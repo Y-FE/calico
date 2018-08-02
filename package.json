@@ -1,9 +1,9 @@
 {
-  "name": "yipen-ui",
-  "version": "1.0.0",
-  "description": "ui lib for yipen and couseware-editor",
+  "name": "calico",
+  "version": "0.0.1",
+  "description": "ui lib for online course system",
   "main": "src/index.js",
-  "repository": "ssh://git@vm2.yi-you.org:10022/YiYou/yipen-ui.git",
+  "repository": "git@github.com:Y-FE/calico.git",
   "author": "pxqing <panxiuqing@gmail.com>",
   "license": "MIT",
   "devDependencies": {
