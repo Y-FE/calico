@@ -1,5 +1,5 @@
 const util = require('./util');
 
 exports.componentName = function(name) {
-    return `Yp${util.upperCaseFirst(name)}`;
+    return `Cc${util.upperCaseFirst(name)}`;
 };

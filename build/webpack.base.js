@@ -5,7 +5,7 @@ module.exports = {
     output: {
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/',
-        filename: 'yipen-ui.common.js',
+        filename: 'calico.common.js',
         chunkFilename: '[id].js',
         libraryTarget: 'commonjs2'
     }

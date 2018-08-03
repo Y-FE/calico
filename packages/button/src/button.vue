@@ -4,7 +4,7 @@
 </style>
 <script>
     export default {
-        name: 'YpButton',
+        name: 'CcButton',
         components: {
         },
         props: {},

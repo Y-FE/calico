@@ -1,7 +1,7 @@
-import YpButton from './src/button';
+import CcButton from './src/button';
 
-YpButton.install = function(Vue) {
-    Vue.component(YpButton.name, YpButton);
+CcButton.install = function(Vue) {
+    Vue.component(CcButton.name, CcButton);
 };
-
-export default YpButton;
+    
+export default CcButton;
