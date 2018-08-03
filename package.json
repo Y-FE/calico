@@ -1,5 +1,5 @@
 {
-  "name": "calico",
+  "name": "calico-ui",
   "version": "0.0.1",
   "description": "ui lib for online course system",
   "main": "src/index.js",
