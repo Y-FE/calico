@@ -38,5 +38,6 @@ panel 支持拖拽选项，
 - [ ] pagination
 
 ### 特殊
-和上课系统密切相关的组件
+和上课系统密切相关的，相对不通用的组件，但是在内部项目需要共享的组件
 - [ ] slidePreview
+- [ ] colorSelect
