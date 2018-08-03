@@ -13,10 +13,15 @@ panel 支持拖拽选项，
 ## 组件
 
 ### 布局
+- [ ] header
+- [ ] aside
+- [ ] main
 
 ### 容器
+- [ ] headerGroup
 - [ ] grid
 - [ ] panel (dragable)
+- [ ] sidePanel (吸附边缘)
 - [ ] menu
 - [ ] scaleArea (保持比例自适应)
 - [ ] 功能拖拽区
@@ -33,3 +38,4 @@ panel 支持拖拽选项，
 - [ ] pagination
 
 ### 特殊
+和上课系统密切相关的组件
