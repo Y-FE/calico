@@ -16,14 +16,17 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
     "typescript": "^2.9.2",
-    "vue": "^2.5.16",
+    "vue": "^2.5.17",
     "vue-loader": "^15.2.6",
-    "vue-template-compiler": "^2.5.16",
+    "vue-template-compiler": "^2.5.17",
+    "vuepress": "^0.13.1",
     "webpack": "^4.16.2"
   },
   "dependencies": {},
   "scripts": {
     "cc": "node build/create-component.js",
-    "prebuild": "node build/build-entry.js"
+    "prebuild": "node build/build-entry.js",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   }
 }
