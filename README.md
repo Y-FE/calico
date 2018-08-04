@@ -41,3 +41,7 @@ panel 支持拖拽选项，
 和上课系统密切相关的，相对不通用的组件，但是在内部项目需要共享的组件
 - [ ] slidePreview
 - [ ] colorSelect
+
+## Thanks
+
+[keepachangelog](https://keepachangelog.com/zh-CN/1.0.0/) for CHANGELOG proposal
