@@ -12,18 +12,24 @@ export default {
 
         let key = binding.arg;
         let isOrigin = binding.modifiers.origin;
+        let isItem = binding.modifiers.item;
 
         let func = binding.value;
 
-        el.addEventListener('drop', e => {
-            e.preventDefault();
-            let item = e.dataTransfer.getData('item');
-            func(item);
-        });
+        if (isItem) {
+            groups.set(key, func);
+        } else {
+            el.addEventListener('drop', e => {
+                e.preventDefault();
+                let item = e.dataTransfer.getData('item');
+                func(item);
+                groups.get(key)();
+            });
 
-        el.addEventListener('dragover', e => {
-            e.preventDefault();
-        });
+            el.addEventListener('dragover', e => {
+                e.preventDefault();
+            });
+        }
     },
     inserted() {},
     update() {},

@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="app">
-        <div v-croup.origin:key="drop" style="width: 200px; height: 200px;"></div>
-        <div draggable="true" @dragstart="startdrag">123</div>
+        <div v-croup:key.origin="drop" style="width: 200px; height: 200px;"></div>
+        <div v-croup:key.item="droped" draggable="true" @dragstart="startdrag">123</div>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>
@@ -23,6 +23,9 @@
             },
             methods: {
                 drop() {
+                    console.log('drop');
+                },
+                droped() {
                     console.log('droped');
                 },
                 startdrag(e) {
