@@ -15,16 +15,22 @@
     "node-sass": "^4.9.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
+    "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
     "vue": "^2.5.17",
     "vue-loader": "^15.2.6",
     "vue-template-compiler": "^2.5.17",
     "vuepress": "^0.13.1",
-    "webpack": "^4.16.2"
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {},
   "scripts": {
     "cc": "node build/create-component.js",
+    "dev": "webpack-dev-server --host 0.0.0.0 --config ./build/webpack.dev.js",
+    "build": "webpack --config ./build/webpack.prod.js",
     "prebuild": "node build/build-entry.js",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs"

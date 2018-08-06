@@ -1,4 +1,5 @@
 <template>
+    <button>a</button>
 </template>
 <style>
 </style>

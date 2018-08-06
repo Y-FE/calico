@@ -1,3 +1,6 @@
+const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
+
 module.exports = {
     entry: {
         app: ['./src/index.js']
@@ -7,6 +10,22 @@ module.exports = {
         publicPath: '/dist/',
         filename: 'calico.common.js',
         chunkFilename: '[id].js',
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'umd'
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.vue', '.js']
+    },
+    plugins: [new VueLoaderPlugin()],
+    module: {
+        rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
+            {
+                test: /\.ts$/,
+                loader: 'ts-loader'
+            }
+        ]
     }
 };
