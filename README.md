@@ -10,6 +10,13 @@ panel 支持拖拽选项，
 功能拖拽区支持主从选项、两个区域配对，
 支持屏蔽右键自定义右键菜单
 
+## dev
+```
+npm run dev
+
+# http://localhost:8080/example for dev
+```
+
 ## 组件
 
 ### 布局
