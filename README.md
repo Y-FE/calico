@@ -34,7 +34,7 @@ npm run dev
 - [ ] 功能拖拽区
 
 ### 普通
-- [ ] button
+- [ ] button 按钮组
 - [ ] switch
 - [ ] select
 - [ ] tooltip
@@ -43,12 +43,16 @@ npm run dev
 - [ ] input
 - [ ] inputNumber
 - [ ] pagination
+- [ ] message
+- [ ] popover
+- [ ] dialog
 
 ### 特殊
 和上课系统密切相关的，相对不通用的组件，但是在内部项目需要共享的组件
 - [ ] slidePreview
 - [ ] colorSelect
-
+- [ ] lineSelect
+- [ ] 属性区（上一层） 工具区（可拖动里面的按钮）  操作区（撤销重做）  课堂状态区（彩色按钮）
 ## Thanks
 
 [keepachangelog](https://keepachangelog.com/zh-CN/1.0.0/) for CHANGELOG proposal
