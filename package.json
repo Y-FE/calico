@@ -34,7 +34,7 @@
     "example:test": "webpack-dev-server --host 0.0.0.0 --config ./build/webpack.example.js",
     "build": "webpack --config ./build/webpack.prod.js",
     "prebuild": "node build/build-entry.js",
-    "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs"
+    "docs:build": "npm run build && vuepress build docs",
+    "docs:dev": "npm run build && vuepress dev docs"
   }
 }
