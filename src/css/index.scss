@@ -5,15 +5,84 @@ $--cat-color-success: #27D2D0;
 $--cat-color-danger: #FF336A;
 $--cat-color-disabled: #CCCCCC;
 
+$--cat-color-white: #FFFFFF;
 $--cat-color-blue: #0077FF;
-$--cat-color-yellow: #FFC047;
+$--cat-color-yellow: #FFA250;
 $--cat-color-black: #000000;
 $--cat-color-black-opacity-1: rgba($--cat-color-black, .1);
-$--cat-color-black-opacity-4: rgba($--cat-color-black, .4);
+$--cat-color-black-opacity-2: rgba($--cat-color-black, .2);
+$--cat-color-black-opacity-4: rgba($--cat-color-black, .04);
 $--cat-color-black-opacity-8: rgba($--cat-color-black, .8);
 
 $--cat-color-text-title: #666666;
 $--cat-color-text-primary: #999999;
 
+//radius
+$--cat-radius-base: 2px;
+$--cat-radius-icon: $--cat-radius-base * 2;
+$--cat-radius-panel: $--cat-radius-base * 5;
+$--cat-radius-round: $--cat-radius-base * 6.5;
+
 //font
 $--cat-font-size-base: 12px;
+$--cat-font-size-large: 20px;
+$--cat-font-size-icon-base: 16px;
+
+$--cat-font-weight-base: 400;
+$--cat-font-weight-bold: 800;
+
+//shadow
+$--cat-box-shadow-grey: 0px 2px 8px 0px rgba(0, 0, 0, .05);
+$--cat-box-shadow-light: 0px 2px 8px 0px rgba(64,59,239,1);
+
+//button
+$--cat-button-font-size: $--cat-font-size-base;
+$--cat-button-padding-vertical: 7px;
+$--cat-button-padding-horizontal: 16px;
+$--cat-button-radius: $--cat-radius-base;
+$--cat-button-radius-round: $--cat-radius-round;
+
+$--cat-button-primary-color: $--cat-color-white;
+$--cat-button-primary-fill: $--cat-color-info;
+$--cat-button-primary-border: $--cat-button-primary-fill;
+
+$--cat-button-primary-fill-hover: --cat-color-text-title;
+$--cat-button-primary-border-hover: $--cat-button-primary-fill-hover;
+
+$--cat-button-primary-fill-disabled: $--cat-color-disabled;
+$--cat-button-primary-border-disabled: $--cat-button-primary-fill-disabled;
+
+
+$--cat-button-default-color: $--cat-color-info;
+$--cat-button-default-fill: $--cat-color-white;
+$--cat-button-default-border: $--cat-color-info;
+
+$--cat-button-default-fill-hover: $--cat-color-black-opacity-1;
+$--cat-button-default-border-hover: $--cat-color-info;
+
+$--cat-button-default-color-disabled: $--cat-color-disabled;
+$--cat-button-default-border-disabled: $--cat-color-disabled;
+
+//popover
+$--cat-popover-fill: $--color-white;
+$--cat-popover-box-shadow: $--cat-box-shadow-grey;
+$--cat-popover-padding: 20px 30px 10px 30px;
+$--cat-popover-color: $--cat-color-text-title;
+$--cat-popover-font-size: $--cat-font-size-base;
+$--cat-popover-radius: $--cat-radius-panel;
+
+
+// tooltip
+$--cat-tooltip-color: $--color-white;
+$--cat-tooltip-font-size: $--cat-font-size-base;
+$--cat-tooltip-arrow-size: 6px;
+$--cat-tooltip-padding: 7px 10px;
+$--cat-tooltip-radius: $--cat-radius-base;
+
+$--cat-tooltip-dark-fill: $--cat-color-black-opacity-8;
+$--cat-tooltip-dark-border-color: $--cat-tooltip-dark-fill;
+
+$--cat-tooltip-light-fill:$--cat-color-success;
+$--cat-tooltip-light-border-color: $--cat-tooltip-light-fill;
+
+// message
