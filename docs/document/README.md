@@ -26,9 +26,9 @@ sidebar: auto
 ```
 
 ### props
-| Name          | Type                          | Default    |
-| ------------- |:-----------------------------:| ----------:|
-| type          | String ['primary', 'default'] | 'default'  |
+| Name |             Type              |   Default |
+|:-----|:-----------------------------:|----------:|
+| type | String ['primary', 'default'] | 'default' |
 
 ### events
 None
