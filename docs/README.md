@@ -1,17 +1,17 @@
 ---
 home: true
 heroImage: /hero.png
-actionText: 查看文档 →
+actionText: Document →
 actionLink: /posts/
-tagline: 由在线上课系统衍生的 Vue 组件库
+tagline: Vue-powered Application Component Lib
 features:
-- title: 专注应用
-  details: 方便构建功能应用型前端界面。
-- title: 基于 Vue
-  details: Vue 在前端领域已经广泛使用，并相较于其他框架对初学者更加友好。
-- title: 项目结构
-  details: 项目结构整体借鉴 Element-UI，支持单个组件引入。
-footer: '@亦友教育前端团队 Powered by VuePress'
+- title: Application Focus
+  details: Easy to create efficient application interface。
+- title: Vue powered
+  details: Vue is one of most popular FEF, and very friendly to beginner。
+- title: Struct
+  details: Inspired by Element-UI，import single component is also supported。
+footer: '@YiYou-Edu-FE Powered by VuePress'
 ---
 
 ## Start
