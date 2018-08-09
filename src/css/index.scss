@@ -122,9 +122,17 @@ $--cat-tool-item-color-active: $--cat-color-primary;
 
 $--cat-tool-item-color-disabled: $--cat-color-disabled;
 
+//icon-block
+$--cat-icon-block-fill: $--cat-color-white;
+$--cat-icon-block-color: $--cat-color-info;
+$--cat-icon-block-icon-size: $--cat-font-size-icon-base;
+$--cat-icon-block-text-size: $--cat-font-size-base;
+$--cat-icon-block-radius: $--cat-radius-icon;
 
+$--cat-icon-block-shadow-hover: $--cat-box-shadow-hover;
 
-
+$--cat-icon-block-fill-active: $--cat-color-primary;
+$--cat-icon-block-color-active: $--cat-color-white;
 
 
 
