@@ -22,11 +22,11 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-let module = {
+let calico = {
     version: '0.0.1',
     install,
     Button,
     ToolItem
 };
 
-export default module
+export default calico

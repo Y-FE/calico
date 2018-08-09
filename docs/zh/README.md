@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 查看文档 →
-actionLink: /posts/
+actionLink: /zh/document/
 tagline: Vue 驱动的应用型组件库
 features:
 - title: 专注应用

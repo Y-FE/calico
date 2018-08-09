@@ -20,11 +20,11 @@ module.exports = {
                 nav: [
                     {
                         text: 'Document',
-                        link: '/document'
+                        link: '/document/'
                     },
                     {
                         text: 'Guide',
-                        link: '/guide'
+                        link: '/guide/'
                     },
                     {
                         text: 'GitHub',
@@ -39,7 +39,7 @@ module.exports = {
         nav: [
             {
                 text: '文档',
-                link: '/zh/document'
+                link: '/zh/document/'
             },
             {
                 text: '快速上手',
@@ -50,5 +50,6 @@ module.exports = {
                 link: 'https://github.com/Y-FE/calico'
             }
         ]
-    }
+    },
+    evergreen: true
 };

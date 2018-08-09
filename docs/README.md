@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: Document →
-actionLink: /posts/
+actionLink: /document/
 tagline: Vue-powered Application Component Lib
 features:
 - title: Application Focus
