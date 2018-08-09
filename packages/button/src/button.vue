@@ -1,14 +1,24 @@
 <template>
-    <button>a</button>
+    <div class="main">
+        <slot></slot>
+    </div>
 </template>
-<style>
+<style lang="scss">
+    .main {
+        color: $--cat-color-primary;
+    }
 </style>
 <script>
     export default {
         name: 'CcButton',
         components: {
         },
-        props: {},
+        props: {
+            type: {
+                type: String,
+                default: 'primary'
+            },
+        },
         data() {
             return {
             }
