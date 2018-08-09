@@ -42,13 +42,13 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-let module = {
+let calico = {
     version: '${version}',
     install,
     ${components.join(',\n    ')}
 };
 
-export default module`;
+export default calico`;
 }
 
 fs.writeFileSync(
