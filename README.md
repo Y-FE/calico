@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-  <img width="280px" src="./src/assets/logo.png" alt="logo" />
+  <img width="280px" src="https://static.yi-you.org/calico/logo/logo.png" alt="logo" />
 </p>
 <br>
 
