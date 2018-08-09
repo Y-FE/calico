@@ -15,9 +15,10 @@
                 type: String,
                 default: 'icon-icon-zidingyishezhi',
             },
-            title: {
+            // 状态 default：普通状态， active: 激活状态
+            state: {
                 type: String,
-                default: '',
+                default: 'default',
             },
             disabled: {
                 type: Boolean,
