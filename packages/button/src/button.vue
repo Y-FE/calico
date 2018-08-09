@@ -1,9 +1,11 @@
 <template>
     <div class="main">
-        <slot></slot>
+        <!-- <slot></slot> -->
+        88877
     </div>
 </template>
 <style lang="scss">
+    // @import '../../../src/css/index.scss';
     .main {
         color: $--cat-color-primary;
     }
