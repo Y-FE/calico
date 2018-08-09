@@ -98,7 +98,7 @@ $--cat-message-padding: 10px;
 $--cat-icon-large-block: 26px;
 $--cat-icon-small-block: 18px;
 
-//--cat-menu-item 彩色底icon+文字
+//menu-item 彩色底icon+文字
 //hover时背景色 darken(背景色, 10%)
 $--cat-menu-item-icon-color: $--cat-color-white;
 $--cat-menu-item-text-color: $--cat-color-info;
@@ -109,7 +109,7 @@ $--cat-menu-item-radius: $--cat-radius-round;
 $--cat-menu-item-text-color-disabled: $--cat-color-disabled;
 $--cat-menu-item-fill-disabled: $--cat-color-disabled;
 
-// $-cat-tool-item
+//tool-item
 $--cat-tool-item-fill: $--cat-color-white;
 $--cat-tool-item-color: $--cat-color-info;
 $--cat-tool-item-icon-size: $--cat-font-size-icon-base;
