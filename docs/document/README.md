@@ -4,7 +4,7 @@ sidebar: auto
 
 # Component
 
-## Button
+## Button <Badge text="beta" type="warn"/> <Badge text="0.0.1+"/>
 **General button**
 
 <cc-button type="primary">Primary</cc-button>
@@ -25,4 +25,22 @@ sidebar: auto
 <cc-button type="default" disabled>Default disabled</cc-button>
 ```
 
+### props
+| Name          | Type                          | Default    |
+| ------------- |:-----------------------------:| ----------:|
+| type          | String ['primary', 'default'] | 'default'  |
+
+### events
+None
+
+### slots
+None
+
 ## Switch
+None
+
+
+## ToolItem
+**Setting Tool**
+
+<cc-tool-item icon="icon-icon-zidingyishezhi"></cc-tool-item>
