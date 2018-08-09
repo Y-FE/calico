@@ -3,9 +3,11 @@ import './css/index.scss';
 import croup from './directives/croup';
 
 import Button from '../packages/button';
+import ToolItem from '../packages/toolItem';
 
 const components = [
-    Button
+    Button,
+    ToolItem
 ];
 
 const install = function(Vue, opts = {}) {
@@ -23,7 +25,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 let calico = {
     version: '0.0.1',
     install,
-    Button
+    Button,
+    ToolItem
 };
 
 export default calico
