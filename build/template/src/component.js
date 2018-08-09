@@ -1,7 +1,7 @@
 module.exports = componentName => {
     return `<template>
 </template>
-<style>
+<style lang="scss">
 </style>
 <script>
     export default {
