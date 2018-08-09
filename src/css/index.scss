@@ -34,6 +34,7 @@ $--cat-font-weight-bold: 800;
 //shadow
 $--cat-box-shadow-grey: 0px 2px 8px 0px rgba(0, 0, 0, .05);
 $--cat-box-shadow-light: 0px 2px 8px 0px rgba(64,59,239,1);
+$--cat-box-shadow-hover: 0px 2px 8px 0px rgba(64,59,239,1);
 
 //button
 $--cat-button-font-size: $--cat-font-size-base;
@@ -46,7 +47,7 @@ $--cat-button-primary-color: $--cat-color-white;
 $--cat-button-primary-fill: $--cat-color-info;
 $--cat-button-primary-border: $--cat-button-primary-fill;
 
-$--cat-button-primary-fill-hover: --cat-color-text-title;
+$--cat-button-primary-fill-hover: $--cat-color-text-title;
 $--cat-button-primary-border-hover: $--cat-button-primary-fill-hover;
 
 $--cat-button-primary-fill-disabled: $--cat-color-disabled;
@@ -86,3 +87,43 @@ $--cat-tooltip-light-fill:$--cat-color-success;
 $--cat-tooltip-light-border-color: $--cat-tooltip-light-fill;
 
 // message
+$--cat-message-fill: $--cat-color-white;
+$--cat-message-color: $--cat-color-danger;
+$--cat-message-font-size: $--cat-font-size-base;
+$--cat-message-radius: $--cat-radius-panel;
+$--cat-message-padding: 10px;
+
+
+//特殊~
+$--cat-icon-large-block: 26px;
+$--cat-icon-small-block: 18px;
+
+//--cat-menu-item 彩色底icon+文字
+//hover时背景色 darken(背景色, 10%)
+$--cat-menu-item-icon-color: $--cat-color-white;
+$--cat-menu-item-text-color: $--cat-color-info;
+$--cat-menu-item-icon-size: $--cat-font-size-icon-base;
+$--cat-menu-item-text-size: $--cat-font-size-base;
+$--cat-menu-item-radius: $--cat-radius-round;
+
+$--cat-menu-item-text-color-disabled: $--cat-color-disabled;
+$--cat-menu-item-fill-disabled: $--cat-color-disabled;
+
+// $-cat-tool-item
+$--cat-tool-item-fill: $--cat-color-white;
+$--cat-tool-item-color: $--cat-color-info;
+$--cat-tool-item-icon-size: $--cat-font-size-icon-base;
+$--cat-tool-item-text-size: $--cat-font-size-base;
+$--cat-tool-item-radius: $--cat-radius-icon;
+
+$--cat-tool-item-shadow-hover: $--cat-box-shadow-hover;
+
+$--cat-tool-item-color-disabled: $--cat-color-disabled;
+
+
+
+
+
+
+
+
