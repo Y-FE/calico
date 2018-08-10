@@ -22,8 +22,10 @@
 | shape | button shape | String | square / round    | square  |
 :::
 
-::: warning EVENTS
-None
+::: tip EVENTS
+| Name  | Description    | Payload |
+|:------|:---------------|:--------|
+| click | button clicked | -       |
 :::
 
 ::: warning SLOTS
