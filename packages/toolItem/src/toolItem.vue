@@ -2,7 +2,6 @@
     <div class="cat-tool-item-container" 
         @click="selectedClick"
         :disabled="disabled" 
-        :state="state"
         :class="[
             disabled ? 'cat-tool-item-disabled' : '',
             state == 'active' ? 'cat-tool-item-add-active' : ''
@@ -40,7 +39,7 @@
             display: inline-block;
         }
         &:hover { 
-            i {
+            .cat-tool-item-icon-box {
                 box-shadow: $--cat-tool-item-shadow-hover;
             }
         }  
@@ -48,24 +47,21 @@
 
     .cat-tool-item-disabled {
         cursor: not-allowed;
-        .cat-tool-item-icon-box {
-            &:hover { 
-               box-shadow: none;
-            }  
-            i {
-                color: $--cat-tool-item-color-disabled; 
-            }
-        }
         .cat-tool-item-text {
            color: $--cat-tool-item-color-disabled;
         }
+        &:hover { 
+            .cat-tool-item-icon-box {
+                box-shadow: none;
+                i {
+                    color: $--cat-tool-item-color-disabled; 
+                }
+            }
+        }  
     }
 
     .cat-tool-item-add-active {
         .cat-tool-item-icon-box {
-            &:hover { 
-               box-shadow: none;
-            }  
             i {
                 color: $--cat-tool-item-color-active; 
             }
@@ -73,6 +69,11 @@
         .cat-tool-item-text {
            color: $--cat-tool-item-color-active;
         }
+        &:hover { 
+            .cat-tool-item-icon-box  {
+                box-shadow: none;
+            } 
+        }  
     }
 
    
