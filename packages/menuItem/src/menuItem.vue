@@ -27,7 +27,7 @@
                 font-size: $--menu-item-icon-size;
             }
             &:hover {
-                filter: brightness(90%);
+                filter: $--color-brightness-base;
             }
         }
         .cat-menu--text {

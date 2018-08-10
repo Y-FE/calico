@@ -16,6 +16,7 @@ $--color-black-opacity-8: rgba($--color-black, .8);
 
 $--color-text-title: #666666;
 $--color-text-primary: #999999;
+$--color-brightness-base: brightness(90%);
 
 //radius
 $--radius-base: 2px;
@@ -130,7 +131,7 @@ $--switch-height: 12px;
 $--select-radius: $--radius-icon;
 $--select-width: 80px !default;
 $--select-height: 26px;
-$--select-color: $--color-text-info;
+$--select-color: $--color-info;
 $--select-title-font-size: $--font-size-base;
 $--select-title-color: $--color-text-title;
 
@@ -149,7 +150,7 @@ $--input-radius: $--radius-icon;
 $--input-border-color: $--color-black-opacity-1;
 $--input-width: 80px !default;
 $--input-height: 26px;
-$--input-color: $--color-text-info;
+$--input-color: $--color-info;
 $--input-padding: 3px 4px;
 $--input-title-font-size: $--font-size-base;
 $--input-title-color: $--color-text-title;
