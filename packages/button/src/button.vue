@@ -12,47 +12,47 @@
 </template>
 <style lang="scss">
     .cat-button-main {
-        color: $--cat-button-default-color;
-        font-size: $--cat-button-font-size;
-        padding:  $--cat-button-padding-vertical $--cat-button-padding-horizontal;
-        background: $--cat-button-default-fill;
+        color: $--button-default-color;
+        font-size: $--button-font-size;
+        padding:  $--button-padding-vertical $--button-padding-horizontal;
+        background: $--button-default-fill;
         display: inline-block;
         cursor: pointer;
         text-align: center;
     }
     .cat-button-square {
-        border-radius: $--cat-button-radius;
+        border-radius: $--button-radius;
     }
     .cat-button-round {
-        border-radius: $--cat-button-radius-round;
+        border-radius: $--button-radius-round;
     }
     .cat-button-default {
-        color: $--cat-button-default-color;
-        border: 1px solid $--cat-button-default-border;  
+        color: $--button-default-color;
+        border: 1px solid $--button-default-border;  
         &:hover {
-            background: $--cat-button-default-fill-hover;
-            border: 1px solid $--cat-button-default-border-hover;   
+            background: $--button-default-fill-hover;
+            border: 1px solid $--button-default-border-hover;   
         }
     }
     .cat-button-primary {
-        background: $--cat-button-primary-fill;
+        background: $--button-primary-fill;
         border: none;
-        color: $--cat-button-primary-color;
+        color: $--button-primary-color;
         &:hover {
-            background: $--cat-button-primary-fill-hover;
+            background: $--button-primary-fill-hover;
         }
     }
 
     .cat-button-default-disabled {
-        color: $--cat-button-default-color-disabled;
-        border: 1px solid $--cat-button-default-border-disabled;
+        color: $--button-default-color-disabled;
+        border: 1px solid $--button-default-border-disabled;
         cursor: not-allowed;
        
     }
     .cat-button-primary-disabled {
-        background: $--cat-button-primary-fill-disabled; 
-        color: $--cat-button-primary-color;
-        border: 1px solid $--cat-button-primary-border-disabled;
+        background: $--button-primary-fill-disabled; 
+        color: $--button-primary-color;
+        border: 1px solid $--button-primary-border-disabled;
         cursor: not-allowed;
     }
 

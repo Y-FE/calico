@@ -21,26 +21,26 @@
         margin: 0;
         padding: 0;
         .cat-tool-item-icon-box {
-            width : $--cat-icon-large-block;
-            height: $--cat-icon-large-block;
-            line-height: $--cat-icon-large-block;
-            background: $--cat-tool-item-fill;
+            width : $--icon-large-block;
+            height: $--icon-large-block;
+            line-height: $--icon-large-block;
+            background: $--tool-item-fill;
             margin: 0 auto;
             margin-bottom: 4px;
             i {
-                font-size: $--cat-tool-item-icon-size;
+                font-size: $--tool-item-icon-size;
             }
         }
         .cat-tool-item-text {
-            font-size: $--cat-tool-item-text-size;
-            line-height: $--cat-tool-item-text-size; 
-            color: $--cat-tool-item-color;
+            font-size: $--tool-item-text-size;
+            line-height: $--tool-item-text-size; 
+            color: $--tool-item-color;
             margin: 0;
             display: inline-block;
         }
         &:hover { 
             .cat-tool-item-icon-box {
-                box-shadow: $--cat-tool-item-shadow-hover;
+                box-shadow: $--tool-item-shadow-hover;
             }
         }  
     }
@@ -48,13 +48,13 @@
     .cat-tool-item-disabled {
         cursor: not-allowed;
         .cat-tool-item-text {
-           color: $--cat-tool-item-color-disabled;
+           color: $--tool-item-color-disabled;
         }
         &:hover { 
             .cat-tool-item-icon-box {
                 box-shadow: none;
                 i {
-                    color: $--cat-tool-item-color-disabled; 
+                    color: $--tool-item-color-disabled; 
                 }
             }
         }  
@@ -63,11 +63,11 @@
     .cat-tool-item-add-active {
         .cat-tool-item-icon-box {
             i {
-                color: $--cat-tool-item-color-active; 
+                color: $--tool-item-color-active; 
             }
         }
         .cat-tool-item-text {
-           color: $--cat-tool-item-color-active;
+           color: $--tool-item-color-active;
         }
         &:hover { 
             .cat-tool-item-icon-box  {
