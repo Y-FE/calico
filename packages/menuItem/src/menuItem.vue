@@ -1,6 +1,10 @@
 <template>
-    <div class="cat-menu-body" @click="menuClick"> 
-        <div class="cat-menu-header" :style="{'background-color': color}">
+    <div class="cat-menu-body" 
+        :class="[disabled ? 'cat-menu--disabled':'']"
+        @click="menuClick"
+        ref="menu"
+        @mouseover="darken(color)"> 
+        <div class="cat-menu-header" :style="{'background-color': getColor}">
             <i class="iconfont" :class="icon" ></i>
         </div>
         <div class="cat-menu--text">
@@ -13,6 +17,7 @@
         display: inline-block;
         text-align: center;
         margin: 0 ;
+        cursor: pointer;
         .cat-menu-header {
             width: $--icon-large-block;
             height: $--icon-large-block;
@@ -31,6 +36,13 @@
             color: $--menu-item-text-color;
             text-align: center;
             margin-top: 4px;
+        }
+    }
+
+    .cat-menu--disabled {
+        cursor: not-allowed;
+        .cat-menu--text {
+            color: $--menu-item-text-color-disabled;
         }
     }
 </style>
@@ -60,12 +72,24 @@
             }
         },
         computed: {
+            getColor(){
+                if(this.disabled){
+                    return '#CCCCCC';
+                }else{
+                    return this.color;
+                }
+            }
         },
         watch: {
         },
         methods: {
             menuClick(){
                 this.$emit('click');
+            },
+            darken(color){
+                console.log(color)
+               document.getElementsByClassName("cat-menu-body")[0].
+               getElementsByClassName("cat-menu-header")[0].style.background = `darken(${color},10%)`;
             }
         },
         created() {

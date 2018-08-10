@@ -2,6 +2,7 @@
     <div class="cat-tool-item-container" 
         @click="selectedClick"
         :disabled="disabled" 
+        :active="active"
         :class="[
             disabled ? 'cat-tool-item--disabled' : '',
             active ? 'cat-tool-item--active' : ''
@@ -47,6 +48,11 @@
 
     .cat-tool-item--disabled {
         cursor: not-allowed;
+        .cat-tool-item-icon-box {
+            i {
+                color: $--tool-item-color-disabled
+            }
+        }
         .cat-tool-item--text {
            color: $--tool-item-color-disabled;
         }
