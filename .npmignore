@@ -3,3 +3,5 @@ example
 build
 test
 docs
+packages
+src
