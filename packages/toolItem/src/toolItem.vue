@@ -4,7 +4,7 @@
         :disabled="disabled" 
         :class="[
             disabled ? 'cat-tool-item--disabled' : '',
-            state == 'active' ? 'cat-tool-item--active' : ''
+            active ? 'cat-tool-item--active' : ''
         ]">
         <div class="cat-tool-item-icon-box">
             <i class="iconfont" :class="icon"></i>
@@ -89,9 +89,9 @@
                 default: 'icon-icon-zidingyishezhi',
             },
             // 状态 default：普通状态， active: 激活状态
-            state: {
-                type: String,
-                default: 'default',
+            active: {
+                type: Boolean,
+                default: false,
             },
             disabled: {
                 type: Boolean,
@@ -116,7 +116,7 @@
         destroyed() {
         },
         mounted() {
-            console.log(this.state);
+           
         }
     }
 </script>

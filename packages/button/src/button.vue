@@ -3,7 +3,7 @@
         @click="buttonClick" 
         class="cat-button-body" 
         :class="[
-            disabled ?  `cat-button--${type}--disabled` : `cat-button--${type}`,
+            disabled ?  `cat-button--${type}-disabled` : `cat-button--${type}`,
             shape ? `cat-button--${shape}` : ''
         ]" 
         :disabled="disabled">
@@ -44,13 +44,13 @@
         }
     }
 
-    .cat-button--default--disabled {
+    .cat-button--default-disabled {
         color: $--button-default-color-disabled;
         border: 1px solid $--button-default-border-disabled;
         cursor: not-allowed;
        
     }
-    .cat-button--primary--disabled {
+    .cat-button--primary-disabled {
         background: $--button-primary-fill-disabled; 
         color: $--button-primary-color;
         border: 1px solid $--button-primary-border-disabled;
