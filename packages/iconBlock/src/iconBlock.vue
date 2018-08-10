@@ -13,6 +13,7 @@
         height: $--icon-large-block;
         line-height:  $--icon-large-block;
         background: $--icon-block-fill;
+        border-radius: $--icon-block-radius;
         text-align: center;
         i {
            font-size: $--icon-block-icon-size;
