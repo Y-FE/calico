@@ -4,7 +4,7 @@
         class="cat-button-main" 
         :class="[
             disabled ?  `cat-button-${type}-disabled` : `cat-button-${type}`,
-            shape ? 'cat-button-square' : 'cat-button-round'
+            shape ? `cat-button-${shape}` : ''
         ]" 
         :disabled="disabled">
         <slot></slot>
@@ -98,7 +98,6 @@
         destroyed() {
         },
         mounted() {
-
         }
     }
 </script>
