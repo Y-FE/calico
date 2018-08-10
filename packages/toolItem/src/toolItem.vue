@@ -27,6 +27,7 @@
             background: $--tool-item-fill;
             margin: 0 auto;
             margin-bottom: 4px;
+            cursor: pointer;
             i {
                 color: $--tool-item-color;
                 font-size: $--tool-item-icon-size;

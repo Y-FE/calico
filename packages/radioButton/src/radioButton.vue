@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cat-radio-button">
         
     </div>
 </template>
