@@ -1,138 +1,138 @@
 //color
-$--cat-color-primary: #403BEF;
-$--cat-color-info: #333333;
-$--cat-color-success: #27D2D0;
-$--cat-color-danger: #FF336A;
-$--cat-color-disabled: #CCCCCC;
+$--color-primary: #403BEF;
+$--color-info: #333333;
+$--color-success: #27D2D0;
+$--color-danger: #FF336A;
+$--color-disabled: #CCCCCC;
 
-$--cat-color-white: #FFFFFF;
-$--cat-color-blue: #0077FF;
-$--cat-color-yellow: #FFA250;
-$--cat-color-black: #000000;
-$--cat-color-black-opacity-1: rgba($--cat-color-black, .1);
-$--cat-color-black-opacity-2: rgba($--cat-color-black, .2);
-$--cat-color-black-opacity-4: rgba($--cat-color-black, .04);
-$--cat-color-black-opacity-8: rgba($--cat-color-black, .8);
+$--color-white: #FFFFFF;
+$--color-blue: #0077FF;
+$--color-yellow: #FFA250;
+$--color-black: #000000;
+$--color-black-opacity-1: rgba($--color-black, .1);
+$--color-black-opacity-2: rgba($--color-black, .2);
+$--color-black-opacity-4: rgba($--color-black, .04);
+$--color-black-opacity-8: rgba($--color-black, .8);
 
-$--cat-color-text-title: #666666;
-$--cat-color-text-primary: #999999;
+$--color-text-title: #666666;
+$--color-text-primary: #999999;
 
 //radius
-$--cat-radius-base: 2px;
-$--cat-radius-icon: $--cat-radius-base * 2;
-$--cat-radius-panel: $--cat-radius-base * 5;
-$--cat-radius-round: $--cat-radius-base * 6.5;
+$--radius-base: 2px;
+$--radius-icon: $--radius-base * 2;
+$--radius-panel: $--radius-base * 5;
+$--radius-round: $--radius-base * 6.5;
 
 //font
-$--cat-font-size-base: 12px;
-$--cat-font-size-large: 20px;
-$--cat-font-size-icon-base: 16px;
+$--font-size-base: 12px;
+$--font-size-large: 20px;
+$--font-size-icon-base: 16px;
 
-$--cat-font-weight-base: 400;
-$--cat-font-weight-bold: 800;
+$--font-weight-base: 400;
+$--font-weight-bold: 800;
 
 //shadow
-$--cat-box-shadow-grey: 0px 2px 8px 0px rgba(0, 0, 0, .05);
-$--cat-box-shadow-light: 0px 2px 8px 0px rgba(64,59,239,1);
-$--cat-box-shadow-hover: 0px 2px 8px 0px rgba(64,59,239,1);
+$--box-shadow-grey: 0px 2px 8px 0px rgba(0, 0, 0, .05);
+$--box-shadow-light: 0px 2px 8px 0px rgba(64,59,239,1);
+$--box-shadow-hover: 0px 2px 8px 0px rgba(64,59,239,1);
 
 //button
-$--cat-button-font-size: $--cat-font-size-base;
-$--cat-button-padding-vertical: 7px;
-$--cat-button-padding-horizontal: 16px;
-$--cat-button-radius: $--cat-radius-base;
-$--cat-button-radius-round: $--cat-radius-round;
+$--button-font-size: $--font-size-base;
+$--button-padding-vertical: 7px;
+$--button-padding-horizontal: 16px;
+$--button-radius: $--radius-base;
+$--button-radius-round: $--radius-round;
 
-$--cat-button-primary-color: $--cat-color-white;
-$--cat-button-primary-fill: $--cat-color-info;
-$--cat-button-primary-border: $--cat-button-primary-fill;
+$--button-primary-color: $--color-white;
+$--button-primary-fill: $--color-info;
+$--button-primary-border: $--button-primary-fill;
 
-$--cat-button-primary-fill-hover: $--cat-color-text-title;
-$--cat-button-primary-border-hover: $--cat-button-primary-fill-hover;
+$--button-primary-fill-hover: $--color-text-title;
+$--button-primary-border-hover: $--button-primary-fill-hover;
 
-$--cat-button-primary-fill-disabled: $--cat-color-disabled;
-$--cat-button-primary-border-disabled: $--cat-button-primary-fill-disabled;
+$--button-primary-fill-disabled: $--color-disabled;
+$--button-primary-border-disabled: $--button-primary-fill-disabled;
 
 
-$--cat-button-default-color: $--cat-color-info;
-$--cat-button-default-fill: $--cat-color-white;
-$--cat-button-default-border: $--cat-color-info;
+$--button-default-color: $--color-info;
+$--button-default-fill: $--color-white;
+$--button-default-border: $--color-info;
 
-$--cat-button-default-fill-hover: $--cat-color-black-opacity-1;
-$--cat-button-default-border-hover: $--cat-color-info;
+$--button-default-fill-hover: $--color-black-opacity-1;
+$--button-default-border-hover: $--color-info;
 
-$--cat-button-default-color-disabled: $--cat-color-disabled;
-$--cat-button-default-border-disabled: $--cat-color-disabled;
+$--button-default-color-disabled: $--color-disabled;
+$--button-default-border-disabled: $--color-disabled;
 
 //popover
-$--cat-popover-fill: $--cat-color-white;
-$--cat-popover-box-shadow: $--cat-box-shadow-grey;
-$--cat-popover-padding: 20px 30px 10px 30px;
-$--cat-popover-color: $--cat-color-text-title;
-$--cat-popover-font-size: $--cat-font-size-base;
-$--cat-popover-radius: $--cat-radius-panel;
+$--popover-fill: $--color-white;
+$--popover-box-shadow: $--box-shadow-grey;
+$--popover-padding: 20px 30px 10px 30px;
+$--popover-color: $--color-text-title;
+$--popover-font-size: $--font-size-base;
+$--popover-radius: $--radius-panel;
 
 
 // tooltip
-$--cat-tooltip-color: $--cat-color-white;
-$--cat-tooltip-font-size: $--cat-font-size-base;
-$--cat-tooltip-arrow-size: 6px;
-$--cat-tooltip-padding: 7px 10px;
-$--cat-tooltip-radius: $--cat-radius-base;
+$--tooltip-color: $--color-white;
+$--tooltip-font-size: $--font-size-base;
+$--tooltip-arrow-size: 6px;
+$--tooltip-padding: 7px 10px;
+$--tooltip-radius: $--radius-base;
 
-$--cat-tooltip-dark-fill: $--cat-color-black-opacity-8;
-$--cat-tooltip-dark-border-color: $--cat-tooltip-dark-fill;
+$--tooltip-dark-fill: $--color-black-opacity-8;
+$--tooltip-dark-border-color: $--tooltip-dark-fill;
 
-$--cat-tooltip-light-fill:$--cat-color-success;
-$--cat-tooltip-light-border-color: $--cat-tooltip-light-fill;
+$--tooltip-light-fill:$--color-success;
+$--tooltip-light-border-color: $--tooltip-light-fill;
 
 // message
-$--cat-message-fill: $--cat-color-white;
-$--cat-message-color: $--cat-color-danger;
-$--cat-message-font-size: $--cat-font-size-base;
-$--cat-message-radius: $--cat-radius-panel;
-$--cat-message-padding: 10px;
+$--message-fill: $--color-white;
+$--message-color: $--color-danger;
+$--message-font-size: $--font-size-base;
+$--message-radius: $--radius-panel;
+$--message-padding: 10px;
 
 
 //特殊~
-$--cat-icon-large-block: 26px;
-$--cat-icon-small-block: 18px;
+$--icon-large-block: 26px;
+$--icon-small-block: 18px;
 
 //menu-item 彩色底icon+文字
 //hover时背景色 darken(背景色, 10%)
-$--cat-menu-item-icon-color: $--cat-color-white;
-$--cat-menu-item-text-color: $--cat-color-info;
-$--cat-menu-item-icon-size: $--cat-font-size-icon-base;
-$--cat-menu-item-text-size: $--cat-font-size-base;
-$--cat-menu-item-radius: $--cat-radius-round;
+$--menu-item-icon-color: $--color-white;
+$--menu-item-text-color: $--color-info;
+$--menu-item-icon-size: $--font-size-icon-base;
+$--menu-item-text-size: $--font-size-base;
+$--menu-item-radius: $--radius-round;
 
-$--cat-menu-item-text-color-disabled: $--cat-color-disabled;
-$--cat-menu-item-fill-disabled: $--cat-color-disabled;
+$--menu-item-text-color-disabled: $--color-disabled;
+$--menu-item-fill-disabled: $--color-disabled;
 
 //tool-item
-$--cat-tool-item-fill: $--cat-color-white;
-$--cat-tool-item-color: $--cat-color-info;
-$--cat-tool-item-icon-size: $--cat-font-size-icon-base;
-$--cat-tool-item-text-size: $--cat-font-size-base;
-$--cat-tool-item-radius: $--cat-radius-icon;
+$--tool-item-fill: $--color-white;
+$--tool-item-color: $--color-info;
+$--tool-item-icon-size: $--font-size-icon-base;
+$--tool-item-text-size: $--font-size-base;
+$--tool-item-radius: $--radius-icon;
 
-$--cat-tool-item-shadow-hover: $--cat-box-shadow-hover;
+$--tool-item-shadow-hover: $--box-shadow-hover;
 
-$--cat-tool-item-color-active: $--cat-color-primary;
+$--tool-item-color-active: $--color-primary;
 
-$--cat-tool-item-color-disabled: $--cat-color-disabled;
+$--tool-item-color-disabled: $--color-disabled;
 
 //icon-block
-$--cat-icon-block-fill: $--cat-color-white;
-$--cat-icon-block-color: $--cat-color-info;
-$--cat-icon-block-icon-size: $--cat-font-size-icon-base;
-$--cat-icon-block-text-size: $--cat-font-size-base;
-$--cat-icon-block-radius: $--cat-radius-icon;
+$--icon-block-fill: $--color-white;
+$--icon-block-color: $--color-info;
+$--icon-block-icon-size: $--font-size-icon-base;
+$--icon-block-text-size: $--font-size-base;
+$--icon-block-radius: $--radius-icon;
 
-$--cat-icon-block-shadow-hover: $--cat-box-shadow-hover;
+$--icon-block-shadow-hover: $--box-shadow-hover;
 
-$--cat-icon-block-fill-active: $--cat-color-primary;
-$--cat-icon-block-color-active: $--cat-color-white;
+$--icon-block-fill-active: $--color-primary;
+$--icon-block-color-active: $--color-white;
 
 
 
