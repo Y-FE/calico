@@ -73,6 +73,7 @@ $--radio-font-size: 12px;
 //radio-button
 $--radio-button-font-size: $--radio-font-size;
 $--radio-button-radius: $--radius-icon;
+$--radio-button-padding: 6px;
 
 $--radio-button-checked-fill: $--color-primary;
 $--radio-button-checked-color: $--color-white;
@@ -124,7 +125,11 @@ $--switch-circle-size: 12px;
 $--switch-width: 24px;
 $--switch-height: 12px;
  
-
+//select
+$--select-radius: 4px;
+//color-select
+$--select-color-radius: $--radius-icon;
+//line-select
 
 //特殊~
 $--icon-huge-block: 30px;

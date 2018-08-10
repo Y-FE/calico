@@ -51,12 +51,12 @@ npm run dev
 - [ ] slidePreview
 - [ ] colorSelect
 - [ ] lineSelect
-- [ ] toolItem
-- [ ] menuItem
-- [ ] iconBlock
-- [ ] iconCircle
-- [ ] iconDefault
-- [ ] iconGreyBlock
+- [x] toolItem
+- [x] menuItem
+- [x] iconBlock
+- [x] iconCircle
+- [x] iconDefault
+- [x] iconGreyBlock
 ## Thanks
 
 [keepachangelog](https://keepachangelog.com/zh-CN/1.0.0/) for CHANGELOG proposal
