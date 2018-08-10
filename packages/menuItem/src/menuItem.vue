@@ -1,4 +1,5 @@
 <template>
+    <div></div>
 </template>
 <style lang="scss">
 </style>
@@ -7,7 +8,18 @@
         name: 'CcMenuItem',
         components: {
         },
-        props: {},
+        props: {
+            // 色值16进制
+            color: {
+                type: String,
+                default: '',
+            },
+            //icon
+            icon: {
+                type: String,
+                default: '',
+            }
+        },
         data() {
             return {
             }

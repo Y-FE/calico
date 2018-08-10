@@ -7,7 +7,12 @@ import IconBlock from '../packages/iconBlock';
 import MenuItem from '../packages/menuItem';
 import ToolItem from '../packages/toolItem';
 
-const components = [Button, IconBlock, MenuItem, ToolItem];
+const components = [
+    Button,
+    IconBlock,
+    MenuItem,
+    ToolItem
+];
 
 const install = function(Vue, opts = {}) {
     components.map(component => {
@@ -30,4 +35,4 @@ let calico = {
     ToolItem
 };
 
-export default calico;
+export default calico
