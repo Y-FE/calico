@@ -30,7 +30,17 @@ module.exports = {
                         text: 'GitHub',
                         link: 'https://github.com/Y-FE/calico'
                     }
-                ]
+                ],
+                sidebar: {
+                    '/document/': [
+                        '',
+                        {
+                            title: 'Component',
+                            collapsable: false,
+                            children: ['button', 'switch', 'toolitem']
+                        }
+                    ]
+                }
             },
             '/zh/': {
                 selectText: '选择语言'
