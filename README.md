@@ -34,11 +34,12 @@ npm run dev
 - [ ] 功能拖拽区
 
 ### 普通
-- [ ] button 按钮组
+- [ x ] button
 - [ ] switch
 - [ ] select
 - [ ] tooltip
-- [ ] radio
+- [ ] radio-btton
+- [ ] radio-group
 - [ ] checkbox
 - [ ] input
 - [ ] inputNumber
@@ -51,7 +52,12 @@ npm run dev
 - [ ] slidePreview
 - [ ] colorSelect
 - [ ] lineSelect
-- [ ] 属性区（上一层） 工具区（可拖动里面的按钮）  操作区（撤销重做）  课堂状态区（彩色按钮）
+- [ ] toolItem
+- [ ] menuItem
+- [ ] iconBlock
+- [ ] iconCircle
+- [ ] iconDefault
+- [ ] iconGreyBlock
 ## Thanks
 
 [keepachangelog](https://keepachangelog.com/zh-CN/1.0.0/) for CHANGELOG proposal

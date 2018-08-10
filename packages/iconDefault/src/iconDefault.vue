@@ -10,6 +10,10 @@
         props: {},
         data() {
             return {
+                icon: {
+                    type: String,
+                    default: '',
+                }
             }
         },
         computed: {
@@ -17,6 +21,9 @@
         watch: {
         },
         methods: {
+            iconClick() {
+                this.$emit('click');
+            }
         },
         created() {
         },
