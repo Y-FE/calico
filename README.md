@@ -40,7 +40,6 @@ npm run dev
 - [ ] tooltip
 - [ ] radio-btton
 - [ ] radio-group
-- [ ] checkbox
 - [ ] input
 - [ ] inputNumber
 - [ ] pagination

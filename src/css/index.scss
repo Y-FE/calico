@@ -19,10 +19,11 @@ $--color-text-primary: #999999;
 
 //radius
 $--radius-base: 2px;
+$--radius-switch: $--radius-base * 2.5;
 $--radius-icon: $--radius-base * 2;
 $--radius-panel: $--radius-base * 5;
 $--radius-round: $--radius-base * 6.5;
-$--radius-circle: $--radius-base * 7.5;
+$--radius-circle: 50%;
 
 //font
 $--font-size-base: 12px;
@@ -118,12 +119,12 @@ $--message-padding: 10px;
 //switch
 $--switch-on-color: $--color-success;
 $--switch-off-color: $--color-white;
+$--switch-core-border-radius: $--radius-switch;
+$--switch-circle-size: 12px;
+$--switch-width: 24px;
+$--switch-height: 12px;
+ 
 
-$--switch-font-size: $--font-size-base !default;
-$--switch-core-border-radius: 10px !default;
-$--switch-width: 40px !default;
-$--switch-height: 20px !default;
-$--switch-button-size: 16px !default;
 
 //特殊~
 $--icon-huge-block: 30px;

@@ -1,10 +1,8 @@
 <template>
     <div class="cat-menu-body" 
         :class="[disabled ? 'cat-menu--disabled':'']"
-        @click="menuClick"
-        @mouseover="darken"
-        @mouseout="quitHover"> 
-        <div class="cat-menu-header" :style="[{'background-color': getColor}]">
+        @click="menuClick"> 
+        <div class="cat-menu-header" :style="[{'background-color': color}]">
             <i class="iconfont" :class="icon" ></i>
         </div>
         <div class="cat-menu--text">
@@ -28,6 +26,9 @@
                 color: $--menu-item-icon-color;
                 font-size: $--menu-item-icon-size;
             }
+            &:hover {
+                filter: brightness(90%);
+            }
         }
         .cat-menu--text {
             height: $--menu-item-text-size;
@@ -39,7 +40,6 @@
             cursor: pointer;
         }
     }
-
     .cat-menu--disabled {
         cursor: not-allowed;
         .cat-menu-header {
@@ -77,19 +77,7 @@
             }
         },
         computed: {
-            getColor(){
-                if(this.disabled){
-                    return '#CCCCCC';
-                }else{
-                    if(this.hover){
-                        var colorDark = this.darkenColor(this.color, 0.1);
-                        return colorDark;
-                    }else{
-                        return this.color;
-                    }
-                    
-                }
-            },
+
         },
         watch: {
         },
@@ -97,38 +85,6 @@
             menuClick(){
                 this.$emit('click');
             },
-            darken(){
-               this.hover = true;
-            },
-            quitHover(){
-                this.hover = false;
-            },
-            // 1.将hex颜色值color转化成rgb数组
-            transformRgb(str) {
-                var r = /^\#?[0-9A-F]{6}$/;
-                if (!r.test(str)) return false;
-                //replace替换查找的到的字符串
-                str = str.replace("#", "");
-                //match得到查询数组
-                var hxs = str.match(/../g);
-                for (var i = 0; i < 3; i++) hxs[i] = parseInt(hxs[i], 16); 
-                return hxs;
-            },
-            darkenColor(color,level) {
-                var r = /^\#?[0-9A-F]{6}$/;
-                if (!r.test(color)) return false;
-                var rgbc = this.transformRgb(color);
-                for (var i = 0; i < 3; i++) rgbc[i] = Math.floor(rgbc[i] * (1 - level));
-                return this.getNewColor(rgbc[0], rgbc[1], rgbc[2]);
-            },
-            getNewColor(a,b,c){
-                var r = /^\d{1,3}$/;
-                if (!r.test(a) || !r.test(b) || !r.test(c)) return false;
-                var hexs = [a.toString(16), b.toString(16), c.toString(16)];
-                for (var i = 0; i < 3; i++) if (hexs[i].length == 1) hexs[i] = "0" + hexs[i];
-                var colorItem = "#" + hexs.join("");
-                return colorItem;     
-            }
         },
         created() {
         },
