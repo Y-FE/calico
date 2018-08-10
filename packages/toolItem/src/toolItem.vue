@@ -20,6 +20,7 @@
     .cat-tool-item-container {
         display: inline-block;
         text-align: center;
+         cursor: pointer;
         .cat-tool-item-icon-box {
             width : $--icon-large-block;
             height: $--icon-large-block;
@@ -27,7 +28,6 @@
             background: $--tool-item-fill;
             margin: 0 auto;
             margin-bottom: 4px;
-            cursor: pointer;
             i {
                 color: $--tool-item-color;
                 font-size: $--tool-item-icon-size;

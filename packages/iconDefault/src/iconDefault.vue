@@ -1,7 +1,7 @@
 <template>
         <i class="iconfont cat-icon--default"  
-        :class="[icon, disabled ? 'cat-icon--default-disabled':'']" 
-        @click="iconClick"></i>
+            :class="[icon, disabled ? 'cat-icon--default-disabled':'']" 
+            @click="iconClick"></i>
 </template>
 <style lang="scss">
     .cat-icon--default {
