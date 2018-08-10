@@ -64,6 +64,20 @@ $--button-default-border-hover: $--color-info;
 $--button-default-color-disabled: $--color-disabled;
 $--button-default-border-disabled: $--color-disabled;
 
+//radio
+$--radio-font-size: 12px;
+//radio-button
+$--radio-button-font-size: $--radio-font-size;
+$--radio-button-radius: $--radius-icon;
+
+$--radio-button-checked-fill: $--color-primary;
+$--radio-button-checked-color: $--color-white;
+$--radio-button-checked-border-color: $--color-primary;
+
+$--radio-button-unchecked-fill: $--color-white;
+$--radio-button-unchecked-color: $--color-info;
+$--radio-button-unchecked-border-color: $--color-black-opacity-1;
+
 //popover
 $--popover-fill: $--color-white;
 $--popover-box-shadow: $--box-shadow-grey;
