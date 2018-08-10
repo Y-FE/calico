@@ -87,6 +87,11 @@ $--popover-color: $--color-text-title;
 $--popover-font-size: $--font-size-base;
 $--popover-radius: $--radius-panel;
 
+//float-box
+$--float-box-fill: $--color-white;
+$--float-box-shadow: $--box-shadow-light;
+$--float-box-radius: $--radius-panel;
+$--float-box-padding:
 
 // tooltip
 $--tooltip-color: $--color-white;
@@ -114,7 +119,7 @@ $--icon-huge-block: 30px;
 $--icon-large-block: 26px;
 $--icon-small-block: 18px;
 
-//menu-item 彩色底icon+文字
+//menu-item 彩色底icon+文字 26px
 //hover时背景色 darken(背景色, 10%)
 $--menu-item-icon-color: $--color-white;
 $--menu-item-text-color: $--color-info;
@@ -125,7 +130,7 @@ $--menu-item-radius: $--radius-round;
 $--menu-item-text-color-disabled: $--color-disabled;
 $--menu-item-fill-disabled: $--color-disabled;
 
-//tool-item
+//tool-item 26px
 $--tool-item-fill: $--color-white;
 $--tool-item-color: $--color-info;
 $--tool-item-icon-size: $--font-size-icon-base;
@@ -138,7 +143,7 @@ $--tool-item-color-active: $--color-primary;
 
 $--tool-item-color-disabled: $--color-disabled;
 
-//icon-block
+//icon-block 26px
 $--icon-block-fill: $--color-white;
 $--icon-block-color: $--color-info;
 $--icon-block-icon-size: $--font-size-icon-base;
@@ -150,7 +155,7 @@ $--icon-block-shadow-hover: $--box-shadow-hover;
 $--icon-block-fill-active: $--color-primary;
 $--icon-block-color-active: $--color-white;
 
-//icon-circle
+//icon-circle 30px
 $--icon-circle-fill: $--color-white;
 $--icon-circle-color: $--color-primary;
 
@@ -161,4 +166,17 @@ $--icon-circle-shadow: $--box-shadow-hover;
 $--icon-circle-fill-hover: $--color-primary;
 $--icon-circle-color-hover: $--color-white;
 
+//icon-default
+$--icon-default-font-size: $--font-size-large;
+$--icon-default-color: $--color-info;
+$--icon-default-color-hover: $--color-text-title;
+$--icon-default-color-disabled: $--color-disabled;
 
+//icon-grey-block 18px
+$--icon-grey-block-font-size: $--font-size-base;
+$--icon-grey-block-fill: $--color-white;
+$--icon-grey-block-color: $--color-info;
+
+$--icon-grey-block-fill-hover: $--color-black-opacity-4;
+
+$--icon-grey-block-color-disabled: $--color-disabled;

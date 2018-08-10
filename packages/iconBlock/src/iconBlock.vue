@@ -1,6 +1,8 @@
 <template>
     <div class="cat-icon-block-body" @click="iconClick" :class="[active ? 'cat-icon-block--active':'']">
-        <i class="iconfont" :class="icon"></i>
+        <slot>
+            <i class="iconfont" :class="icon"></i>
+        </slot>
     </div>
 </template>
 <style lang="scss">
