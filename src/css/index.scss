@@ -22,6 +22,7 @@ $--radius-base: 2px;
 $--radius-icon: $--radius-base * 2;
 $--radius-panel: $--radius-base * 5;
 $--radius-round: $--radius-base * 6.5;
+$--radius-circle: $--radius-base * 7.5;
 
 //font
 $--font-size-base: 12px;
@@ -38,7 +39,7 @@ $--box-shadow-hover: 0px 2px 8px 0px rgba(64,59,239,1);
 
 //button
 $--button-font-size: $--font-size-base;
-$--button-padding-vertical: 4px;
+$--button-padding-vertical: 7px;
 $--button-padding-horizontal: 16px;
 $--button-radius: $--radius-base;
 $--button-radius-round: $--radius-round;
@@ -91,7 +92,7 @@ $--popover-radius: $--radius-panel;
 $--tooltip-color: $--color-white;
 $--tooltip-font-size: $--font-size-base;
 $--tooltip-arrow-size: 6px;
-$--tooltip-padding: 7px 10px;
+$--tooltip-padding: 6px 10px;
 $--tooltip-radius: $--radius-base;
 
 $--tooltip-dark-fill: $--color-black-opacity-8;
@@ -109,6 +110,7 @@ $--message-padding: 10px;
 
 
 //特殊~
+$--icon-huge-block: 30px;
 $--icon-large-block: 26px;
 $--icon-small-block: 18px;
 
@@ -148,6 +150,15 @@ $--icon-block-shadow-hover: $--box-shadow-hover;
 $--icon-block-fill-active: $--color-primary;
 $--icon-block-color-active: $--color-white;
 
+//icon-circle
+$--icon-circle-fill: $--color-white;
+$--icon-circle-color: $--color-primary;
 
+$--icon-circle-icon-size: $--font-size-icon-base;
+$--icon-circle-radius: $--radius-circle;
+$--icon-circle-shadow: $--box-shadow-hover;
+
+$--icon-circle-fill-hover: $--color-primary;
+$--icon-circle-color-hover: $--color-white;
 
 
