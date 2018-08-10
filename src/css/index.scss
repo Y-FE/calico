@@ -36,6 +36,8 @@ $--font-weight-bold: 800;
 $--box-shadow-grey: 0px 2px 8px 0px rgba(0, 0, 0, .05);
 $--box-shadow-light: 0px 2px 8px 0px rgba(64,59,239,1);
 $--box-shadow-hover: 0px 2px 8px 0px rgba(64,59,239,1);
+$--box-shadow-hover-success: 0px 2px 8px 0px rgba(39,210,208,1);
+$--box-shadow-hover-danger: 0px 2px 8px 0px rgba(255,51,106,1);
 
 //button
 $--button-font-size: $--font-size-base;
@@ -113,6 +115,15 @@ $--message-font-size: $--font-size-base;
 $--message-radius: $--radius-panel;
 $--message-padding: 10px;
 
+//switch
+$--switch-on-color: $--color-success;
+$--switch-off-color: $--color-white;
+
+$--switch-font-size: $--font-size-base !default;
+$--switch-core-border-radius: 10px !default;
+$--switch-width: 40px !default;
+$--switch-height: 20px !default;
+$--switch-button-size: 16px !default;
 
 //特殊~
 $--icon-huge-block: 30px;
@@ -137,11 +148,15 @@ $--tool-item-icon-size: $--font-size-icon-base;
 $--tool-item-text-size: $--font-size-base;
 $--tool-item-radius: $--radius-icon;
 
+$--tool-item-color-active: $--color-primary;
+$--tool-item-color-disabled: $--color-disabled;
 $--tool-item-shadow-hover: $--box-shadow-hover;
 
-$--tool-item-color-active: $--color-primary;
+$--tool-item-color-success: $--color-success;
+$--tool-item-shadow-hover-success: $--box-shadow-hover-success;
 
-$--tool-item-color-disabled: $--color-disabled;
+$--tool-item-color-danger: $--color-danger;
+$--tool-item-shadow-hover-danger: $--box-shadow-hover-danger;
 
 //icon-block 26px
 $--icon-block-fill: $--color-white;

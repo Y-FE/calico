@@ -8,7 +8,9 @@
             active ? 'cat-tool-item--active' : ''
         ]">
         <div class="cat-tool-item-icon-box">
-            <i class="iconfont" :class="icon"></i>
+            <slot name="tool">
+                <i class="iconfont" :class="icon"></i>
+            </slot>
         </div>
         <p class="cat-tool-item--text">
             <slot></slot>
@@ -94,7 +96,12 @@
                 type: String,
                 default: 'icon-icon-zidingyishezhi',
             },
-            // 状态 default：普通状态， active: 激活状态
+            // 状态: 默认:  'default'， 成功：'success'， 失败：'danger'
+            state: {
+                type: String,
+                default: 'default',
+            },
+            //active 选中
             active: {
                 type: Boolean,
                 default: false,

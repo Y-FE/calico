@@ -5,13 +5,23 @@ import croup from './directives/croup';
 
 import Button from '../packages/button';
 import IconBlock from '../packages/iconBlock';
+import IconCircle from '../packages/iconCircle';
+import IconDefault from '../packages/iconDefault';
+import IconGreyBlock from '../packages/iconGreyBlock';
 import MenuItem from '../packages/menuItem';
+import RadioButton from '../packages/radioButton';
+import RadioGroup from '../packages/radioGroup';
 import ToolItem from '../packages/toolItem';
 
 const components = [
     Button,
     IconBlock,
+    IconCircle,
+    IconDefault,
+    IconGreyBlock,
     MenuItem,
+    RadioButton,
+    RadioGroup,
     ToolItem
 ];
 
@@ -28,11 +38,16 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.0.1',
+    version: '0.1.0',
     install,
     Button,
     IconBlock,
+    IconCircle,
+    IconDefault,
+    IconGreyBlock,
     MenuItem,
+    RadioButton,
+    RadioGroup,
     ToolItem
 };
 

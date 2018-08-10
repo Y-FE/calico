@@ -34,7 +34,7 @@ npm run dev
 - [ ] 功能拖拽区
 
 ### 普通
-- [ x ] button
+- [x] button
 - [ ] switch
 - [ ] select
 - [ ] tooltip
