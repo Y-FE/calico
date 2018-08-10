@@ -4,9 +4,8 @@
         :disabled="disabled" 
         :active="active"
         :class="[
-            disabled ? 'cat-tool-item--disabled' : '',
-            active ? 'cat-tool-item--active' : ''
-        ]">
+            disabled ? 'cat-tool-item--disabled' : `cat-tool-item--${state}`,
+            active && state === 'default'  ? 'cat-tool-item--active' : '', ]">
         <div class="cat-tool-item-icon-box">
             <slot name="tool">
                 <i class="iconfont" :class="icon"></i>
@@ -21,8 +20,6 @@
     .cat-tool-item-container {
         display: inline-block;
         text-align: center;
-        margin: 0;
-        padding: 0;
         .cat-tool-item-icon-box {
             width : $--icon-large-block;
             height: $--icon-large-block;
@@ -31,6 +28,7 @@
             margin: 0 auto;
             margin-bottom: 4px;
             i {
+                color: $--tool-item-color;
                 font-size: $--tool-item-icon-size;
             }
         }
@@ -38,7 +36,6 @@
             font-size: $--tool-item-text-size;
             line-height: $--tool-item-text-size; 
             color: $--tool-item-color;
-            margin: 0;
             display: inline-block;
         }
         &:hover { 
@@ -47,7 +44,66 @@
             }
         }  
     }
-
+    .cat-tool-item--default {
+        .cat-tool-item-icon-box {
+            i {
+                font-size: $--tool-item-icon-size; 
+            }
+        }
+        .cat-tool-item--text {
+           color: $--tool-item-color;
+        }
+        &:hover { 
+            .cat-tool-item-icon-box  {
+                box-shadow: $--tool-item-shadow-hover;
+            } 
+        }  
+    }
+    .cat-tool-item--active {
+        .cat-tool-item-icon-box {
+            i {
+                color: $--tool-item-color-active; 
+            }
+        }
+        .cat-tool-item--text {
+           color: $--tool-item-color-active;
+        }
+        &:hover { 
+            .cat-tool-item-icon-box  {
+                box-shadow: none;
+            } 
+        }  
+    }
+    .cat-tool-item--success{
+        .cat-tool-item-icon-box {
+            i {
+                color: $--tool-item-color-success;
+            }
+        }
+        .cat-tool-item--text {
+           color: $--tool-item-color-success;
+        }
+        &:hover { 
+            .cat-tool-item-icon-box {
+                box-shadow: $--tool-item-shadow-hover-success;
+            }
+        }     
+    }
+    .cat-tool-item--danger{
+        .cat-tool-item-icon-box {
+            i {
+                color:$--tool-item-color-danger;
+            }
+        }
+        .cat-tool-item--text {
+           color: $--tool-item-color-danger;
+        }
+        &:hover { 
+            .cat-tool-item-icon-box {
+                box-shadow: $--tool-item-shadow-hover-danger;
+            }
+        }    
+    }
     .cat-tool-item--disabled {
         cursor: not-allowed;
         .cat-tool-item-icon-box {
@@ -67,23 +123,6 @@
             }
         }  
     }
-
-    .cat-tool-item--active {
-        .cat-tool-item-icon-box {
-            i {
-                color: $--tool-item-color-active; 
-            }
-        }
-        .cat-tool-item--text {
-           color: $--tool-item-color-active;
-        }
-        &:hover { 
-            .cat-tool-item-icon-box  {
-                box-shadow: none;
-            } 
-        }  
-    }
-
    
 </style>
 <script>

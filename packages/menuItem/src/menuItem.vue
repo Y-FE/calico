@@ -2,7 +2,7 @@
     <div class="cat-menu-body" 
         :class="[disabled ? 'cat-menu--disabled':'']"
         @click="menuClick"> 
-        <div class="cat-menu-header" :style="[{'background-color': color}]">
+        <div class="cat-menu-header" :style="[{'background-color': disabled ? '#CCCCCC': color}]">
             <i class="iconfont" :class="icon" ></i>
         </div>
         <div class="cat-menu--text">
@@ -73,7 +73,7 @@
         },
         data() {
             return {
-                hover: false,
+              
             }
         },
         computed: {
