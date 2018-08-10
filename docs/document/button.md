@@ -16,9 +16,10 @@
 ## Interface
 
 ::: tip PROPS
-| Name |             Type              |   Default |
-|:-----|:-----------------------------:|----------:|
-| type | String ['primary', 'default'] | 'default' |
+| Name  | Description  | Type   | Options           | Default |
+|:------|:-------------|:-------|:------------------|:--------|
+| type  | button type  | String | primary / default | default |
+| shape | button shape | String | square / round    | square  |
 :::
 
 ::: warning EVENTS
