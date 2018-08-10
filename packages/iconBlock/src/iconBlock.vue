@@ -4,7 +4,7 @@
         :class="[active ? 'cat-icon-block--active':'']">
         <slot>
             <i class="iconfont" :class="icon"></i>
-        <slot>
+        </slot>
     </div>
 </template>
 <style lang="scss">
@@ -17,6 +17,7 @@
         i {
            font-size: $--icon-block-icon-size;
            color: $--icon-block-color; 
+           cursor: pointer;
         }
         &:hover {
             box-shadow: $--icon-block-shadow-hover;
