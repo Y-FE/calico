@@ -1,17 +1,17 @@
 <template>
     <button 
         @click="buttonClick" 
-        class="cat-button-main" 
+        class="cat-button-body" 
         :class="[
-            disabled ?  `cat-button-${type}-disabled` : `cat-button-${type}`,
-            shape ? `cat-button-${shape}` : ''
+            disabled ?  `cat-button--${type}--disabled` : `cat-button--${type}`,
+            shape ? `cat-button--${shape}` : ''
         ]" 
         :disabled="disabled">
         <slot></slot>
     </button>
 </template>
 <style lang="scss">
-    .cat-button-main {
+    .cat-button-body {
         color: $--button-default-color;
         font-size: $--button-font-size;
         padding:  $--button-padding-vertical $--button-padding-horizontal;
@@ -20,13 +20,13 @@
         cursor: pointer;
         text-align: center;
     }
-    .cat-button-square {
+    .cat-button--square {
         border-radius: $--button-radius;
     }
-    .cat-button-round {
+    .cat-button--round {
         border-radius: $--button-radius-round;
     }
-    .cat-button-default {
+    .cat-button--default {
         color: $--button-default-color;
         border: 1px solid $--button-default-border;  
         &:hover {
@@ -34,22 +34,23 @@
             border: 1px solid $--button-default-border-hover;   
         }
     }
-    .cat-button-primary {
+    .cat-button--primary {
         background: $--button-primary-fill;
-        border: none;
+        border: 1px solid $--button-primary-fill;
         color: $--button-primary-color;
         &:hover {
             background: $--button-primary-fill-hover;
+            border-color: $--button-primary-fill-hover;
         }
     }
 
-    .cat-button-default-disabled {
+    .cat-button--default--disabled {
         color: $--button-default-color-disabled;
         border: 1px solid $--button-default-border-disabled;
         cursor: not-allowed;
        
     }
-    .cat-button-primary-disabled {
+    .cat-button--primary--disabled {
         background: $--button-primary-fill-disabled; 
         color: $--button-primary-color;
         border: 1px solid $--button-primary-border-disabled;

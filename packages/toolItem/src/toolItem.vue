@@ -3,13 +3,13 @@
         @click="selectedClick"
         :disabled="disabled" 
         :class="[
-            disabled ? 'cat-tool-item-disabled' : '',
-            state == 'active' ? 'cat-tool-item-add-active' : ''
+            disabled ? 'cat-tool-item--disabled' : '',
+            state == 'active' ? 'cat-tool-item--active' : ''
         ]">
         <div class="cat-tool-item-icon-box">
             <i class="iconfont" :class="icon"></i>
         </div>
-        <p class="cat-tool-item-text">
+        <p class="cat-tool-item--text">
             <slot></slot>
         </p>
     </div>
@@ -31,7 +31,7 @@
                 font-size: $--tool-item-icon-size;
             }
         }
-        .cat-tool-item-text {
+        .cat-tool-item--text {
             font-size: $--tool-item-text-size;
             line-height: $--tool-item-text-size; 
             color: $--tool-item-color;
@@ -45,9 +45,9 @@
         }  
     }
 
-    .cat-tool-item-disabled {
+    .cat-tool-item--disabled {
         cursor: not-allowed;
-        .cat-tool-item-text {
+        .cat-tool-item--text {
            color: $--tool-item-color-disabled;
         }
         &:hover { 
@@ -60,13 +60,13 @@
         }  
     }
 
-    .cat-tool-item-add-active {
+    .cat-tool-item--active {
         .cat-tool-item-icon-box {
             i {
                 color: $--tool-item-color-active; 
             }
         }
-        .cat-tool-item-text {
+        .cat-tool-item--text {
            color: $--tool-item-color-active;
         }
         &:hover { 
