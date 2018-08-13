@@ -1,8 +1,13 @@
 <template>
     <transition>
-        <div v-if="show" class="cat-message-body cat-layout-flex--align">
-            <p></p>
-        </div>
+        <cc-row 
+            class="cat-message-body"
+            justify="space-between"
+            align="center"
+            v-if="show">
+            <p>66</p>
+            <p>77</p>
+        </cc-row>
     </transition>
 </template>
 <style lang="scss">
@@ -12,14 +17,14 @@
         background-color: $--message-fill;
         border-radius: $--message-radius;
         padding: $--message-padding;
-        // @include cat-layout-flex--justify(space-between);
-        // @include cat-layout-flex--aligin;
     }
 </style>
 <script>
+    import ccRow from '../../row/src/row.vue';
     export default {
         name: 'CcMessage',
         components: {
+            ccRow,
         },
         props: {},
         data() {
