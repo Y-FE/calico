@@ -12,6 +12,7 @@
         width: $--switch-width;
         height: $--switch-height;
         border-radius: $--switch-border-radius;
+        transition: $--transition-base;
         cursor: pointer;
     }
     .cat-switch-body--off {
@@ -28,6 +29,7 @@
         transition: $--transition-base;
     }
     .cat-switch--circle {
+        background-color: $--switch-off-color;
         border-radius: $--switch-circle-border-radius;
         width: $--switch-circle-size;
         height: $--switch-circle-size;
@@ -43,7 +45,6 @@
         }
         .cat-switch--circle {
             transform: translateX(100%);
-            background-color: $--switch-off-color;
         }
     }
 </style>
