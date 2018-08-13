@@ -1,7 +1,7 @@
 <template>    
     <li class="cat-color-option" 
         @click="optionClick"
-        :style="{'background-color':value}">
+        :style="{'background-color': value}">
         <slot></slot>
     </li>
 </template>
@@ -18,16 +18,16 @@
     
 </style>
 <script>
-    import Emitter from "../mixins/emitter";
+    import {ccParent, model} from '@mixins/parentModel';
     export default {
         name: 'CcColorOption',
         componentName: 'CcColorOption',
-        mixins: [Emitter],
+        mixins: [ccParent('CcColorSelect')],
         components: {
         },
         props: {
             value:{ //颜色值
-                type:String,
+                type: String,
                 default: ''
             }
         },
@@ -41,9 +41,7 @@
         },
         methods: {
             optionClick(){
-                this.$nextTick(() => {
-                    this.dispatch("CcColorSelect", "optionClick", this.value);
-                });
+                this._parent[model] = this.value;
             }
         },
         created() {

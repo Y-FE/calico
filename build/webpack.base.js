@@ -14,6 +14,10 @@ module.exports = {
         libraryTarget: 'umd'
     },
     resolve: {
+        alias: {
+            '@mixins': path.join(__dirname, '../src/mixins'),
+            '@packages': path.join(__dirname, '../packages')
+        },
         extensions: ['.ts', '.tsx', '.vue', '.js']
     },
     plugins: [new VueLoaderPlugin()],
@@ -52,7 +56,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader']
             }
         ]
     }

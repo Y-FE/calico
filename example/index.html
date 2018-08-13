@@ -81,7 +81,7 @@
         </cc-row> -->
         <br><br>
         <cc-color-select v-model="color" title="画笔颜色">
-            <cc-color-option v-for="item in colorList" :value="item"></cc-color-option>
+            <cc-color-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-color-select>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>

@@ -50,13 +50,13 @@
     }
 </style>
 <script>
+    import {ccModel, modelProp} from '@mixins/parentModel';
+
     export default {
         name: 'CcColorSelect',
+        componentName: 'CcColorSelect',
+        mixins: [ccModel(String)],
         components: {
-        },
-        model: {
-            prop: 'color',
-            event: 'change'
         },
         props: {
             // 选择框描述
@@ -64,11 +64,6 @@
                 type: String,
                 default: '',
             },
-            color: {
-                type: String,
-                default: '',
-            },
-           
         },
         data() {
             return {
@@ -76,14 +71,9 @@
             }
         },
         computed: {  
-            // color:{
-            //    get() {
-            //        console.log(this);
-            //     },
-            //     set(color) {
-            //         this.$emit('input', color);    
-            //     }
-            // }
+            color() {
+                return this[modelProp];
+            }
         },
         watch: {
         },
@@ -95,7 +85,6 @@
         destroyed() {
         },
         mounted() {
-           console.log(this);
         }
     }
    
