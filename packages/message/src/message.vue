@@ -1,8 +1,13 @@
 <template>
     <transition>
-        <div v-if="show" class="cat-message-body cat-layout-flex--align">
-            <p></p>
-        </div>
+        <cc-row 
+            justify="space-between"
+            align="center"
+            class="cat-message-body"
+            v-if="show">
+            <p>{{message}}</p>
+            <i class="iconfont icon-close" @click="close()"></i>
+        </cc-row>
     </transition>
 </template>
 <style lang="scss">
@@ -12,14 +17,30 @@
         background-color: $--message-fill;
         border-radius: $--message-radius;
         padding: $--message-padding;
-        // @include cat-layout-flex--justify(space-between);
-        // @include cat-layout-flex--aligin;
+        width: $--message-width;
+        position: absolute;
+        top: 72px;
+        left: calc(50% - 26px);
+        z-index: 100;
+        p {
+            width: 200px;
+            line-height: $--message-line-height;
+        }
+        i {
+            cursor: pointer;
+            font-size: $--message-font-size;
+            &:hover {
+                filter: $--color-brightness-base;
+            }
+        }
     }
 </style>
 <script>
+    import ccRow from '../../row/src/row.vue';
     export default {
         name: 'CcMessage',
         components: {
+            ccRow,
         },
         props: {},
         data() {

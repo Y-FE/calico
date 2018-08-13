@@ -69,13 +69,14 @@
             <cc-radio-button label="喷漆"></cc-radio-button>
             <cc-radio-button label="放大镜"></cc-radio-button>
         </cc-radio-group>
-        <br><br>
-        <cc-color-select title="画笔颜色" v-model="color">
-            <cc-color-option   
-                v-for="item in colorList"
-                :key="item"
-                :value="item"></cc-color-option>
-        </cc-color-select>
+
+        <!-- <cc-row 
+            class="cat-message-body"
+            justify="space-between"
+            aligin="center">
+            <p>66</p>
+            <p>77</p>
+        </cc-row> -->
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>
@@ -102,7 +103,10 @@
                 startdrag(e) {
                     e.dataTransfer.setData('item', 'ok')
                 }
-            }
+            },
+            mounted() {
+                this.$message('000');
+            },
         });
     </script>
 </body>

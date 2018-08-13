@@ -36,7 +36,7 @@ $--font-weight-base: 400;
 $--font-weight-bold: 800;
 
 $--line-height-base: 1em;
-$--line-height-muti: 1.2em;
+$--line-height-muti: 16px;
 
 //shadow
 $--box-shadow-grey: 0px 2px 8px 0px rgba(0, 0, 0, .05);
@@ -125,6 +125,7 @@ $--message-font-size: $--font-size-base;
 $--message-radius: $--radius-icon;
 $--message-padding: 8px;
 $--message-line-height: $--line-height-muti;
+$--message-width: 252px;
 
 //switch
 $--switch-on-color: $--color-success;
@@ -144,7 +145,7 @@ $--select-title-font-size: $--font-size-base;
 $--select-title-color: $--color-text-title;
 
 $--select-option-radius: $--select-radius;
-$--select-option-border-color: $--color-info !default;
+$--select-option-border-color: $--color-black-opacity-1 !default;
 $--select-option-color: $--color-info;
 $--select-option-color-active: $--color-primary;
 $--select-option-background-color-hover: $--color-black-opacity-4;
