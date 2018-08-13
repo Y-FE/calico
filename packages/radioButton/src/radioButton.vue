@@ -44,19 +44,13 @@
             padding: $--radio-button-padding; 
             border-left: 0; 
         }
-        .cat-inner-radio:checked+.cat-radio-button--text {
+        .cat-inner-radio:checked+.cat-radio-button--text ,
+        .cat-radio-button--active {
             color: #fff;
             background-color: #409eff;
             border-color: #409eff;
             box-shadow: -1px 0 0 0 #409eff;
         } 
-    }
-    .cat-radio-button--checked {
-        background: $--radio-button-checked-fill;
-        border: 1px solid $--radio-button-checked-border-color;
-        .cat-radio-button--text {
-           color: $--radio-button-checked-color;
-        }
     }
     .cat-radio-button:first-child .cat-radio-button--text {
         border-radius: $--radio-button-radius 0 0 $--radio-button-radius;
