@@ -1,6 +1,6 @@
 <template>    
     <li class="cat-color-option" 
-        @click="optionClick(value)"
+        @click="optionClick"
         :style="{'background-color':value}">
         <slot></slot>
     </li>
@@ -18,10 +18,11 @@
     
 </style>
 <script>
-    // import Emitter from "../mixins/emitter";
+    import Emitter from "../mixins/emitter";
     export default {
         name: 'CcColorOption',
-        // mixins: [Emitter],
+        componentName: 'CcColorOption',
+        mixins: [Emitter],
         components: {
         },
         props: {
@@ -40,10 +41,9 @@
         },
         methods: {
             optionClick(){
-                // this.$nextTick(() => {
-                //     this.dispatch("CcColorSelect", "optionClick", this.value);
-                // });
-                this.$emit('input',this.value);
+                this.$nextTick(() => {
+                    this.dispatch("CcColorSelect", "optionClick", this.value);
+                });
             }
         },
         created() {

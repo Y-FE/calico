@@ -3,9 +3,10 @@
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
-        <div class="cat-color-input-body" 
-            :style="[{'background-color':color}]">
-        </div>
+        <input class="cat-color-input-body" 
+            readonly="readonly" 
+            autocomplete="off" 
+            :style="[{'background-color': color}]" />
          <div class="cat-color-dropdown">
             <ul class="cat-color-wrap">
                 <slot></slot>
@@ -23,7 +24,6 @@
             height: $--select-height;
             border-radius: $--select-option-radius; 
             cursor: pointer;
-            border: 1px solid red;
         }
         .cat-color-dropdown {
             position: absolute;  
@@ -64,6 +64,10 @@
                 type: String,
                 default: '',
             },
+            color: {
+                type: String,
+                default: '',
+            },
            
         },
         data() {
@@ -72,10 +76,14 @@
             }
         },
         computed: {  
-            color(){
-                let vm = this;
-                console.log(vm);
-            } 
+            // color:{
+            //    get() {
+            //        console.log(this);
+            //     },
+            //     set(color) {
+            //         this.$emit('input', color);    
+            //     }
+            // }
         },
         watch: {
         },
@@ -87,6 +95,8 @@
         destroyed() {
         },
         mounted() {
+           console.log(this);
         }
     }
+   
 </script>
