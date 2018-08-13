@@ -1,6 +1,6 @@
 <template>
     <div class="cat-color-option-select">
-        <p class="cat-select-title">
+        <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
         <div class="cat-color-input-body" 
@@ -23,6 +23,7 @@
             height: $--select-height;
             border-radius: $--select-option-radius; 
             cursor: pointer;
+            border: 1px solid red;
         }
         .cat-color-dropdown {
             position: absolute;  
@@ -72,7 +73,8 @@
         },
         computed: {  
             color(){
-                
+                let vm = this;
+                console.log(vm);
             } 
         },
         watch: {
