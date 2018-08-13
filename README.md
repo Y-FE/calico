@@ -36,11 +36,11 @@ npm run dev
 
 ### 普通
 - [x] button
-- [ ] switch
+- [x] switch
 - [ ] select
 - [ ] tooltip
-- [ ] radio-btton
-- [ ] radio-group
+- [x] radio-btton
+- [x] radio-group
 - [ ] input
 - [ ] inputNumber
 - [ ] pagination
