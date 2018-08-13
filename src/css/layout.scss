@@ -1,0 +1,14 @@
+.cat-layout-flex {
+    display: flex;
+}
+@mixin cat-layout-flex--justify($val: center) {
+    @extend .cat-layout-flex;
+    justify-content: $val;
+}
+@mixin cat-layout-flex--align($val: center) {
+    @extend .cat-layout-flex;
+    align-items: $val;
+}
+// .cat-layout-flex--align {
+//     @extend .cat-layout-flex;
+// }
