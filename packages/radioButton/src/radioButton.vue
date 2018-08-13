@@ -39,7 +39,7 @@
             margin: 0;
             cursor: pointer;
             border: 1px solid $--radio-button-unchecked-border-color;
-            transition: all .3s cubic-bezier(.645,.045,.355,1); 
+            transition: $--transition-base; 
             padding: $--radio-button-padding; 
             border-left: 0; 
         }

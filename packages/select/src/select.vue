@@ -1,18 +1,5 @@
 <template>
- <div class="cat-color-option-select">
-        <div class="cat-color-input-body">
-            <input type="text" 
-                readonly="readonly" 
-                autocomplete="off" 
-                placeholder="请选择" 
-                class="cat-input--inner">
-            <span class="el-input__suffix">
-                <span class="el-input__suffix-inner">
-                    <i class="el-select--caret iconfont el-icon-arrow-up"></i>
-                    </span>
-            </span>
-        </div>
-    </div>
+    <div></div>
 </template>
 <style lang="scss">
 </style>

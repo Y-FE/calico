@@ -46,6 +46,9 @@ $--box-shadow-hover-success: 0px 2px 8px 0px rgba(39,210,208,1);
 $--box-shadow-hover-warning: 0px 2px 8px 0px rgba(255,162,80,0.5);;
 $--box-shadow-hover-danger: 0px 2px 8px 0px rgba(255,51,106,1);
 
+//transition
+$--transition-base: all .3s cubic-bezier(.645,.045,.355,1);
+
 // 控件篇
 //button
 $--button-font-size: $--font-size-base;
@@ -128,13 +131,15 @@ $--message-line-height: $--line-height-muti;
 $--message-width: 252px;
 
 //switch
+$--switch-background-color: $--color-black-opacity-1;
+$--switch-width: 24px;
+$--switch-height: 10px;
+$--switch-border-radius: $--radius-switch;
 $--switch-on-color: $--color-success;
 $--switch-off-color: $--color-white;
-$--switch-core-border-radius: $--radius-switch;
+$--switch-circle-border-radius: $--radius-circle;
 $--switch-circle-size: 12px;
-$--switch-width: 24px;
-$--switch-height: 12px;
- 
+
 //select
 $--select-radius: $--radius-icon;
 $--select-width: 80px !default;

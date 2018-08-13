@@ -20,6 +20,7 @@ import RadioButton from '../packages/radioButton';
 import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
 import Select from '../packages/select';
+import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
 
 const components = [
@@ -38,6 +39,7 @@ const components = [
     RadioGroup,
     Row,
     Select,
+    Switch,
     ToolItem
 ];
 
@@ -71,6 +73,7 @@ let calico = {
     RadioGroup,
     Row,
     Select,
+    Switch,
     ToolItem
 };
 
