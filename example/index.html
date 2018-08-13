@@ -77,6 +77,10 @@
             <p>66</p>
             <p>77</p>
         </cc-row> -->
+        <br><br>
+        <cc-color-select v-model="color" title="画笔颜色">
+            <cc-color-option v-for="item in colorList" :value="item"></cc-color-option>
+        </cc-color-select>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>

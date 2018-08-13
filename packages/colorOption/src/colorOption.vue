@@ -11,17 +11,17 @@
         height: $--color-select-option-size;
         cursor: pointer;
         &:hover {
-            filter: brightness(90%)
+            filter: brightness(90%);
         }
     }
    
     
 </style>
 <script>
-    import Emitter from "../mixins/emitter";
+    // import Emitter from "../mixins/emitter";
     export default {
         name: 'CcColorOption',
-        mixins: [Emitter],
+        // mixins: [Emitter],
         components: {
         },
         props: {
@@ -40,9 +40,10 @@
         },
         methods: {
             optionClick(){
-                this.$nextTick(() => {
-                    this.dispatch("CcColorSelect", "optionClick", this.value);
-                });
+                // this.$nextTick(() => {
+                //     this.dispatch("CcColorSelect", "optionClick", this.value);
+                // });
+                this.$emit('input',this.value);
             }
         },
         created() {
