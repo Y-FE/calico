@@ -1,14 +1,18 @@
 <template>
     <label class="cat-radio-button"  
-            @click="radioClick"
             role="radio">
         <input type="radio" 
             class="cat-inner-radio" 
             :value="label" 
-            :checked="checked"
-            :name='groupName'
-            >
-        <span class="cat-radio-button--text">{{label}}</span>
+            v-model="value"
+            :name="name"  
+            @change="handleChange"
+            :disabled="disabled">
+        <span class="cat-radio-button--text" 
+            :class="[value === label ? 'cat-radio-button--active':'']">
+            <slot></slot>
+            <template v-if="!$slots.default">{{label}}</template> 
+        </span>
     </label> 
 </template>
 <style lang="scss">
@@ -65,27 +69,24 @@
    
 </style>
 <script>
+    import Emitter from "../mixins/emitter";
     export default {
         name: 'CcRadioButton',
         components: {
         },
-        model: {//自定义 v-model的prop和event,
-        //这个定义的意思就是使用change事件更新model的值,以此来实时更新v-model的值
-            prop: 'model',
-            event: 'change'
-        },
+        mixins: [Emitter],
         props: {
-            checked:{
-                type: Boolean,
-                default: false
-            },
             label:{
                 type: String,
                 default: ''
             },
-            groupName:{
+            name:{
                 type: String,
-                default: 'radio' 
+                default: ''
+            },
+            disabled:{
+                type: Boolean,
+                default: false 
             }
         },
         data() {
@@ -93,12 +94,45 @@
             }
         },
         computed: {
+            value: {
+                get() {
+                    return this._radioGroup.value;
+                },
+                set(value) {
+                    if(this._radioGroup){
+                        this._radioGroup.$emit('input', value); 
+                    }   
+                }
+            },
+            // 判断是否是组单选按钮
+            _radioGroup() {
+                let parent = this.$parent;
+                while (parent) {
+                    if (parent.$options.componentName !== 'CcRadioGroup') {
+                        parent = parent.$parent;
+                    } else {
+                        return parent;
+                    }
+                }
+                return false;
+            },
+            size() {
+                return this._radioGroup.size || this.disabled;
+            },
+            isDisable() {
+                return this._radioGroup.disabled || this.disabled;
+            }
         },
         watch: {
         },
         methods: {
-            radioClick(){
+            radioClick(e){
                 this.$emit('click');
+            },
+            handleChange() {
+                this.$nextTick(() => {
+                    this.isGroup && this.dispatch("CcRadioGroup", "handleChange", this.value);
+                });
             }
         },
         created() {

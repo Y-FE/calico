@@ -14,9 +14,13 @@
 <script>
     export default {
         name: 'CcRadioGroup',
+        componentName: "CcRadioGroup",
         components: {
         },
-        props: {},
+        props: {
+            value: {},
+            disabled: Boolean
+        },
         data() {
             return {
             }

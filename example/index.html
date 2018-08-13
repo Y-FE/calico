@@ -57,9 +57,11 @@
 
         <cc-radio-button label="画笔"></cc-radio-button>
 
-        <cc-radio-group>
+        <cc-radio-group v-model="radio3">
             <cc-radio-button label="画笔"></cc-radio-button>
             <cc-radio-button label="橡皮"></cc-radio-button>
+            <cc-radio-button label="喷漆"></cc-radio-button>
+            <cc-radio-button label="放大镜"></cc-radio-button>
         </cc-radio-group>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
@@ -69,7 +71,8 @@
             el: "#app",
             data() {
                 return {
-                    test: 'ok'
+                    test: 'ok',
+                    radio3: 0
                 }
             },
             methods: {
