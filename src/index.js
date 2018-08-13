@@ -6,25 +6,37 @@ import './css/reset.css';
 import croup from './directives/croup';
 
 import Button from '../packages/button';
+import ColorOption from '../packages/colorOption';
+import ColorSelect from '../packages/colorSelect';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
 import IconGreyBlock from '../packages/iconGreyBlock';
+import LineOption from '../packages/lineOption';
+import LineSelect from '../packages/lineSelect';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
+import Option from '../packages/option';
 import RadioButton from '../packages/radioButton';
 import RadioGroup from '../packages/radioGroup';
+import Select from '../packages/select';
 import ToolItem from '../packages/toolItem';
 
 const components = [
     Button,
+    ColorOption,
+    ColorSelect,
     IconBlock,
     IconCircle,
     IconDefault,
     IconGreyBlock,
+    LineOption,
+    LineSelect,
     MenuItem,
+    Option,
     RadioButton,
     RadioGroup,
+    Select,
     ToolItem
 ];
 
@@ -44,13 +56,19 @@ let calico = {
     version: '0.1.0',
     install,
     Button,
+    ColorOption,
+    ColorSelect,
     IconBlock,
     IconCircle,
     IconDefault,
     IconGreyBlock,
+    LineOption,
+    LineSelect,
     MenuItem,
+    Option,
     RadioButton,
     RadioGroup,
+    Select,
     ToolItem
 };
 
