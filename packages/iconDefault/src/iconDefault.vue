@@ -1,6 +1,6 @@
 <template>
-        <i class="iconfont cat-icon--default"  
-            :class="[icon, disabled ? 'cat-icon--default-disabled':'']" 
+        <i class="iconfont"  
+            :class="[icon, disabled ? 'cat-icon--default-disabled':'cat-icon--default']" 
             @click="iconClick"></i>
 </template>
 <style lang="scss">
@@ -14,7 +14,8 @@
     }
     .cat-icon--default-disabled {
         cursor: not-allowed;
-        color:$--icon-default-color-disabled;
+        font-size: $--icon-default-font-size;
+        color: $--icon-default-color-disabled;
     }
 </style>
 <script>

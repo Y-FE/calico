@@ -1,10 +1,18 @@
 <template>
-    <label class="cat-radio-button"  @click="radioClick">
+    <label class="cat-radio-button"  
+            role="radio">
         <input type="radio" 
             class="cat-inner-radio" 
             :value="label" 
-            :checked="checked">
-        <span class="cat-radio-button--text">{{label}}</span>
+            v-model="value"
+            :name="name"  
+            @change="handleChange"
+            :disabled="disabled">
+        <span class="cat-radio-button--text" 
+            :class="[value === label ? 'cat-radio-button--active':'']">
+            <slot></slot>
+            <template v-if="!$slots.default">{{label}}</template> 
+        </span>
     </label> 
 </template>
 <style lang="scss">
@@ -30,45 +38,49 @@
             text-align: center;
             box-sizing: border-box;
             margin: 0;
-            border-left: 0;
             cursor: pointer;
-            transition: all .3s cubic-bezier(.645,.045,.355,1); 
             border: 1px solid $--radio-button-unchecked-border-color;
-            padding: $--radio-button-padding;  
+            transition: all .3s cubic-bezier(.645,.045,.355,1); 
+            padding: $--radio-button-padding; 
+            border-left: 0; 
         }
-        .cat-inner-radio:checked+.cat-radio-button--text {
+        .cat-inner-radio:checked+.cat-radio-button--text ,
+        .cat-radio-button--active {
             color: #fff;
             background-color: #409eff;
             border-color: #409eff;
             box-shadow: -1px 0 0 0 #409eff;
         } 
     }
-    .cat-radio-button--checked {
-        background: $--radio-button-checked-fill;
-        border: 1px solid $--radio-button-checked-border-color;
-        .cat-radio-button--text {
-           color: $--radio-button-checked-color;
-        }
+    .cat-radio-button:first-child .cat-radio-button--text {
+        border-radius: $--radio-button-radius 0 0 $--radio-button-radius;
+        box-shadow: none!important;
+        border-left: 1px solid $--radio-button-unchecked-border-color;
+    }
+    .cat-radio-button:last-child .cat-radio-button--text {
+        border-radius: 0 $--radio-button-radius $--radio-button-radius 0;
     }
    
 </style>
 <script>
+    import Emitter from "../mixins/emitter";
     export default {
         name: 'CcRadioButton',
         components: {
         },
-        model: {//自定义 v-model的 prop和event,这个定义的意思就是使用change事件更新model的值,以此来实时更新v-model的值
-            prop: 'model',
-            event: 'change'
-        },
+        mixins: [Emitter],
         props: {
-            checked:{
-                type: Boolean,
-                default: false
-            },
             label:{
                 type: String,
                 default: ''
+            },
+            name:{
+                type: String,
+                default: ''
+            },
+            disabled:{
+                type: Boolean,
+                default: false 
             }
         },
         data() {
@@ -76,12 +88,45 @@
             }
         },
         computed: {
+            value: {
+                get() {
+                    return this._radioGroup.value;
+                },
+                set(value) {
+                    if(this._radioGroup){
+                        this._radioGroup.$emit('input', value); 
+                    }   
+                }
+            },
+            // 判断是否是组单选按钮
+            _radioGroup() {
+                let parent = this.$parent;
+                while (parent) {
+                    if (parent.$options.componentName !== 'CcRadioGroup') {
+                        parent = parent.$parent;
+                    } else {
+                        return parent;
+                    }
+                }
+                return false;
+            },
+            size() {
+                return this._radioGroup.size || this.disabled;
+            },
+            isDisable() {
+                return this._radioGroup.disabled || this.disabled;
+            }
         },
         watch: {
         },
         methods: {
-            radioClick(){
+            radioClick(e){
                 this.$emit('click');
+            },
+            handleChange() {
+                this.$nextTick(() => {
+                    this.isGroup && this.dispatch("CcRadioGroup", "handleChange", this.value);
+                });
             }
         },
         created() {
