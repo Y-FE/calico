@@ -25,10 +25,7 @@
             i {
                 color: $--menu-item-icon-color;
                 font-size: $--menu-item-icon-size;
-            }
-            &:hover {
-                filter: brightness(90%);
-            }
+            }  
         }
         .cat-menu--text {
             height: $--menu-item-text-size;
@@ -37,7 +34,9 @@
             color: $--menu-item-text-color;
             text-align: center;
             margin-top: 4px;
-            cursor: pointer;
+        }
+        &:hover {
+            filter: brightness(90%);
         }
     }
     .cat-menu--disabled {

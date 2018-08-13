@@ -1,9 +1,13 @@
 <template>
-    <label class="cat-radio-button"  @click="radioClick">
+    <label class="cat-radio-button"  
+            @click="radioClick"
+            role="radio">
         <input type="radio" 
             class="cat-inner-radio" 
             :value="label" 
-            :checked="checked">
+            :checked="checked"
+            :name='groupName'
+            >
         <span class="cat-radio-button--text">{{label}}</span>
     </label> 
 </template>
@@ -30,11 +34,11 @@
             text-align: center;
             box-sizing: border-box;
             margin: 0;
-            border-left: 0;
             cursor: pointer;
-            transition: all .3s cubic-bezier(.645,.045,.355,1); 
             border: 1px solid $--radio-button-unchecked-border-color;
-            padding: $--radio-button-padding;  
+            transition: all .3s cubic-bezier(.645,.045,.355,1); 
+            padding: $--radio-button-padding; 
+            border-left: 0; 
         }
         .cat-inner-radio:checked+.cat-radio-button--text {
             color: #fff;
@@ -50,6 +54,14 @@
            color: $--radio-button-checked-color;
         }
     }
+    .cat-radio-button:first-child .cat-radio-button--text {
+        border-radius: $--radio-button-radius 0 0 $--radio-button-radius;
+        box-shadow: none!important;
+        border-left: 1px solid $--radio-button-unchecked-border-color;
+    }
+    .cat-radio-button:last-child .cat-radio-button--text {
+        border-radius: 0 $--radio-button-radius $--radio-button-radius 0;
+    }
    
 </style>
 <script>
@@ -57,7 +69,8 @@
         name: 'CcRadioButton',
         components: {
         },
-        model: {//自定义 v-model的 prop和event,这个定义的意思就是使用change事件更新model的值,以此来实时更新v-model的值
+        model: {//自定义 v-model的prop和event,
+        //这个定义的意思就是使用change事件更新model的值,以此来实时更新v-model的值
             prop: 'model',
             event: 'change'
         },
@@ -69,6 +82,10 @@
             label:{
                 type: String,
                 default: ''
+            },
+            groupName:{
+                type: String,
+                default: 'radio' 
             }
         },
         data() {
