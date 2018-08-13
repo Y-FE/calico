@@ -43,7 +43,7 @@ npm run dev
 - [ ] input
 - [ ] inputNumber
 - [ ] pagination
-- [ ] message
+- [x] message
 - [ ] popover
 
 ### 特殊
