@@ -36,7 +36,7 @@
             margin-top: 4px;
         }
         &:hover {
-            filter: brightness(90%);
+            filter: $--color-brightness-base;
         }
     }
     .cat-menu--disabled {
