@@ -15,17 +15,17 @@
         display: inline-block;
         text-align: center;
         margin: 0 ;
+        cursor: pointer;
         .cat-menu-header {
             width: $--icon-large-block;
             height: $--icon-large-block;
             border-radius: $--menu-item-radius;
             line-height:  $--icon-large-block;
             margin: 0 auto;
-            cursor: pointer;
             i {
                 color: $--menu-item-icon-color;
                 font-size: $--menu-item-icon-size;
-            }  
+            }
         }
         .cat-menu--text {
             height: $--menu-item-text-size;
@@ -46,6 +46,9 @@
         }
         .cat-menu--text {
             color: $--menu-item-text-color-disabled;
+        }
+        &:hover {
+            filter: brightness(100%);
         }
     }
 </style>
