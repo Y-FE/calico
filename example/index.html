@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_776059_p0mx8b87tl9.css">
+    <style>
+        #app{
+            margin: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -43,26 +48,34 @@
         <cc-menu-item icon="icon-purview" color="#403BEF" disabled>
             板书权限
         </cc-menu-item>
-
+        <br>
         <cc-icon-block icon="icon-CenterAlignment"></cc-icon-block>
         <cc-icon-block icon="icon-CenterAlignment" active></cc-icon-block>
-       
+        <br><br>
         <cc-icon-circle icon="icon-increaseTime"></cc-icon-circle>
+        <br><br>
         <cc-icon-default icon="icon-nextPage"></cc-icon-default>
         <cc-icon-default icon="icon-nextPage" disabled></cc-icon-default>
 
-       
+        <br><br>
         <cc-icon-grey-block icon="icon-increaseTime"></cc-icon-grey-block>
         <cc-icon-grey-block icon="icon-increaseTime" disabled></cc-icon-grey-block>
-
+        <br><br>
         <cc-radio-button label="画笔"></cc-radio-button>
-
+       
         <cc-radio-group v-model="radio3">
             <cc-radio-button label="画笔"></cc-radio-button>
             <cc-radio-button label="橡皮"></cc-radio-button>
             <cc-radio-button label="喷漆"></cc-radio-button>
             <cc-radio-button label="放大镜"></cc-radio-button>
         </cc-radio-group>
+        <br><br>
+        <cc-color-select title="画笔颜色" v-model="color">
+            <cc-color-option   
+                v-for="item in colorList"
+                :key="item"
+                :value="item"></cc-color-option>
+        </cc-color-select>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>
@@ -72,7 +85,11 @@
             data() {
                 return {
                     test: 'ok',
-                    radio3: '画笔'
+                    radio3: '画笔',
+                    color: '#18A2EA',
+                    colorList:[
+                        '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
+                    ]
                 }
             },
             methods: {

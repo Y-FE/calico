@@ -27,7 +27,6 @@
             opacity: 0;
             outline: none;
             position: absolute;
-            z-index: -1;
         } 
         .cat-radio-button--text {
             font-size: $--radio-button-font-size;
@@ -46,21 +45,26 @@
         }
         .cat-inner-radio:checked+.cat-radio-button--text ,
         .cat-radio-button--active {
-            color: #fff;
-            background-color: #409eff;
-            border-color: #409eff;
-            box-shadow: -1px 0 0 0 #409eff;
+            color: $--radio-button-checked-color;
+            background-color:$--radio-button-checked-fill;
+            border-color: $--radio-button-checked-border-color;
+            box-shadow: -1px 0 0 0 $--radio-button-checked-border-color;
         } 
+    }
+    .cat-radio-button:last-child .cat-radio-button--text {
+        border-radius: 0 $--radio-button-radius $--radio-button-radius 0;
     }
     .cat-radio-button:first-child .cat-radio-button--text {
         border-radius: $--radio-button-radius 0 0 $--radio-button-radius;
         box-shadow: none!important;
         border-left: 1px solid $--radio-button-unchecked-border-color;
     }
-    .cat-radio-button:last-child .cat-radio-button--text {
-        border-radius: 0 $--radio-button-radius $--radio-button-radius 0;
+    .cat-radio-button:nth-of-type(1) .cat-radio-button--text {
+        border: 1px solid $--radio-button-unchecked-border-color; 
     }
    
+   
+
 </style>
 <script>
     import Emitter from "../mixins/emitter";
@@ -120,9 +124,6 @@
         watch: {
         },
         methods: {
-            radioClick(e){
-                this.$emit('click');
-            },
             handleChange() {
                 this.$nextTick(() => {
                     this.isGroup && this.dispatch("CcRadioGroup", "handleChange", this.value);
