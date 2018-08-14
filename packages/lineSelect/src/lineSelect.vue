@@ -1,11 +1,13 @@
 <template>
-    <div class="cat-line-option-select" @click.prevent.stop="switchClick">
+    <div class="cat-line-option-select" 
+        v-clickoutside="handleClose">
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
         <input class="cat-line-input-body" 
             readonly="readonly" 
             autocomplete="off" 
+            @click.prevent.stop="lineClick"
             :style="[{'border-color': color}]" />
          <div class="cat-line-dropdown" v-if="visible">
             <ul class="cat-line-wrap">
@@ -78,11 +80,18 @@
             }
         },
         watch: {
-            
+            color(val, oldVal){
+                if(val !== oldVal){
+                   this.visible = false; 
+                }
+            }
         },
         methods: {
-            switchClick(){
+            lineClick(){
                 this.visible = !this.visible;
+            },
+            handleClose(){
+                this.visible = false;
             }
         },
         created() {

@@ -3,6 +3,7 @@ import './css/index.scss';
 import './css/reset.css';
 
 import croup from './directives/croup';
+import clickoutside from './directives/clickoutside';
 
 import Aside from '../packages/aside';
 import Button from '../packages/button';
@@ -57,6 +58,7 @@ const install = function(Vue, opts = {}) {
     });
     Vue.use(Message);
     Vue.directive('croup', croup);
+    Vue.directive('clickoutside', clickoutside);
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
