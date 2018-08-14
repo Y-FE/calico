@@ -36,7 +36,7 @@
     }
 </style>
 <script>
-    import ccRow from '../../row/src/row.vue';
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcMessage',
         components: {

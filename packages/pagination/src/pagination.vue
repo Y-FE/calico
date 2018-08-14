@@ -37,7 +37,7 @@
 
 </style>
 <script>
-    import CcIconDefault from '../../iconDefault/src/iconDefault.vue';
+    import CcIconDefault from '@packages/iconDefault/src/iconDefault.vue';
     export default {
         name: 'CcPagination',
         components: {
