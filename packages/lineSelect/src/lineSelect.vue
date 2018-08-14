@@ -1,5 +1,5 @@
 <template>
-    <div class="cat-line-option-select" @click="switchClick">
+    <div class="cat-line-option-select" @click.prevent.stop="switchClick">
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
@@ -7,7 +7,7 @@
             readonly="readonly" 
             autocomplete="off" 
             :style="[{'border-color': color}]" />
-         <div class="cat-line-dropdown" v-if="ifDrop">
+         <div class="cat-line-dropdown" v-if="visible">
             <ul class="cat-line-wrap">
                 <slot></slot>
             </ul>
@@ -24,12 +24,14 @@
             height: $--select-height;
             border-radius: $--select-option-radius; 
             cursor: pointer;
+            border-width: 1px;
+            border-style: solid;
         }
         .cat-line-dropdown {
             position: absolute;  
             bottom: -60px;
             left: 0;
-            transition: all .5s ease-in;
+            transition: $--transition-base;
             .cat-line-wrap {
                 width: $--select-width; 
                 min-height: 55px;
@@ -67,18 +69,19 @@
         },
         data() {
             return {
+                visible: false
             }
         },
         computed: {
             color(){
-                getModel.call(this);
+                return getModel.call(this);
             }
         },
         watch: {
         },
         methods: {
             switchClick(){
-                
+                this.visible = !this.visible;
             }
         },
         created() {

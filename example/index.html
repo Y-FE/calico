@@ -17,8 +17,8 @@
         <div v-croup:key.origin="drop" style="width: 200px; height: 200px;"></div>
         <div v-croup:key.item="droped" draggable="true" @dragstart="startdrag">123</div>
         <cc-button>按钮1</cc-button>
-        <cc-button type="primary" disabled>按钮2</cc-button>
-        <cc-button type="default">按钮3</cc-button>
+        <cc-button type="primary" disabled  @click="buttonClick">按钮2</cc-button>
+        <cc-button type="default" @click="buttonClick">按钮3</cc-button>
         <cc-button type="default" disabled>按钮4</cc-button>
         <cc-button type="default" shape="round">按钮5</cc-button>
         <br>
@@ -87,6 +87,7 @@
             <cc-pagination  v-model="currentPage" :total="4" @pre-click="preClick" @next-click="nextClick"></cc-pagination>
         </div>
         <cc-line-select v-model="color" title="边框颜色">
+        <cc-line-select v-model="line" title="边框颜色">
                 <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-line-select>
     </div>
@@ -100,6 +101,7 @@
                     test: 'ok',
                     radio3: '画笔',
                     color: '#18A2EA',
+                    line: '#18A2EA',
                     currentPage: 1,
                     total: 4,
                     colorList:[
@@ -123,6 +125,9 @@
                 },
                 nextClick(data){
                     this.currentPage = data;    
+                },
+                buttonClick(data){
+                    console.log(data);
                 }
             },
             mounted() {

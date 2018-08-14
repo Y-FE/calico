@@ -35,12 +35,12 @@
             outline: none;
             font-size: $--radio-button-font-size;
             color: $--radio-button-unchecked-color;
-            line-height: 1;
-            white-space: nowrap;
-            -webkit-appearance: none;
-            text-align: center;
-            box-sizing: border-box;
-            margin: 0;
+            // line-height: 1;
+            // white-space: nowrap;
+            // -webkit-appearance: none;
+            // text-align: center;
+            // box-sizing: border-box;
+            // margin: 0;
             cursor: pointer;
             border: 1px solid $--radio-button-unchecked-border-color;
             transition: $--transition-base; 
