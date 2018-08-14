@@ -1,5 +1,5 @@
 <template>
-    <div class="cat-color-option-select">
+    <div class="cat-color-option-select" @click="switchClick">
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
@@ -7,7 +7,7 @@
             readonly="readonly" 
             autocomplete="off" 
             :style="[{'background-color': color}]" />
-         <div class="cat-color-dropdown">
+         <div class="cat-color-dropdown" v-if="ifDrop">
             <ul class="cat-color-wrap">
                 <slot></slot>
             </ul>
@@ -29,6 +29,7 @@
             position: absolute;  
             bottom: -60px;
             left: 0;
+            transition: all .5s ease-in;
             .cat-color-wrap {
                 width: $--select-width; 
                 min-height: 55px;
@@ -67,7 +68,7 @@
         },
         data() {
             return {
-                
+               ifDrop: false 
             }
         },
         computed: {  
@@ -78,7 +79,9 @@
         watch: {
         },
         methods: {
-            
+            switchClick(){
+                this.ifDrop = !this.ifDrop;
+            }   
         },
         created() {
         },

@@ -84,7 +84,7 @@
         </cc-color-select>
 
         <div style="margin-top: 100px;">
-            <cc-pagination currentPage="4" total="4"></cc-pagination>
+            <cc-pagination  v-model="currentPage" :total="4" @pre-click="preClick" @next-click="nextClick"></cc-pagination>
         </div>
        
     </div>
@@ -98,12 +98,12 @@
                     test: 'ok',
                     radio3: '画笔',
                     color: '#18A2EA',
-                    currentPage: 4,
+                    currentPage: 1,
                     total: 4,
                     colorList:[
                         '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
                     ],
-                    mm: false,
+                    mm: true,
                 }
             },
             methods: {
@@ -115,6 +115,12 @@
                 },
                 startdrag(e) {
                     e.dataTransfer.setData('item', 'ok')
+                },
+                preClick(data){
+                    this.currentPage = data;
+                },
+                nextClick(data){
+                    this.currentPage = data;
                 }
             },
             mounted() {

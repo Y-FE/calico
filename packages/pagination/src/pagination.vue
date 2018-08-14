@@ -1,16 +1,18 @@
 <template>
     <div class="cat-pagination">
-            <cc-icon-default icon="icon-preview" 
-                :disabled="currentPage === 1"
-                @click="preClick"></cc-icon-default>
+            <cc-icon-default icon="icon-pre" 
+                :disabled="value === 1"
+                @click="preClick">
+            </cc-icon-default>
         <span class="cat-pagination-page">
-            <span class="cat-pagination--current">{{currentPage}}</span>
+            <span class="cat-pagination--current">{{value}}</span>
             <span class="cat-cat-pagination-line">/</span>
             <span class="cat-pagination--total">{{total}}</span>
         </span>
         <cc-icon-default icon="icon-nextPage" 
-            :disabled=" currentPage === total" 
-            @click="nextClick"></cc-icon-default>
+            :disabled="value === total" 
+            @click="nextClick">
+        </cc-icon-default>
     </div>
 </template>
 <style lang="scss">
@@ -46,12 +48,12 @@
         props: {
             // 总条目数
             total: {
-                type: String | Number,
+                type: Number,
                 default: 0,
             },
             //当前页
-            currentPage: {
-                type: String | Number,
+            value: {
+                type: Number,
                 default: 1,
             },
         },
@@ -60,17 +62,18 @@
             }
         },
         computed: {
+        
         },
         watch: {
         },
         methods: {
             preClick() {
-                let page = parseInt(this.currentPage) - 1;
+                let page = parseInt(this.value) - 1;
                 this.$emit('pre-click', page);
                 this.$emit('current-change', page);
             },
             nextClick() {
-                let page = parseInt(this.currentPage) + 1;
+                let page = parseInt(this.value) + 1;
                 this.$emit('next-click', page);
                 this.$emit('current-change', page);
             },
