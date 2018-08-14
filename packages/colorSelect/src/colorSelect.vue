@@ -1,5 +1,7 @@
 <template>
-    <div class="cat-color-option-select" @click="colorClick">
+    <div class="cat-color-option-select" 
+        v-blur="handleClose"
+        @click="colorClick">
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
@@ -86,7 +88,10 @@
         methods: {
             colorClick(){
                 this.visible = !this.visible;
-            }   
+            },
+            handleClose(){
+                this.visible = false;
+            }
         },
         created() {
         },

@@ -1,13 +1,13 @@
 <template>
     <div class="cat-line-option-select" 
-        v-clickoutside="handleClose">
+        v-blur="handleClose"
+        @click="lineClick">
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
         <input class="cat-line-input-body" 
             readonly="readonly" 
             autocomplete="off" 
-            @click.prevent.stop="lineClick"
             :style="[{'border-color': color}]" />
          <div class="cat-line-dropdown" v-if="visible">
             <ul class="cat-line-wrap">
