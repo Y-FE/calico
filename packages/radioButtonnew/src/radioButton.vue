@@ -35,12 +35,12 @@
             outline: none;
             font-size: $--radio-button-font-size;
             color: $--radio-button-unchecked-color;
-            line-height: 1;
-            white-space: nowrap;
-            -webkit-appearance: none;
-            text-align: center;
-            box-sizing: border-box;
-            margin: 0;
+            // line-height: 1;
+            // white-space: nowrap;
+            // -webkit-appearance: none;
+            // text-align: center;
+            // box-sizing: border-box;
+            // margin: 0;
             cursor: pointer;
             border: 1px solid $--radio-button-unchecked-border-color;
             transition: $--transition-base; 
@@ -76,13 +76,12 @@
 
 </style>
 <script>
-    import {setParentModel, ccParent, getParentModel} from "@mixins/parentModel";
+    import Emitter from "../mixins/emitter";
     export default {
         name: 'CcRadioButton',
-        componentName: 'CcRadioButton',
         components: {
         },
-        mixins: [ccParent('CcRadioGroup')],
+        mixins: [Emitter],
         props: {
             label:{
                 type: String,
@@ -102,21 +101,30 @@
             }
         },
         computed: {
-            value:{
-                get(){
-                   return getParentModel.call(this); 
-                } ,
-                set(value){
+            value: {
+                get() {
+                    return this._radioGroup.value;
+                },
+                set(value) {
                     if(this._radioGroup){
-                        this.$emit('input', value); 
+                        this._radioGroup.$emit('input', value); 
                     }   
                 }
             },
-            _radioGroup() { // 判断是否是组单选按钮
-                return ccParent('CcRadioGroup');
+            // 判断是否是组单选按钮
+            _radioGroup() {
+                let parent = this.$parent;
+                while (parent) {
+                    if (parent.$options.componentName !== 'CcRadioGroup') {
+                        parent = parent.$parent;
+                    } else {
+                        return parent;
+                    }
+                }
+                return false;
             },
             size() {
-                return this._radioGroup.size || this.size;
+                return this._radioGroup.size || this.disabled;
             },
             isDisable() {
                 return this._radioGroup.disabled || this.disabled;
@@ -126,9 +134,9 @@
         },
         methods: {
             handleChange() {
-                if(this._radioGroup){
-                    setParentModel.call(this,this.label)
-                }    
+                this.$nextTick(() => {
+                    this.isGroup && this.dispatch("CcRadioGroup", "handleChange", this.value);
+                });
             }
         },
         created() {
