@@ -91,6 +91,9 @@
         },
         methods: {
             buttonClick() {
+                if(this.disabled){
+                    return ;
+                }
                 this.$emit('click');
             },
         },

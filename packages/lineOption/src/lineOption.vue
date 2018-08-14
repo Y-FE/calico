@@ -6,9 +6,17 @@
     </li>
 </template>
 <style lang="scss">
+    .cat-line-option {
+        width: $--color-select-option-size;
+        height: $--color-select-option-size;
+        cursor: pointer;
+        &:hover {
+            filter: $--color-brightness-base;
+        }
+    }
 </style>
 <script>
-    import {setParentModel,ccParent} from '@mixins/parentModel'
+    import {ccParent, setParentModel} from '@mixins/parentModel';
     export default {
         name: 'CcLineOption',
         components: 'CcLineOption',
@@ -31,7 +39,7 @@
         },
         methods: {
             lineClick(){
-              setParentModel.call(this, this.value)  
+                setParentModel.call(this, this.value); 
             }
         },
         created() {

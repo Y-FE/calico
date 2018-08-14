@@ -1,5 +1,5 @@
 <template>
-    <div class="cat-color-option-select" @click="switchClick">
+    <div class="cat-color-option-select" @click="colorClick">
         <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
@@ -7,7 +7,7 @@
             readonly="readonly" 
             autocomplete="off" 
             :style="[{'background-color': color}]" />
-         <div class="cat-color-dropdown" v-if="ifDrop">
+         <div class="cat-color-dropdown" v-if="visible">
             <ul class="cat-color-wrap">
                 <slot></slot>
             </ul>
@@ -68,7 +68,7 @@
         },
         data() {
             return {
-               ifDrop: false 
+               visible: false 
             }
         },
         computed: {  
@@ -77,10 +77,15 @@
             }
         },
         watch: {
+            color(val, oldVal){
+                if(val !== oldVal){
+                   this.visible = false; 
+                }
+            }
         },
         methods: {
-            switchClick(){
-                this.ifDrop = !this.ifDrop;
+            colorClick(){
+                this.visible = !this.visible;
             }   
         },
         created() {

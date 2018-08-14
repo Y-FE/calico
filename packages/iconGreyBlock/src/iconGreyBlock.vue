@@ -56,6 +56,9 @@
         },
         methods: {
             iconClick() {
+                if(this.disabled){
+                    return;
+                }
                 this.$emit('click');
             }
         },
