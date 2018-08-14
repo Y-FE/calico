@@ -20,13 +20,12 @@ npm run dev
 ## 组件
 
 ### 布局
-- [ ] header
 - [ ] aside
 - [ ] main
 - [x] row
 
 ### 容器
-- [ ] headerGroup
+- [x] header
 - [ ] grid
 - [ ] panel (dragable)
 - [ ] sidePanel (吸附边缘)

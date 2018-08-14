@@ -4,15 +4,18 @@ import './css/reset.css';
 
 import croup from './directives/croup';
 
+import Aside from '../packages/aside';
 import Button from '../packages/button';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
+import Header from '../packages/header';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
 import IconGreyBlock from '../packages/iconGreyBlock';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
+import Main from '../packages/main';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
 import Option from '../packages/option';
@@ -25,15 +28,18 @@ import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
 
 const components = [
+    Aside,
     Button,
     ColorOption,
     ColorSelect,
+    Header,
     IconBlock,
     IconCircle,
     IconDefault,
     IconGreyBlock,
     LineOption,
     LineSelect,
+    Main,
     MenuItem,
     Option,
     Pagination,
@@ -60,15 +66,18 @@ if (typeof window !== 'undefined' && window.Vue) {
 let calico = {
     version: '0.1.0',
     install,
+    Aside,
     Button,
     ColorOption,
     ColorSelect,
+    Header,
     IconBlock,
     IconCircle,
     IconDefault,
     IconGreyBlock,
     LineOption,
     LineSelect,
+    Main,
     MenuItem,
     Option,
     Pagination,
