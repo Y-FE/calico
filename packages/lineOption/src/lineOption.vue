@@ -24,7 +24,7 @@
         },
         methods: {
             lineClick(){
-                
+              setParentModel.call(this, this.value)  
             }
         },
         created() {
