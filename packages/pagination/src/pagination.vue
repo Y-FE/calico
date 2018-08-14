@@ -68,18 +68,21 @@
         },
         methods: {
             preClick() {
-                let page = parseInt(this.value) - 1;
-                if( page > 0){
-                    this.$emit('pre-click', page);
-                    this.$emit('current-change', page);
+                if (this.value === 1) {
+                    return;
                 }
+                let page = parseInt(this.value) - 1;
+                this.$emit('pre-click', page);
+                this.$emit('current-change', page);
+                
             },
             nextClick() {
-                let page = parseInt(this.value) + 1;
-                if( page < this.total || page === this.total){
-                    this.$emit('next-click', page);
-                    this.$emit('current-change', page);
+                if(this.value === this.total) {
+                    return;
                 }
+                let page = parseInt(this.value) + 1;
+                this.$emit('next-click', page);
+                this.$emit('current-change', page);
             },
         },
         created() {
