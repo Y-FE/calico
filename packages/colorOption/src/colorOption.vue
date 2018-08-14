@@ -18,7 +18,7 @@
     
 </style>
 <script>
-    import {ccParent, model, parent} from '@mixins/parentModel';
+    import {ccParent, setParentModel} from '@mixins/parentModel';
     export default {
         name: 'CcColorOption',
         componentName: 'CcColorOption',
@@ -41,7 +41,7 @@
         },
         methods: {
             optionClick(){
-                this[parent][model] = this.value;
+                setParentModel.call(this, this.value);
             }
         },
         created() {

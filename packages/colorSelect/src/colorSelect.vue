@@ -50,7 +50,7 @@
     }
 </style>
 <script>
-    import {ccModel, modelProp} from '@mixins/parentModel';
+    import {ccModel, getModel} from '@mixins/parentModel';
 
     export default {
         name: 'CcColorSelect',
@@ -72,7 +72,7 @@
         },
         computed: {  
             color() {
-                return this[modelProp];
+                return getModel.call(this);
             }
         },
         watch: {

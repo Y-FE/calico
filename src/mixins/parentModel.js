@@ -1,7 +1,7 @@
-export const modelProp = 'ccValue';
-export const modelEvent = 'ccInput';
-export const model = 'ccModel';
-export const parent = '_parent';
+const modelProp = 'ccValue';
+const modelEvent = 'ccInput';
+const model = 'ccModel';
+const parent = '_parent';
 
 export function ccModel(Type) {
     return {
@@ -43,4 +43,16 @@ export function ccParent(componentName) {
             }
         }
     };
+}
+
+export function setParentModel(value) {
+    this[parent][model] = value;
+}
+
+export function getModel() {
+    return this[modelProp];
+}
+
+export function getParentModel() {
+    return this[parent][model];
 }
