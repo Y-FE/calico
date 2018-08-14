@@ -1,6 +1,5 @@
 <template>
-    <label class="cat-radio-button"  
-            role="radio">
+    <label class="cat-radio-button">
         <input type="radio" 
             class="cat-inner-radio" 
             :value="label" 
@@ -35,12 +34,6 @@
             outline: none;
             font-size: $--radio-button-font-size;
             color: $--radio-button-unchecked-color;
-            line-height: 1;
-            white-space: nowrap;
-            -webkit-appearance: none;
-            text-align: center;
-            box-sizing: border-box;
-            margin: 0;
             cursor: pointer;
             border: 1px solid $--radio-button-unchecked-border-color;
             transition: $--transition-base; 
@@ -52,7 +45,6 @@
             color: $--radio-button-checked-color;
             background-color: $--radio-button-checked-fill;
             border-color: $--radio-button-checked-border-color;
-            box-shadow: -1px 0 0 0 $--radio-button-checked-border-color;
         } 
         &:hover {
             .cat-radio-button--text {
@@ -65,7 +57,6 @@
     }
     .cat-radio-button:first-child .cat-radio-button--text {
         border-radius: $--radio-button-radius 0 0 $--radio-button-radius;
-        box-shadow: none!important;
         border-left: 1px solid $--radio-button-unchecked-border-color;
     }
     .cat-radio-button:nth-of-type(1) .cat-radio-button--text {
@@ -107,26 +98,20 @@
                    return getParentModel.call(this); 
                 } ,
                 set(value){
-                    if(this._radioGroup){
+                    if(this.radioGroup){
                         this.$emit('input', value); 
                     }   
                 }
             },
-            _radioGroup() { // 判断是否是组单选按钮
+            radioGroup() { // 判断是否是组单选按钮
                 return ccParent('CcRadioGroup');
             },
-            size() {
-                return this._radioGroup.size || this.size;
-            },
-            isDisable() {
-                return this._radioGroup.disabled || this.disabled;
-            }
         },
         watch: {
         },
         methods: {
             handleChange() {
-                if(this._radioGroup){
+                if(this.radioGroup){
                     setParentModel.call(this,this.label)
                 }    
             }
