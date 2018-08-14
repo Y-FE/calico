@@ -11,7 +11,7 @@
         height: $--color-select-option-size;
         cursor: pointer;
         &:hover {
-            filter: brightness(90%);
+            filter: $--color-brightness-base;
         }
     }
    
