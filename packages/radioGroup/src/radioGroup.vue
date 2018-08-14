@@ -12,13 +12,15 @@
     }
 </style>
 <script>
+    import {ccModel, getModel}  from "@mixins/parentModel";
     export default {
         name: 'CcRadioGroup',
         componentName: "CcRadioGroup",
+        mixins: [ccModel(String)],
         components: {
         },
         props: {
-            value: {},
+            
             disabled: Boolean
         },
         data() {
@@ -26,6 +28,9 @@
             }
         },
         computed: {
+            value(){
+                return getModel.call(this);
+            }
         },
         watch: {
         },
