@@ -89,6 +89,10 @@
         <cc-line-select v-model="line" title="边框颜色">
                 <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-line-select>
+
+        <cc-select v-model="fontSize" title="字号">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item"></cc-option>
+        </cc-select>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>
@@ -102,10 +106,12 @@
                     color: '#18A2EA',
                     line: '#18A2EA',
                     currentPage: 1,
+                    fontSize: 12,
                     total: 4,
                     colorList:[
                         '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
                     ],
+                    fontList:[12,14,16,18,20,22],
                     mm: true,
                 }
             },
