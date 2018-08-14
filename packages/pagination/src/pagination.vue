@@ -72,8 +72,7 @@
                     return;
                 }
                 let page = parseInt(this.value) - 1;
-                this.$emit('pre-click', page);
-                this.$emit('current-change', page);
+                this.$emit('input', page);
                 
             },
             nextClick() {
@@ -81,8 +80,7 @@
                     return;
                 }
                 let page = parseInt(this.value) + 1;
-                this.$emit('next-click', page);
-                this.$emit('current-change', page);
+                this.$emit('input', page);
             },
         },
         created() {
