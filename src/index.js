@@ -16,6 +16,7 @@ import LineSelect from '../packages/lineSelect';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
 import Option from '../packages/option';
+import Pagination from '../packages/pagination';
 import RadioButton from '../packages/radioButton';
 import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
@@ -35,6 +36,7 @@ const components = [
     LineSelect,
     MenuItem,
     Option,
+    Pagination,
     RadioButton,
     RadioGroup,
     Row,
@@ -69,6 +71,7 @@ let calico = {
     LineSelect,
     MenuItem,
     Option,
+    Pagination,
     RadioButton,
     RadioGroup,
     Row,
