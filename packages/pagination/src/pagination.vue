@@ -72,7 +72,7 @@
                     return;
                 }
                 let page = parseInt(this.value) - 1;
-                this.$emit('input', page);  
+                this.$emit('input', page);
             },
             nextClick() {
                 if(this.value === this.total) {
