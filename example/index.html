@@ -86,7 +86,9 @@
         <div style="margin-top: 100px;">
             <cc-pagination  v-model="currentPage" :total="4" @pre-click="preClick" @next-click="nextClick"></cc-pagination>
         </div>
-       
+        <cc-line-select v-model="color" title="边框颜色">
+                <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
+        </cc-line-select>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>
@@ -117,14 +119,10 @@
                     e.dataTransfer.setData('item', 'ok')
                 },
                 preClick(data){
-                    // if(this.currentPage > 1){
-                        this.currentPage = data;
-                    //}
+                    this.currentPage = data;
                 },
                 nextClick(data){
-                    // if(this.currentPage < this.total){
-                        this.currentPage = data;
-                    // }    
+                    this.currentPage = data;    
                 }
             },
             mounted() {

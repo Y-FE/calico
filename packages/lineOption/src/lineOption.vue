@@ -1,5 +1,6 @@
 <template>
-    <li class="cat-line-option" 
+    <li class="cat-line-option"
+        :style="{'background':value}" 
         @click="lineClick">
         <slot></slot>
     </li>
@@ -11,9 +12,15 @@
     export default {
         name: 'CcLineOption',
         components: 'CcLineOption',
+        mixins: [ccParent('CcLineSelect')],
         components: {
         },
-        props: {},
+        props: {
+            value: {
+                type: String,
+                default: ''
+            }
+        },
         data() {
             return {
             }
