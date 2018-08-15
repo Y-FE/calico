@@ -42,7 +42,7 @@ npm run dev
 - [x] radio-group
 - [ ] input
 - [ ] inputNumber
-- [ ] pagination
+- [x] pagination
 - [x] message
 - [ ] popover
 

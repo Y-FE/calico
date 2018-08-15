@@ -16,12 +16,10 @@
     export default {
         name: 'CcRadioGroup',
         componentName: "CcRadioGroup",
-        mixins: [ccModel(String)],
+        mixins: [ccModel(String | Number | Boolean)],
         components: {
         },
         props: {
-            
-            disabled: Boolean
         },
         data() {
             return {
