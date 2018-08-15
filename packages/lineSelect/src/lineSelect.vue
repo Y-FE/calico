@@ -10,9 +10,12 @@
             autocomplete="off" 
             :style="[{'border-color': color}]" />
          <div class="cat-line-dropdown" v-if="visible">
-            <ul class="cat-line-wrap">
+            <cc-row justify="space-around"
+                align="center"
+                wrap="wrap"
+                class="cat-line-wrap">
                 <slot></slot>
-            </ul>
+            </cc-row>
          </div>
     </div>
 </template>
@@ -20,9 +23,10 @@
     .cat-line-option-select {
         display: inline-block;
         position: relative;
+        width: $--select-width;
         .cat-line-input-body {
             position: relative;
-            width: $--select-width;
+            width: 100%;
             height: $--select-height;
             border-radius: $--select-option-radius; 
             cursor: pointer;
@@ -34,17 +38,13 @@
             bottom: -60px;
             left: 0;
             transition: $--transition-base;
+            width: 100%;
             .cat-line-wrap {
-                width: $--select-width; 
+                width: 100%;
                 min-height: 55px;
                 padding: $--color-select-option-padding;     
                 border: 1px solid $--select-option-border-color; 
                 border-radius: $--select-option-radius; 
-                display: flex;
-                justify-content: space-around;
-                flex-flow:row wrap;
-                align-items: center;
-                align-content: space-around;
             }
         }
         .cat-select-title {
@@ -56,11 +56,13 @@
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcLineSelect',
         componentName: 'CcLineSelect',
         mixins: [ccModel(String)],
         components: {
+            ccRow
         },
         props: {
             // 选择框描述

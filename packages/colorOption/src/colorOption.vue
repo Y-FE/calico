@@ -14,8 +14,6 @@
             filter: $--color-brightness-base;
         }
     }
-   
-    
 </style>
 <script>
     import {ccParent, setParentModel} from '@mixins/parentModel';
