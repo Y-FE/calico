@@ -7,7 +7,7 @@
         </p>
         <div class="cat-input-body">
             <input class="cat-input-main" 
-                :value="value" 
+                :value="label ? label : value" 
                 readonly
                 :class="[visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
             <span class="cat-input-icon">
@@ -114,14 +114,21 @@
         },
         data() {
             return {
-                visible: false
+                visible: false,
+                labelList: [],
             }
         },
         computed: {
+            label() {
+                let label = this.labelList.find(i => i.value === getModel.call(this));
+                if (label) {
+                    return label.label;
+                }
+                return label;
+            },
             value() {
-                return 888;
-                // return getModel.call(this);
-            }
+                return getModel.call(this);
+            },
         },
         watch: {
         },
@@ -138,7 +145,9 @@
         destroyed() {
         },
         mounted() {
-            console.log(this.$children[0].$children[0].label);
+            if (this.$slots && this.$slots.default && this.$slots.default.length) {
+                this.labelList = this.$slots.default.map(item => item.componentInstance ? item.componentInstance : '');
+            }
         }
     }
 </script>

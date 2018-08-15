@@ -2,7 +2,6 @@ const modelProp = 'ccValue';
 const modelEvent = 'ccInput';
 const model = 'ccModel';
 const parent = '_parent';
-const children = '_children';
 
 export function ccModel(Type) {
     return {
@@ -45,23 +44,6 @@ export function ccParent(componentName) {
         }
     };
 }
-export function ccChildren(componentName) {
-    return {
-        computed: {
-            [parent]() {
-                let parent = this.$parent;
-                while (parent) {
-                    if (parent.$options.componentName !== componentName) {
-                        parent = parent.$parent;
-                    } else {
-                        return parent;
-                    }
-                }
-                return false;
-            }
-        }
-    };
-}
 
 export function setParentModel(value) {
     this[parent][model] = value;
@@ -74,4 +56,5 @@ export function getModel() {
 export function getParentModel() {
     return this[parent][model];
 }
+
 
