@@ -58,8 +58,8 @@
         <cc-icon-default icon="icon-nextPage" disabled></cc-icon-default>
 
         <br><br>
-        <cc-icon-grey-block icon="icon-increaseTime"></cc-icon-grey-block>
-        <cc-icon-grey-block icon="icon-increaseTime" disabled></cc-icon-grey-block>
+        <cc-icon-grey-block icon="icon-addCourseware"></cc-icon-grey-block>
+        <cc-icon-grey-block icon="icon-addCourseware" disabled></cc-icon-grey-block>
         <br><br>
        
         <cc-radio-group v-model="radio3">
@@ -86,7 +86,7 @@
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
         </div>
         <cc-line-select v-model="line" title="边框颜色">
-                <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
+            <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-line-select>
 
         <cc-select v-model="fontSize" title="字号" style="margin-left: 60px;">

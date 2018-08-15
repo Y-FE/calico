@@ -41,8 +41,8 @@
                 position: absolute;
                 z-index: 1;
                 top: 1px;
-                height: 95%;
-                line-height: 1.2;
+                height: 92%;
+                line-height: 1.3;
             }
             .cat-input-number--decrease {
                 left: 1px;

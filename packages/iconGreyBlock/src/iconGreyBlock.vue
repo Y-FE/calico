@@ -11,7 +11,6 @@
     .cat-icon-grey-block-boby {
         width: $--icon-small-block;
         height: $--icon-small-block;
-        line-height: $--icon-small-block;
         text-align: center;
         background: $--icon-grey-block-fill;
         cursor: pointer;
