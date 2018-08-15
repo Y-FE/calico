@@ -31,7 +31,7 @@ npm run dev
 - [ ] sidePanel (吸附边缘)
 - [ ] menu
 - [ ] scaleArea (保持比例自适应)
-- [ ] 功能拖拽区
+- [ ] drag
 
 ### 普通
 - [x] button
@@ -40,7 +40,6 @@ npm run dev
 - [ ] tooltip
 - [x] radio-btton
 - [x] radio-group
-- [ ] input
 - [ ] inputNumber
 - [x] pagination
 - [x] message
