@@ -10,7 +10,7 @@ export default {
                 binding.value();
             }
         }
-        document.addEventListener('click', handler);
+        document.addEventListener('click', handler, true);
     },
     inserted(el: HTMLElement) {},
     update() { },

@@ -1,14 +1,8 @@
 <template>
     <label class="cat-radio-button">
-        <input type="radio" 
-            class="cat-inner-radio" 
-            :value="label" 
-            v-model="value"
-            :name="name"  
-            @change="handleChange"
-            :disabled="disabled">
         <span class="cat-radio-button--text" 
-            :class="[value === label ? 'cat-radio-button--active':'']">
+            @click="handleChange"
+            :class="[val === label ? 'cat-radio-button--active':'cat-radio-button--default']">
             <slot></slot>
             <template v-if="!$slots.default">{{label}}</template> 
         </span>
@@ -46,11 +40,16 @@
             background-color: $--radio-button-checked-fill;
             border-color: $--radio-button-checked-border-color;
         } 
-        &:hover {
-            .cat-radio-button--text {
+        .cat-radio-button--default {
+            &:hover {
                 color: $--radio-button-checked-fill;
             }
         }
+        // &:hover {
+        //     .cat-radio-button--text {
+        //         color: $--radio-button-checked-fill;
+        //     }
+        // }
     }
     .cat-radio-button:last-child .cat-radio-button--text {
         border-radius: 0 $--radio-button-radius $--radio-button-radius 0;
@@ -76,44 +75,28 @@
         mixins: [ccParent('CcRadioGroup')],
         props: {
             label:{
-                type: String,
+                type:  Boolean | String | Number,
                 default: ''
             },
             name:{
                 type: String,
                 default: ''
             },
-            disabled:{
-                type: Boolean,
-                default: false 
-            }
         },
         data() {
             return {
             }
         },
         computed: {
-            value:{
-                get(){
-                   return getParentModel.call(this); 
-                } ,
-                set(value){
-                    if(this.radioGroup){
-                        this.$emit('input', value); 
-                    }   
-                }
-            },
-            radioGroup() { // 判断是否是组单选按钮
-                return ccParent('CcRadioGroup');
+            val() {
+                return getParentModel.call(this); 
             },
         },
         watch: {
         },
         methods: {
             handleChange() {
-                if(this.radioGroup){
-                    setParentModel.call(this,this.label)
-                }    
+                setParentModel.call(this, this.label);
             }
         },
         created() {
