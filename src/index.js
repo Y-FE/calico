@@ -18,17 +18,18 @@ import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
-import Main from '../packages/main';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
 import Option from '../packages/option';
 import Pagination from '../packages/pagination';
+import Popover from '../packages/popover';
 import RadioButton from '../packages/radioButton';
 import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
 import Select from '../packages/select';
 import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
+import Tooltip from '../packages/tooltip';
 
 const components = [
     Aside,
@@ -44,16 +45,17 @@ const components = [
     InputNumber,
     LineOption,
     LineSelect,
-    Main,
     MenuItem,
     Option,
     Pagination,
+    Popover,
     RadioButton,
     RadioGroup,
     Row,
     Select,
     Switch,
-    ToolItem
+    ToolItem,
+    Tooltip
 ];
 
 const install = function(Vue, opts = {}) {
@@ -85,16 +87,17 @@ let calico = {
     InputNumber,
     LineOption,
     LineSelect,
-    Main,
     MenuItem,
     Option,
     Pagination,
+    Popover,
     RadioButton,
     RadioGroup,
     Row,
     Select,
     Switch,
-    ToolItem
+    ToolItem,
+    Tooltip
 };
 
 export default calico

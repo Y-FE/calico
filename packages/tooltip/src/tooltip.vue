@@ -4,7 +4,7 @@
 </style>
 <script>
     export default {
-        name: 'CcMain',
+        name: 'CcTooltip',
         components: {
         },
         props: {},

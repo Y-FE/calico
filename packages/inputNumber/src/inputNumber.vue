@@ -68,7 +68,7 @@
                     width: 100%;
                     text-align: center;
                     &:focus {
-                        border-color: $--color-primary;
+                        border-color: $--input-number-border-color-active;
                     }
                 } 
             }
