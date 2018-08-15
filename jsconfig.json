@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "target": "es6",
+      "paths": {
+        "@mixins/*": ["./src/mixins/*"],
+        "@packages/*": ["./packages/*"]
+      }
+    },
+    "include": [
+        "./src/**/*" ,
+        "./packages/**/*"  
+    ],
+    "extends": "node_modules"
+  }
