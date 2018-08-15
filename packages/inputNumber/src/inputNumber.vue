@@ -93,11 +93,11 @@
             },
             max: {
                 type: Number,
-                default: 1
+                default: Infinity
             },
             min: {
                 type: Number ,
-                default: 1
+                default: -Infinity
             },
             step: {
                 type: Number,
@@ -113,7 +113,7 @@
         
         },
         watch: {
-            currentValue: function(val) {
+            currentValue(val) {
                 //$emit与父组件通信  （子组件-->父组件）
                 //this指向当前组件实例
                 this.$emit('input', val);
@@ -121,7 +121,7 @@
                 this.$emit('on-change', val)
             },
             //监听父组件value是否改变
-            value: function(val) {
+            value(val) {
                 this.updateValue(val);
             }
         },
@@ -154,17 +154,15 @@
                 }
             },
             handleChange(event) {
-                var val = event.target.value.trim();
-                var max = this.max;
-                var min = this.min;
+                let val = event.target.value.trim();
                 if(this.isValueNumber(val)) {
                     val = Number(val);
                     this.currentValue = val;
-                    if(val > max) {
-                        this.current = max;
+                    if(val > this.max) {
+                        this.current = this.max;
                     }
-                    if(val < min) {
-                        this.current = min;
+                    if(val < this.min) {
+                        this.current = this.min;
                     }
                 } else {
                     //如果输入的不是数字，将输入的内容重置为之前的currentValue
