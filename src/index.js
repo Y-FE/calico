@@ -91,4 +91,4 @@ let calico = {
     ToolItem
 };
 
-export default calico
+export default calico;
