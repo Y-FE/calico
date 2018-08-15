@@ -7,7 +7,7 @@
         </p>
         <div class="cat-input-body">
             <input class="cat-input-main" 
-                :value="label" 
+                :value="label ? label : value" 
                 readonly
                 :class="[visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
             <span class="cat-input-icon">
@@ -125,6 +125,9 @@
                     return label.label;
                 }
                 return label;
+            },
+            value() {
+                return getModel.call(this);
             },
         },
         watch: {
