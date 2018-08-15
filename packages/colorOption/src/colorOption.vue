@@ -1,9 +1,9 @@
 <template>    
-    <li class="cat-color-option" 
+    <div class="cat-color-option" 
         @click="optionClick"
         :style="{'background-color': value}">
         <slot></slot>
-    </li>
+    </div>
 </template>
 <style lang="scss">
     .cat-color-option {

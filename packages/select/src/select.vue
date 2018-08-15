@@ -17,9 +17,12 @@
             </span>
         </div>
         <div class="cat-select-dropdown" v-if="visible">
-            <ul class="cat-select-wrap">
+            <cc-row justify="space-around"
+                align="center"
+                wrap="wrap"
+                class="cat-select-wrap">
                 <slot></slot>
-            </ul>
+            </cc-row>
         </div>
     </div>
 </template>
@@ -94,11 +97,13 @@
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcSelect',
         componentName: 'CcSelect',
         mixins: [ccModel(Number|String)],
         components: {
+            ccRow
         },
         props: {
             // 选择框描述

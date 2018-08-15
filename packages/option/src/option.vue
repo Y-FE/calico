@@ -1,5 +1,5 @@
 <template>
-    <li class="cat-option"
+    <div class="cat-option"
         @click="optionClick">
        <cc-row 
             justify="space-between"
@@ -7,7 +7,7 @@
             <span class="cat-option-left">{{value}}</span>
             <span class="cat-option-right"><slot></slot></span>
         </cc-row> 
-    </li>
+    </div>
 </template>
 <style lang="scss">
     .cat-option {

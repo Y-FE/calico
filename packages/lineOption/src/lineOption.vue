@@ -1,9 +1,9 @@
 <template>
-    <li class="cat-line-option"
+    <div class="cat-line-option"
         :style="{'background':value}" 
         @click="lineClick">
         <slot></slot>
-    </li>
+    </div>
 </template>
 <style lang="scss">
     .cat-line-option {
