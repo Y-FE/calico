@@ -7,11 +7,21 @@
       // if using webpack 2+ or rollup, to leverage tree shaking:
       "module": "es2015",
       "moduleResolution": "node",
+      "allowJs": true,
       "lib": [
         "es2015", "dom"
       ],
       "types": [
         "vue"
-      ]
-    }
+      ],
+      "baseUrl": ".",
+      "paths": {
+        "@mixins/*": ["./src/mixins/*"],
+        "@packages/*": ["./packages/*"]
+      }
+    },
+    "include": [
+      "./src/**/*" ,
+      "./packages/**/*"  
+    ],
   }
