@@ -63,10 +63,10 @@
         <br><br>
        
         <cc-radio-group v-model="radio3">
-            <cc-radio-button label="77">画笔</cc-radio-button>
-            <cc-radio-button label="橡皮"></cc-radio-button>
-            <cc-radio-button label="喷漆"></cc-radio-button>
-            <cc-radio-button label="放大镜"></cc-radio-button>
+            <cc-radio-button value="77" >画笔</cc-radio-button>
+            <cc-radio-button value="橡皮">77777</cc-radio-button>
+            <cc-radio-button value="喷漆" label="大象"></cc-radio-button>
+            <cc-radio-button value="放大镜"></cc-radio-button>
         </cc-radio-group>
         <cc-switch v-model="mm"  style="margin-top: 20px;"></cc-switch>
 
@@ -95,8 +95,12 @@
         </cc-select>
 
         <cc-select v-model="course" title="课件" style="margin-left: 60px;">
-            <cc-option v-for="(item, index) in courseList" :key="index" :value="item">
-                <i class="iconfont icon-delete"></i>
+            <cc-option 
+                v-for="(item, index) in courseList" 
+                :key="index" 
+                :value="item.val" 
+                :label="item.name">
+                <i slot="right" class="iconfont icon-delete"></i>
             </cc-option>
         </cc-select>
     </div>
@@ -113,13 +117,17 @@
                     line: '#18A2EA',
                     currentPage: 1,
                     fontSize: 12,
-                    course: '课件1',
+                    course: 1,
                     total: 4,
                     colorList:[
                         '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
                     ],
                     fontList:[12,14,16,18,20,22],
-                    courseList:['课件1','课件2','16','18','20','22'],
+                    courseList:[
+                        {val: 1, name: "课件1"},
+                        {val: 2, name: "课件2"},
+                        {val: 3, name: "课件3"},
+                    ],
                     mm: true,
                 }
             },

@@ -9,14 +9,14 @@
             <input class="cat-input-main" 
                 :value="value" 
                 readonly
-                :class="[ visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
+                :class="[visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
             <span class="cat-input-icon">
                 <i class="cat-triangle iconfont "  
                     :class="[visible === false ? 'icon-dropDown':'cat-icon-resever icon-TakeUp']">
                 </i>    
             </span>
         </div>
-        <div class="cat-select-dropdown" v-if="visible">
+        <div class="cat-select-dropdown" v-show="visible">
             <cc-row justify="space-around"
                 align="center"
                 wrap="wrap"
@@ -78,7 +78,7 @@
                 border: 1px solid $--select-option-border-color;
             }
             .cat-input-border--active {
-                border: 1px solid #430bef;
+                border: 1px solid $--select-option-border-color-active;
             }
         }
         .cat-select-dropdown {
@@ -101,7 +101,7 @@
     export default {
         name: 'CcSelect',
         componentName: 'CcSelect',
-        mixins: [ccModel(Number|String)],
+        mixins: [ccModel(Number | String)],
         components: {
             ccRow
         },
@@ -118,22 +118,18 @@
             }
         },
         computed: {
-            value(){
-                return getModel.call(this);
+            value() {
+                return 888;
+                // return getModel.call(this);
             }
         },
         watch: {
-            value(val, oldVal){
-                if(val !== oldVal){
-                   this.visible = false; 
-                }
-            }
         },
         methods: {
-            selectClick(){
+            selectClick() {
                 this.visible = !this.visible;
             },
-            handleClose(){
+            handleClose() {
                 this.visible = false;
             }
         },
@@ -142,6 +138,7 @@
         destroyed() {
         },
         mounted() {
+            console.log(this.$children[0].$children[0].label);
         }
     }
 </script>

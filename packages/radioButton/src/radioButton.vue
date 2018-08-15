@@ -2,9 +2,11 @@
     <label class="cat-radio-button">
         <span class="cat-radio-button--text" 
             @click="handleChange"
-            :class="[val === label ? 'cat-radio-button--active':'cat-radio-button--default']">
+            :class="parentVal === value ? 'cat-radio-button--active':'cat-radio-button--default'">
             <slot></slot>
-            <template v-if="!$slots.default">{{label}}</template> 
+            <template v-if="!$slots.default">
+                {{label ? label : value}}
+            </template> 
         </span>
     </label> 
 </template>
@@ -45,11 +47,6 @@
                 color: $--radio-button-checked-fill;
             }
         }
-        // &:hover {
-        //     .cat-radio-button--text {
-        //         color: $--radio-button-checked-fill;
-        //     }
-        // }
     }
     .cat-radio-button:last-child .cat-radio-button--text {
         border-radius: 0 $--radio-button-radius $--radio-button-radius 0;
@@ -74,13 +71,14 @@
         },
         mixins: [ccParent('CcRadioGroup')],
         props: {
-            label:{
+            // 自身绑定值
+            value:{
                 type:  Boolean | String | Number,
                 default: ''
             },
-            name:{
-                type: String,
-                default: ''
+            // 绑定值的描述
+            label: {
+                type: Number | String,
             },
         },
         data() {
@@ -88,7 +86,8 @@
             }
         },
         computed: {
-            val() {
+            // 父组件的v-model值
+            parentVal() {
                 return getParentModel.call(this); 
             },
         },
@@ -96,7 +95,7 @@
         },
         methods: {
             handleChange() {
-                setParentModel.call(this, this.label);
+                setParentModel.call(this, this.value);
             }
         },
         created() {

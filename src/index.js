@@ -14,6 +14,8 @@ import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
 import IconGreyBlock from '../packages/iconGreyBlock';
+import Input from '../packages/input';
+import InputNumber from '../packages/inputNumber';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
 import Main from '../packages/main';
@@ -38,6 +40,8 @@ const components = [
     IconCircle,
     IconDefault,
     IconGreyBlock,
+    Input,
+    InputNumber,
     LineOption,
     LineSelect,
     Main,
@@ -77,6 +81,8 @@ let calico = {
     IconCircle,
     IconDefault,
     IconGreyBlock,
+    Input,
+    InputNumber,
     LineOption,
     LineSelect,
     Main,
@@ -91,4 +97,4 @@ let calico = {
     ToolItem
 };
 
-export default calico;
+export default calico
