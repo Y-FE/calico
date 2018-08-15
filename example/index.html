@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_776059_97n5wmc3rhg.css">
+    <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_776059_w4er9nc6hls.css">
     <style>
         #app{
             margin: 50px;
@@ -90,8 +90,15 @@
                 <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-line-select>
 
-        <cc-select v-model="fontSize" title="字号">
-            <cc-option v-for="(item, index) in fontList" :key="index" :value="item"></cc-option>
+        <cc-select v-model="fontSize" title="字号" style="margin-left: 60px;">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
+            </cc-option>
+        </cc-select>
+
+        <cc-select v-model="course" title="课件" style="margin-left: 60px;">
+            <cc-option v-for="(item, index) in courseList" :key="index" :value="item">
+                <i class="iconfont icon-delete"></i>
+            </cc-option>
         </cc-select>
     </div>
     <script src="https://vuejs.org/js/vue.js"></script>
@@ -107,11 +114,13 @@
                     line: '#18A2EA',
                     currentPage: 1,
                     fontSize: 12,
+                    course: '课件1',
                     total: 4,
                     colorList:[
                         '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
                     ],
                     fontList:[12,14,16,18,20,22],
+                    courseList:['课件1','课件2','16','18','20','22'],
                     mm: true,
                 }
             },

@@ -1,12 +1,19 @@
 <template>
-    <div class="cat-select"  @click="lineClick">
-         <p class="cat-select-title" v-if="title">
+    <div class="cat-select" 
+        v-blur="handleClose"
+        @click="selectClick">
+        <p class="cat-select-title" v-if="title">
             {{title}}
         </p>
         <div class="cat-input-body">
-            <input class="cat-input-main" />
-            <span :class="['triangle',visible === false?'triangleShow':'triangleHidden']">
-
+            <input class="cat-input-main" 
+                :value="value" 
+                readonly
+                :class="[ visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
+            <span class="cat-input-icon">
+                <i class="cat-triangle iconfont "  
+                    :class="[visible === false ? 'icon-dropDown':'cat-icon-resever icon-TakeUp']">
+                </i>    
             </span>
         </div>
         <div class="cat-select-dropdown" v-if="visible">
@@ -17,13 +24,80 @@
     </div>
 </template>
 <style lang="scss">
+    .cat-select {
+        width: $--select-width;
+        display: inline-block;
+        position: relative;
+        .cat-select-title {
+            font-size: $--select-font-size;
+            color: $--select-color; 
+            margin-bottom: 10px;
+        }
+        .cat-input-body {
+            position: relative;
+            width: 100%;
+            height: $--select-height; 
+            cursor: pointer;
+            .cat-input-main {
+                border-radius: $--select-option-radius; 
+                color: $--select-color;
+                display: inline-block;
+                font-size: $--select-title-font-size;
+                height: $--select-height;
+                line-height: $--select-height;
+                outline: none;
+                padding: 0 10px;
+                transition: border-color $--transition-base;
+                width: 100%;
+                cursor: pointer;
+            }
+            .cat-input-icon {
+                position: absolute;
+                height: 100%;
+                right: 5px;
+                top: 0;
+                text-align: center;
+                transition: all .3s;
+                pointer-events: none;
+                line-height: $--select-height ;
+                i {
+                    color: $--select-title-color;
+                    font-size: $--select-font-size;
+                    transition: transform .3s;
+                    transform: rotate(180deg);
+                    cursor: pointer;
+                }
+                .cat-icon-resever {
+                    transform: rotate(0deg);
+                }
+            }
+            .cat-input-border--default {
+                border: 1px solid $--select-option-border-color;
+            }
+            .cat-input-border--active {
+                border: 1px solid #430bef;
+            }
+        }
+        .cat-select-dropdown {
+            position: absolute;  
+            top: 60px;
+            left: 0;
+            transition: all .5s ease-in;
+            width: 100%;
+            .cat-select-wrap {
+                width: 100%;     
+                border: 1px solid $--select-option-border-color; 
+                border-radius: $--select-option-radius; 
+            }
+        }
+    }
 </style>
 <script>
-    // import {ccModel} from '@mixins/parentModel'
+    import {ccModel, getModel} from '@mixins/parentModel';
     export default {
         name: 'CcSelect',
         componentName: 'CcSelect',
-        // mixins: [ccModel(String)],
+        mixins: [ccModel(Number|String)],
         components: {
         },
         props: {
@@ -40,14 +114,22 @@
         },
         computed: {
             value(){
-                //return getModel.call(this);
+                return getModel.call(this);
             }
         },
         watch: {
+            value(val, oldVal){
+                if(val !== oldVal){
+                   this.visible = false; 
+                }
+            }
         },
         methods: {
-            lineClick(){
-
+            selectClick(){
+                this.visible = !this.visible;
+            },
+            handleClose(){
+                this.visible = false;
             }
         },
         created() {
