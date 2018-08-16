@@ -258,6 +258,27 @@ $--icon-grey-block-fill-hover: $--color-black-opacity-4;
 
 $--icon-grey-block-color-disabled: $--color-disabled;
 
+//preview
+$--preview-width: 200px;
+$--preview-height: 110px;
+$--preview-img-width: 160px;
+$--preview-img-height: 90px;
+$--preview-font-size: $--font-size-base;
+$--preview-color: $--color-info;
+$--preview-background-color: $--color-white;
+$--preview-background-color-active: $--color-black-opacity-4;
+$--preview-line-active: $--color-primary;
+
+//preview-operate
+$--preview-operate-height: 30px;
+$--preview-operate-background-color: $--color-black-opacity-8;
+
+$--preview-operate-item-padding: 9px;
+$--preview-operate-item-font-size: $--font-size-base;
+$--preview-operate-item-color: $--color-white;
+
+$--preview-operate-item-color-active: $--color-danger;
+$--preview-operate-item-background-color-active: $--color-black;
 
 //布局篇
 $--header-padding: 0 20px;
