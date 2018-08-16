@@ -2,8 +2,7 @@
     <div class="cat-nav-item" 
         :class="parentVal === value ? 'cat-nav-item--active':'cat-nav-item--default'">
         <span class="cat-nav-item--text" 
-            @click="handleChange"
-            >
+            @click="handleChange">
             <slot></slot>
             <template v-if="!$slots.default">
                 {{label ? label : value}}
@@ -16,6 +15,8 @@
         margin-right: 10px;
         padding: $--nav-item-padding;
         transition: $--transition-base;
+        position: relative;
+        cursor: pointer;
        .cat-nav-item--text {
            font-size: $--nav-font-size;
            color: $--nav-item-color;
@@ -25,7 +26,15 @@
        }
     }
     .cat-nav-item--active {
-        border-bottom: 1px solid $--nav-item-border-active;
+        &::after{
+            position: absolute;
+            content: "";
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $--nav-item-border-active;
+        }
         .cat-nav-item--text {
             color: $--nav-item-color-acitve;
        }    

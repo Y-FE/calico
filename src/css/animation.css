@@ -12,7 +12,7 @@
 }
 
 .silde-enter {
-    opacity: .5;
+    opacity: 0;
     transform: translateY(-50%);
 }
 .silde-enter-active,
@@ -20,7 +20,7 @@
     transition: .3s;
 }
 .silde-leave-to {
-    opacity: .5;
+    opacity: 0;
     transform: translateY(-50%);
 }
 
