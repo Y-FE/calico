@@ -31,7 +31,8 @@
         border: 1px solid $--button-default-border;  
         &:hover {
             background: $--button-default-fill-hover;
-            border: 1px solid $--button-default-border-hover;   
+            border: 1px solid $--button-default-border-hover;
+            transition: $--transition-primary;
         }
     }
     .cat-button--primary {
@@ -41,6 +42,7 @@
         &:hover {
             background: $--button-primary-fill-hover;
             border-color: $--button-primary-fill-hover;
+            transition: $--transition-primary;
         }
     }
 

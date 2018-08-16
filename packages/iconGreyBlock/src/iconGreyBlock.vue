@@ -21,6 +21,7 @@
         }
         &:hover {
             background: $--icon-grey-block-fill-hover;
+             transition: $--transition-primary;
         }
     }
     .cat-icon-grey-block--disabled {

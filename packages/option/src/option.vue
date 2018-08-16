@@ -23,6 +23,7 @@
         &:hover {
             background: $--select-option-background-color-hover;
             color: $--select-option-color-active;
+            transition: $--transition-primary;
         }
         .iconfont {
             font-size: $--select-font-size;

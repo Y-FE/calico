@@ -9,14 +9,16 @@
             readonly="readonly" 
             autocomplete="off" 
             :style="[{'border-color': color}]" />
-         <div class="cat-line-dropdown" v-if="visible">
-            <cc-row justify="space-around"
-                align="center"
-                wrap="wrap"
-                class="cat-line-wrap">
-                <slot></slot>
-            </cc-row>
-         </div>
+        <transition name="up-silde">
+            <div class="cat-line-dropdown" v-if="visible">
+                <cc-row justify="space-around"
+                    align="center"
+                    wrap="wrap"
+                    class="cat-line-wrap">
+                    <slot></slot>
+                </cc-row>
+            </div>
+        </transition>
     </div>
 </template>
 <style lang="scss">
@@ -55,6 +57,7 @@
             margin-bottom: 10px;
         }
     }
+
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';
