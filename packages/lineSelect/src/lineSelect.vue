@@ -2,9 +2,9 @@
     <div class="cat-line-option-select" 
         v-blur="handleClose"
         @click="lineClick">
-        <p class="cat-select-title" v-if="title">
+        <!-- <p class="cat-select-title" v-if="title">
             {{title}}
-        </p>
+        </p> -->
         <input class="cat-line-input-body" 
             readonly="readonly" 
             autocomplete="off" 
@@ -51,13 +51,12 @@
                 border-radius: $--select-option-radius; 
             }
         }
-        .cat-select-title {
-            font-size: $--select-font-size;
-            color: $--select-color; 
-            margin-bottom: 10px;
-        }
     }
-
+    .cat-select-title {
+        font-size: $--select-font-size;
+        color: $--select-color; 
+        margin-bottom: 10px;
+    }
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';
@@ -70,11 +69,11 @@
             ccRow
         },
         props: {
-            // 选择框描述
-            title: {
-                type: String,
-                default: '',
-            }
+            // // 选择框描述
+            // title: {
+            //     type: String,
+            //     default: '',
+            // }
         },
         data() {
             return {

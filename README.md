@@ -20,18 +20,18 @@ npm run dev
 ## 组件
 
 ### 布局
-- [ ] aside
-- [ ] main
 - [x] row
+- [ ] aside 先不写
+- [ ] main 先不写
 
 ### 容器
-- [x] header
-- [ ] grid ? 
-- [ ] panel (dragable)
-- [ ] sidePanel (吸附边缘) ? 
-- [ ] menu ? 
-- [ ] scaleArea (保持比例自适应)
+- [ ] header
 - [ ] drag
+- [ ] panel (dragable)
+- [ ] scaleArea (保持比例自适应)
+- [ ] grid ? 先不写
+- [ ] menu ? 先不写
+- [ ] sidePanel (吸附边缘) ? 
 
 ### 普通
 - [x] button
@@ -44,7 +44,7 @@ npm run dev
 - [x] pagination
 - [x] message
 - [ ] popover
-- [ ] nav
+- [x] nav
 
 
 ### 特殊
