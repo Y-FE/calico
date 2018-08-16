@@ -27,6 +27,7 @@
         width: fit-content;
     }
     .cat-tooltip-box {
+        z-index: 99;
         position: absolute;
         bottom: -37px;
         width: 100%;
@@ -113,7 +114,6 @@
         destroyed() {
         },
         mounted() {
-            console.log(this.show);
         }
     }
 </script>

@@ -27,6 +27,8 @@ import NavItem from '../packages/navItem';
 import Option from '../packages/option';
 import Pagination from '../packages/pagination';
 import Popover from '../packages/popover';
+import Preview from '../packages/preview';
+import PreviewOperate from '../packages/previewOperate';
 import RadioButton from '../packages/radioButton';
 import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
@@ -56,6 +58,8 @@ const components = [
     Option,
     Pagination,
     Popover,
+    Preview,
+    PreviewOperate,
     RadioButton,
     RadioGroup,
     Row,
@@ -101,6 +105,8 @@ let calico = {
     Option,
     Pagination,
     Popover,
+    Preview,
+    PreviewOperate,
     RadioButton,
     RadioGroup,
     Row,
