@@ -72,7 +72,7 @@
         mixins: [ccParent('CcRadioGroup')],
         props: {
             // 自身绑定值
-            value:{
+            value: {
                 type:  Boolean | String | Number,
                 default: ''
             },
