@@ -37,8 +37,10 @@
             left: 0;
             transition: all .5s ease-in;
             width: 100%;
+            z-index: 10;
             .cat-color-wrap {
                 width: 100%; 
+                background: $--color-white;
                 min-height: 55px;
                 padding: $--color-select-option-padding;     
                 border: 1px solid $--select-option-border-color; 

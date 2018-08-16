@@ -2,7 +2,7 @@
     <cc-row justify="center" align="center" 
         class="cat-icon-grey-block-boby" 
         :class="[disabled ? 'cat-icon-grey-block--disabled':'']"
-        @click="iconClick">
+        @click.native="iconClick">
         <slot>
             <i class="iconfont" :class="icon"></i>
         </slot>

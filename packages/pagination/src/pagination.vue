@@ -1,6 +1,6 @@
 <template>
     <div class="cat-pagination">
-            <cc-icon-default icon="icon-pre" 
+            <cc-icon-default icon="icon-PreviousPage" 
                 :disabled="value === 1"
                 @click="preClick">
             </cc-icon-default>

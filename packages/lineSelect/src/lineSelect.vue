@@ -39,9 +39,11 @@
             left: 0;
             transition: $--transition-base;
             width: 100%;
+            z-index: 10;
             .cat-line-wrap {
                 width: 100%;
                 min-height: 55px;
+                background: $--color-white;
                 padding: $--color-select-option-padding;     
                 border: 1px solid $--select-option-border-color; 
                 border-radius: $--select-option-radius; 
