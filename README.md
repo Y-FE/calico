@@ -26,10 +26,10 @@ npm run dev
 
 ### 容器
 - [x] header
-- [ ] grid
+- [ ] grid ? 
 - [ ] panel (dragable)
-- [ ] sidePanel (吸附边缘)
-- [ ] menu
+- [ ] sidePanel (吸附边缘) ? 
+- [ ] menu ? 
 - [ ] scaleArea (保持比例自适应)
 - [ ] drag
 
@@ -44,11 +44,12 @@ npm run dev
 - [x] pagination
 - [x] message
 - [ ] popover
+- [ ] nav
 
 
 ### 特殊
 和上课系统密切相关的，相对不通用的组件，但是在内部项目需要共享的组件
-- [ ] slidePreview
+- [ ] slidePreview ?
 - [x] colorSelect
 - [x] lineSelect
 - [x] toolItem

@@ -10,6 +10,7 @@ import Aside from '../packages/aside';
 import Button from '../packages/button';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
+import FloatPanel from '../packages/floatPanel';
 import Header from '../packages/header';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
@@ -21,6 +22,8 @@ import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
+import Nav from '../packages/nav';
+import NavItem from '../packages/navItem';
 import Option from '../packages/option';
 import Pagination from '../packages/pagination';
 import Popover from '../packages/popover';
@@ -37,6 +40,7 @@ const components = [
     Button,
     ColorOption,
     ColorSelect,
+    FloatPanel,
     Header,
     IconBlock,
     IconCircle,
@@ -47,6 +51,8 @@ const components = [
     LineOption,
     LineSelect,
     MenuItem,
+    Nav,
+    NavItem,
     Option,
     Pagination,
     Popover,
@@ -79,6 +85,7 @@ let calico = {
     Button,
     ColorOption,
     ColorSelect,
+    FloatPanel,
     Header,
     IconBlock,
     IconCircle,
@@ -89,6 +96,8 @@ let calico = {
     LineOption,
     LineSelect,
     MenuItem,
+    Nav,
+    NavItem,
     Option,
     Pagination,
     Popover,
