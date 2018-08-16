@@ -1,5 +1,7 @@
 <template>
-    <div class="cat-float-panel-body" draggable="true">
+    <div class="cat-float-panel-body" 
+        :style="style"
+        draggable="true">
         <slot></slot>
     </div>
 </template>
@@ -11,6 +13,7 @@
         border-radius: $--float-panel-radius;
         width: fit-content;
         cursor: pointer;
+        position: fixed;
     }
 </style>
 <script>
@@ -21,6 +24,10 @@
         props: {},
         data() {
             return {
+                style: {
+                    left: '220px',
+                    top: '72px' 
+                }
             }
         },
         computed: {
