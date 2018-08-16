@@ -25,6 +25,7 @@
             box-shadow: none;
             i {
                 color: $--icon-circle-color-hover;
+                transition: $--transition-primary;
             }
         }
     }

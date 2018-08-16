@@ -22,6 +22,7 @@
         }
         &:hover {
             box-shadow: $--icon-block-shadow-hover;
+            transition: $--transition-primary;
         }
         
     }

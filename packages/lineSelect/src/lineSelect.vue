@@ -9,14 +9,16 @@
             readonly="readonly" 
             autocomplete="off" 
             :style="[{'border-color': color}]" />
-         <div class="cat-line-dropdown" v-if="visible">
-            <cc-row justify="space-around"
-                align="center"
-                wrap="wrap"
-                class="cat-line-wrap">
-                <slot></slot>
-            </cc-row>
-         </div>
+        <transition name="up-silde">
+            <div class="cat-line-dropdown" v-if="visible">
+                <cc-row justify="space-around"
+                    align="center"
+                    wrap="wrap"
+                    class="cat-line-wrap">
+                    <slot></slot>
+                </cc-row>
+            </div>
+        </transition>
     </div>
 </template>
 <style lang="scss">
@@ -54,6 +56,18 @@
             color: $--select-color; 
             margin-bottom: 10px;
         }
+    }
+    .up-silde-enter {
+        opacity: 0;
+        transform:translateY(50%);
+    }
+    .up-silde-leave-to {
+        opacity: 0;
+        transform:translateY(50%);
+    }
+    .up-silde-enter-active, 
+    .up-silde-leave-active {
+        transition: .5s 
     }
 </style>
 <script>

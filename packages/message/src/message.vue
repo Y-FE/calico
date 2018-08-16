@@ -1,5 +1,5 @@
 <template>
-    <transition>
+    <transition name="silde">
         <cc-row 
             justify="space-between"
             align="center"
@@ -18,7 +18,7 @@
         border-radius: $--message-radius;
         padding: $--message-padding;
         width: $--message-width;
-        position: absolute;
+        position: fixed;
         top: 72px;
         left: calc(50% - 26px);
         z-index: 100;
@@ -34,6 +34,14 @@
             }
         }
     }
+    .silde-enter {
+        opacity: 0;
+        transform: translateY(-72px);
+    }
+    .silde-enter-active {
+        transition: .6s;
+    }
+    
 </style>
 <script>
     import ccRow from '@packages/row/src/row.vue';

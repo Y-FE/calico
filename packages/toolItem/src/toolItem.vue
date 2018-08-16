@@ -19,6 +19,7 @@
 <style lang="scss">
     .cat-tool-item-container {
         display: inline-block;
+        //width: fit-content;
         text-align: center;
          cursor: pointer;
         .cat-tool-item-icon-box {
@@ -28,6 +29,7 @@
             background: $--tool-item-fill;
             margin: 0 auto;
             margin-bottom: 4px;
+            text-align: center;
             i {
                 color: $--tool-item-color;
                 font-size: $--tool-item-icon-size;
@@ -42,6 +44,7 @@
         &:hover { 
             .cat-tool-item-icon-box {
                 box-shadow: $--tool-item-shadow-hover;
+                transition: $--transition-primary;
             }
         }  
     }
@@ -57,6 +60,7 @@
         &:hover { 
             .cat-tool-item-icon-box  {
                 box-shadow: $--tool-item-shadow-hover;
+                transition: $--transition-primary;
             } 
         }  
     }
@@ -87,6 +91,7 @@
         &:hover { 
             .cat-tool-item-icon-box {
                 box-shadow: $--tool-item-shadow-hover-success;
+                transition: $--transition-primary;
             }
         }     
     }
@@ -102,6 +107,7 @@
         &:hover { 
             .cat-tool-item-icon-box {
                 box-shadow: $--tool-item-shadow-hover-danger;
+                transition: $--transition-primary;
             }
         }    
     }

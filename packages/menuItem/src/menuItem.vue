@@ -2,7 +2,7 @@
     <div class="cat-menu-body" 
         :class="[disabled ? 'cat-menu--disabled':'']"
         @click="menuClick"> 
-        <div class="cat-menu-header" :style="[{'background-color': disabled ? '#CCCCCC': color}]">
+        <div class="cat-menu-header" :style="[{'background-color': disabled ? disabledColor : color}]">
             <i class="iconfont" :class="icon" ></i>
         </div>
         <div class="cat-menu--text">
@@ -75,7 +75,7 @@
         },
         data() {
             return {
-              
+                disabledColor: '#CCCCCC'
             }
         },
         computed: {
