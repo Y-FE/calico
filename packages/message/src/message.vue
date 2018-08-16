@@ -34,13 +34,7 @@
             }
         }
     }
-    .silde-enter {
-        opacity: 0;
-        transform: translateY(-72px);
-    }
-    .silde-enter-active {
-        transition: .6s;
-    }
+ 
     
 </style>
 <script>

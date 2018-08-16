@@ -97,15 +97,7 @@
             }
         }
     }
-    .drop-down-enter {
-        opacity: 0;
-    }
-    .drop-down-active {
-       transition: opacity .3s;
-    }
-    .drop-down-leave {
-        opacity: 0;
-    }
+    
     
 
 </style>

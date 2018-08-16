@@ -37,7 +37,7 @@
             position: absolute;  
             bottom: -60px;
             left: 0;
-            transition: all .5s ease-in;
+            transition: $--transition-base;
             width: 100%;
             z-index: 10;
             .cat-color-wrap {
@@ -55,18 +55,7 @@
             margin-bottom: 10px;
         }
     }
-    .up-silde-enter {
-        opacity: 0;
-        transform:translateY(50%);
-    }
-    .up-silde-leave-to {
-        opacity: 0;
-        transform:translateY(50%);
-    }
-    .up-silde-enter-active, 
-    .up-silde-leave-active {
-        transition: .5s 
-    }
+    
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';

@@ -15,6 +15,13 @@
 <body>
     <div id="app">
         <div v-croup:key.origin="drop" style="width: 200px; height: 200px;"></div>
+        <cc-tooltip theme="light" :show="mm">
+            <p>我是一个粉刷匠</p>
+        </cc-tooltip>
+        <cc-tooltip style="margin-top: 100px;" @click.native="mm = !mm">
+            <p>我是一个粉刷匠2</p>
+        </cc-tooltip>
+        <br><br>
         <div v-croup:key.item="droped" draggable="true" @dragstart="startdrag">123</div>
         <cc-button>按钮1</cc-button>
         <cc-button type="primary" disabled  @click="buttonClick">按钮2</cc-button>
@@ -23,6 +30,7 @@
         <cc-button type="default" shape="round">按钮5</cc-button>
         <br>
         <cc-aside></cc-aside>
+        
         <cc-tool-item icon="icon-setting">
             第一页
         </cc-tool-item>
@@ -107,12 +115,9 @@
         <br><br>
         <cc-input-number v-model="number1" :max="6" :min="1" title="粗细"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
-        <cc-tooltip theme="light" :show="mm">
-            <p>我是一个粉刷匠</p>
-        </cc-tooltip>
-        <cc-tooltip style="margin-top: 100px;" @click.native="mm = !mm">
-            <p>我是一个粉刷匠</p>
-        </cc-tooltip>
+        <br><br>
+       
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="http://localhost:8080/dist/calico.common.js"></script>

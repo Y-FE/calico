@@ -5,18 +5,20 @@
             @mouseleave="mouseChange(false)">
             <slot></slot>
         </div>
-        <cc-row justify="center" align="center" class="cat-tooltip-box" v-if="showState">
-            <div class="cat-tooltip--arrow"
-                :class="`cat-tooltip--arrow-${theme}`">
-            </div>
-            <cc-row 
-                justify="center" 
-                align="center" 
-                :class="`cat-tooltip--${theme}`"
-                class="cat-tooltip--tool">
-                {{content}}
+        <transition name="fade-in">
+            <cc-row justify="center" align="center" class="cat-tooltip-box" v-if="showState">
+                <div class="cat-tooltip--arrow"
+                    :class="`cat-tooltip--arrow-${theme}`">
+                </div>
+                <cc-row 
+                    justify="center" 
+                    align="center" 
+                    :class="`cat-tooltip--${theme}`"
+                    class="cat-tooltip--tool">
+                    {{content}}
+                </cc-row>
             </cc-row>
-        </cc-row>
+        </transition>
     </div>
 </template>
 <style lang="scss">
@@ -28,6 +30,7 @@
         position: absolute;
         bottom: -37px;
         width: 100%;
+        transition: $--transition-base;
         .cat-tooltip--arrow {
             position: absolute;
             width: 0;
@@ -57,6 +60,7 @@
             background-color: $--tooltip-light-fill;
         }
     }
+   
 </style>
 <script>
     import ccRow from '@packages/row/src/row.vue';

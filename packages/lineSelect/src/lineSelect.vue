@@ -57,18 +57,7 @@
             margin-bottom: 10px;
         }
     }
-    .up-silde-enter {
-        opacity: 0;
-        transform:translateY(50%);
-    }
-    .up-silde-leave-to {
-        opacity: 0;
-        transform:translateY(50%);
-    }
-    .up-silde-enter-active, 
-    .up-silde-leave-active {
-        transition: .5s 
-    }
+
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';
