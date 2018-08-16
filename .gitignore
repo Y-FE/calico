@@ -1,2 +1,4 @@
 node_modules
 lib
+src/css/index.css
+src/css/index.min.css
