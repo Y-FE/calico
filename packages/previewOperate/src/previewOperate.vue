@@ -17,6 +17,14 @@
         watch: {
         },
         methods: {
+            deletItem() {
+                this.$emit('delete-item');
+                
+            },
+            changeOrder(direction) {
+                // direction: up / down
+                this.$emit('change-order', direction);
+            },
         },
         created() {
         },
