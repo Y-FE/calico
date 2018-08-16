@@ -1,11 +1,16 @@
 import Vue from 'vue';
-import calico from '../lib/calico.common.js';
+import calico from '../src/index.js';
 
+import App from './App.vue';
+console.log(calico);
 Vue.use(calico);
 
 new Vue({
     el: '#app',
     render(h) {
-        return h('cc-button', 123);
+        return h('app');
+    },
+    components: {
+        App
     }
 });
