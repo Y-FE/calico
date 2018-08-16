@@ -12,6 +12,7 @@
         cursor: pointer;
         &:hover {
             filter: $--color-brightness-base;
+            transition: $--transition-primary;
         }
     }
 </style>

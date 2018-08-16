@@ -10,20 +10,24 @@
                 :value="label ? label : value" 
                 readonly
                 :class="[visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
-            <span class="cat-input-icon">
-                <i class="cat-triangle iconfont "  
-                    :class="[visible === false ? 'icon-dropDown':'cat-icon-resever icon-TakeUp']">
-                </i>    
-            </span>
-        </div>
-        <div class="cat-select-dropdown" v-show="visible">
-            <cc-row justify="space-around"
+            <cc-row justify="center" 
                 align="center"
-                wrap="wrap"
-                class="cat-select-wrap">
-                <slot></slot>
+                class="cat-input-icon">
+                <i class="cat-triangle iconfont icon-dropDown"  
+                    :class="[visible === false ? '':'cat-icon-resever']">
+                </i>    
             </cc-row>
         </div>
+        <transition name="drop-down">
+            <div class="cat-select-dropdown" v-show="visible">
+                <cc-row justify="space-around"
+                    align="center"
+                    wrap="wrap"
+                    class="cat-select-wrap">
+                    <slot></slot>
+                </cc-row>
+            </div>
+        </transition>
     </div>
 </template>
 <style lang="scss">
@@ -60,18 +64,17 @@
                 right: 5px;
                 top: 0;
                 text-align: center;
-                transition: all .3s;
+                transition: $--transition-base;
                 pointer-events: none;
-                line-height: $--select-height ;
                 i {
                     color: $--select-title-color;
                     font-size: $--select-font-size;
                     transition: transform .3s;
-                    transform: rotate(180deg);
+                    transform: rotate(0deg);
                     cursor: pointer;
                 }
                 .cat-icon-resever {
-                    transform: rotate(0deg);
+                    transform: rotate(180deg);
                 }
             }
             .cat-input-border--default {
@@ -94,6 +97,17 @@
             }
         }
     }
+    .drop-down-enter {
+        opacity: 0;
+    }
+    .drop-down-active {
+       transition: opacity .3s;
+    }
+    .drop-down-leave {
+        opacity: 0;
+    }
+    
+
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';

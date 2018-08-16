@@ -1,11 +1,12 @@
 <template>
-    <div class="cat-icon-grey-block-boby" 
-        @click="iconClick" 
-        :class="[disabled ? 'cat-icon-grey-block--disabled':'']">
+    <cc-row justify="center" align="center" 
+        class="cat-icon-grey-block-boby" 
+        :class="[disabled ? 'cat-icon-grey-block--disabled':'']"
+        @click.native="iconClick">
         <slot>
             <i class="iconfont" :class="icon"></i>
         </slot>
-    </div>
+    </cc-row>
 </template>
 <style lang="scss">
     .cat-icon-grey-block-boby {
@@ -20,6 +21,7 @@
         }
         &:hover {
             background: $--icon-grey-block-fill-hover;
+             transition: $--transition-primary;
         }
     }
     .cat-icon-grey-block--disabled {
@@ -30,9 +32,11 @@
     }
 </style>
 <script>
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcIconGreyBlock',
         components: {
+            ccRow
         },
         props: {
             icon: {

@@ -41,8 +41,6 @@
                 position: absolute;
                 z-index: 1;
                 top: 1px;
-                height: 92%;
-                line-height: 1.3;
             }
             .cat-input-number--decrease {
                 left: 1px;
@@ -170,7 +168,8 @@
                 }
             },
             isValueNumber(value) {
-                return(/(^-?[0-9]+\.{1}\d+$)|(^-?[1-9]*$)|(^-?0{1}$)/).test(value + '');
+                return  (/^[0-9]+.?[0-9]*$/).test(value + '');
+                //(/(^-?[0-9]+\.{1}\d+$)|(^-?[1-9]*$)|(^-?0{1}$)/).test(value + '');
             }
         },
         created() {
