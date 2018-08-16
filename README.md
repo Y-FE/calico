@@ -37,7 +37,7 @@ npm run dev
 - [x] button
 - [x] switch
 - [x] select
-- [ ] tooltip
+- [x] tooltip
 - [x] radio-btton
 - [x] radio-group
 - [ ] inputNumber
