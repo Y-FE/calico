@@ -16,7 +16,8 @@ module.exports = {
     resolve: {
         alias: {
             '@mixins': path.join(__dirname, '../src/mixins'),
-            '@packages': path.join(__dirname, '../packages')
+            '@packages': path.join(__dirname, '../packages'),
+            '@hoc': path.join(__dirname, '../src/hoc')
         },
         extensions: ['.ts', '.tsx', '.vue', '.js']
     },
