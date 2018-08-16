@@ -90,8 +90,10 @@
             left: 0;
             transition: all .5s ease-in;
             width: 100%;
+            z-index: 99;
             .cat-select-wrap {
-                width: 100%;     
+                width: 100%;  
+                background: $--color-white;    
                 border: 1px solid $--select-option-border-color; 
                 border-radius: $--select-option-radius; 
             }
