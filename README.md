@@ -40,7 +40,7 @@ npm run dev
 - [x] tooltip
 - [x] radio-btton
 - [x] radio-group
-- [ ] inputNumber
+- [x] inputNumber
 - [x] pagination
 - [x] message
 - [ ] popover
