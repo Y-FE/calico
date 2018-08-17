@@ -8,8 +8,10 @@ import blur from './directives/blur';
 
 import Aside from '../packages/aside';
 import Button from '../packages/button';
+import Clock from '../packages/clock';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
+import FlexModal from '../packages/flexModal';
 import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
 import Header from '../packages/header';
@@ -41,8 +43,10 @@ import Tooltip from '../packages/tooltip';
 const components = [
     Aside,
     Button,
+    Clock,
     ColorOption,
     ColorSelect,
+    FlexModal,
     FloatPanel,
     Grid,
     Header,
@@ -89,8 +93,10 @@ let calico = {
     install,
     Aside,
     Button,
+    Clock,
     ColorOption,
     ColorSelect,
+    FlexModal,
     FloatPanel,
     Grid,
     Header,

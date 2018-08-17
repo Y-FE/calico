@@ -47,9 +47,12 @@
     transition: .3s 
 }
 
-.fade-enter .fade-leave-to{
+.fade-enter {
     opacity: 0;
 }
+.fade-leave-to {
+    opacity: 0;
+ }
 .fade-enter-active, 
 .fade-leave-active {
     transition: .3s 

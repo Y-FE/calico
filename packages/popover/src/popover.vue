@@ -49,7 +49,6 @@
     }
 </style>
 <script>
-    //一个只有点击功能的泡泡弹窗
     import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcPopover',

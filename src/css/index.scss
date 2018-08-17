@@ -258,6 +258,22 @@ $--icon-grey-block-fill-hover: $--color-black-opacity-4;
 
 $--icon-grey-block-color-disabled: $--color-disabled;
 
+//clock
+$--clock-radius: $--radius-icon;
+$--clock-color: $--color-text-primary;
+$--clock-font-size: $--font-size-large;
+$--clock-backgound-color: linear-gradient(0deg, $--color-black-opacity-2, $--color-white);
+$--clock-size: 40px;
+
+//flex-modal
+$--flex-modal-fill: $--color-white;
+$--flex-modal-box-shadow: $--box-shadow-grey;
+$--flex-modal-padding: 20px 30px 10px 30px;
+$--flex-modal-color: $--color-text-title;
+$--flex-modal-font-size: $--font-size-base;
+$--flex-modal-radius: $--radius-panel;
+$--flex-background-color: $--color-white;
+
 //preview
 $--preview-width: 200px;
 $--preview-height: 110px;

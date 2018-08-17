@@ -119,11 +119,10 @@
                 <i class="iconfont icon-deletePage"></i>
             </cc-preview>
         </div>
-
-
-        <cc-popover style="margin: 20px;">
-            <p slot="reference"></p>
-        </cc-popover>
+        <p @click="showmodal = !showmodal">88888</p>
+        <cc-flex-modal :show="showmodal">
+            7766
+        </cc-flex-modal>
 
         <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
             {{i}}
@@ -140,6 +139,7 @@
         props: {},
         data() {
             return {
+                    showmodal: false,
                     test: 'ok',
                     radio3: '橡皮',
                     color: '#FF4040',

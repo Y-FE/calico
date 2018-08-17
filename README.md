@@ -31,7 +31,7 @@ npm run dev
 - [ ] scaleArea (保持比例自适应)
 - [ ] grid ? 先不写
 - [ ] menu ? 先不写
-- [ ] sidePanel (吸附边缘) ? 
+- [ ] sidePanel (吸附边缘) ?     
 
 ### 普通
 - [x] button
@@ -43,14 +43,15 @@ npm run dev
 - [x] inputNumber
 - [x] pagination
 - [x] message
-- [ ] popover
 - [x] nav
 
 
 ### 特殊
 和上课系统密切相关的，相对不通用的组件，但是在内部项目需要共享的组件
-- [ ] preview
-- [ ] previewOperate
+- [x] flexModal
+- [x] clock
+- [x] preview
+- [x] previewOperate
 - [x] colorSelect
 - [x] lineSelect
 - [x] toolItem
