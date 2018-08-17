@@ -35,6 +35,7 @@
             width: $--preview-operate-height;
             height: $--preview-operate-height;
             cursor: pointer;
+            transition: $--transition-primary;
             i {
                 font-size: $--preview-operate-item-font-size;
                 color: $--preview-operate-item-color;

@@ -108,6 +108,17 @@
         </cc-nav>
         <br><br>
         <cc-preview-operate></cc-preview-operate>
+        <div style="margin:30px;">
+            <cc-preview v-for="(item, index) in courseList"
+                style="margin-bottom:20px;" 
+                :order="(index+1)" 
+                :key="index" 
+                @select="changeNow"
+                operate                
+                :active="index === nowIndex">
+                <i class="iconfont icon-deletePage"></i>
+            </cc-preview>
+        </div>
     </div>
 </template>
 <style>
@@ -141,6 +152,7 @@
                         {val: 3, name: "课件3"},
                     ],
                     mm: true,
+                    nowIndex: 0
                 }
         },
         computed: {
@@ -165,6 +177,9 @@
                 },
                 buttonClick(data){
                     console.log(data);
+                },
+                changeNow(data){
+                    this.nowIndex = data;
                 }
         },
         created() {

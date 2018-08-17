@@ -16,6 +16,7 @@
         box-shadow: $--icon-circle-shadow; 
         text-align: center;
         cursor: pointer;
+        transition: $--transition-primary;
         i {
             color: $--icon-circle-color;
             font-size: $--icon-circle-icon-size;
@@ -25,7 +26,6 @@
             box-shadow: none;
             i {
                 color: $--icon-circle-color-hover;
-                transition: $--transition-primary;
             }
         }
     }

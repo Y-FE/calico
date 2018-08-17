@@ -20,10 +20,10 @@
         cursor: pointer;
         font-size: $--select-font-size;
         color: $--select-option-color;
+        transition: $--transition-primary;
         &:hover {
             background: $--select-option-background-color-hover;
-            color: $--select-option-color-active;
-            transition: $--transition-primary;
+            color: $--select-option-color-active;     
         }
         .iconfont {
             font-size: $--select-font-size;
