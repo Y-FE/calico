@@ -65,7 +65,7 @@
             aligin="center">
             <p>66</p>
             <p>77</p>
-        </cc-row> -->
+        </cc-row>  -->
         <br><br>
         <cc-color-select v-model="color" title="画笔颜色">
             <cc-color-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
@@ -105,7 +105,7 @@
             我是一个骚气的可拖拽
         </cc-float-panel>
 
-        <!-- 写法和radiobutton一样, 希望和radiobutton用同样的参数 -->
+         <!-- 写法和radiobutton一样, 希望和radiobutton用同样的参数  -->
         <cc-nav v-model="nav" style="margin-top:37px;">
             <cc-nav-item  label="课件导航" value="课件导航">课件导航</cc-nav-item>
             <cc-nav-item  label="动画风格" value="动画风格">动画风格</cc-nav-item>
@@ -133,6 +133,8 @@
         </cc-tooltip> -->
         <cc-clock time="23"></cc-clock>
         <cc-clock time="46"></cc-clock>
+        <br><br><br><br>
+        <!-- <cc-scale-area></cc-scale-area> -->
     </div>
 </template>
 <style>
