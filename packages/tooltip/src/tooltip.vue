@@ -32,7 +32,7 @@
         margin-top: 11px;
     }
     .cat-tooltip--box-main {
-        z-index: 99;
+        z-index: $--tooltip-z-index;
         position: absolute;
         transform: translateX(-50%);
         transition: $--transition-base;

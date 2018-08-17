@@ -27,7 +27,7 @@ npm run example
 ### 容器
 - [ ] header
 - [ ] drag
-- [ ] panel (dragable)
+- [x] panel (dragable)
 - [ ] scaleArea (保持比例自适应)
 - [ ] grid ? 先不写
 - [ ] menu ? 先不写

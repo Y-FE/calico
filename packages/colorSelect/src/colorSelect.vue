@@ -39,7 +39,7 @@
             left: 0;
             transition: $--transition-base;
             width: 100%;
-            z-index: 10;
+            z-index:  $--select-z-index;
             .cat-color-wrap {
                 width: 100%; 
                 background: $--color-white;

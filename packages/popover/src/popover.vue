@@ -33,12 +33,12 @@
         margin-top: 5px;
     }
     .cat-popover--box-main {
-        z-index: 99;
+        z-index: $--popover-z-index;
         position: absolute;
         transform: translateX(-50%);
         width: 100%;
         .cat-popover--tool {
-            background-color:  $--color-white;
+            background-color: $--popover-fill;
             box-shadow: $--popover-box-shadow;
             padding: $--popover-padding;
             color: $--popover-color;

@@ -21,7 +21,7 @@
         position: fixed;
         top: 72px;
         left: calc(50% - 26px);
-        z-index: 100;
+        z-index: $--message-z-index;
         p {
             width: 200px;
             line-height: $--message-line-height;

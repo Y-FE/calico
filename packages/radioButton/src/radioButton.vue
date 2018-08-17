@@ -21,7 +21,7 @@
             opacity: 0;
             outline: none;
             position: absolute;
-            z-index: -1;
+            // z-index: -1;
         } 
         .cat-radio-button--text {
             position: relative;

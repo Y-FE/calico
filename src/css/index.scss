@@ -52,8 +52,11 @@ $--transition-base: all .3s cubic-bezier(.645,.045,.355,1);
 $--transition-primary: all .2s cubic-bezier(.645,.045,.355,1);
 
 //z-index
-$--z-index-base: 99;
-$--z-index-message: 100;
+$--z-index-9: 9;
+$--z-index-10: 10;
+$--z-index-99: 99;
+$--z-index-100: 100;
+
 
 // 控件篇
 //button
@@ -106,12 +109,14 @@ $--popover-padding: 20px 30px 10px 30px;
 $--popover-color: $--color-text-title;
 $--popover-font-size: $--font-size-base;
 $--popover-radius: $--radius-panel;
+$--popover-z-index: $--z-index-10;
 
 //float-panel
 $--float-panel-fill: $--color-white;
 $--float-panel-box-shadow: $--box-shadow-panel;
 $--float-panel-radius: $--radius-panel;
 $--float-panel-padding: 20px;         
+$--float-panel-z-index: $--z-index-9;         
 
 // tooltip
 $--tooltip-color: $--color-white;
@@ -119,6 +124,7 @@ $--tooltip-font-size: $--font-size-base;
 $--tooltip-arrow-size: 6px;
 $--tooltip-padding: 7px 10px;
 $--tooltip-radius: $--radius-base;
+$--tooltip-z-index: $--z-index-10;
 
 $--tooltip-dark-fill: $--color-black-opacity-8;
 $--tooltip-dark-border-color: $--tooltip-dark-fill;
@@ -135,6 +141,7 @@ $--message-radius: $--radius-icon;
 $--message-padding: 8px;
 $--message-line-height: $--line-height-muti;
 $--message-width: 252px;
+$--message-z-index: $--z-index-100;
 
 //switch
 $--switch-background-color: $--color-black-opacity-1;
@@ -150,6 +157,7 @@ $--switch-circle-size: 12px;
 $--select-radius: $--radius-icon;
 $--select-width: 80px !default;
 $--select-height: 26px;
+$--select-z-index: $--z-index-10;
 $--select-color: $--color-info;
 $--select-font-size: $--font-size-base;
 $--select-title-font-size: $--font-size-base;
@@ -276,7 +284,8 @@ $--flex-modal-padding: 20px 30px 10px 30px;
 $--flex-modal-color: $--color-text-title;
 $--flex-modal-font-size: $--font-size-base;
 $--flex-modal-radius: $--radius-panel;
-$--flex-background-color: $--color-white;
+$--flex-modal-background-color: $--color-white;
+$--flex-modal-z-index: $--z-index-99;
 
 //preview
 $--preview-width: 200px;

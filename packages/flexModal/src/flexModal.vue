@@ -9,9 +9,9 @@
 </template>
 <style lang="scss">
     .flex-modal-body {
-        z-index: 100;
+        z-index: $--flex-modal-z-index;
         position: fixed;
-        background-color: $--flex-background-color;
+        background-color: $--flex-modal-background-color;
         box-shadow: $--flex-modal-box-shadow;
         padding: $--flex-modal-padding;
         color: $--flex-modal-color;

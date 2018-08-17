@@ -90,7 +90,7 @@
             left: 0;
             transition: all .5s ease-in;
             width: 100%;
-            z-index: 10;
+            z-index:  $--select-z-index;
             .cat-select-wrap {
                 width: 100%;  
                 background: $--color-white;    

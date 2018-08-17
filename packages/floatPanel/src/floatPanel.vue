@@ -16,7 +16,7 @@
         cursor: pointer;
         position: fixed;
         height: fit-content;
-        z-index: 99;
+        z-index: $--float-panel-z-index;
     }
 </style>
 <script>
