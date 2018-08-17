@@ -25,20 +25,32 @@
        }
     }
     .cat-nav-item--active {
-        // transition: transform .3s cubic-bezier(.645,.045,.355,1);
-        // &::after{
-        //     position: absolute;
-        //     content: "";
-        //     bottom: 1px;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 1px;
-        //     background: $--nav-item-border-active;
-        // }
+        &::after{
+            position: absolute;
+            content: "";
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $--nav-item-border-active;
+            animation: transX .3s;
+            transition: all .3s ease-in;
+        }
         .cat-nav-item--text {
             color: $--nav-item-color-acitve;
        }    
-    } 
+    }
+    @keyframes transX {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;;
+    }
+    100% {
+        width: 100%;
+    }
+  } 
 </style>
 <script>
     import {setParentModel, ccParent, getParentModel} from "@mixins/parentModel";
