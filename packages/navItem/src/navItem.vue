@@ -25,15 +25,16 @@
        }
     }
     .cat-nav-item--active {
-        &::after{
-            position: absolute;
-            content: "";
-            bottom: 1px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: $--nav-item-border-active;
-        }
+        // transition: transform .3s cubic-bezier(.645,.045,.355,1);
+        // &::after{
+        //     position: absolute;
+        //     content: "";
+        //     bottom: 1px;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 1px;
+        //     background: $--nav-item-border-active;
+        // }
         .cat-nav-item--text {
             color: $--nav-item-color-acitve;
        }    

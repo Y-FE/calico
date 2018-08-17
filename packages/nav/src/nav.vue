@@ -4,6 +4,7 @@
             justify="flex-start"
             align="center"
             class="cat-nav-list">
+            <div class="cat-navs--active-item"></div>
             <slot></slot>
         </cc-row>
     </div>
@@ -13,6 +14,16 @@
         border-bottom: 1px solid $--nav-border;
         .cat-nav-list {
             width: fit-content;
+            .cat-navs--active-item {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                background-color: #409eff;
+                z-index: 1;
+                transition: transform .3s cubic-bezier(.645,.045,.355,1);
+                list-style: none;
+            }
         }   
     }
 </style>
