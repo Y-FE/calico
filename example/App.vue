@@ -102,7 +102,7 @@
         </cc-float-panel>
 
         <!-- 写法和radiobutton一样, 希望和radiobutton用同样的参数 -->
-        <cc-nav v-model="nav">
+        <cc-nav v-model="nav" style="margin-top:37px;">
             <cc-nav-item  label="课件导航" value="课件导航">课件导航</cc-nav-item>
             <cc-nav-item  label="动画风格" value="动画风格">动画风格</cc-nav-item>
         </cc-nav>
