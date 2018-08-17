@@ -8,7 +8,9 @@
             <span>
                 {{label ? label : value}}
             </span>
-            <slot name="right"></slot>
+            <span :option-hover-display="hoverDisplay">
+                <slot name="right"></slot>
+            </span>
         </cc-row> 
     </div>
 </template>
@@ -20,13 +22,20 @@
         cursor: pointer;
         font-size: $--select-font-size;
         color: $--select-option-color;
+        transition: $--transition-primary;
         &:hover {
             background: $--select-option-background-color-hover;
             color: $--select-option-color-active;
             transition: $--transition-primary;
+            [option-hover-display=true] {
+                display: inline;
+            }
         }
         .iconfont {
             font-size: $--select-font-size;
+        }
+        [option-hover-display=true] {
+            display: none;
         }
     }
     .cat-option--acitve {
@@ -54,6 +63,10 @@
                 type: Number | String,
                 default: '',
             },
+            hoverDisplay: {
+                type: Boolean,
+                default: true
+            }
         },
         data() {
             return {

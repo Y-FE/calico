@@ -10,9 +10,9 @@
         width: $--color-select-option-size;
         height: $--color-select-option-size;
         cursor: pointer;
+        transition: $--transition-primary;
         &:hover {
             filter: $--color-brightness-base;
-            transition: $--transition-primary;
         }
     }
 </style>

@@ -28,21 +28,21 @@
     }
     .cat-button--default {
         color: $--button-default-color;
-        border: 1px solid $--button-default-border;  
+        border: 1px solid $--button-default-border;
+        transition: $--transition-primary;  
         &:hover {
             background: $--button-default-fill-hover;
-            border: 1px solid $--button-default-border-hover;
-            transition: $--transition-primary;
+            border: 1px solid $--button-default-border-hover;  
         }
     }
     .cat-button--primary {
         background: $--button-primary-fill;
         border: 1px solid $--button-primary-fill;
         color: $--button-primary-color;
+        transition: $--transition-primary;
         &:hover {
             background: $--button-primary-fill-hover;
             border-color: $--button-primary-fill-hover;
-            transition: $--transition-primary;
         }
     }
 

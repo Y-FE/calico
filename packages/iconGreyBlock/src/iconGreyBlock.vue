@@ -15,13 +15,13 @@
         text-align: center;
         background: $--icon-grey-block-fill;
         cursor: pointer;
+        transition: $--transition-primary;
         i {
             font-size: $--icon-grey-block-font-size;
             color: $--icon-grey-block-color;
         }
         &:hover {
             background: $--icon-grey-block-fill-hover;
-             transition: $--transition-primary;
         }
     }
     .cat-icon-grey-block--disabled {

@@ -15,14 +15,14 @@
         background: $--icon-block-fill;
         border-radius: $--icon-block-radius;
         text-align: center;
+        transition: $--transition-primary;
         i {
            font-size: $--icon-block-icon-size;
            color: $--icon-block-color; 
            cursor: pointer;
         }
         &:hover {
-            box-shadow: $--icon-block-shadow-hover;
-            transition: $--transition-primary;
+            box-shadow: $--icon-block-shadow-hover;   
         }
         
     }
