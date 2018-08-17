@@ -101,8 +101,8 @@
         <cc-tooltip style="margin-top: 100px;" @click.native="mm = !mm">
             <p>我是一个粉刷匠</p>
         </cc-tooltip>
-        <cc-float-panel>
-            lull
+        <cc-float-panel :show="true">
+            我是一个骚气的可拖拽
         </cc-float-panel>
 
         <!-- 写法和radiobutton一样, 希望和radiobutton用同样的参数 -->

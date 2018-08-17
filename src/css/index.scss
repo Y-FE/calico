@@ -51,6 +51,10 @@ $--box-shadow-hover-danger: 0px 2px 8px 0px rgba(255,51,106,.5);
 $--transition-base: all .3s cubic-bezier(.645,.045,.355,1);
 $--transition-primary: all .2s cubic-bezier(.645,.045,.355,1);
 
+//z-index
+$--z-index-base: 99;
+$--z-index-message: 100;
+
 // 控件篇
 //button
 $--button-font-size: $--font-size-base;

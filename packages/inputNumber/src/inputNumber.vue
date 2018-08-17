@@ -39,7 +39,7 @@
             line-height: $--input-number-height;
             .cat-input-button {
                 position: absolute;
-                z-index: 1;
+                // z-index: 1;
                 top: 1px;
             }
             .cat-input-number--decrease {
