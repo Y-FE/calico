@@ -1,36 +1,40 @@
 <template>
-    <div class="cat-tooltip-body" 
-        @mouseover="mouseChange(true)"
-        @mouseleave="mouseChange(false)">
+    <cc-row justify="center" align="center"  direction="column" class="cat-tooltip-body" 
+        @mouseover.native="mouseChange(true)"
+        @mouseleave.native="mouseChange(false)">
         <div style="cursor: pointer;" >
             <slot></slot>
         </div>
-        <transition name="fade-in">
-            <cc-row justify="center" align="center" class="cat-tooltip-box" v-show="showState">
-                <div class="cat-tooltip--arrow"
-                    :class="`cat-tooltip--arrow-${theme}`">
-                </div>
-                <cc-row 
-                    justify="center" 
-                    align="center" 
-                    :class="`cat-tooltip--${theme}`"
-                    class="cat-tooltip--tool">
-                    {{content}}
+        <div class="cat-tooltip--box">
+            <transition name="fade-in">
+                <cc-row justify="center" align="center" class="cat-tooltip--box-main" v-show="showState">
+                    <div class="cat-tooltip--arrow"
+                        :class="`cat-tooltip--arrow-${theme}`">
+                    </div>
+                    <cc-row 
+                        justify="center" 
+                        align="center" 
+                        :class="`cat-tooltip--${theme}`"
+                        class="cat-tooltip--tool">
+                        {{content}}
+                    </cc-row>
                 </cc-row>
-            </cc-row>
-        </transition>
-    </div>
+            </transition>
+        </div>
+    </cc-row>
 </template>
 <style lang="scss">
     .cat-tooltip-body {
-        position: relative;
         width: fit-content;
+        position: relative;
     }
-    .cat-tooltip-box {
+    .cat-tooltip--box {
+        margin-top: 11px;
+    }
+    .cat-tooltip--box-main {
         z-index: 99;
         position: absolute;
-        bottom: -37px;
-        width: 100%;
+        transform: translateX(-50%);
         transition: $--transition-base;
         .cat-tooltip--arrow {
             position: absolute;
@@ -53,6 +57,7 @@
             padding: $--tooltip-padding;
             border-radius: $--tooltip-radius;
             width: fit-content;
+            white-space: nowrap;
         }
         .cat-tooltip--dark {
             background-color: $--tooltip-dark-fill;
