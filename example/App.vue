@@ -108,6 +108,14 @@
         </cc-nav>
         <br><br>
         <cc-preview-operate></cc-preview-operate>
+
+        <cc-popover style="margin: 20px;">
+            噜啦啦
+        </cc-popover>
+
+        <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
+            {{i}}
+        </cc-tooltip> -->
     </div>
 </template>
 <style>
