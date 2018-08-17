@@ -1,7 +1,7 @@
 <template>
     <div class="cat-tooltip-body" 
         @mouseover="mouseChange(true)"
-        @mouseleave="mouseChange(false)">>
+        @mouseleave="mouseChange(false)">
         <div style="cursor: pointer;" >
             <slot></slot>
         </div>
