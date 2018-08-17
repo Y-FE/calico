@@ -1,8 +1,8 @@
 <template>
     <div class="cat-nav-item" 
+        @click="handleChange" 
         :class="parentVal === value ? 'cat-nav-item--active':'cat-nav-item--default'">
-        <span class="cat-nav-item--text" 
-            @click="handleChange">
+        <span class="cat-nav-item--text">
             <slot>
                 {{label ? label : value}}
             </slot>
