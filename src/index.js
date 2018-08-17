@@ -35,6 +35,7 @@ import PreviewOperate from '../packages/previewOperate';
 import RadioButton from '../packages/radioButton';
 import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
+import ScaleArea from '../packages/scaleArea';
 import Select from '../packages/select';
 import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
@@ -69,6 +70,7 @@ const components = [
     RadioButton,
     RadioGroup,
     Row,
+    ScaleArea,
     Select,
     Switch,
     ToolItem,
@@ -119,6 +121,7 @@ let calico = {
     RadioButton,
     RadioGroup,
     Row,
+    ScaleArea,
     Select,
     Switch,
     ToolItem,

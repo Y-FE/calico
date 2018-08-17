@@ -12,7 +12,7 @@ panel 支持拖拽选项，
 
 ## dev
 ```
-npm run dev
+npm run example
 
 # http://localhost:8080/example for dev
 ```

@@ -1,5 +1,9 @@
 <template>
 <div style="padding: 50px;">
+    <div style="margin: 50px">
+        <div v-croup:key.origin="drop" style="width: 200px; height: 200px;"></div>
+        <div v-croup:key.item="droped" draggable="true" @dragstart="startdrag">123</div>
+    </div>
     <cc-button>按钮1</cc-button>
         <cc-button type="primary" disabled  @click="buttonClick">按钮2</cc-button>
         <cc-button type="default" @click="buttonClick">按钮3</cc-button>
