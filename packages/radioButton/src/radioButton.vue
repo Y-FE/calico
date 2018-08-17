@@ -3,10 +3,9 @@
         <span class="cat-radio-button--text" 
             @click="handleChange"
             :class="parentVal === value ? 'cat-radio-button--active':'cat-radio-button--default'">
-            <slot></slot>
-            <template v-if="!$slots.default">
+            <slot>
                 {{label ? label : value}}
-            </template> 
+            </slot>
         </span>
     </label> 
 </template>

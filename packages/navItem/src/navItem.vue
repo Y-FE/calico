@@ -3,10 +3,9 @@
         :class="parentVal === value ? 'cat-nav-item--active':'cat-nav-item--default'">
         <span class="cat-nav-item--text" 
             @click="handleChange">
-            <slot></slot>
-            <template v-if="!$slots.default">
+            <slot>
                 {{label ? label : value}}
-            </template> 
+            </slot>
         </span>
     </div> 
 </template>

@@ -47,6 +47,14 @@
     transition: .3s 
 }
 
+.fade-enter .fade-leave-to{
+    opacity: 0;
+}
+.fade-enter-active, 
+.fade-leave-active {
+    transition: .3s 
+}
+
 @keyframes bounce-in {
     0% {
       transform: scale(0);

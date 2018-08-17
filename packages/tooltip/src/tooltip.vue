@@ -1,12 +1,12 @@
 <template>
-    <div class="cat-tooltip-body">
-        <div style="cursor: pointer;" 
-            @mouseover="mouseChange(true)"
-            @mouseleave="mouseChange(false)">
+    <div class="cat-tooltip-body" 
+        @mouseover="mouseChange(true)"
+        @mouseleave="mouseChange(false)">
+        <div style="cursor: pointer;" >
             <slot></slot>
         </div>
         <transition name="fade-in">
-            <cc-row justify="center" align="center" class="cat-tooltip-box" v-if="showState">
+            <cc-row justify="center" align="center" class="cat-tooltip-box" v-show="showState">
                 <div class="cat-tooltip--arrow"
                     :class="`cat-tooltip--arrow-${theme}`">
                 </div>

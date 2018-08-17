@@ -119,6 +119,15 @@
                 <i class="iconfont icon-deletePage"></i>
             </cc-preview>
         </div>
+
+
+        <cc-popover style="margin: 20px;">
+            噜啦啦
+        </cc-popover>
+
+        <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
+            {{i}}
+        </cc-tooltip> -->
     </div>
 </template>
 <style>
