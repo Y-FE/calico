@@ -12,7 +12,7 @@
         <div class="cat-preview-operate-box"
             @click="select(order)">
             <img src="" alt="" class="cat-preview-operate-img">
-            <cc-preview-operate class="cat-preview-operate">
+            <cc-preview-operate class="cat-preview-operate" v-if="isOperate && active">
             </cc-preview-operate>
         </div>
     </cc-row>
@@ -28,12 +28,15 @@
             height: $--preview-img-height;
             position: relative;
             background: $--preview-background-color;
-            // box-shadow: 
+            box-shadow: $--preview-shadow;
             cursor: pointer;
             .cat-preview-operate {
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                width: 100%;
+            }
+            .cat-preview-operate-img {
                 width: 100%;
             }
         }
