@@ -1,28 +1,41 @@
 <template>
-    <div class="cat-popover-body">
+    <cc-row 
+        justify="center" 
+        align="center"  
+        direction="column" 
+        class="cat-popover-body" >
         <div style="cursor: pointer;" >
             <slot name="reference"></slot>
         </div>
-        <transition name="fade">
-            <cc-row 
-                justify="center" 
-                align="center" 
-                class="cat-popover-box">
-                <div class="cat-popover--tool">
-                    wishing一个分数阶
-                </div>
-            </cc-row>
-        </transition>
-    </div>
+        <div class="cat-popover--box">
+            <transition name="fade-in">
+                <cc-row 
+                    justify="center" 
+                    align="center" 
+                    class="cat-popover--box-main">
+                    <cc-row 
+                        justify="center" 
+                        align="center" 
+                        class="cat-popover--tool" :style="{'width': width}">
+                        <slot>caclo威武</slot>
+                    </cc-row>
+                </cc-row>
+            </transition>
+        </div>
+    </cc-row>
 </template>
 <style lang="scss">
     .cat-popover-body {
         position: relative;
         width: fit-content;
     }
-    .cat-popover-box {
+    .cat-popover--box {
+        margin-top: 5px;
+    }
+    .cat-popover--box-main {
         z-index: 99;
         position: absolute;
+        transform: translateX(-50%);
         width: 100%;
         .cat-popover--tool {
             background-color:  $--color-white;
@@ -31,11 +44,12 @@
             color: $--popover-color;
             font-size: $--popover-font-size;
             border-radius: $--popover-radius;
-            width: fit-content;
+            min-width: 150px;
         }
     }
 </style>
 <script>
+    //一个只有点击功能的泡泡弹窗
     import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcPopover',
@@ -47,6 +61,10 @@
         },
         data() {
             return {
+                width: {
+                    type: String | Number,
+                    default: 150
+                },
             }
         },
         computed: {

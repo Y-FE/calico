@@ -11,6 +11,7 @@ import Button from '../packages/button';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
 import FloatPanel from '../packages/floatPanel';
+import Grid from '../packages/grid';
 import Header from '../packages/header';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
@@ -43,6 +44,7 @@ const components = [
     ColorOption,
     ColorSelect,
     FloatPanel,
+    Grid,
     Header,
     IconBlock,
     IconCircle,
@@ -83,13 +85,14 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.2.0',
+    version: '0.3.0',
     install,
     Aside,
     Button,
     ColorOption,
     ColorSelect,
     FloatPanel,
+    Grid,
     Header,
     IconBlock,
     IconCircle,

@@ -122,7 +122,7 @@
 
 
         <cc-popover style="margin: 20px;">
-            噜啦啦
+            <p slot="reference"></p>
         </cc-popover>
 
         <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
