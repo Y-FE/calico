@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="padding: 50px;">
     <cc-button>按钮1</cc-button>
         <cc-button type="primary" disabled  @click="buttonClick">按钮2</cc-button>
         <cc-button type="default" @click="buttonClick">按钮3</cc-button>
@@ -91,8 +91,8 @@
         <br><br>
         <cc-input-number v-model="number1" :max="6" :min="1" title="粗细"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
-        <cc-tooltip theme="light" :show="mm">
-            <p>我是一个粉刷匠</p>
+        <cc-tooltip theme="light" :show="mm" content="路沙发客服敬爱的">
+            <p>我是一</p>
         </cc-tooltip>
         <cc-tooltip style="margin-top: 100px;" @click.native="mm = !mm">
             <p>我是一个粉刷匠</p>
