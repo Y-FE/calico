@@ -25,6 +25,9 @@
                     type: Number | String,
                     default: 0,
                 },
+                imgSrc: {
+                    
+                }
             }
         },
         computed: {

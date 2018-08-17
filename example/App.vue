@@ -106,6 +106,8 @@
             <cc-nav-item  label="课件导航" value="课件导航">课件导航</cc-nav-item>
             <cc-nav-item  label="动画风格" value="动画风格">动画风格</cc-nav-item>
         </cc-nav>
+        <br><br>
+        <cc-preview-operate></cc-preview-operate>
     </div>
 </template>
 <style>
