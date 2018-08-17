@@ -127,6 +127,8 @@
         <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
             {{i}}
         </cc-tooltip> -->
+        <cc-clock time="23"></cc-clock>
+        <cc-clock time="46"></cc-clock>
     </div>
 </template>
 <style>

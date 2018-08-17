@@ -1,4 +1,7 @@
 <template>
+    <div class="cat-grid-container">
+
+    </div>
 </template>
 <style lang="scss">
 </style>
