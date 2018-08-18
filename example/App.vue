@@ -1,8 +1,45 @@
 <template>
 <div style="padding: 50px;">
-    <div style="margin: 50px">
-        <div v-croup:key.origin="drop" style="width: 200px; height: 200px;"></div>
-        <div v-croup:key.item="droped" draggable="true" @dragstart="startdrag">123</div>
+    <div style="height: 200px; width: 200px; border: 1px solid red" v-croup:lu.orign="dropTool"></div>
+    <div style="margin: 100px 50px; border: 1px solid #000; width: 500px; height: 500px; padding: 20px;">
+        <cc-row         
+            justify="space-between"
+            align="center">
+            <cc-row justify="center" align="center" 
+                v-croup:tool.orign="{fun: dropTool, index}"
+                :style="{'width': `calc(100% / ${toolItemList.length})`}"
+                v-for="(item, index) in toolItemList"                 
+                :key="index">
+                <cc-tool-item 
+                    :icon="item.icon">
+                    {{item.name}}
+                </cc-tool-item>
+            </cc-row>
+            <cc-tool-item icon="icon-setting"  @click="showDraggable = !showDraggable"></cc-tool-item>
+        </cc-row>
+        <cc-flex-modal :show="showDraggable" top="310" left="135" width="254">
+            <cc-row wrap="wrap" aglin="center" justify="space-between">
+                <cc-row 
+                    v-croup:tool.item="item"
+                    :draggable="!toolItemList.some(i => i.name === item.name) ? true : false"
+                    v-for="(item, index) in toolItemListDefault" 
+                    :style="{'width': `calc(100% / 4`, 'margin-top': index > 3 ? '20px' : ''}"
+                    justify="center" align="center" 
+                    class="cat-item"
+                    :key="index">
+                    <cc-tool-item 
+                        :disabled="toolItemList.some(i => i.name === item.name) ? true : false"
+                        :icon="item.icon">
+                        {{item.name}}
+                    </cc-tool-item>
+                </cc-row>
+                <!-- <cc-tool-item 
+                    class="cat-item"
+                    v-for="(item, index) in toolItemListDefault" :key="index" :icon="item.icon">
+                    {{item.name}}
+                </cc-tool-item> -->
+            </cc-row>
+        </cc-flex-modal>
     </div>
     <cc-button>按钮1</cc-button>
         <cc-button type="primary" disabled  @click="buttonClick">按钮2</cc-button>
@@ -138,6 +175,10 @@
     </div>
 </template>
 <style>
+    .cat-item + .cat-item {
+        /* margin-left: 20px; */
+        /* margin-top: 20px; */
+    }
 </style>
 <script>
     export default {
@@ -147,57 +188,90 @@
         props: {},
         data() {
             return {
-                    showmodal: false,
-                    test: 'ok',
-                    radio3: '橡皮',
-                    color: '#FF4040',
-                    line: '#18A2EA',
-                    currentPage: 1,
-                    fontSize: 12,
-                    course: 1,
-                    total: 4,
-                    number1: 2,
-                    number2: 30,
-                    nav: '课件导航',
-                    colorList:[
-                        '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
-                    ],
-                    fontList:[12,14,16,18,20,22],
-                    courseList:[
-                        {val: 1, name: "课件1"},
-                        {val: 2, name: "课件2"},
-                        {val: 3, name: "课件3"},
-                    ],
-                    mm: true,
-                    nowIndex: 0
-                }
+                //----------------------
+                showDraggable: true,
+                toolItemListDefault: [
+                    {icon: 'icon-word', name: '文字'},
+                    {icon: 'icon-picture', name: '图片'},
+                    {icon: 'icon-shape', name: '形状'},
+                    {icon: 'icon-line', name: '直线'},
+                    {icon: 'icon-paint-pen', name: '画笔'},
+                    {icon: 'icon-exercises', name: '题目'},
+                    {icon: 'icon-theme', name: '知识点'},
+                    {icon: 'icon-animation', name: '动画'},
+                ],
+                toolItemList: [
+                    {icon: 'icon-word', name: '文字'},
+                    {icon: 'icon-picture', name: '图片'},
+                    {icon: 'icon-shape', name: '形状'},
+                    // {icon: 'icon-line', name: '直线'},
+                    // {icon: 'icon-paint-pen', name: '画笔'},
+                    // {icon: 'icon-exercises', name: '题目'},
+                    // {icon: 'icon-theme', name: '知识点'},
+                    {icon: 'icon-animation', name: '动画'},
+                ],
+                showmodal: false,
+                //-----------------------
+                test: 'ok',
+                radio3: '橡皮',
+                color: '#FF4040',
+                line: '#18A2EA',
+                currentPage: 1,
+                fontSize: 12,
+                course: 1,
+                total: 4,
+                number1: 2,
+                number2: 30,
+                nav: '课件导航',
+                colorList:[
+                    '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
+                ],
+                fontList:[12,14,16,18,20,22],
+                courseList:[
+                    {val: 1, name: "课件1"},
+                    {val: 2, name: "课件2"},
+                    {val: 3, name: "课件3"},
+                ],
+                mm: true,
+                nowIndex: 0
+            }
         },
         computed: {
         },
         watch: {
         },
         methods: {
-            drop() {
-                    console.log('drop');
-                },
-                droped() {
-                    console.log('droped');
-                },
-                startdrag(e) {
-                    e.dataTransfer.setData('item', 'ok')
-                },
-                preClick(data){
-                    this.currentPage = data;
-                },
-                nextClick(data){
-                    this.currentPage = data;    
-                },
-                buttonClick(data){
-                    console.log(data);
-                },
-                changeNow(data){
-                    this.nowIndex = data;
+            dropTool(item, index) {
+                if(!item) {
+                    this.$message('这他妈不是你的放置区');
+                    return;
                 }
+                this.toolItemList.splice(index, 0, item);
+            },
+            // -----------------
+            drop() {
+                console.log('drop');
+            },
+            droped(val) {
+                console.log(val);
+                console.log('droped');
+            },
+            startdrag(e) {
+                console.log(e);
+                e.dataTransfer.setData('item', 'ok')
+            },
+            preClick(data){
+                this.currentPage = data;
+            },
+            nextClick(data){
+                this.currentPage = data;    
+            },
+            buttonClick(data){
+                console.log(data);
+            },
+            changeNow(data){
+                this.nowIndex = data;
+            }
         },
         created() {
         },
