@@ -59,14 +59,14 @@
         </cc-radio-group>
         <cc-switch v-model="mm"  style="margin-top: 20px;"></cc-switch>
 
-        <!-- <cc-row 
+       <cc-row 
             class="cat-message-body"
             justify="space-between"
             aligin="center">
             <p>66</p>
             <p>77</p>
-        </cc-row>  -->
-        <br><br>
+        </cc-row>  
+       <br><br>
         <cc-color-select v-model="color" title="画笔颜色">
             <cc-color-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-color-select>
@@ -131,10 +131,14 @@
         <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
             {{i}}
         </cc-tooltip> -->
-        <cc-clock time="23"></cc-clock>
-        <cc-clock time="46"></cc-clock>
+        <div>
+            <cc-clock time="23"></cc-clock>
+            <cc-clock time="46"></cc-clock>
+        </div>
+       
+        
         <br><br><br><br>
-        <!-- <cc-scale-area></cc-scale-area> -->
+        <cc-scale-area></cc-scale-area>
     </div>
 </template>
 <style>
