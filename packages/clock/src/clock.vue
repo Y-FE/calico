@@ -21,10 +21,10 @@
             text-align: center;
         }
     }
-    .cat-clock-container:last-of-type {
-        .cat-clock-pot {
-            display: none;
-        }
+    .cat-clock-container:last-of-type .cat-clock-pot,
+    .cat-clock-container:last-child .cat-clock-pot,
+    .cat-clock-container:nth-last-of-type(1) .cat-clock-pot {
+        display: none;
     }
 </style>
 <script>
