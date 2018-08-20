@@ -5,13 +5,17 @@ const groups = new Map();
 function selected(e: MouseEvent): boolean {
     return false;
 }
-let itemValue: Object;
+let itemValue: {
+    fun?: Function,
+    value?: any
+};
 // v-croup.origin:key
 export default {
     bind(el: HTMLElement, binding: VNodeDirective, vnode: VNode) {
         //有同一个key的就是一家人
         let key = binding.arg;
-        let value = binding.value; //item中是item的信息，origin中是执行的函数
+        //绑定{fun(), value}
+        let value = binding.value;
         // 放置区
         let isOrigin = binding.modifiers.origin;
         // 拖拽条目
@@ -34,14 +38,21 @@ export default {
                 // console.log(itemValue);
                 let itemgroup = groups.get(key);
                 if (!itemgroup) {
-                    value.fun(false);
+                    // value.fun(false);
                     return;
                 }
                 let ifGroup = itemgroup.some((i: Object) => i === itemValue);
                 if (!ifGroup) {
-                    value.fun(false);
-                } else {
-                    value.fun(itemValue, value.index);
+                    return;
+                    // value.fun(false);
+                }
+                //执行拖拽条目方法
+                if (itemValue.fun) {
+                    itemValue.fun(itemValue.value, value.value);
+                }
+                // 执行放置区方法
+                if (value.fun) {
+                    value.fun(itemValue.value, value.value);
                 }
                 itemValue = {};
             });
