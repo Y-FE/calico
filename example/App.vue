@@ -6,8 +6,8 @@
             justify="space-between"
             align="center">
             <cc-row justify="center" align="center" 
-                v-croup:tool.orign="{fun: dropTool, value: index}"
-                v-croup:tool.item="item"
+                v-croup:tool.orign="{value: index}"
+                v-croup:tool.item="{fun: dropSelf, value: index}"
                 draggable="true"
                 :style="{'width': `calc(100% / ${toolItemList.length})`}"
                 v-for="(item, index) in toolItemList"                 
@@ -22,7 +22,7 @@
         <cc-flex-modal :show="showDraggable" top="310" left="135" width="254">
             <cc-row wrap="wrap" aglin="center" justify="space-between">
                 <cc-row 
-                    v-croup:tool.item="{fun: dropStartItem, value: item}"
+                    v-croup:tool.item="{fun: dropTool, value: item}"
                     :draggable="!toolItemList.some(i => i.name === item.name) ? true : false"
                     v-for="(item, index) in toolItemListDefault" 
                     :style="{'width': `calc(100% / 4`, 'margin-top': index > 3 ? '20px' : ''}"
@@ -184,6 +184,9 @@
         /* margin-left: 20px; */
         /* margin-top: 20px; */
     }
+    .move-list-move {
+        transition: transform .8s;
+    }
 </style>
 <script>
     export default {
@@ -249,15 +252,22 @@
         watch: {
         },
         methods: {
-            dropTool(item, index) {
-                // if(!item) {
-                //     this.$message('这他妈不是你的放置区');
-                //     return;
-                // }
-                this.toolItemList.splice(index, 0, item);
+            dropTool(itemValue, orignValue) {
+                if (orignValue !== undefined) {
+                     this.toolItemList.splice(orignValue, 0, itemValue);
+                }
             },
-            dropStartItem() {
-                console.log('你放置了我');
+            dropSelf(itemValue, orignValue) {
+                if (orignValue === undefined) {
+                    this.toolItemList = this.toolItemList.filter((i, index) => index !== itemValue);
+                    return;
+                };
+                let item = this.toolItemList[itemValue];
+                this.toolItemList = this.toolItemList.filter((i, index) => index !== itemValue);
+                this.toolItemList.splice(orignValue, 0, item);
+            },
+            mmd() {
+                console.log(88888);
             },
             // -----------------
             drop() {

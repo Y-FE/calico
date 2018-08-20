@@ -31,6 +31,16 @@ export default {
             el.addEventListener('dragstart', e => {
                 itemValue = value;
             });
+            //拖拽结束后
+            el.addEventListener('dragend', e => {
+                //拖拽条目不在放置区内
+                if (e.dataTransfer.dropEffect === 'none') {
+                    //执行拖拽条目方法
+                    if (itemValue.fun) {
+                        itemValue.fun(itemValue.value);
+                    }
+                }
+            });
         } else {
             // 拖动放置到可释放目标时[放置区方法]
             el.addEventListener('drop', e => {
@@ -74,6 +84,9 @@ export default {
             //     el.style.borderRight = '';
             // });
         }
+        // window.addEventListener('dragexit', e => {
+        //     console.log('dd');
+        // });
     },
     inserted() {},
     update() {},
