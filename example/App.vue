@@ -17,7 +17,7 @@
                     {{item.name}}
                 </cc-tool-item>
             </cc-row>
-            <cc-tool-item icon="icon-setting"  @click="showDraggable = !showDraggable"></cc-tool-item>
+            <cc-tool-item icon="icon-setting"  v-croup:tool.orign="{value: toolItemList.length}"  @click="showDraggable = !showDraggable"></cc-tool-item>
         </cc-row>
         <cc-flex-modal :show="showDraggable" top="310" left="135" width="254">
             <cc-row wrap="wrap" aglin="center" justify="space-between">

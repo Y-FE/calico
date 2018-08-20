@@ -24,14 +24,6 @@
     }
 </style>
 <script>
-
-    function scale(width, height, outWidth, outHeight) {
-        const hScale = outWidth / width;
-        const vScale = outHeight / height;
-        const scale = Math.min(hScale, vScale);
-        return scale;
-    }
-
     export default {
         name: 'CcScaleArea',
         components: {
@@ -60,7 +52,7 @@
         },
         computed: {
             scale() {
-                return scale(this.width, this.height, this.outWidth, this.outHeight);
+                return this.caclScale(this.width, this.height, this.outWidth, this.outHeight);
             },
             outerStyle() {
                 return {
@@ -85,7 +77,12 @@
         watch: {
         },
         methods: {
-    
+            caclScale(width, height, outWidth, outHeight) {
+                const hScale = outWidth / width;
+                const vScale = outHeight / height;
+                const scale = Math.min(hScale, vScale);
+                return scale;
+            }
         },
         created() {
         },
