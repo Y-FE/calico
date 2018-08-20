@@ -175,7 +175,10 @@
        
         
         <br><br><br><br>
-        <cc-scale-area></cc-scale-area>
+        <cc-scale-area
+            :outWidth="scaleOutWidth"
+            :outHeight="scaleOutHeight"
+        ></cc-scale-area>
     </div>
 </template>
 <style>
@@ -237,7 +240,10 @@
                     {val: 3, name: "课件3"},
                 ],
                 mm: true,
-                nowIndex: 0
+                nowIndex: 0,
+
+                scaleOutWidth: 1366,
+                scaleOutHeight: 768
             }
         },
         computed: {
@@ -283,6 +289,13 @@
         },
         mounted() {
             this.$message('000');
+
+            this.scaleOutWidth = window.innerWidth-200;
+            this.scaleOutHeight = window.innerHeight-200;
+            window.onresize = () => {
+                this.scaleOutWidth = window.innerWidth-200;
+                this.scaleOutHeight = window.innerHeight-200;
+            }
         }
     }
 </script>

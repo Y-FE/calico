@@ -1,22 +1,53 @@
 <template>
-    <div class="cat-scale-area" 
-        :style="[{'width': parseInt(myWidth) + 'px'}, {'height': parseInt(myHeight) + 'px'}]">
+    <div class="cat-scale-area"
+        :style="outerStyle">
+        <div
+            :style="containerStyle">
+            <div class="cat-scale-area-inner"
+                :style="innerStyle">
+                <slot></slot>
+            </div>
+            <slot name="container"></slot>
+        </div>
     </div>
 </template>
 <style lang="scss">
     .cat-scale-area {
         border: 1px solid #403bef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cat-scale-area-inner {
+        border: 1px solid #403b00;
+        transform-origin: 0 0;
     }
 </style>
 <script>
+
+    function scale(width, height, outWidth, outHeight) {
+        const hScale = outWidth / width;
+        const vScale = outHeight / height;
+        const scale = Math.min(hScale, vScale);
+        return scale;
+    }
+
     export default {
         name: 'CcScaleArea',
         components: {
         },
         props: {
+            outWidth: {
+                type: Number,
+                default: 1366
+            },
+            outHeight: {
+                type: Number,
+                default: 768
+            },
             width: {
                 type: Number,
-                default: 1336
+                default: 1366
             },
             height: {
                 type: Number,
@@ -25,29 +56,33 @@
         },
         data() {
             return {
-                calBgWidth: '',
-                calBgHeight: '',
-                myWidth: this.width,
-                myHeight: this.height,
-                screenWidth: document.documentElement.clientWidth,
-                screenHeight: document.documentElement.clientHeight,
             }
         },
         computed: {
+            scale() {
+                return scale(this.width, this.height, this.outWidth, this.outHeight);
+            },
+            outerStyle() {
+                return {
+                    width: `${this.outWidth}px`,
+                    height: `${this.outHeight}px`
+                }
+            },
+            containerStyle() {
+                return {
+                    width: `${this.width * this.scale}px`,
+                    height: `${this.height * this.scale}px`
+                }
+            },
+            innerStyle() {
+                return {
+                    width: `${this.width}px`,
+                    height: `${this.height}px`,
+                    transform: `scale(${this.scale})`
+                }
+            }
         },
         watch: {
-            screenWidth (val) {
-                //console.log(val + 'w');
-                this.screenWidth = val;
-                this.myWidth = val / this.calBgWidth;
-                this.myHeight = this.myWidth / (this.width / this.height);
-            },
-            screenHeight(val){
-                //console.log(val + 'h');
-                this.screenHeight = val;
-                this.myHeight = val / this.calBgHeight;
-                this.myWidth = this.myHeight * (this.width / this.height);    
-            }
         },
         methods: {
     
@@ -57,14 +92,6 @@
         destroyed() {
         },
         mounted() {
-            // 然后监听window的resize事件．监听浏览器窗口变化
-            const that = this;
-            that.calBgWidth = document.documentElement.clientWidth / that.width;
-            that.calBgHeight = document.documentElement.clientHeight / that.height;
-            window.onresize = function temp() {
-                that.screenWidth = document.documentElement.clientWidth;
-                that.screenHeight = document.documentElement.clientHeight;
-            }
         }
     }
 </script>
