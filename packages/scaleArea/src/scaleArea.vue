@@ -1,5 +1,7 @@
 <template>
-    <div class="cat-scale-area"
+    <cc-row class="cat-scale-area"
+        justify="center"
+        align="center"
         :style="outerStyle">
         <div
             :style="containerStyle">
@@ -9,14 +11,11 @@
             </div>
             <slot name="container"></slot>
         </div>
-    </div>
+    </cc-row>
 </template>
 <style lang="scss">
     .cat-scale-area {
         border: 1px solid #403bef;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .cat-scale-area-inner {
         border: 1px solid #403b00;
@@ -24,9 +23,11 @@
     }
 </style>
 <script>
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcScaleArea',
         components: {
+            ccRow,
         },
         props: {
             outWidth: {

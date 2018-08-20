@@ -31,6 +31,10 @@ export default {
             el.addEventListener('dragstart', e => {
                 itemValue = value;
             });
+            el.addEventListener('dragleave', e => {
+                e.preventDefault();
+                el.style.boxShadow = '';
+            });
             //拖拽结束后
             el.addEventListener('dragend', e => {
                 //拖拽条目不在放置区内
@@ -45,16 +49,14 @@ export default {
             // 拖动放置到可释放目标时[放置区方法]
             el.addEventListener('drop', e => {
                 e.preventDefault();
-                // console.log(itemValue);
+                el.style.boxShadow = '';
                 let itemgroup = groups.get(key);
                 if (!itemgroup) {
-                    // value.fun(false);
                     return;
                 }
                 let ifGroup = itemgroup.some((i: Object) => i === itemValue);
                 if (!ifGroup) {
                     return;
-                    // value.fun(false);
                 }
                 //执行拖拽条目方法
                 if (itemValue.fun) {
@@ -69,24 +71,9 @@ export default {
             // 拖动到可释放目标区域时触发[放置区方法]
             el.addEventListener('dragover', e => {
                 e.preventDefault();
-                // el.style.borderLeft = '1px solid red';
-                // el.style.borderRight = '1px solid red';
+                el.style.boxShadow = '0px 1px 10px 2px rgba(0, 0, 0, .05)';
             });
-            // el.addEventListener('dragleave', e => {
-            //     e.preventDefault();
-            //     el.style.borderLeft = '';
-            //     el.style.borderRight = '';
-            // });
-            // el.addEventListener('dragend', e => {
-            //     console.log('eee');
-            //     e.preventDefault();
-            //     el.style.borderLeft = '';
-            //     el.style.borderRight = '';
-            // });
         }
-        // window.addEventListener('dragexit', e => {
-        //     console.log('dd');
-        // });
     },
     inserted() {},
     update() {},

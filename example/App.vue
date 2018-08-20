@@ -6,6 +6,7 @@
             justify="space-between"
             align="center">
             <cc-row justify="center" align="center" 
+                style="height: 62px"
                 v-croup:tool.orign="{value: index}"
                 v-croup:tool.item="{fun: dropSelf, value: index}"
                 draggable="true"

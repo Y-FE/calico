@@ -1,9 +1,9 @@
 <template>
     <cc-row justify="space-between" align="center" class="cat-header-body">
-        <cc-row justify="space-between" align="center" style="width: 585px;">
+        <cc-row align="center">
             <slot name="left"></slot>
         </cc-row>
-        <cc-row justify="space-between" align="center" style="width: 545px;">
+        <cc-row align="center">
             <slot name="right"></slot>
         </cc-row>
     </cc-row>
@@ -12,7 +12,6 @@
     .cat-header-body {
         width: 100%;
         height: $--header-height;
-        padding: $--header-padding;
         background-color: $--header-background-color;
     }
 </style>
