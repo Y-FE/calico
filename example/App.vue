@@ -6,7 +6,9 @@
             justify="space-between"
             align="center">
             <cc-row justify="center" align="center" 
-                v-croup:tool.orign="{fun: dropTool, index}"
+                v-croup:tool.orign="{fun: dropTool, value: index}"
+                v-croup:tool.item="item"
+                draggable="true"
                 :style="{'width': `calc(100% / ${toolItemList.length})`}"
                 v-for="(item, index) in toolItemList"                 
                 :key="index">
@@ -20,7 +22,7 @@
         <cc-flex-modal :show="showDraggable" top="310" left="135" width="254">
             <cc-row wrap="wrap" aglin="center" justify="space-between">
                 <cc-row 
-                    v-croup:tool.item="item"
+                    v-croup:tool.item="{fun: dropStartItem, value: item}"
                     :draggable="!toolItemList.some(i => i.name === item.name) ? true : false"
                     v-for="(item, index) in toolItemListDefault" 
                     :style="{'width': `calc(100% / 4`, 'margin-top': index > 3 ? '20px' : ''}"
@@ -96,14 +98,14 @@
         </cc-radio-group>
         <cc-switch v-model="mm"  style="margin-top: 20px;"></cc-switch>
 
-       <cc-row 
+        <!-- <cc-row 
             class="cat-message-body"
             justify="space-between"
             aligin="center">
             <p>66</p>
             <p>77</p>
-        </cc-row>  
-       <br><br>
+        </cc-row>  -->
+        <br><br>
         <cc-color-select v-model="color" title="画笔颜色">
             <cc-color-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-color-select>
@@ -168,14 +170,10 @@
         <!-- <cc-tooltip v-for="i in 6" :key="i" :content="'dd'+i">
             {{i}}
         </cc-tooltip> -->
-        <div>
-            <cc-clock time="23"></cc-clock>
-            <cc-clock time="46"></cc-clock>
-        </div>
-       
-        
+        <cc-clock time="23"></cc-clock>
+        <cc-clock time="46"></cc-clock>
         <br><br><br><br>
-        <cc-scale-area></cc-scale-area>
+        <!-- <cc-scale-area></cc-scale-area> -->
     </div>
 </template>
 <style>
@@ -246,11 +244,14 @@
         },
         methods: {
             dropTool(item, index) {
-                if(!item) {
-                    this.$message('这他妈不是你的放置区');
-                    return;
-                }
+                // if(!item) {
+                //     this.$message('这他妈不是你的放置区');
+                //     return;
+                // }
                 this.toolItemList.splice(index, 0, item);
+            },
+            dropStartItem() {
+                console.log('你放置了我');
             },
             // -----------------
             drop() {
