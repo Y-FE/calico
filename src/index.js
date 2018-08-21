@@ -40,6 +40,7 @@ import ScaleArea from '../packages/scaleArea';
 import Select from '../packages/select';
 import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
+import ToolItemLayout from '../packages/toolItemLayout';
 import Tooltip from '../packages/tooltip';
 
 const components = [
@@ -76,6 +77,7 @@ const components = [
     Select,
     Switch,
     ToolItem,
+    ToolItemLayout,
     Tooltip
 ];
 
@@ -128,6 +130,7 @@ let calico = {
     Select,
     Switch,
     ToolItem,
+    ToolItemLayout,
     Tooltip
 };
 

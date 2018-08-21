@@ -6,11 +6,9 @@
         :class="[
             disabled ? 'cat-tool-item--disabled' : `cat-tool-item--${state}`,
             active && state === 'default'  ? 'cat-tool-item--active' : '', ]">
-        <slot name="tool">
-            <div class="cat-tool-item-icon-box">
+            <cc-row justify="center" align="center" class="cat-tool-item-icon-box">
                 <i class="iconfont" :class="icon"></i>
-            </div>
-        </slot>
+            </cc-row>
         <p class="cat-tool-item--text">
             <slot></slot>
         </p>
@@ -134,9 +132,11 @@
    
 </style>
 <script>
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcToolItem',
         components: {
+            ccRow
         },
         props: {
             icon: {

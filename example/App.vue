@@ -50,6 +50,10 @@
         <cc-button type="default" shape="round">按钮5</cc-button>
         <br>
         <cc-aside></cc-aside>
+        <cc-tool-item-layout>
+            <cc-switch slot="tool" v-model="mm"></cc-switch>
+            第一页
+        </cc-tool-item-layout>
         <cc-tool-item icon="icon-setting">
             第一页
         </cc-tool-item>
