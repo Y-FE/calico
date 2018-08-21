@@ -43,6 +43,7 @@ import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
 import ToolItemLayout from '../packages/toolItemLayout';
 import Tooltip from '../packages/tooltip';
+import VerticalGroup from '../packages/verticalGroup';
 
 const components = [
     Aside,
@@ -80,7 +81,8 @@ const components = [
     Switch,
     ToolItem,
     ToolItemLayout,
-    Tooltip
+    Tooltip,
+    VerticalGroup
 ];
 
 const install = function(Vue, opts = {}) {
@@ -97,7 +99,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.4.7',
+    version: '0.4.8',
     install,
     Aside,
     Button,
@@ -134,7 +136,8 @@ let calico = {
     Switch,
     ToolItem,
     ToolItemLayout,
-    Tooltip
+    Tooltip,
+    VerticalGroup
 };
 
 export default calico
