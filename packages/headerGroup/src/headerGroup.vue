@@ -5,7 +5,10 @@
 </template>
 <style lang="scss">
     .cat-header-group {
-        padding: 0 24px;
+        padding: 0 14px;
+    }
+    .cat-header-group > * {
+        padding: 0 10px;
     }
 </style>
 <script>

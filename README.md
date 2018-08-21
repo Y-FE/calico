@@ -31,7 +31,7 @@ npm run example
 - [x] scaleArea (保持比例自适应)
 - [ ] grid ? 先不写
 - [ ] menu ? 先不写
-- [ ] sidePanel (吸附边缘) ?     
+- [x] sidePanel (吸附边缘) ?     
 
 ### 普通
 - [x] button
