@@ -67,6 +67,10 @@
                     let self = vnode.context;
                     
                     el.addEventListener('mousedown', e => {
+                        if (e.path[0] !== el) {
+                            return;
+                        }
+                        // console.log(e);
                         //算出鼠标相对元素的位置
                         let disX = e.clientX - el.offsetLeft;
                         let disY = e.clientY - el.offsetTop;

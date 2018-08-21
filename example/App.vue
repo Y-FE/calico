@@ -131,7 +131,7 @@
             <p>我是一个粉刷匠</p>
         </cc-tooltip>
         <cc-float-panel :show="true">
-            我是一个骚气的可拖拽
+            <p>我是一个骚气的可拖拽</p>
         </cc-float-panel>
 
          <!-- 写法和radiobutton一样, 希望和radiobutton用同样的参数  -->

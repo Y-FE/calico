@@ -2,9 +2,9 @@
     <div class="cat-color-option-select" 
         v-blur="handleClose"
         @click="colorClick">
-        <p class="cat-select-title" v-if="title">
+        <!-- <p class="cat-select-title" v-if="title">
             {{title}}
-        </p>
+        </p> -->
         <input class="cat-color-input-body" 
             readonly="readonly" 
             autocomplete="off" 
@@ -68,11 +68,11 @@
             ccRow
         },
         props: {
-            // 选择框描述
-            title: {
-                type: String,
-                default: '',
-            },
+            // // 选择框描述
+            // title: {
+            //     type: String,
+            //     default: '',
+            // },
         },
         data() {
             return {

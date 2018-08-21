@@ -2,9 +2,9 @@
     <div class="cat-select" 
         v-blur="handleClose"
         @click="selectClick">
-        <p class="cat-select-title" v-if="title">
+        <!-- <p class="cat-select-title" v-if="title">
             {{title}}
-        </p>
+        </p> -->
         <div class="cat-input-body">
             <input class="cat-input-main" 
                 :value="label ? label : value" 
@@ -115,10 +115,10 @@
         },
         props: {
             // 选择框描述
-            title: {
-                type: String,
-                default: '',
-            }            
+            // title: {
+            //     type: String,
+            //     default: '',
+            // }            
         },
         data() {
             return {
