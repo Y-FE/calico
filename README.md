@@ -25,10 +25,10 @@ npm run example
 - [ ] main 先不写
 
 ### 容器
-- [ ] header
-- [ ] drag
+- [x] header
+- [x] drag
 - [x] panel (dragable)
-- [ ] scaleArea (保持比例自适应)
+- [x] scaleArea (保持比例自适应)
 - [ ] grid ? 先不写
 - [ ] menu ? 先不写
 - [ ] sidePanel (吸附边缘) ?     
@@ -55,6 +55,7 @@ npm run example
 - [x] colorSelect
 - [x] lineSelect
 - [x] toolItem
+- [x] toolItemLayout
 - [x] menuItem
 - [x] iconBlock
 - [x] iconCircle
