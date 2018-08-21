@@ -13,6 +13,8 @@
         width: 100%;
         height: $--header-height;
         background-color: $--header-background-color;
+
+        border-bottom: $--color-black-opacity-1 1px solid;
     }
 </style>
 <script>
