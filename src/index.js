@@ -99,7 +99,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.4.8',
+    version: '0.5.0',
     install,
     Aside,
     Button,
