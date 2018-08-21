@@ -13,7 +13,7 @@
             <cc-row justify="center" 
                 align="center"
                 class="cat-input-icon">
-                <i class="cat-triangle iconfont icon-dropDown"  
+                <i class="cat-triangle iconfont icon-dropdown"  
                     :class="[visible === false ? '':'cat-icon-resever']">
                 </i>    
             </cc-row>
