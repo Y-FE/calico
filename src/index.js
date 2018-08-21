@@ -15,6 +15,7 @@ import FlexModal from '../packages/flexModal';
 import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
 import Header from '../packages/header';
+import HeaderGroup from '../packages/headerGroup';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
@@ -51,6 +52,7 @@ const components = [
     FloatPanel,
     Grid,
     Header,
+    HeaderGroup,
     IconBlock,
     IconCircle,
     IconDefault,
@@ -102,6 +104,7 @@ let calico = {
     FloatPanel,
     Grid,
     Header,
+    HeaderGroup,
     IconBlock,
     IconCircle,
     IconDefault,
