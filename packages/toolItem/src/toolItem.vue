@@ -27,7 +27,6 @@
             line-height: $--icon-large-block;
             background: $--tool-item-fill;
             margin: 0 auto;
-            margin-bottom: 4px;
             text-align: center;
             i {
                 color: $--tool-item-color;
@@ -35,6 +34,7 @@
             }
         }
         .cat-tool-item--text {
+            margin-top: 4px;
             font-size: $--tool-item-text-size;
             line-height: $--tool-item-text-size; 
             color: $--tool-item-color;
