@@ -1,6 +1,5 @@
 <template>
 <div style="padding: 50px;">
-    <div style="height: 200px; width: 200px; border: 1px solid red" v-croup:lu.orign="dropTool"></div>
     <div style="margin: 100px 50px; border: 1px solid #000; width: 500px; height: 500px; padding: 20px;">
         <cc-row         
             justify="space-between"
@@ -71,24 +70,24 @@
         <cc-menu-item icon="icon-speaker" color="#27D2D0">
             扬声器
         </cc-menu-item>
-        <cc-menu-item icon="icon-Microphone" color="#FFA250">
+        <cc-menu-item icon="icon-microphone" color="#FFA250">
             麦克风
         </cc-menu-item>
         <cc-menu-item icon="icon-purview" color="#403BEF" disabled>
             板书权限
         </cc-menu-item>
         <br>
-        <cc-icon-block icon="icon-CenterAlignment"></cc-icon-block>
-        <cc-icon-block icon="icon-CenterAlignment" active></cc-icon-block>
+        <cc-icon-block icon="icon-center-alignment"></cc-icon-block>
+        <cc-icon-block icon="icon-center-alignment" active></cc-icon-block>
         <br><br>
-        <cc-icon-circle icon="icon-increaseTime"></cc-icon-circle>
+        <cc-icon-circle icon="icon-increase-time"></cc-icon-circle>
         <br><br>
-        <cc-icon-default icon="icon-nextPage"></cc-icon-default>
-        <cc-icon-default icon="icon-nextPage" disabled></cc-icon-default>
+        <cc-icon-default icon="icon-nextpage"></cc-icon-default>
+        <cc-icon-default icon="icon-nextpage" disabled></cc-icon-default>
 
         <br><br>
-        <cc-icon-grey-block icon="icon-addCourseware"></cc-icon-grey-block>
-        <cc-icon-grey-block icon="icon-addCourseware" disabled></cc-icon-grey-block>
+        <cc-icon-grey-block icon="icon-add-courseware"></cc-icon-grey-block>
+        <cc-icon-grey-block icon="icon-add-courseware" disabled></cc-icon-grey-block>
         <br><br>
        
         <cc-radio-group v-model="radio3">

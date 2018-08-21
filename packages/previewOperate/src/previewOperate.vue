@@ -7,19 +7,19 @@
                 @click="deletItem"
                 justify="center"
                 align="center">
-                <i class="iconfont icon-deletePage"></i>
+                <i class="iconfont icon-delete-page"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
                 @click="changeOrder('up')"
                 justify="center"
                 align="center">
-                <i class="iconfont icon-moveUp"></i>
+                <i class="iconfont icon-move-up"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
                 @click="changeOrder('down')"
                 justify="center"
                 align="center">
-                <i class="iconfont icon-moveDown"></i>
+                <i class="iconfont icon-move-down"></i>
             </cc-row>
         </cc-row>
     </div>

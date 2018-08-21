@@ -1,6 +1,6 @@
 <template>
     <div class="cat-pagination">
-            <cc-icon-default icon="icon-PreviousPage" 
+            <cc-icon-default icon="icon-previouspage" 
                 :disabled="value === 1"
                 @click="preClick">
             </cc-icon-default>
@@ -9,7 +9,7 @@
             <span class="cat-cat-pagination-line">/</span>
             <span class="cat-pagination--total">{{total}}</span>
         </span>
-        <cc-icon-default icon="icon-nextPage" 
+        <cc-icon-default icon="icon-nextpage" 
             :disabled="value === total" 
             @click="nextClick">
         </cc-icon-default>
