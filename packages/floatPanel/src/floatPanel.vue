@@ -3,7 +3,9 @@
         :style="position" 
         v-show="show"
         v-drag>
-        <slot></slot>
+        <div style="cursor: default">
+            <slot></slot>
+        </div>
     </div>
 </template>
 <style lang="scss">
@@ -13,7 +15,7 @@
         padding: $--float-panel-padding;
         border-radius: $--float-panel-radius;
         width: fit-content;
-        cursor: pointer;
+        cursor: grab;
         position: fixed;
         height: fit-content;
         z-index: $--float-panel-z-index;
