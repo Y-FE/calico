@@ -38,6 +38,7 @@ import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
 import ScaleArea from '../packages/scaleArea';
 import Select from '../packages/select';
+import SidePanel from '../packages/sidePanel';
 import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
 import ToolItemLayout from '../packages/toolItemLayout';
@@ -75,6 +76,7 @@ const components = [
     Row,
     ScaleArea,
     Select,
+    SidePanel,
     Switch,
     ToolItem,
     ToolItemLayout,
@@ -95,7 +97,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.4.3',
+    version: '0.4.6',
     install,
     Aside,
     Button,
@@ -128,6 +130,7 @@ let calico = {
     Row,
     ScaleArea,
     Select,
+    SidePanel,
     Switch,
     ToolItem,
     ToolItemLayout,
