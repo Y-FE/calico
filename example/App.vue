@@ -103,15 +103,16 @@
         <div style="margin-top: 100px;">
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
         </div>
+        <cc-vertical-group>
         <cc-line-select v-model="line" title="边框颜色">
             <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-line-option>
         </cc-line-select>
 
-        <cc-select v-model="fontSize" title="字号" style="margin-left: 60px;">
+        <cc-select v-model="fontSize" title="字号">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
         </cc-select>
-
+        </cc-vertical-group>
         <cc-select v-model="course" title="课件" style="margin-left: 60px;">
             <cc-option 
                 v-for="(item, index) in courseList" 
