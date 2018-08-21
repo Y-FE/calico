@@ -15,7 +15,7 @@
                 :disabled="value === min"
                 @click="reduce">
             </cc-icon-grey-block>
-            <cc-icon-grey-block icon="icon-addCourseware" 
+            <cc-icon-grey-block icon="icon-add-courseware" 
                 class="cat-input-number--increase cat-input-button"
                 :disabled="value === max"
                 @click="increase">
