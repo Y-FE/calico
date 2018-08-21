@@ -65,21 +65,7 @@
             第三页
         </cc-tool-item>
         <br>
-        <cc-menu-item icon="icon-ReportErrors" color="#FF336A">
-            报错
-        </cc-menu-item>
-        <cc-menu-item icon="icon-chat" color="#0077FF">
-            聊天
-        </cc-menu-item>
-        <cc-menu-item icon="icon-speaker" color="#27D2D0">
-            扬声器
-        </cc-menu-item>
-        <cc-menu-item icon="icon-microphone" color="#FFA250">
-            麦克风
-        </cc-menu-item>
-        <cc-menu-item icon="icon-purview" color="#403BEF" disabled>
-            板书权限
-        </cc-menu-item>
+        
         <br>
         <cc-icon-block icon="icon-center-alignment"></cc-icon-block>
         <cc-icon-block icon="icon-center-alignment" active></cc-icon-block>
@@ -181,6 +167,25 @@
             :outWidth="scaleOutWidth"
             :outHeight="scaleOutHeight"
         ></cc-scale-area>
+    
+    
+    <cc-side-panel>
+        <cc-menu-item icon="icon-ReportErrors" color="#FF336A">
+            报错
+        </cc-menu-item>
+        <cc-menu-item icon="icon-chat" color="#0077FF">
+            聊天
+        </cc-menu-item>
+        <cc-menu-item icon="icon-speaker" color="#27D2D0">
+            扬声器
+        </cc-menu-item>
+        <cc-menu-item icon="icon-microphone" color="#FFA250">
+            麦克风
+        </cc-menu-item>
+        <cc-menu-item icon="icon-purview" color="#403BEF" disabled>
+            板书权限
+        </cc-menu-item>
+    </cc-side-panel>
     </div>
 </template>
 <style>

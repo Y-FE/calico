@@ -42,6 +42,7 @@ $--line-height-muti: 16px;
 //shadow
 $--box-shadow-grey: 0px 1px 10px 2px rgba(0, 0, 0, .05);
 $--box-shadow-panel: 0px 2px 36px -5px rgba(64,59,239,.5);
+$--box-shadow-panel-side: 2px 0px 8px 0px rgba(0, 0, 0, .05);
 $--box-shadow-hover: 0px 3px 8px -1px rgba(64,59,239,.5);
 $--box-shadow-hover-success: 0px 2px 8px 0px rgba(39,210,208,.5);
 $--box-shadow-hover-warning: 0px 2px 8px 0px rgba(255,162,80,0.5);;
@@ -117,6 +118,10 @@ $--float-panel-box-shadow: $--box-shadow-panel;
 $--float-panel-radius: $--radius-panel;
 $--float-panel-padding: 20px;         
 $--float-panel-z-index: $--z-index-9;         
+
+//side-panel
+$--side-panel-box-shadow: $--box-shadow-panel-side;
+$--side-panel-border-color: $--color-black-opacity-1;
 
 // tooltip
 $--tooltip-color: $--color-white;
