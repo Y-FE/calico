@@ -25,6 +25,7 @@
         .cat-tool-item-icon-box {
             width : $--icon-large-block;
             height: $--icon-large-block;
+            border-radius: $--radius-icon;
             line-height: $--icon-large-block;
             background: $--tool-item-fill;
             margin: 0 auto;
