@@ -6,11 +6,11 @@
         :class="[
             disabled ? 'cat-tool-item--disabled' : `cat-tool-item--${state}`,
             active && state === 'default'  ? 'cat-tool-item--active' : '', ]">
-        <div class="cat-tool-item-icon-box">
-            <slot name="tool">
+        <slot name="tool">
+            <div class="cat-tool-item-icon-box">
                 <i class="iconfont" :class="icon"></i>
-            </slot>
-        </div>
+            </div>
+        </slot>
         <p class="cat-tool-item--text">
             <slot></slot>
         </p>
