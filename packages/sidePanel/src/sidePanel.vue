@@ -2,6 +2,7 @@
     <cc-row
         class="cat-side-panel"
         direction="column"
+        justify="space-around"
         >
         <slot></slot>
     </cc-row>
@@ -10,7 +11,8 @@
     .cat-side-panel {
         position: fixed;
         right: 0;
-        top: calc(100% - 165px);
+        top: calc(50% - 165px);
+        padding: 10px 0;
         width:66px;
         height:331px;
         border-top-left-radius: $--radius-panel;
