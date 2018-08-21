@@ -1,6 +1,6 @@
-import Select from './src/select';
+import select from './src/select';
 import title from '@hoc/title';
-const CcSelect = title(Select);
+const CcSelect = title(select);
 CcSelect.install = function(Vue) {
     Vue.component(CcSelect.name, CcSelect);
 };

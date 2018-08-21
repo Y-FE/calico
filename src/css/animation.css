@@ -1,14 +1,14 @@
 .up-silde-enter {
     opacity: 0;
-    transform:translateY(50%);
+    transform:translateY(30%);
 }
 .up-silde-leave-to {
     opacity: 0;
-    transform:translateY(50%);
+    transform:translateY(30%);
 }
 .up-silde-enter-active, 
 .up-silde-leave-active {
-    transition: .5s 
+    transition: .3s 
 }
 
 .silde-enter {
@@ -27,10 +27,11 @@
 .drop-down-enter {
     opacity: 0;
 }
-.drop-down-active {
-   transition: opacity .3s;
+.drop-down-enter-active,
+.drop-down-leave-active {
+    transition: .2s;
 }
-.drop-down-leave {
+.drop-down-leave-to {
     opacity: 0;
 }
 

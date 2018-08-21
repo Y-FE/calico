@@ -1,6 +1,6 @@
 <template>
     <div class="cat-input-number">
-        <p class="cat-input-title" v-if="title">{{title}}</p>
+        <!-- <p class="cat-input-title" v-if="title">{{title}}</p> -->
         <div class="cat-input-number-body">
             <div class="cat-input-body">
                 <input type="text"
@@ -80,10 +80,10 @@
             CcIconGreyBlock
         },
         props: {
-            title: {
-                type: String,
-                default: ''
-            },
+            // title: {
+            //     type: String,
+            //     default: ''
+            // },
             value: {
                 type: Number,
                 default: 1

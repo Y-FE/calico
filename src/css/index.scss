@@ -320,3 +320,11 @@ $--preview-operate-item-background-color-active: $--color-black;
 //布局篇
 $--header-height: 62px;
 $--header-background-color: $--color-white;
+
+//aside
+$--aside-width: 200px;
+$--aside-head-height: 42px;
+$--aside-body-height: calc(100% - 112px);
+$--aside-body-border-color: $--color-black-opacity-1;
+$--aside-body-padding: 10px 0;
+$--aside-foot-height: 70px;

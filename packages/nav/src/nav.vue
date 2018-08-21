@@ -10,7 +10,7 @@
 </template>
 <style lang="scss">
     .cat-nav {
-        border-bottom: 1px solid $--nav-border;
+        // border-bottom: 1px solid $--nav-border;
         .cat-nav-list {
             width: fit-content;
             position: relative;

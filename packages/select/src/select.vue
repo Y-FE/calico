@@ -86,9 +86,9 @@
         }
         .cat-select-dropdown {
             position: absolute;  
-            top: 60px;
+            top: 38px;
             left: 0;
-            transition: all .5s ease-in;
+            transition: all .2s ease-in;
             width: 100%;
             z-index:  $--select-z-index;
             .cat-select-wrap {

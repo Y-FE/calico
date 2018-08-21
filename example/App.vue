@@ -1,5 +1,7 @@
 <template>
 <div style="padding: 50px;">
+    <cc-aside style="height: 800px;">
+    </cc-aside>
     <div style="margin: 100px 50px; border: 1px solid #000; width: 500px; height: 500px; padding: 20px;">
         <cc-row         
             justify="space-between"
@@ -103,7 +105,7 @@
         <div style="margin-top: 100px;">
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
         </div>
-        <cc-line-select v-model="line" title="边框颜色">
+        <cc-line-select v-model="line">
             <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-line-option>
         </cc-line-select>
 
@@ -112,7 +114,7 @@
             </cc-option>
         </cc-select>
 
-        <cc-select v-model="course" title="课件" style="margin-left: 60px;">
+        <cc-select v-model="course"  style="margin-left: 60px;">
             <cc-option 
                 v-for="(item, index) in courseList" 
                 :key="index" 
@@ -122,7 +124,7 @@
             </cc-option>
         </cc-select>
         <br><br>
-        <cc-input-number v-model="number1" :max="6" :min="1" title="粗细"></cc-input-number>
+        <cc-input-number v-model="number1" :max="6" :min="1"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
         <cc-tooltip theme="light" :show="mm" content="路沙发客服敬爱的">
             <p>我是一</p>
