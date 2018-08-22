@@ -31,6 +31,7 @@
         width: $--aside-width;
         height: 100%;
         border-right: $--border;
+        background-color: $--color-white;
     }
     .cat-aside--head {
         height: $--aside-head-height;
