@@ -11,6 +11,7 @@ import Button from '../packages/button';
 import Clock from '../packages/clock';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
+import Container from '../packages/container';
 import FlexModal from '../packages/flexModal';
 import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
@@ -54,6 +55,7 @@ const components = [
     Clock,
     ColorOption,
     ColorSelect,
+    Container,
     FlexModal,
     FloatPanel,
     Grid,
@@ -105,13 +107,14 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.5.2',
+    version: '0.5.3',
     install,
     Aside,
     Button,
     Clock,
     ColorOption,
     ColorSelect,
+    Container,
     FlexModal,
     FloatPanel,
     Grid,
