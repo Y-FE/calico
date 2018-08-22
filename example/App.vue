@@ -105,15 +105,19 @@
         <div style="margin-top: 100px;">
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
         </div>
-        <cc-line-select v-model="line">
+
+        <cc-vertical-group>
+        <cc-line-select v-model="line" title="线条颜色">
             <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-line-option>
         </cc-line-select>
 
-        <cc-select v-model="fontSize" title="字号" style="margin-left: 60px;">
+        <cc-select v-model="fontSize" title="字号">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
         </cc-select>
+        </cc-vertical-group>
 
+        <cc-vertical-group>
         <cc-select v-model="course"  style="margin-left: 60px;">
             <cc-option 
                 v-for="(item, index) in courseList" 
@@ -123,9 +127,9 @@
                 <i slot="right" class="iconfont icon-delete"></i>
             </cc-option>
         </cc-select>
-        <br><br>
-        <cc-input-number v-model="number1" :max="6" :min="1"></cc-input-number>
+        <cc-input-number v-model="number1" :max="6" :min="1" title="大小"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
+        </cc-vertical-group>
         <cc-tooltip theme="light" :show="mm" content="路沙发客服敬爱的">
             <p>我是一</p>
         </cc-tooltip>

@@ -1,6 +1,6 @@
 {
   "name": "calico-ui",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "ui lib for online course system",
   "main": "lib/calico.common.js",
   "repository": "git@github.com:Y-FE/calico.git",
@@ -33,6 +33,7 @@
     "example": "webpack-dev-server --host 0.0.0.0 --config ./build/webpack.example.js",
     "build": "webpack --config ./build/webpack.prod.js",
     "prebuild": "node build/build-entry.js",
+    "publish": "nrm use npm && npm publish && nrm use taobao",
     "docs:build": "npm run build && vuepress build docs",
     "docs:dev": "npm run build && vuepress dev docs"
   }
