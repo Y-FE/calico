@@ -192,6 +192,7 @@
             板书权限
         </cc-menu-item>
     </cc-side-panel>
+    <cc-main></cc-main>
     </div>
 </template>
 <style>
