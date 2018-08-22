@@ -128,12 +128,13 @@
         <cc-color-select v-model="color" title="画笔颜色">
             <cc-color-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-color-option>
         </cc-color-select>
-
+        <div style="margin-top: 80px;">
+            <cc-pagination column v-model="currentPage" :total="4"></cc-pagination>
+        </div>
         <div style="margin-top: 100px;">
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
         </div>
 
-        <cc-vertical-group>
         <cc-line-select v-model="line" title="线条颜色">
             <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-line-option>
         </cc-line-select>
@@ -142,9 +143,6 @@
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
         </cc-select>
-        </cc-vertical-group>
-
-        <cc-vertical-group>
         <cc-select v-model="course">
             <cc-option 
                 v-for="(item, index) in courseList" 
@@ -156,7 +154,6 @@
         </cc-select>
         <cc-input-number v-model="number1" :max="6" :min="1" title="大小"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
-        </cc-vertical-group>
         <cc-tooltip theme="light" :show="mm" content="路沙发客服敬爱的">
             <p>我是一</p>
         </cc-tooltip>

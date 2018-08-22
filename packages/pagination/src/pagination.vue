@@ -1,15 +1,15 @@
 <template>
-    <div class="cat-pagination">
-            <cc-icon-default icon="icon-previouspage" 
-                :disabled="value === 1"
-                @click="preClick">
-            </cc-icon-default>
-        <span class="cat-pagination-page">
+    <div class="cat-pagination" :class="column ? 'cat-pagination--column' : ''">
+        <cc-icon-default icon="icon-arrow-left" 
+            :disabled="value === 1"
+            @click="preClick">
+        </cc-icon-default>
+        <span class="cat-pagination-page" v-if="!column">
             <span class="cat-pagination--current">{{value}}</span>
             <span class="cat-cat-pagination-line">/</span>
             <span class="cat-pagination--total">{{total}}</span>
         </span>
-        <cc-icon-default icon="icon-nextpage" 
+        <cc-icon-default icon="icon-arrow-right" 
             :disabled="value === total" 
             @click="nextClick">
         </cc-icon-default>
@@ -36,7 +36,9 @@
             }
         }   
     }
-
+    .cat-pagination--column {
+        transform: rotate(90deg);
+    }
 </style>
 <script>
     import CcIconDefault from '@packages/iconDefault/src/iconDefault.vue';
@@ -55,6 +57,11 @@
             value: {
                 type: Number,
                 default: 1,
+            },
+            // 排列
+            column: {
+                type: Boolean,
+                default: false
             },
         },
         data() {
