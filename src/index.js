@@ -16,6 +16,7 @@ import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
 import Header from '../packages/header';
 import HeaderGroup from '../packages/headerGroup';
+import HorizontalRadio from '../packages/horizontalRadio';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
@@ -44,6 +45,7 @@ import ToolItem from '../packages/toolItem';
 import ToolItemLayout from '../packages/toolItemLayout';
 import Tooltip from '../packages/tooltip';
 import VerticalGroup from '../packages/verticalGroup';
+import VerticalRadio from '../packages/verticalRadio';
 
 const components = [
     Aside,
@@ -56,6 +58,7 @@ const components = [
     Grid,
     Header,
     HeaderGroup,
+    HorizontalRadio,
     IconBlock,
     IconCircle,
     IconDefault,
@@ -82,7 +85,8 @@ const components = [
     ToolItem,
     ToolItemLayout,
     Tooltip,
-    VerticalGroup
+    VerticalGroup,
+    VerticalRadio
 ];
 
 const install = function(Vue, opts = {}) {
@@ -111,6 +115,7 @@ let calico = {
     Grid,
     Header,
     HeaderGroup,
+    HorizontalRadio,
     IconBlock,
     IconCircle,
     IconDefault,
@@ -137,7 +142,8 @@ let calico = {
     ToolItem,
     ToolItemLayout,
     Tooltip,
-    VerticalGroup
+    VerticalGroup,
+    VerticalRadio
 };
 
 export default calico
