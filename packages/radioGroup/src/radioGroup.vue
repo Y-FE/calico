@@ -1,25 +1,32 @@
 <template>
-    <div class="cat-radio-group">
+    <cc-row 
+        :align="column ? '' : 'center'" 
+        justify="center" 
+        :direction="column ? 'column' : ''"
+        class="cat-radio-group">
         <slot></slot>
-    </div>
+    </cc-row>
 </template>
 <style lang="scss">
     .cat-radio-group {
-        display: inline-block;
-        line-height: 1;
-        vertical-align: middle;
-        font-size: 0;
+        width: fit-content;
     }
 </style>
 <script>
+    import ccRow from '@packages/row/src/row.vue'; 
     import {ccModel, getModel}  from "@mixins/parentModel";
     export default {
         name: 'CcRadioGroup',
         componentName: "CcRadioGroup",
         mixins: [ccModel(String | Number | Boolean)],
         components: {
+            ccRow,
         },
         props: {
+            column: {
+                type: Boolean,
+                default: false
+            }
         },
         data() {
             return {
