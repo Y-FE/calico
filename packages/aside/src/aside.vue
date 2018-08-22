@@ -29,16 +29,20 @@
     </div>
 </template>
 <style lang="scss">
+    $--border: 1px solid $--aside-body-border-color;
+
     .cat-aside-body {
         width: $--aside-width;
         height: 100%;
+        border-right: $--border;
     }
     .cat-aside--head {
         height: $--aside-head-height;
     }
     .cat-aside--body {
         height: $--aside-body-height;
-        border: 1px solid $--aside-body-border-color;
+        border-top: $--border;
+        border-bottom: $--border;
         border-left: none;
         overflow-y: auto;
         padding: $--aside-body-padding;

@@ -6,10 +6,13 @@ export default component => {
     return {
         ...component,
         render(h) {
-            return h('div', [
-                h('p', { class: { 'cat-select-title': true } }, this.title),
-                component.render.call(this, h)
-            ]);
+            let children = [component.render.call(this, h)];
+            if (this.title) {
+                children.unshift(
+                    h('p', { class: { 'cat-select-title': true } }, this.title)
+                );
+            }
+            return h('div', children);
         }
     };
 };
