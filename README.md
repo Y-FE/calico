@@ -61,6 +61,8 @@ npm run example
 - [x] iconCircle
 - [x] iconDefault
 - [x] iconGreyBlock
+- [x] verticalRadio
+- [x] horizontalRadio
 
 ## Thanks
 

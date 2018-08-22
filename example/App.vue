@@ -1,5 +1,22 @@
 <template>
 <div style="padding: 50px;">
+    <cc-radio-group v-model="hori" title="形状">
+        <cc-horizontal-radio  value="77">
+            <i class="iconfont icon-triangle"></i>
+        </cc-horizontal-radio>
+        <cc-horizontal-radio  :value="1">
+            <i class="iconfont icon-rectangle"></i>
+        </cc-horizontal-radio>
+    </cc-radio-group>
+    <cc-radio-group v-model="hori" column>
+        <cc-vertical-radio  value="77" label="我是坏蛋">
+            <i class="iconfont icon-triangle"></i>
+        </cc-vertical-radio>
+        <cc-vertical-radio  :value="1">
+            <i class="iconfont icon-rectangle"></i>
+        </cc-vertical-radio>
+    </cc-radio-group>
+    <!-- <cc-horizontal-radio></cc-horizontal-radio> -->
     <cc-aside style="height: 800px;">
     </cc-aside>
     <div style="margin: 100px 50px; border: 1px solid #000; width: 500px; height: 500px; padding: 20px;">
@@ -212,6 +229,7 @@
         props: {},
         data() {
             return {
+                hori: 1,
                 //----------------------
                 showDraggable: true,
                 toolItemListDefault: [
