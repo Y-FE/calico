@@ -20,6 +20,9 @@
            font-size: $--icon-block-icon-size;
            color: $--icon-block-color; 
            cursor: pointer;
+           > div {
+               background-color: $--color-black;
+           }
         }
         &:hover {
             box-shadow: $--icon-block-shadow-hover;   
@@ -30,6 +33,9 @@
         box-shadow: none;
         .cat-icon-block--content {
             color: $--icon-block-color-active;
+            > div {
+               background-color: $--icon-block-color-active;
+            }
         } 
         &:hover {
             box-shadow: none;
