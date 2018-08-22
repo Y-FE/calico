@@ -15,6 +15,7 @@
         padding: 10px 0;
         width:66px;
         height:331px;
+        background-color: $--color-white;
         border-top-left-radius: $--radius-panel;
         border-bottom-left-radius: $--radius-panel;
         box-shadow: $--side-panel-box-shadow;

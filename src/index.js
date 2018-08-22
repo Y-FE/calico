@@ -11,6 +11,7 @@ import Button from '../packages/button';
 import Clock from '../packages/clock';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
+import Container from '../packages/container';
 import FlexModal from '../packages/flexModal';
 import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
@@ -25,6 +26,7 @@ import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
+import Main from '../packages/main';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
 import Nav from '../packages/nav';
@@ -53,6 +55,7 @@ const components = [
     Clock,
     ColorOption,
     ColorSelect,
+    Container,
     FlexModal,
     FloatPanel,
     Grid,
@@ -67,6 +70,7 @@ const components = [
     InputNumber,
     LineOption,
     LineSelect,
+    Main,
     MenuItem,
     Nav,
     NavItem,
@@ -103,13 +107,14 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.5.2',
+    version: '0.5.5',
     install,
     Aside,
     Button,
     Clock,
     ColorOption,
     ColorSelect,
+    Container,
     FlexModal,
     FloatPanel,
     Grid,
@@ -124,6 +129,7 @@ let calico = {
     InputNumber,
     LineOption,
     LineSelect,
+    Main,
     MenuItem,
     Nav,
     NavItem,
