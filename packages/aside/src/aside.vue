@@ -8,15 +8,11 @@
                 头
             </slot>
         </cc-row>
-        <cc-row 
-            justify="center" 
-            align="center" 
-            direction="column" 
-            class="cat-aside--body">
+        <div class="cat-aside--body">
             <slot name="body">
                 身体
             </slot>
-        </cc-row>
+        </div>
         <cc-row 
             justify="center" 
             align="center" 
@@ -45,6 +41,7 @@
         border-bottom: $--border;
         border-left: none;
         overflow-y: auto;
+        overflow-x: hidden;
         padding: $--aside-body-padding;
     }
     .cat-aside--foot {

@@ -17,7 +17,17 @@
         </cc-vertical-radio>
     </cc-radio-group>
     <!-- <cc-horizontal-radio></cc-horizontal-radio> -->
-    <cc-aside style="height: 800px;">
+    <cc-aside style="height: 400px;">
+        <div slot="body">
+            <cc-preview v-for="(item, index) in courseList"
+                :order="(index+1)" 
+                :key="index" 
+                @select="changeNow"
+                operate                
+                :active="index === nowIndex">
+                <i class="iconfont icon-delete-page"></i>
+            </cc-preview>
+        </div>
     </cc-aside>
     <div style="margin: 100px 50px; border: 1px solid #000; width: 500px; height: 500px; padding: 20px;">
         <cc-row         
@@ -230,7 +240,7 @@
             return {
                 hori: 1,
                 //----------------------
-                showDraggable: true,
+                showDraggable: false,
                 toolItemListDefault: [
                     {icon: 'icon-word', name: '文字'},
                     {icon: 'icon-picture', name: '图片'},
