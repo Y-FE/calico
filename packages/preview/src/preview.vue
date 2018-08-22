@@ -10,9 +10,14 @@
         </div>
         <div class="cat-preview-operate-box"
             @click="select(order)">
-            <img src="" alt="" class="cat-preview-operate-img">
-            <cc-preview-operate class="cat-preview-operate" v-if="active">
-            </cc-preview-operate>
+            <template v-if="operate">
+                <cc-preview-operate 
+                    @delete-item="deleteItem"
+                    @change-order="changeOrder"
+                    class="cat-preview-operate" 
+                    v-if="active">
+                </cc-preview-operate>
+            </template>
         </div>
     </cc-row>
 </template>
@@ -122,7 +127,7 @@
             
         },
         methods: {
-            deletItem() {
+            deleteItem() {
                 if (!this.operate) {
                     return;
                 } else {

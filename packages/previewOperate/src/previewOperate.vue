@@ -4,7 +4,7 @@
             align="center"
             class="cat-operate-body">
             <cc-row class="cat-operate-box"
-                @click="deletItem"
+                @click="deleteItem"
                 justify="center"
                 align="center">
                 <i class="iconfont icon-delete-page"></i>
@@ -25,30 +25,30 @@
     </div>
 </template>
 <style lang="scss">
-.cat-operate-icons {
-    height: $--preview-operate-height;
-    background: $--preview-operate-background-color;
-    .cat-operate-body {
-        width: fit-content;
-        margin: 0 auto;
-        .cat-operate-box {
-            width: $--preview-operate-height;
-            height: $--preview-operate-height;
-            cursor: pointer;
-            transition: $--transition-primary;
-            i {
-                font-size: $--preview-operate-item-font-size;
-                color: $--preview-operate-item-color;
-            }
-            &:hover {
-                background: $--preview-operate-item-background-color-active;
+    .cat-operate-icons {
+        height: $--preview-operate-height;
+        background: $--preview-operate-background-color;
+        .cat-operate-body {
+            width: fit-content;
+            margin: 0 auto;
+            .cat-operate-box {
+                width: $--preview-operate-height;
+                height: $--preview-operate-height;
+                cursor: pointer;
+                transition: $--transition-primary;
                 i {
-                   color: $--preview-operate-item-color-active; 
+                    font-size: $--preview-operate-item-font-size;
+                    color: $--preview-operate-item-color;
+                }
+                &:hover {
+                    background: $--preview-operate-item-background-color-active;
+                    i {
+                    color: $--preview-operate-item-color-active; 
+                    }
                 }
             }
-        }
-    } 
-}
+        } 
+    }
 </style>
 <script>
     import ccRow from '@packages/row/src/row.vue';
@@ -67,7 +67,7 @@
         watch: {
         },
         methods: {
-            deletItem() {
+            deleteItem() {
                 this.$emit('delete-item');
             },
             changeOrder(direction) {
