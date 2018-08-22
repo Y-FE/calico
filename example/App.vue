@@ -197,10 +197,18 @@
             :outWidth="scaleOutWidth"
             :outHeight="scaleOutHeight"
         ></cc-scale-area>
-    
+        <cc-menu-item icon="icon-report-errors" color="#FF336A">
+            报错
+        </cc-menu-item>
+        <cc-menu-item icon="icon-report-errors" close color="#FF336A">
+            报错
+        </cc-menu-item>
+        <cc-menu-item icon="icon-report-errors" disabled color="#FF336A">
+            报错
+        </cc-menu-item>
     
     <cc-side-panel>
-        <cc-menu-item icon="icon-ReportErrors" color="#FF336A">
+        <cc-menu-item icon="icon-report-errors" color="#FF336A">
             报错
         </cc-menu-item>
         <cc-menu-item icon="icon-chat" color="#0077FF">

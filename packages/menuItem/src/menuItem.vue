@@ -2,7 +2,8 @@
     <div class="cat-menu-body" 
         :class="[disabled ? 'cat-menu--disabled':'']"
         @click="menuClick"> 
-        <div class="cat-menu-header" :style="[{'background-color': disabled ? disabledColor : color}]">
+        <div class="cat-menu-header" 
+            :style="[{'background-color': disabled ? disabledColor : close ? closeColor : color}]">
             <i class="iconfont" :class="icon" ></i>
         </div>
         <div class="cat-menu--text">
@@ -71,11 +72,16 @@
             disabled: {
                 type: Boolean,
                 default: false,
+            },
+            close: {
+                type: Boolean,
+                default: false,
             }
         },
         data() {
             return {
-                disabledColor: '#CCCCCC'
+                disabledColor: '#CCCCCC',
+                closeColor: '#666666'
             }
         },
         computed: {
