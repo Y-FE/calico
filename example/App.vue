@@ -145,7 +145,7 @@
         </cc-vertical-group>
 
         <cc-vertical-group>
-        <cc-select v-model="course"  style="margin-left: 60px;">
+        <cc-select v-model="course">
             <cc-option 
                 v-for="(item, index) in courseList" 
                 :key="index" 
@@ -283,6 +283,9 @@
                     {val: 1, name: "课件1"},
                     {val: 2, name: "课件2"},
                     {val: 3, name: "课件3"},
+                    {val: 4, name: "课件1"},
+                    {val: 5, name: "课件2"},
+                    {val: 6, name: "课件3"},
                 ],
                 mm: true,
                 nowIndex: 0,

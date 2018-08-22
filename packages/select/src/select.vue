@@ -1,5 +1,6 @@
 <template>
     <div class="cat-select" 
+        :style="{width: `${width}px`}"
         v-blur="handleClose"
         @click="selectClick">
         <!-- <p class="cat-select-title" v-if="title">
@@ -114,11 +115,10 @@
             ccRow
         },
         props: {
-            // 选择框描述
-            // title: {
-            //     type: String,
-            //     default: '',
-            // }            
+            width: {
+                type: Number,
+                default: 80
+            }          
         },
         data() {
             return {

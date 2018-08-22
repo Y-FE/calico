@@ -72,7 +72,7 @@ img {
 ::-webkit-scrollbar {
   border-radius: 6px;
   width: 6px;
-  background: #eeebe7;
+  background: transparent;
 }
 /* 滚动槽 */
 ::-webkit-scrollbar-track {
