@@ -68,5 +68,19 @@ img {
   vertical-align: middle;
   border: 0;
 }
-
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  border-radius: 6px;
+  width: 6px;
+  background: #eeebe7;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #d6d6d6;
+}
 

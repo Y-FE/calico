@@ -1,11 +1,10 @@
 <template>
-    <cc-row justify="space-around"
-        align="center"
+    <cc-row align="center"
         class="cat-preview" 
         :class="active ? 'cat-preview--active': ''">
         <div class="cat-preview-operate-num">
             <div class="cat-preview-num--self">{{order}}</div>
-            <div class="cat-preview-operate-delete" @click="deletePage">
+            <div class="cat-preview-operate-delete">
                 <slot></slot>
             </div>
         </div>
@@ -46,7 +45,7 @@
         }
     }
     .cat-preview-operate-num {
-        width: $--preview-font-size;
+        width: 25px;
         height: $--preview-img-height;
         text-align: center;
         position: relative;
@@ -62,6 +61,7 @@
             margin-right: auto;
             top: 50%;
             transform: translateY(-50%);
+            color: $--preview-color;
             font-size: $--preview-font-size;
         }
     }
@@ -144,9 +144,6 @@
                     this.isOperate = true;
                 }
             },
-            deletePage(){
-                this.$emit('delete-page');
-            }
         },
         created() {
         },
