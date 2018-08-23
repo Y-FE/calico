@@ -8,7 +8,7 @@
     .cat-main {
         width: 100%;
         height: 100%;
-        background-color: $--color-gray;
+        background-color: $--color-grey;
     }
 </style>
 <script>

@@ -37,7 +37,7 @@
                 style="height: 62px"
                 v-croup:tool.orign="{value: index}"
                 v-croup:tool.item="{fun: dropSelf, value: index}"
-                draggable="true"
+                :draggable="showDraggable"
                 :style="{'width': `calc(100% / ${toolItemList.length})`}"
                 v-for="(item, index) in toolItemList"                 
                 :key="index">
@@ -46,7 +46,11 @@
                     {{item.name}}
                 </cc-tool-item>
             </cc-row>
-            <cc-tool-item icon="icon-setting"  v-croup:tool.orign="{value: toolItemList.length}"  @click="showDraggable = !showDraggable"></cc-tool-item>
+            <cc-icon-nano icon="icon-setting" 
+                :active="showDraggable" 
+                v-croup:tool.orign="{value: toolItemList.length}"  
+                @click="showDraggable = !showDraggable">
+            </cc-icon-nano>
         </cc-row>
         <cc-flex-modal :show="showDraggable" top="310" left="135" width="254">
             <cc-row wrap="wrap" aglin="center" justify="space-between">

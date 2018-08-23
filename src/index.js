@@ -22,10 +22,12 @@ import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
 import IconGreyBlock from '../packages/iconGreyBlock';
+import IconNano from '../packages/iconNano';
 import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
+import Lull from '../packages/lull';
 import Main from '../packages/main';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
@@ -66,10 +68,12 @@ const components = [
     IconCircle,
     IconDefault,
     IconGreyBlock,
+    IconNano,
     Input,
     InputNumber,
     LineOption,
     LineSelect,
+    Lull,
     Main,
     MenuItem,
     Nav,
@@ -125,10 +129,12 @@ let calico = {
     IconCircle,
     IconDefault,
     IconGreyBlock,
+    IconNano,
     Input,
     InputNumber,
     LineOption,
     LineSelect,
+    Lull,
     Main,
     MenuItem,
     Nav,

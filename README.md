@@ -58,6 +58,7 @@ npm run example
 - [x] toolItemLayout
 - [x] menuItem
 - [x] iconBlock
+- [x] iconNano
 - [x] iconCircle
 - [x] iconDefault
 - [x] iconGreyBlock
