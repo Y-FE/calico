@@ -10,6 +10,9 @@
         </div>
         <div class="cat-preview-operate-box"
             @click="select(order)">
+            <slot name="content">
+               
+            </slot>
             <template v-if="operate">
                 <cc-preview-operate 
                     @delete-item="deleteItem"

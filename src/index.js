@@ -27,7 +27,6 @@ import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
-import Lull from '../packages/lull';
 import Main from '../packages/main';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
@@ -73,7 +72,6 @@ const components = [
     InputNumber,
     LineOption,
     LineSelect,
-    Lull,
     Main,
     MenuItem,
     Nav,
@@ -134,7 +132,6 @@ let calico = {
     InputNumber,
     LineOption,
     LineSelect,
-    Lull,
     Main,
     MenuItem,
     Nav,

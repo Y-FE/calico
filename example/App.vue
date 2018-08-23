@@ -26,6 +26,8 @@
                 operate                
                 :active="index === nowIndex">
                 <i class="iconfont icon-delete-page"></i>
+                <div slot="content">
+                </div>
             </cc-preview>
         </div>
     </cc-aside>
