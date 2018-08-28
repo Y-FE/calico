@@ -44,6 +44,7 @@ npm run example
 - [x] pagination
 - [x] message
 - [x] nav
+- [x] popover
 
 
 ### 特殊
