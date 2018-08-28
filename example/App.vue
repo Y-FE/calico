@@ -99,6 +99,9 @@
         <cc-tool-item icon="icon-setting" active>
             第三页
         </cc-tool-item>
+        <cc-tool-item icon="icon-setting" state="danger">
+            第三页
+        </cc-tool-item>
         <br>
         
         <br>
