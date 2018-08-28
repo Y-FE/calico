@@ -1,5 +1,7 @@
 <template>
     <cc-row 
+        @mouseover.native="mouseChange(true)"
+        @mouseleave.native="mouseChange(false)"
         justify="center" 
         align="center"  
         direction="column" 
@@ -10,15 +12,13 @@
         <div class="cat-popover--box">
             <transition name="fade-in">
                 <cc-row 
+                    v-show="showState"
                     justify="center" 
                     align="center" 
                     class="cat-popover--box-main">
-                    <cc-row 
-                        justify="center" 
-                        align="center" 
-                        class="cat-popover--tool" :style="{'width': width}">
+                    <div class="cat-popover--tool" :style="{'min-width': `${width}px`}">
                         <slot>caclo威武</slot>
-                    </cc-row>
+                    </div>
                 </cc-row>
             </transition>
         </div>
@@ -44,7 +44,6 @@
             color: $--popover-color;
             font-size: $--popover-font-size;
             border-radius: $--popover-radius;
-            min-width: 150px;
         }
     }
 </style>
@@ -56,21 +55,38 @@
             ccRow,
         },
         props: {
-
+            //Boolean: 手动控制组件的消失和出现
+            show: {
+                type: String | Boolean,
+                default: 'hover'
+            },
+            width: {
+                type: String | Number,
+                default: 182
+            },
         },
         data() {
             return {
-                width: {
-                    type: String | Number,
-                    default: 150
-                },
+                visible: false,
             }
         },
         computed: {
+            showState() {
+                if (typeof(this.show) !== 'string') {
+                    this.visible = this.show;
+                }
+                return this.visible;
+            },
         },
         watch: {
         },
         methods: {
+            mouseChange(val) {
+                if (typeof(this.show) !== 'string') {
+                    return;
+                }
+                this.visible = val;
+            },
         },
         created() {
         },

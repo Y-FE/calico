@@ -166,6 +166,17 @@
         <cc-tooltip style="margin-top: 100px;" @click.native="mm = !mm">
             <p>我是一个粉刷匠</p>
         </cc-tooltip>
+        
+        <cc-popover width="182" style="margin-top: 100px;">
+            <p slot="reference">我是popover --- hover</p>
+            <div>这个一点也不好玩</div>
+        </cc-popover>
+
+        <cc-popover width="182" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩</div>
+        </cc-popover>
+
         <cc-float-panel :show="true">
             <p>我是一个骚气的可拖拽</p>
         </cc-float-panel>
