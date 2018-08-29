@@ -14,11 +14,7 @@
     </cc-row>
 </template>
 <style lang="scss">
-    .cat-scale-area {
-        border: 1px solid #403bef;
-    }
     .cat-scale-area-inner {
-        border: 1px solid #403b00;
         transform-origin: 0 0;
     }
 </style>
