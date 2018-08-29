@@ -5,10 +5,12 @@
         <!-- <p class="cat-select-title" v-if="title">
             {{title}}
         </p> -->
-        <input class="cat-line-input-body" 
-            readonly="readonly" 
-            autocomplete="off" 
-            :style="[{'border-color': color}]" />
+        <cc-row class="cat-line-input-body" 
+            justify="center"
+            align="center"
+            :style="[{'border-color': color ? color : '#FF336A'}]"> 
+            {{color ? '' : '/'}}
+        </cc-row>
         <transition name="up-silde">
             <div class="cat-line-dropdown" v-if="visible">
                 <cc-row justify="space-around"
@@ -34,6 +36,8 @@
             cursor: pointer;
             border-width: 1px;
             border-style: solid;
+            color: $--color-danger;
+            font-size: $--font-size-base;
         }
         .cat-line-dropdown {
             position: absolute;  

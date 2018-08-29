@@ -6,9 +6,7 @@
             <div class="cat-input-body">
                 <input type="text"
                     :value="currentValue"
-                    @keyup.up='increase' 
-                    @keyup.down='reduce'
-                    @change="handleChange" 
+                    @blur="handleChange" 
                     class="cat-input" />
             </div>
             <cc-icon-grey-block icon="icon-reduce" 

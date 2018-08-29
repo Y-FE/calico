@@ -329,7 +329,7 @@
                 number2: 30,
                 nav: '课件导航',
                 colorList:[
-                    '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A','transparent'
+                    '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A',''
                 ],
                 fontList:[12,14,16,18,20,22],
                 courseList:[

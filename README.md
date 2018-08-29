@@ -56,7 +56,9 @@ npm run example
 - [x] colorSelect
 - [x] lineSelect
 - [x] toolItem
+- [x] toolItemHorizal
 - [x] toolItemLayout
+- [x] toolItemLayoutHorizal
 - [x] menuItem
 - [x] iconBlock
 - [x] iconNano
