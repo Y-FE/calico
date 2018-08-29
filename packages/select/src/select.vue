@@ -61,12 +61,14 @@
             }
             .cat-input-icon {
                 position: absolute;
-                height: 100%;
-                right: 5px;
-                top: 0;
+                height: calc(100% - 2px);
+                padding: 0 5px;
+                right: 2px;
+                top: 1px;
                 text-align: center;
                 transition: $--transition-base;
                 pointer-events: none;
+                background-color: #fff;
                 i {
                     color: $--select-title-color;
                     font-size: $--select-font-size;
@@ -90,10 +92,10 @@
             top: 38px;
             left: 0;
             transition: all .2s ease-in;
-            width: 100%;
+            min-width: 100%;
             z-index:  $--select-z-index;
             .cat-select-wrap {
-                width: 100%;  
+                min-width: 100%;  
                 background: $--color-white;    
                 border: 1px solid $--select-option-border-color; 
                 border-radius: $--select-option-radius; 

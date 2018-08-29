@@ -102,6 +102,9 @@
         <cc-tool-item icon="icon-setting" state="danger">
             第三页
         </cc-tool-item>
+        <cc-tool-item icon="icon-setting" state="success">
+            第三页
+        </cc-tool-item>
         <br>
         
         <br>
@@ -175,8 +178,16 @@
             <div>这个一点也不好玩</div>
         </cc-popover>
 
-        <cc-popover width="182" :show="mm" style="margin-top: 100px;">
-            <p slot="reference" @click="mm = !mm">我是popover --- click</p>
+        <cc-popover width="182" direction="bottom" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩</div>
+        </cc-popover>
+        <cc-popover width="182" direction="left" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩</div>
+        </cc-popover>
+        <cc-popover width="182" direction="left" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
             <div>这个一点也不好玩</div>
         </cc-popover>
 

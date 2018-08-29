@@ -9,15 +9,17 @@
         <div style="cursor: pointer;" >
             <slot name="reference"></slot>
         </div>
-        <div class="cat-popover--box">
+        <div class="cat-popover--box" 
+            :style="{position: direction === 'bottom' ? 'relative' : 'absolute'}">
             <transition name="fade-in">
                 <cc-row 
                     v-show="showState"
                     justify="center" 
                     align="center" 
-                    class="cat-popover--box-main">
+                    class="cat-popover--box-main"
+                    :style="style">
                     <div class="cat-popover--tool" :style="{'min-width': `${width}px`}">
-                        <slot>caclo威武</slot>
+                        <slot>calico威武</slot>
                     </div>
                 </cc-row>
             </transition>
@@ -26,17 +28,16 @@
 </template>
 <style lang="scss">
     .cat-popover-body {
-        position: relative;
         width: fit-content;
+        position: relative;
     }
     .cat-popover--box {
-        margin-top: 5px;
+        // position: relative;
     }
     .cat-popover--box-main {
         z-index: $--popover-z-index;
         position: absolute;
-        transform: translateX(-50%);
-        width: 100%;
+        // width: 100%;
         .cat-popover--tool {
             background-color: $--popover-fill;
             box-shadow: $--popover-box-shadow;
@@ -64,6 +65,10 @@
                 type: String | Number,
                 default: 182
             },
+            direction: {
+                type: String,
+                default: 'bottom'
+            },
         },
         data() {
             return {
@@ -76,6 +81,28 @@
                     this.visible = this.show;
                 }
                 return this.visible;
+            },
+            style() {
+                let style = {};
+                if (this.direction === 'bottom') {
+                    style = {
+                        top: '10px',
+                        transform: 'translateX(-50%)',
+                    };
+                }
+                // if (this.direction === 'top') {
+                //     style = {
+                //         top: '-10px',
+                //         transform: 'translateX(-50%)',
+                //     };
+                // }
+                if (this.direction === 'left') {
+                    style = {
+                        right: '-10px',
+                        transform: 'translateY(-50%)',
+                    };
+                }
+                return style;
             },
         },
         watch: {

@@ -26,12 +26,12 @@
 <style lang="scss">
     .cat-tooltip-body {
         width: fit-content;
-        position: relative;
     }
     .cat-tooltip--box {
-        margin-top: 11px;
+        position: relative;
     }
     .cat-tooltip--box-main {
+        top: 11px;
         z-index: $--tooltip-z-index;
         position: absolute;
         transform: translateX(-50%);

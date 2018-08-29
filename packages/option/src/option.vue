@@ -1,13 +1,13 @@
 <template>
-    <div class="cat-option"
+    <div class="cat-option-body"
         @click="optionClick">
        <cc-row 
             justify="space-between"
             align="center" 
             :class="parentVal === value ? 'cat-option--acitve' : ''">
-            <span>
+            <p class="cat-option--item">
                 {{label ? label : value}}
-            </span>
+            </p>
             <span :option-hover-display="hoverDisplay">
                 <slot name="right"></slot>
             </span>
@@ -15,8 +15,8 @@
     </div>
 </template>
 <style lang="scss">
-    .cat-option {
-        width: 100%;
+    .cat-option-body {
+        min-width: 100%;
         height: $--select-height;
         padding: $--select-option-item-padding; 
         cursor: pointer;
@@ -40,6 +40,13 @@
     }
     .cat-option--acitve {
         color: $--select-option-color-active;
+    }
+    .cat-option--item {
+        // min-width: 100%;
+        white-space: nowrap;
+    }
+    .cat-option--item + span{
+        margin-left: 20px;
     }
 </style>
 <script>
