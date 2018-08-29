@@ -45,6 +45,8 @@ import Select from '../packages/select';
 import SidePanel from '../packages/sidePanel';
 import Switch from '../packages/switch';
 import ToolItem from '../packages/toolItem';
+import ToolItemHorizal from '../packages/toolItemHorizal';
+import ToolItemHorizalLayout from '../packages/toolItemHorizalLayout';
 import ToolItemLayout from '../packages/toolItemLayout';
 import Tooltip from '../packages/tooltip';
 import VerticalGroup from '../packages/verticalGroup';
@@ -89,6 +91,8 @@ const components = [
     SidePanel,
     Switch,
     ToolItem,
+    ToolItemHorizal,
+    ToolItemHorizalLayout,
     ToolItemLayout,
     Tooltip,
     VerticalGroup,
@@ -109,7 +113,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.5.14',
+    version: '0.5.15',
     install,
     Aside,
     Button,
@@ -149,6 +153,8 @@ let calico = {
     SidePanel,
     Switch,
     ToolItem,
+    ToolItemHorizal,
+    ToolItemHorizalLayout,
     ToolItemLayout,
     Tooltip,
     VerticalGroup,

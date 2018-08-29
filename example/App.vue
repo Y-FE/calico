@@ -105,6 +105,23 @@
         <cc-tool-item icon="icon-setting" state="success">
             第三页
         </cc-tool-item>
+        <cc-tool-item-horizal icon="icon-setting">
+            第一页
+        </cc-tool-item-horizal>
+        <cc-tool-item-horizal icon="icon-setting" disabled>
+            第二页
+        </cc-tool-item-horizal>
+
+        <cc-tool-item-horizal icon="icon-setting" active>
+            第三页
+        </cc-tool-item-horizal>
+        <cc-tool-item-horizal icon="icon-setting" state="danger">
+            第三页
+        </cc-tool-item-horizal>
+        <cc-tool-item-horizal icon="icon-setting" state="success">
+            第三页
+        </cc-tool-item-horizal>
+
         <br>
         
         <br>
