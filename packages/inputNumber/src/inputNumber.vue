@@ -1,5 +1,6 @@
 <template>
-    <div class="cat-input-number">
+    <div class="cat-input-number"
+        :style="{width: `${width}px`}">
         <!-- <p class="cat-input-title" v-if="title">{{title}}</p> -->
         <div class="cat-input-number-body">
             <div class="cat-input-body">
@@ -99,7 +100,11 @@
             step: {
                 type: Number,
                 default: 1
-            }
+            },
+            width: {
+                type: Number,
+                default: 80
+            }   
         },
         data() {
             return {
