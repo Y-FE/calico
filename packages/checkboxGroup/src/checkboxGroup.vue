@@ -3,12 +3,12 @@
         :align="column ? '' : 'center'" 
         justify="center" 
         :direction="column ? 'column' : ''"
-        class="cat-radio-group">
+        class="cat-checkbox-group">
         <slot></slot>
     </cc-row>
 </template>
 <style lang="scss">
-    .cat-radio-group {
+    .cat-checkbox-group {
         width: fit-content;
     }
 </style>
@@ -16,11 +16,11 @@
     import ccRow from '@packages/row/src/row.vue'; 
     import {ccModel}  from "@mixins/parentModel";
     export default {
-        name: 'CcRadioGroup',
-        componentName: "CcRadioGroup",
-        mixins: [ccModel(String | Number | Boolean)],
+        name: 'CcCheckboxGroup',
+        componentName: "CcCheckboxGroup",
+        mixins: [ccModel(Array)],
         components: {
-            ccRow,
+            ccRow
         },
         props: {
             column: {

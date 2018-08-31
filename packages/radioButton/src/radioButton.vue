@@ -17,12 +17,12 @@
         cursor: pointer;
         text-align: center;
         background: $--radio-button-unchecked-fill;
-       .cat-inner-radio {
-            opacity: 0;
-            outline: none;
-            position: absolute;
-            // z-index: -1;
-        } 
+    //    .cat-inner-radio {
+    //         opacity: 0;
+    //         outline: none;
+    //         position: absolute;
+    //         // z-index: -1;
+    //     } 
         .cat-radio-button--text {
             position: relative;
             display: inline-block;
@@ -35,7 +35,7 @@
             padding: $--radio-button-padding; 
             border-left: 0; 
         }
-        .cat-inner-radio:checked+.cat-radio-button--text ,
+        // .cat-inner-radio:checked+.cat-radio-button--text ,
         .cat-radio-button--active {
             color: $--radio-button-checked-color;
             background-color: $--radio-button-checked-fill;
@@ -57,9 +57,6 @@
     .cat-radio-button:nth-of-type(1) .cat-radio-button--text {
         border: 1px solid $--radio-button-unchecked-border-color; 
     }
-   
-   
-
 </style>
 <script>
     import {setParentModel, ccParent, getParentModel} from "@mixins/parentModel";

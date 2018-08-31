@@ -1,5 +1,13 @@
 <template>
 <div style="padding: 50px;">
+    <cc-checkbox-group v-model="horiArr" title="多选">
+        <cc-horizontal-checkbox  value="77">
+            <i class="iconfont icon-triangle"></i>
+        </cc-horizontal-checkbox>
+        <cc-horizontal-checkbox  :value="1">
+            <i class="iconfont icon-rectangle"></i>
+        </cc-horizontal-checkbox>
+    </cc-checkbox-group>
     <cc-radio-group v-model="hori" title="形状">
         <cc-horizontal-radio  value="77">
             <i class="iconfont icon-triangle"></i>
@@ -293,6 +301,7 @@
         data() {
             return {
                 hori: 1,
+                horiArr: [],
                 //----------------------
                 showDraggable: false,
                 toolItemListDefault: [

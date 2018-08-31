@@ -38,13 +38,14 @@ npm run example
 - [x] switch
 - [x] select
 - [x] tooltip
-- [x] radio-btton
-- [x] radio-group
+- [x] radioBtton
+- [x] radioGroup
+- [x] checkboxGroup
 - [x] inputNumber
 - [x] pagination
 - [x] message
 - [x] nav
-  - [x] popover
+- [x] popover
 
 
 ### 特殊
@@ -67,6 +68,7 @@ npm run example
 - [x] iconGreyBlock
 - [x] verticalRadio
 - [x] horizontalRadio
+- [x] horizontalCheckbox
 
 ## Thanks
 

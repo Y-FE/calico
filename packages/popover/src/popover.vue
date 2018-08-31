@@ -98,8 +98,7 @@
                 // }
                 if (this.direction === 'left') {
                     style = {
-                        right: '-10px',
-                        transform: 'translateY(-50%)',
+                        transform: 'translateX(50%)',
                     };
                 }
                 return style;

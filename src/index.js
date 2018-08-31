@@ -8,6 +8,7 @@ import blur from './directives/blur';
 
 import Aside from '../packages/aside';
 import Button from '../packages/button';
+import CheckboxGroup from '../packages/checkboxGroup';
 import Clock from '../packages/clock';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
@@ -17,6 +18,7 @@ import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
 import Header from '../packages/header';
 import HeaderGroup from '../packages/headerGroup';
+import HorizontalCheckbox from '../packages/horizontalCheckbox';
 import HorizontalRadio from '../packages/horizontalRadio';
 import IconBlock from '../packages/iconBlock';
 import IconCircle from '../packages/iconCircle';
@@ -55,6 +57,7 @@ import VerticalRadio from '../packages/verticalRadio';
 const components = [
     Aside,
     Button,
+    CheckboxGroup,
     Clock,
     ColorOption,
     ColorSelect,
@@ -64,6 +67,7 @@ const components = [
     Grid,
     Header,
     HeaderGroup,
+    HorizontalCheckbox,
     HorizontalRadio,
     IconBlock,
     IconCircle,
@@ -113,10 +117,11 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.5.15',
+    version: '0.5.16',
     install,
     Aside,
     Button,
+    CheckboxGroup,
     Clock,
     ColorOption,
     ColorSelect,
@@ -126,6 +131,7 @@ let calico = {
     Grid,
     Header,
     HeaderGroup,
+    HorizontalCheckbox,
     HorizontalRadio,
     IconBlock,
     IconCircle,
