@@ -205,15 +205,71 @@
 
         <cc-popover width="182" direction="bottom" :show="mm" style="margin-top: 100px;">
             <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
-            <div>这个一点也不好玩</div>
+            <div>这个一点也不好玩b</div>
+        </cc-popover>
+        <cc-popover width="182" direction="bottomStart" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩bs</div>
+        </cc-popover>
+        <cc-popover width="182" direction="bottomStart" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>这个一点也不好玩bs</div>
+        </cc-popover>
+        <cc-popover width="182" direction="bottomEnd" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩be</div>
+        </cc-popover>
+        <cc-popover width="182" direction="bottomEnd" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>这个一点也不好玩be</div>
         </cc-popover>
         <cc-popover width="182" direction="left" :show="mm" style="margin-top: 100px;">
             <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
-            <div>这个一点也不好玩</div>
+            <div>这个一点也不好玩l</div>
         </cc-popover>
         <cc-popover width="182" direction="left" :show="mm" style="margin-top: 100px;">
             <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
-            <div>这个一点也不好玩</div>
+            <div>这个一点也不好玩l</div>
+        </cc-popover>
+        <cc-popover width="182" direction="leftStart" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩ls</div>
+        </cc-popover>
+        <cc-popover width="182" direction="leftStart" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>这个一点也不好玩ls</div>
+        </cc-popover>
+        <cc-popover width="182" direction="leftEnd" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>这个一点也不好玩le</div>
+        </cc-popover>
+        <cc-popover width="182" direction="leftEnd" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>这个一点也不好玩le</div>
+        </cc-popover>
+        <cc-popover offsetX="50" width="182" direction="right" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>右边</div>
+        </cc-popover>
+        <cc-popover width="182" direction="right" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>右边</div>
+        </cc-popover>
+        <cc-popover offsetX="50" width="182" direction="rightStart" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>右上</div>
+        </cc-popover>
+        <cc-popover width="182" direction="rightStart" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>右上</div>
+        </cc-popover>
+        <cc-popover offsetX="50" width="182" direction="rightEnd" :show="mm" style="margin-top: 100px;">
+            <p style="width: 50px" slot="reference" @click="mm = !mm">我是popover --- click</p>
+            <div>右下</div>
+        </cc-popover>
+        <cc-popover width="182" direction="rightEnd" :show="mm" style="margin-top: 100px;">
+            <p slot="reference" @click="mm = !mm">我是popover --- clic我是popover --- clic我是popover --- clic</p>
+            <div>右下</div>
         </cc-popover>
 
         <cc-float-panel :show="true">
