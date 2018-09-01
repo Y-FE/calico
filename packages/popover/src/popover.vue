@@ -6,7 +6,7 @@
         align="center"  
         direction="column" 
         class="cat-popover-body" >
-        <div style="cursor: pointer;" ref="catPopoverP">
+        <div style="cursor: pointer; width: 100%" ref="catPopoverP">
             <slot name="reference"></slot>
         </div>
         <div class="cat-popover--box" 
