@@ -289,6 +289,7 @@
                 :order="(index+1)" 
                 :key="index" 
                 @select="changeNow"
+                @delete-item="deletePage('dd')"
                 operate                
                 :active="index === nowIndex">
                 <i class="iconfont icon-deletePage"></i>
@@ -417,6 +418,9 @@
         watch: {
         },
         methods: {
+            deletePage(name) {
+                console.log(name);
+            },
             dropTool(itemValue, orignValue) {
                 if (orignValue !== undefined) {
                      this.toolItemList.splice(orignValue, 0, itemValue);
