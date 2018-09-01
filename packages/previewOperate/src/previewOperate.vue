@@ -4,19 +4,19 @@
             align="center"
             class="cat-operate-body">
             <cc-row class="cat-operate-box"
-                @click.native="deleteItem"
+                @click.native.stop="deleteItem"
                 justify="center"
                 align="center">
                 <i class="iconfont icon-delete-page"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
-                @click.native="changeOrder('up')"
+                @click.native.stop="changeOrder('up')"
                 justify="center"
                 align="center">
                 <i class="iconfont icon-move-up"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
-                @click.native="changeOrder('down')"
+                @click.native.stop="changeOrder('down')"
                 justify="center"
                 align="center">
                 <i class="iconfont icon-move-down"></i>
