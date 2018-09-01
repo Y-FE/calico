@@ -91,6 +91,9 @@
         },
         methods: {
             menuClick(){
+                if(this.disabled) {
+                    return;
+                }
                 this.$emit('click');
             },
         },

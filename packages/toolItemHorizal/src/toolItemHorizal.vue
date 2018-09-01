@@ -171,6 +171,9 @@
         },
         methods: {
             selectedClick(){
+                if(this.disabled) {
+                    return;
+                }
                 this.$emit('click');
             }
         },

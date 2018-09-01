@@ -1,18 +1,4 @@
 <template>
-    <!-- <div class="cat-tool-item-container" 
-        @click="selectedClick"
-        :disabled="disabled" 
-        :active="active"
-        :class="[
-            disabled ? 'cat-tool-item--disabled' : `cat-tool-item--${state}`,
-            active && state === 'default'  ? 'cat-tool-item--active' : '', ]">
-            <cc-row justify="center" align="center" class="cat-tool-item-icon-box">
-                <i class="iconfont" :class="icon"></i>
-            </cc-row>
-        <p class="cat-tool-item--text">
-            <slot></slot>
-        </p>
-    </div> -->
     <cc-tool-item-layout 
         class="cat-tool-item-body"
         @click.native="selectedClick"
@@ -204,6 +190,9 @@
         },
         methods: {
             selectedClick(){
+                if(this.disabled) {
+                    return;
+                }
                 this.$emit('click');
             }
         },
