@@ -29,13 +29,15 @@
             transition: $--transition-primary;
             [option-hover-display=true] {
                 display: inline;
+                opacity: 1;
             }
         }
         .iconfont {
             font-size: $--select-font-size;
         }
         [option-hover-display=true] {
-            display: none;
+            // display: none;
+            opacity: 0;
         }
     }
     .cat-option--acitve {
