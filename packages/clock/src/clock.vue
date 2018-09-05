@@ -12,6 +12,7 @@
             height: $--clock-size;
             line-height: $--clock-size;
             font-size: $--clock-font-size;
+            font-weight: $--clock-font-weight;
             color: $--clock-color;
         }
         .cat-time-block {
