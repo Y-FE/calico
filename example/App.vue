@@ -1,5 +1,12 @@
 <template>
-<div style="padding: 50px;">
+<div>
+    <cc-modal 
+        :show.sync="showN"
+        title="我是一个分数字键">
+    </cc-modal>
+    <cc-button @click="showN = true">
+        展示模态框
+    </cc-button>
     <cc-checkbox-group v-model="horiArr" title="多选">
         <cc-horizontal-checkbox  value="77">
             <i class="iconfont icon-triangle"></i>
@@ -357,6 +364,7 @@
         props: {},
         data() {
             return {
+                showN: true,
                 hori: 1,
                 horiArr: [],
                 //----------------------

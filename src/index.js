@@ -32,6 +32,7 @@ import LineSelect from '../packages/lineSelect';
 import Main from '../packages/main';
 import MenuItem from '../packages/menuItem';
 import Message from '../packages/message';
+import Modal from '../packages/modal';
 import Nav from '../packages/nav';
 import NavItem from '../packages/navItem';
 import Option from '../packages/option';
@@ -80,6 +81,7 @@ const components = [
     LineSelect,
     Main,
     MenuItem,
+    Modal,
     Nav,
     NavItem,
     Option,
@@ -117,7 +119,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.5.20',
+    version: '0.5.21',
     install,
     Aside,
     Button,
@@ -144,6 +146,7 @@ let calico = {
     LineSelect,
     Main,
     MenuItem,
+    Modal,
     Nav,
     NavItem,
     Option,

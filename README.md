@@ -46,6 +46,7 @@ npm run example
 - [x] message
 - [x] nav
 - [x] popover
+- [x] modal
 
 
 ### 特殊

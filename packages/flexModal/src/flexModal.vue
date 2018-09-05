@@ -11,7 +11,7 @@
     .flex-modal-body {
         z-index: $--flex-modal-z-index;
         position: fixed;
-        background-color: $--flex-modal-background-color;
+        background-color: $--flex-modal-fill;
         box-shadow: $--flex-modal-box-shadow;
         padding: $--flex-modal-padding;
         color: $--flex-modal-color;

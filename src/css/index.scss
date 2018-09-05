@@ -17,7 +17,7 @@ $--color-black-opacity-2: rgba($--color-black, .2);
 $--color-black-opacity-02: rgba($--color-black, .02);
 $--color-black-opacity-4: rgba($--color-black, .04);
 $--color-black-opacity-5: rgba($--color-black, .05);
-$--color-black-opacity-6: rgba($--color-black, .06);
+$--color-black-opacity-6: rgba($--color-black, .6);
 $--color-black-opacity-8: rgba($--color-black, .8);
 
 $--color-text-title: #666666;
@@ -34,8 +34,9 @@ $--radius-circle: 50%;
 
 //font
 $--font-size-base: 12px;
+$--font-size-title: 16px;
 $--font-size-large: 20px;
-$--font-size-icon-base: 16px;
+$--font-size-icon-base: $--font-size-title;
 
 $--font-weight-base: 400;
 $--font-weight-bold: 800;
@@ -209,6 +210,27 @@ $--nav-item-border-active: $--color-primary;
 $--nav-border: $--color-black-opacity-5;
 $--nav-font-size: $--font-size-base;
 $--nav-item-padding: 9px 0;
+
+//modal
+$--modal-fill: $--color-black-opacity-6;
+$--modal-z-index: $--z-index-99;
+$--modal-line: $--color-black-opacity-1;
+
+$--modal-main-fill: $--color-white;
+$--modal-main-radius: $--radius-icon;
+
+$--modal-header-padding: 20px;
+$--modal-header-color: $--color-info;
+$--modal-header-font-size: $--font-size-title;
+$--modal-header-icon-font-size: $--font-size-base;
+
+$--modal-body-padding: 20px;
+$--modal-body-font-size: $--font-size-title;
+$--modal-body-color: $--color-text-title;
+
+$--modal-footer-padding: 10px 20px;
+
+
 //特殊~
 $--icon-huge-block: 30px;
 $--icon-large-block: 26px;
@@ -305,7 +327,6 @@ $--flex-modal-padding: 20px 30px 10px 30px;
 $--flex-modal-color: $--color-text-title;
 $--flex-modal-font-size: $--font-size-base;
 $--flex-modal-radius: $--radius-panel;
-$--flex-modal-background-color: $--color-white;
 $--flex-modal-z-index: $--z-index-99;
 
 //preview
