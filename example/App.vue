@@ -364,7 +364,7 @@
         props: {},
         data() {
             return {
-                showN: true,
+                showN: false,
                 hori: 1,
                 horiArr: [],
                 //----------------------
@@ -476,7 +476,19 @@
         destroyed() {
         },
         mounted() {
-            this.$message('000');
+            this.$message.success({
+                message: 'wohh',
+                showClose: true,
+            });
+            this.$message.error({
+                message: 'wohh',
+                duration: 5000
+            });
+            // this.$message(876587);
+            // this.$message.info('info');
+            // this.$message.error('error');
+            // this.$message.warning('warning');
+            // this.$message.success('success');
 
             this.scaleOutWidth = window.innerWidth-200;
             this.scaleOutHeight = window.innerHeight-200;

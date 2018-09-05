@@ -8,7 +8,6 @@ $--color-disabled: #CCCCCC;
 $--color-white: #FFFFFF;
 $--color-blue: #0077FF;
 $--color-yellow: #FFA250;
-$--color-yellow-opacity-8: rgba($--color-yellow, .8);
 $--color-grey: #F5F5F5;
 $--color-grey-nano: #8796AB;
 $--color-black: #000000;
@@ -19,6 +18,11 @@ $--color-black-opacity-4: rgba($--color-black, .04);
 $--color-black-opacity-5: rgba($--color-black, .05);
 $--color-black-opacity-6: rgba($--color-black, .6);
 $--color-black-opacity-8: rgba($--color-black, .8);
+
+$--color-primary-opacity-8: rgba($--color-primary, .8);
+$--color-danger-opacity-8: rgba($--color-danger, .8);
+$--color-yellow-opacity-8: rgba($--color-yellow, .8);
+$--color-success-opacity-8: rgba($--color-success, .8);
 
 $--color-text-title: #666666;
 $--color-text-primary: #999999;
@@ -144,7 +148,6 @@ $--tooltip-light-fill:$--color-success;
 $--tooltip-light-border-color: $--tooltip-light-fill;
 
 // message
-$--message-fill:$--color-yellow-opacity-8;
 $--message-color: $--color-white;
 $--message-shadow: $--box-shadow-hover-warning;
 $--message-font-size: $--font-size-base;
@@ -153,6 +156,11 @@ $--message-padding: 8px;
 $--message-line-height: $--line-height-muti;
 $--message-width: 252px;
 $--message-z-index: $--z-index-100;
+
+$--message-fill-info:$--color-primary-opacity-8;
+$--message-fill-error:$--color-danger-opacity-8;
+$--message-fill-warning:$--color-yellow-opacity-8;
+$--message-fill-success:$--color-success-opacity-8;
 
 //switch
 $--switch-background-color: $--color-black-opacity-1;
