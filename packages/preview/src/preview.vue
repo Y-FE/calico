@@ -30,7 +30,6 @@
         height: $--preview-height;
         background: $--preview-background-color;
         transition: $--transition-base;
-        cursor: pointer; 
         .cat-preview-operate-box {
             width: $--preview-img-width;
             height: $--preview-img-height;
@@ -71,6 +70,7 @@
             transform: translateY(-50%);
             color: $--preview-color;
             font-size: $--preview-font-size;
+            cursor: pointer;
         }
     }
     .cat-preview--active {

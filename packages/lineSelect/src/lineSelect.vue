@@ -58,7 +58,7 @@
     }
     .cat-select-title {
         font-size: $--select-font-size;
-        color: $--select-color; 
+        color: $--color-text-title; 
         margin-bottom: 10px;
     }
 </style>
