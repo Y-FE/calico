@@ -47,6 +47,7 @@ npm run example
 - [x] nav
 - [x] popover
 - [x] modal
+- [x] progress
 
 
 ### 特殊

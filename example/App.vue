@@ -1,11 +1,17 @@
 <template>
 <div>
+    <cc-progress :percent="percent" style="margin: 20px">
+
+    </cc-progress>
     <cc-modal 
         :show.sync="showN"
         title="我是一个分数字键">
     </cc-modal>
     <cc-button @click="showN = true">
         展示模态框
+    </cc-button>
+    <cc-button @click="percent = percent === 80 ? 50 : 80">
+        进度条修改
     </cc-button>
     <cc-checkbox-group v-model="horiArr" title="多选">
         <cc-horizontal-checkbox  value="77">
@@ -364,6 +370,7 @@
         props: {},
         data() {
             return {
+                percent: 50,
                 showN: false,
                 hori: 1,
                 horiArr: [],
