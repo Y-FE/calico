@@ -167,7 +167,7 @@
                         top: `${(this.sizeP.height / 2)}px`
                     };
                 }
-                this.style.offset = `(${this.offsetX}px, ${this.offsetY}px)`;
+                // this.style.offset = `(${this.offsetX}px, ${this.offsetY}px)`;
             },
         },
         created() {
