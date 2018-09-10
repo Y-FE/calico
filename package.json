@@ -1,6 +1,6 @@
 {
   "name": "calico-ui",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "ui lib for online course system",
   "main": "lib/calico.common.js",
   "repository": "git@github.com:Y-FE/calico.git",
