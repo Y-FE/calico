@@ -94,6 +94,10 @@
             },
         },
         watch: {
+            showState() {
+                this.getSize();
+                this.caclStyle();
+            }
         },
         methods: {
             mouseChange(val) {
