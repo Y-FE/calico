@@ -1,6 +1,7 @@
 <template>
     <div class="cat-switch-body" 
-        :class="value ? 'cat-switch-body--on' : 'cat-switch-body--off'" 
+        :class="[value ? 'cat-switch-body--on' : 'cat-switch-body--off', 
+        disabled ? 'cat-switch-body-disabled' : 'cat-switch-body-active ']" 
         @click="switchClick"> 
         <div class="cat-switch--back"></div>
         <div class="cat-switch--circle"></div>
@@ -13,7 +14,13 @@
         height: $--switch-height;
         border-radius: $--switch-border-radius;
         transition: $--transition-base;
+    }
+    .cat-switch-body-active {
         cursor: pointer;
+    }
+    .cat-switch-body-disabled {
+        cursor: not-allowed;
+        filter: $--color-brightness-base;
     }
     .cat-switch-body--off {
         background-color: $--switch-background-color;
@@ -58,6 +65,10 @@
                 type: Boolean,
                 default: false,
             },
+            disabled: {
+                type: Boolean,
+                default: false,
+            }
         },
         data() {
             return {
@@ -69,6 +80,9 @@
         },
         methods: {
             switchClick() {
+                if(this.disabled) {
+                    return;
+                }
                 this.$emit('input', !this.value);
             }
         },

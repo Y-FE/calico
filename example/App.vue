@@ -3,6 +3,8 @@
     <cc-progress :percent="percent" style="margin: 20px">
 
     </cc-progress>
+    <cc-switch v-model="mm" disabled></cc-switch>
+    <cc-switch v-model="mm"></cc-switch>
     <cc-modal 
         :show.sync="showN"
         title="我是一个分数字键">

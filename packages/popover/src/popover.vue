@@ -11,7 +11,7 @@
         </div>
         <div class="cat-popover--box" 
             :style="{position: direction === 'bottom' ? 'relative' : 'absolute'}">
-            <transition name="fade-in">
+            <transition name="drop-down">
                 <cc-row 
                     v-show="showState"
                     justify="center" 
