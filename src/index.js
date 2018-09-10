@@ -121,7 +121,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.6.3',
+    version: '0.6.4',
     install,
     Aside,
     Button,
