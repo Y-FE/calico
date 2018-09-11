@@ -11,7 +11,7 @@
                 :value="label ? label : value" 
                 readonly
                 :placeholder="placeholder"
-                :class="[visible === false ? 'cat-select-input-border--default':'cat-select-input-border--active']"/>
+                :class="[visible === false ? 'cat-select-input-border--default':'cat-select-input-border--active', `cat-select-input-font-size--${size}`]"/>
             <cc-row justify="center" 
                 align="center"
                 class="cat-select-input-icon"
@@ -97,10 +97,14 @@
         }
         .cat-select-input-body--normal {
             height: $--select-height; 
-            font-size: $--select-font-size;
         }
         .cat-select-input-body--large {
             height: $--select-height-large; 
+        }
+        .cat-select-input-font-size--normal {
+            font-size: $--select-font-size;
+        }
+        .cat-select-input-font-size--large {
             font-size: $--select-font-size-large;
         }
         .cat-select-dropdown {

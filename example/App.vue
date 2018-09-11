@@ -5,10 +5,10 @@
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
         </cc-select>
-        <cc-input size="large" v-model="largeInput" placeholder="请输入666">
+        <cc-input title="999" size="large" v-model="largeInput" placeholder="请输入666">
 
         </cc-input>
-        <cc-textarea v-model="largeInput" placeholder="请输入666">
+        <cc-textarea title="dd" v-model="largeInput" placeholder="请输入666">
 
         </cc-textarea>
     </div>
