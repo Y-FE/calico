@@ -51,7 +51,6 @@
                 border-radius: $--select-option-radius; 
                 color: $--select-color;
                 display: inline-block;
-                font-size: $--select-title-font-size;
                 height: 100%;
                 line-height: 100%;
                 outline: none;
@@ -98,9 +97,11 @@
         }
         .cat-select-input-body--normal {
             height: $--select-height; 
+            font-size: $--select-font-size;
         }
         .cat-select-input-body--large {
             height: $--select-height-large; 
+            font-size: $--select-large-font-size;
         }
         .cat-select-dropdown {
             position: absolute;  
