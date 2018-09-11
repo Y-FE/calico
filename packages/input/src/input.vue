@@ -2,6 +2,7 @@
     <input v-model="inputVal"
         class="cat-input-body cat-input-body--default" 
         :class="`cat-input-body--${size}`"
+        :style="{width: `${width}px`}"
         :placeholder="placeholder"/>
 </template>
 <style lang="scss">
@@ -46,6 +47,10 @@
                 type: String,
                 default: 'normal',
             },
+            width: {
+                type: String | Number,
+                default: 100,
+            }
         },
         data() {
             return {

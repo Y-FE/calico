@@ -2,7 +2,7 @@
     <textarea v-model="inputVal"
         :placeholder="placeholder"
         class="cat-textarea-body cat-textarea-default"
-        :style="{'resize': resize ? '' : 'none', 'height': `${rows * 20 + 20}px`}">
+        :style="{'resize': resize ? '' : 'none', 'height': `${rows * 20 + 20}px`, width: `${width}px`}">
         
     </textarea>
 </template>
@@ -47,6 +47,10 @@
             rows: {
                 type: Number,
                 default: 2
+            },
+            width: {
+                type: String | Number,
+                default: 100,
             }
         },
         data() {
