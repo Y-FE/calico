@@ -48,6 +48,7 @@ import ScaleArea from '../packages/scaleArea';
 import Select from '../packages/select';
 import SidePanel from '../packages/sidePanel';
 import Switch from '../packages/switch';
+import Textarea from '../packages/textarea';
 import ToolItem from '../packages/toolItem';
 import ToolItemHorizal from '../packages/toolItemHorizal';
 import ToolItemHorizalLayout from '../packages/toolItemHorizalLayout';
@@ -98,6 +99,7 @@ const components = [
     Select,
     SidePanel,
     Switch,
+    Textarea,
     ToolItem,
     ToolItemHorizal,
     ToolItemHorizalLayout,
@@ -164,6 +166,7 @@ let calico = {
     Select,
     SidePanel,
     Switch,
+    Textarea,
     ToolItem,
     ToolItemHorizal,
     ToolItemHorizalLayout,

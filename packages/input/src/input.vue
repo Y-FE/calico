@@ -24,7 +24,7 @@
         font-size: $--input-font-size-large;
     }
     .cat-input-body--normal {
-
+        
     }
 </style>
 <script>

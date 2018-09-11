@@ -8,6 +8,7 @@
         <cc-input size="large" v-model="largeInput" placeholder="请输入666">
 
         </cc-input>
+        <cc-textarea v-model="largeInput" placeholder="请输入666"></cc-textarea>
     </div>
     <cc-progress :percent="percent" style="margin: 20px">
 
