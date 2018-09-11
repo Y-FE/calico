@@ -6,14 +6,16 @@
         <!-- <p class="cat-select-title" v-if="title">
             {{title}}
         </p> -->
-        <div class="cat-input-body">
+        <div class="cat-input-body" :class="`cat-input-body--${size}`">
             <input class="cat-input-main" 
                 :value="label ? label : value" 
                 readonly
+                :placeholder="placeholder"
                 :class="[visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
             <cc-row justify="center" 
                 align="center"
-                class="cat-input-icon">
+                class="cat-input-icon"
+                :class="`cat-input-icon--${size}`">
                 <i class="cat-triangle iconfont icon-dropdown"  
                     :class="[visible === false ? '':'cat-icon-resever']">
                 </i>    
@@ -44,15 +46,14 @@
         .cat-input-body {
             position: relative;
             width: 100%;
-            height: $--select-height; 
             cursor: pointer;
             .cat-input-main {
                 border-radius: $--select-option-radius; 
                 color: $--select-color;
                 display: inline-block;
                 font-size: $--select-title-font-size;
-                height: $--select-height;
-                line-height: $--select-height;
+                height: 100%;
+                line-height: 100%;
                 outline: none;
                 padding: 0 10px;
                 transition: border-color $--transition-base;
@@ -62,7 +63,6 @@
             .cat-input-icon {
                 position: absolute;
                 height: calc(100% - 2px);
-                padding: 0 5px;
                 right: 2px;
                 top: 1px;
                 text-align: center;
@@ -80,16 +80,31 @@
                     transform: rotate(180deg);
                 }
             }
+            .cat-input-icon--default {
+                padding: 0 5px;
+            }
+            .cat-input-icon--large {
+                padding: 0 8px;
+            }
             .cat-input-border--default {
-                border: 1px solid $--select-option-border-color;
+                border: 1px solid $--select-border-color;
+                &:hover {
+                    border: 1px solid $--select-border-color-hover;
+                }
             }
             .cat-input-border--active {
-                border: 1px solid $--select-option-border-color-active;
+                border: 1px solid $--select-border-color-active;
             }
+        }
+        .cat-input-body--default {
+            height: $--select-height; 
+        }
+        .cat-input-body--large {
+            height: $--select-height-large; 
         }
         .cat-select-dropdown {
             position: absolute;  
-            top: 38px;
+            top: calc(100% + 5px);
             left: 0;
             transition: all .2s ease-in;
             min-width: 100%;
@@ -102,9 +117,6 @@
             }
         }
     }
-    
-    
-
 </style>
 <script>
     import {ccModel, getModel} from '@mixins/parentModel';
@@ -120,6 +132,15 @@
             width: {
                 type: Number,
                 default: 80
+            },
+            placeholder: {
+                type: String,
+                default: ''
+            },
+            //default , large
+            size: {
+                type: String,
+                default: 'default',
             }          
         },
         data() {

@@ -68,6 +68,18 @@ img {
   vertical-align: middle;
   border: 0;
 }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+  color:#ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+  color:#ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+  color:#ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+  color:#ccc;
+}
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
   border-radius: 6px;

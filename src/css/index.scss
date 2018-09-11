@@ -172,15 +172,30 @@ $--switch-off-color: $--color-white;
 $--switch-circle-border-radius: $--radius-circle;
 $--switch-circle-size: 12px;
 
+//input
+$--input-radius: $--radius-icon;
+$--input-placeholder-color: $--color-disabled;
+$--input-color: $--color-info;
+$--input-border-color: $--color-black-opacity-1;
+$--input-border-color-hover: $--color-black-opacity-6;
+$--input-border-color-active: $--color-primary;
+
+$--input-height-large: 40px;
+$--input-font-size-large: $--font-size-title;
+
+
 //select
 $--select-radius: $--radius-icon;
 $--select-width: 80px !default;
-$--select-height: 26px;
+
 $--select-z-index: $--z-index-10;
 $--select-color: $--color-info;
-$--select-font-size: $--font-size-base;
+$--select-placeholder-color: $--input-placeholder-color;
 $--select-title-font-size: $--font-size-base;
 $--select-title-color: $--color-text-title;
+$--select-border-color: $--input-border-color;
+$--select-border-color-hover: $--input-border-color-hover;
+$--select-border-color-active: $--input-border-color-active;
 
 $--select-option-radius: $--select-radius;
 $--select-option-border-color: $--color-black-opacity-1 !default;
@@ -189,6 +204,12 @@ $--select-option-color: $--color-info;
 $--select-option-color-active: $--color-primary;
 $--select-option-background-color-hover: $--color-black-opacity-4;
 $--select-option-item-padding: 7px 10px;
+
+$--select-height: 26px;
+$--select-font-size: $--font-size-base;
+
+$--select-height-large: $--input-height-large;
+$--select-font-size-large: $--input-font-size-large;
 
 //color-select
 $--color-select-option-padding: 4px;

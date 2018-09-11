@@ -1,9 +1,10 @@
 <template>
-    <div class="cat-option-body"
+    <div class="cat-option-body" :class="`cat-option-body--${size}`"
         @click="optionClick">
        <cc-row 
             justify="space-between"
             align="center" 
+            style="height: 100%"
             :class="parentVal === value ? 'cat-option--acitve' : ''">
             <p class="cat-option--item">
                 {{label ? label : value}}
@@ -17,7 +18,6 @@
 <style lang="scss">
     .cat-option-body {
         min-width: 100%;
-        height: $--select-height;
         padding: $--select-option-item-padding; 
         cursor: pointer;
         font-size: $--select-font-size;
@@ -39,6 +39,12 @@
             // display: none;
             opacity: 0;
         }
+    }
+    .cat-option-body--default {
+        height: $--select-height;
+    }
+    .cat-option-body--large {
+        height: $--select-height-large;
     }
     .cat-option--acitve {
         color: $--select-option-color-active;
@@ -85,6 +91,9 @@
             // 父组件的v-model值
             parentVal() {
                 return getParentModel.call(this); 
+            },
+            size() {
+                return this._parent.size;
             },
         },
         watch: {

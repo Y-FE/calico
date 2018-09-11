@@ -1,5 +1,11 @@
 <template>
 <div>
+    <div style="margin: 50px;">
+        <cc-select v-model="fontSize" title="字号" size="large">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
+            </cc-option>
+        </cc-select>
+    </div>
     <cc-progress :percent="percent" style="margin: 20px">
 
     </cc-progress>
