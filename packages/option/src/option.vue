@@ -40,7 +40,7 @@
             opacity: 0;
         }
     }
-    .cat-option-body--default {
+    .cat-option-body--normal {
         height: $--select-height;
     }
     .cat-option-body--large {

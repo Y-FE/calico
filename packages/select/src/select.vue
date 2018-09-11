@@ -6,18 +6,18 @@
         <!-- <p class="cat-select-title" v-if="title">
             {{title}}
         </p> -->
-        <div class="cat-input-body" :class="`cat-input-body--${size}`">
-            <input class="cat-input-main" 
+        <div class="cat-select-input-body" :class="`cat-select-input-body--${size}`">
+            <input class="cat-select-input-main" 
                 :value="label ? label : value" 
                 readonly
                 :placeholder="placeholder"
-                :class="[visible === false ? 'cat-input-border--default':'cat-input-border--active']"/>
+                :class="[visible === false ? 'cat-select-input-border--default':'cat-select-input-border--active']"/>
             <cc-row justify="center" 
                 align="center"
-                class="cat-input-icon"
-                :class="`cat-input-icon--${size}`">
-                <i class="cat-triangle iconfont icon-dropdown"  
-                    :class="[visible === false ? '':'cat-icon-resever']">
+                class="cat-select-input-icon"
+                :class="`cat-select-input-icon--${size}`">
+                <i class="iconfont icon-take-up cat-select-icon-dropdown"  
+                    :class="[visible === false ? '':'cat-select-icon-resever']">
                 </i>    
             </cc-row>
         </div>
@@ -43,11 +43,11 @@
             color: $--select-color; 
             margin-bottom: 10px;
         }
-        .cat-input-body {
+        .cat-select-input-body {
             position: relative;
             width: 100%;
             cursor: pointer;
-            .cat-input-main {
+            .cat-select-input-main {
                 border-radius: $--select-option-radius; 
                 color: $--select-color;
                 display: inline-block;
@@ -60,7 +60,7 @@
                 width: 100%;
                 cursor: pointer;
             }
-            .cat-input-icon {
+            .cat-select-input-icon {
                 position: absolute;
                 height: calc(100% - 2px);
                 right: 2px;
@@ -76,30 +76,30 @@
                     transform: rotate(0deg);
                     cursor: pointer;
                 }
-                .cat-icon-resever {
+                .cat-select-icon-resever {
                     transform: rotate(180deg);
                 }
             }
-            .cat-input-icon--default {
+            .cat-select-input-icon--normal {
                 padding: 0 5px;
             }
-            .cat-input-icon--large {
+            .cat-select-input-icon--large {
                 padding: 0 8px;
             }
-            .cat-input-border--default {
+            .cat-select-input-border--default {
                 border: 1px solid $--select-border-color;
                 &:hover {
                     border: 1px solid $--select-border-color-hover;
                 }
             }
-            .cat-input-border--active {
+            .cat-select-input-border--active {
                 border: 1px solid $--select-border-color-active;
             }
         }
-        .cat-input-body--default {
+        .cat-select-input-body--normal {
             height: $--select-height; 
         }
-        .cat-input-body--large {
+        .cat-select-input-body--large {
             height: $--select-height-large; 
         }
         .cat-select-dropdown {
@@ -137,10 +137,10 @@
                 type: String,
                 default: ''
             },
-            //default , large
+            //normal , large
             size: {
                 type: String,
-                default: 'default',
+                default: 'normal',
             }          
         },
         data() {

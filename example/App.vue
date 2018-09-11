@@ -5,6 +5,9 @@
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
         </cc-select>
+        <cc-input size="large" v-model="largeInput" placeholder="请输入666">
+
+        </cc-input>
     </div>
     <cc-progress :percent="percent" style="margin: 20px">
 
@@ -378,6 +381,7 @@
         props: {},
         data() {
             return {
+                largeInput: '',
                 percent: 50,
                 showN: false,
                 hori: 1,

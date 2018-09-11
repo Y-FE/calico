@@ -1,21 +1,21 @@
 <template>
     <div class="cat-input-number"
         :style="{width: `${width}px`}">
-        <!-- <p class="cat-input-title" v-if="title">{{title}}</p> -->
+        <!-- <p class="cat-input-number-title" v-if="title">{{title}}</p> -->
         <div class="cat-input-number-body">
-            <div class="cat-input-body">
+            <div class="cat-input-number-body">
                 <input type="text"
                     :value="currentValue"
                     @blur="handleChange" 
-                    class="cat-input" />
+                    class="cat-input-number-input" />
             </div>
             <cc-icon-grey-block icon="icon-reduce" 
-                class="cat-input-number--decrease cat-input-button"
+                class="cat-input-number--decrease cat-input-number-button"
                 :disabled="value === min"
                 @click="reduce">
             </cc-icon-grey-block>
             <cc-icon-grey-block icon="icon-add-courseware" 
-                class="cat-input-number--increase cat-input-button"
+                class="cat-input-number--increase cat-input-number-button"
                 :disabled="value === max"
                 @click="increase">
             </cc-icon-grey-block>
@@ -25,7 +25,7 @@
 <style lang="scss">
     .cat-input-number {
         width: $--input-number-width;
-        .cat-input-title {
+        .cat-input-number-title {
             font-size: $--input-number-title-font-size;
             color: $--input-number-title-color;
             margin-bottom: 10px;
@@ -36,9 +36,9 @@
             width: 100%; 
             height: $--input-number-height;
             line-height: $--input-number-height;
-            .cat-input-button {
+            .cat-input-number-button {
                 position: absolute;
-                top: 1px;
+                top: 3px;
             }
             .cat-input-number--decrease {
                 left: 1px;
@@ -48,10 +48,10 @@
                 right: 1px;
                 border-radius: 0 $--input-number-radius  $--input-number-radius 0;
             }
-            .cat-input-body {
+            .cat-input-number-body {
                 position: relative;
                 width: 100%;
-                .cat-input {
+                .cat-input-number-input {
                     border-radius: $--input-number-radius;
                     border: 1px solid $--input-number-border-color;
                     color: $--input-number-color;
