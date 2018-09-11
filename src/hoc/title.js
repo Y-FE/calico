@@ -9,7 +9,10 @@ export default component => {
             let children = [component.render.call(this, h)];
             if (this.title) {
                 children.unshift(
-                    h('p', { class: { 'cat-select-title': true } }, this.title)
+                    h('p', { class: { 'cat-select-title': true } }, [
+                        this.title,
+                        this.$slots.titleExtra
+                    ])
                 );
             }
             return h('div', children);
