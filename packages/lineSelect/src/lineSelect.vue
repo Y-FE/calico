@@ -8,8 +8,8 @@
         <cc-row class="cat-line-input-body" 
             justify="center"
             align="center"
-            :style="[{'border-color': color ? color : '#FF336A'}]"> 
-            {{color ? '' : '/'}}
+            :style="[{'border-color': (color !== 'rgba(0,0,0,0)' && color) ? color : '#FF336A'}]"> 
+            {{(color !== 'rgba(0,0,0,0)' && color) ? '' : '/'}}
         </cc-row>
         <transition name="up-silde">
             <div class="cat-line-dropdown" v-if="visible">

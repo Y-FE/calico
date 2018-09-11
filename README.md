@@ -41,6 +41,8 @@ npm run example
 - [x] radioBtton
 - [x] radioGroup
 - [x] checkboxGroup
+- [x] input
+- [x] textarea
 - [x] inputNumber
 - [x] pagination
 - [x] message
@@ -68,6 +70,8 @@ npm run example
 - [x] iconCircle
 - [x] iconDefault
 - [x] iconGreyBlock
+- [x] courseRadioGroup
+- [x] courseRadio
 - [x] verticalRadio
 - [x] horizontalRadio
 - [x] horizontalCheckbox

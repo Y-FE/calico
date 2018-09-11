@@ -10,8 +10,8 @@
             align="center"
             class="cat-color-input-body" 
             :style="[{'background-color': color, 
-                'border': color ? '' : '1px solid #FF336A'}]">
-            {{color ? ' ' : '/'}}
+                'border': (color !== 'rgba(0,0,0,0)' && color) ? '' : '1px solid #FF336A'}]">
+            {{(color !== 'rgba(0,0,0,0)' && color) ? ' ' : '/'}}
         </cc-row>
         <transition name="up-silde">
             <div class="cat-color-dropdown" v-if="visible">

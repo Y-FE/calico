@@ -13,6 +13,8 @@ import Clock from '../packages/clock';
 import ColorOption from '../packages/colorOption';
 import ColorSelect from '../packages/colorSelect';
 import Container from '../packages/container';
+import CourseRadio from '../packages/courseRadio';
+import CourseRadioGroup from '../packages/courseRadioGroup';
 import FlexModal from '../packages/flexModal';
 import FloatPanel from '../packages/floatPanel';
 import Grid from '../packages/grid';
@@ -65,6 +67,8 @@ const components = [
     ColorOption,
     ColorSelect,
     Container,
+    CourseRadio,
+    CourseRadioGroup,
     FlexModal,
     FloatPanel,
     Grid,
@@ -132,6 +136,8 @@ let calico = {
     ColorOption,
     ColorSelect,
     Container,
+    CourseRadio,
+    CourseRadioGroup,
     FlexModal,
     FloatPanel,
     Grid,

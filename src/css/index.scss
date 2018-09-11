@@ -27,6 +27,7 @@ $--color-success-opacity-8: rgba($--color-success, .8);
 $--color-text-title: #666666;
 $--color-text-primary: #999999;
 $--color-brightness-base: brightness(90%);
+$--color-brightness-modal: brightness(40%);
 
 //radius
 $--radius-base: 2px;
@@ -40,6 +41,7 @@ $--radius-circle: 50%;
 $--font-size-base: 12px;
 $--font-size-title: 16px;
 $--font-size-large: 20px;
+$--font-size-icon-large: $--font-size-large * 2;
 $--font-size-icon-base: $--font-size-title;
 
 $--font-weight-base: 400;
@@ -400,3 +402,12 @@ $--aside-body-height: calc(100% - 112px);
 $--aside-body-border-color: $--color-black-opacity-1;
 $--aside-body-padding: 10px 0;
 $--aside-foot-height: 70px;
+
+//course-raido
+$--course-raido-width: 245px;
+$--course-raido-height: 155px;
+$--course-raido-back-height: 135px;
+$--course-raido-font-size: $--font-size-large;
+$--course-raido-color: $--color-white;
+$--course-raido-icon-font-size: $--font-size-icon-large;
+$--course-raido-icon-color: $--color-success;

@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div style="margin: 50px;">
+    <!-- <div style="margin: 50px;">
         <cc-select v-model="fontSize" title="字号" size="large">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
@@ -8,8 +8,10 @@
         <cc-input size="large" v-model="largeInput" placeholder="请输入666">
 
         </cc-input>
-        <cc-textarea v-model="largeInput" placeholder="请输入666"></cc-textarea>
-    </div>
+        <cc-textarea v-model="largeInput" placeholder="请输入666">
+
+        </cc-textarea>
+    </div> -->
     <cc-progress :percent="percent" style="margin: 20px">
 
     </cc-progress>
@@ -17,7 +19,15 @@
     <cc-switch v-model="mm"></cc-switch>
     <cc-modal 
         :show.sync="showN"
+        width="820"
         title="我是一个分数字键">
+        <template slot="body">
+            <cc-course-radio-group v-model="courseRadio">
+                <cc-course-radio v-for="i in 6" :key="i" :value="i">
+                    我是一个
+                </cc-course-radio>
+            </cc-course-radio-group>
+        </template>
     </cc-modal>
     <cc-button @click="showN = true">
         展示模态框
@@ -382,9 +392,10 @@
         props: {},
         data() {
             return {
+                courseRadio: 1,
                 largeInput: '',
                 percent: 50,
-                showN: false,
+                showN: true,
                 hori: 1,
                 horiArr: [],
                 //----------------------
@@ -413,7 +424,7 @@
                 //-----------------------
                 test: 'ok',
                 radio3: '橡皮',
-                color: '#FF4040',
+                color: 'rgba(0,0,0,0)',
                 line: '#18A2EA',
                 currentPage: 1,
                 fontSize: 12,
