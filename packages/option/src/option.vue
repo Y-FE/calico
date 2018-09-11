@@ -20,7 +20,6 @@
         min-width: 100%;
         padding: $--select-option-item-padding; 
         cursor: pointer;
-        font-size: $--select-font-size;
         color: $--select-option-color;
         transition: $--transition-primary;
         &:hover {
@@ -42,9 +41,11 @@
     }
     .cat-option-body--normal {
         height: $--select-height;
+        font-size: $--select-font-size;
     }
     .cat-option-body--large {
         height: $--select-height-large;
+        font-size: $--select-font-size-large;
     }
     .cat-option--acitve {
         color: $--select-option-color-active;

@@ -101,7 +101,7 @@
         }
         .cat-select-input-body--large {
             height: $--select-height-large; 
-            font-size: $--select-large-font-size;
+            font-size: $--select-font-size-large;
         }
         .cat-select-dropdown {
             position: absolute;  
