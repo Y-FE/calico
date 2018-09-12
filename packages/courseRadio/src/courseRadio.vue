@@ -2,7 +2,6 @@
     <cc-row align="center" class="cat-course-radio-body">
         <cc-row 
             align="center" 
-            justify="center" 
             @click.native="handleChange"
             class="cat-course-radio-body--back"
             :class="parentVal === value ? 'cat-course-radio-body--back-active' : 'cat-course-radio-body--back-default'"
@@ -41,6 +40,9 @@
         cursor: pointer;
         font-size: $--course-raido-font-size;
         color: $--course-raido-color;
+        overflow: hidden;
+        padding: $--course-raido-back-padding;
+        word-break: break-all;
     }
     .cat-course-radio-body--back-default {
         &:hover {

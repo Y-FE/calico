@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div style="margin: 50px;">
+    <!-- <div style="margin: 50px;">
         <cc-select v-model="fontSize" title="字号" size="large">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
@@ -11,7 +11,7 @@
         <cc-textarea title="dd" v-model="largeInput" placeholder="请输入666">
 
         </cc-textarea>
-    </div>
+    </div> -->
     <cc-progress :percent="percent" style="margin: 20px">
 
     </cc-progress>
@@ -24,7 +24,7 @@
         <template slot="body">
             <cc-course-radio-group v-model="courseRadio">
                 <cc-course-radio v-for="i in 6" :key="i" :value="i">
-                    我是一个
+                    我是一个fhuipqhfuie qhfiqehfiqwep hfiqpejfioqwepjfioqepjfiqowefjoqwepfjqio wefhqweopfhiqohfiopqwe fhqiwofhq wfhqei fhqeiofhqwe f
                 </cc-course-radio>
             </cc-course-radio-group>
         </template>
