@@ -6,19 +6,22 @@
             <cc-row class="cat-operate-box"
                 @click.native.stop="deleteItem"
                 justify="center"
-                align="center">
+                align="center"
+                v-if="showDelete">
                 <i class="iconfont icon-delete-page"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
                 @click.native.stop="changeOrder('up')"
                 justify="center"
-                align="center">
+                align="center"
+                v-if="showUp">
                 <i class="iconfont icon-move-up"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
                 @click.native.stop="changeOrder('down')"
                 justify="center"
-                align="center">
+                align="center"
+                v-if="showDown">
                 <i class="iconfont icon-move-down"></i>
             </cc-row>
         </cc-row>
@@ -57,7 +60,20 @@
         components: {
             ccRow
         },
-        props: {},
+        props: {
+            showDelete: {
+                type: Boolean,
+                default: true
+            },
+            showUp: {
+                type: Boolean,
+                default: true
+            },
+            showDown: {
+                type: Boolean,
+                default: true
+            },
+        },
         data() {
             return {
             }

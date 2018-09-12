@@ -19,19 +19,19 @@ export default {
             return MessageInstance;
         };
         let Message = (message) => {
-            init(message, 'info');
+           return init(message, 'info');
         }
         Message.info = (message) => {
-            init(message, 'info');
+            return init(message, 'info');
         };
         Message.error = (message) => {
-            init(message, 'error');
+            return init(message, 'error');
         };
         Message.warning = (message) => {
-            init(message, 'warning');
+            return init(message, 'warning');
         };
         Message.success = (message) => {
-            init(message, 'success');
+            return init(message, 'success');
         };
         // Message.sucess = ()
         Vue.prototype.$message = Message;

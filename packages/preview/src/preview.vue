@@ -15,6 +15,9 @@
             </slot>
             <template v-if="operate">
                 <cc-preview-operate 
+                    :showDelete="showDelete"
+                    :showUp="showUp"
+                    :showDown="showDown"
                     @delete-item="deleteItem"
                     @change-order="changeOrder"
                     class="cat-preview-operate" 
@@ -97,7 +100,7 @@
             ccRow
         },
         props: {
-            // 激活状态
+            // 激活状态[该界面被选中状态]
             active: {
                 type: Boolean,
                 default: false,
@@ -116,7 +119,19 @@
             imgSrc: {
                 type: String,
                 default: '',
-            }
+            },
+            showDelete: {
+                type: Boolean,
+                default: true
+            },
+            showUp: {
+                type: Boolean,
+                default: true
+            },
+            showDown: {
+                type: Boolean,
+                default: true
+            },
         },
         data() {
             return {
