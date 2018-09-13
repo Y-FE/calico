@@ -64,6 +64,7 @@
                 duration: 3000,
                 //info error warning success
                 type: 'info',
+                timeout: null,
             }
         },
         computed: {
@@ -73,18 +74,23 @@
         methods: {
             startTime(){
                 this.show = true;
-                if(this.showClose) {
+                if(this.duration === 0) {
                     return;
                 }
-                setTimeout(() => {
+                this.timeout = setTimeout(() => {
                     this.close();
                 }, this.duration);
             },
             close() {
+                this.timeout && clearTimeout(this.timeout);
                 this.show = false;
                 setTimeout(() => {
                     this.$destroy(true);
-                    this.$el.parentNode.removeChild(this.$el) // 从DOM里将这个组件移除
+                    if(this.$el && this.$el.parentNode) {
+                        this.$el.parentNode.removeChild(this.$el) // 从DOM里将这个组件移除
+                    } else {
+                        console.error('message already closed!!');
+                    }
                 }, 500);
             }
         },

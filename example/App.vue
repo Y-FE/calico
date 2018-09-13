@@ -516,8 +516,7 @@
             //     duration: 5000
             // });
             // let a = this.$message(876587);
-            console.log(a);
-            console.log('dd');
+
             setTimeout(function() {
                 a.close();
             }, 8000);
