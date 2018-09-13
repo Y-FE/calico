@@ -7,6 +7,7 @@
                 <input type="text"
                     :value="currentValue"
                     @blur="handleChange" 
+                    @focus="focus"
                     class="cat-input-number-input" />
             </div>
             <cc-icon-grey-block icon="icon-reduce" 
@@ -168,10 +169,14 @@
                     //如果输入的不是数字，将输入的内容重置为之前的currentValue
                     event.target.value = this.currentValue;
                 }
+                this.$emit('blur');
             },
             isValueNumber(value) {
                 return  (/^[0-9]+.?[0-9]*$/).test(value + '');
-            }
+            },
+            focus() {
+                this.$emit('focus');
+            },
         },
         created() {
         },

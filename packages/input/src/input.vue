@@ -3,7 +3,9 @@
         class="cat-input-body cat-input-body--default" 
         :class="`cat-input-body--${size}`"
         :style="{width: `${width}px`}"
-        :placeholder="placeholder"/>
+        :placeholder="placeholder"
+        @focus="focus"
+        @blur="blur"/>
 </template>
 <style lang="scss">
     .cat-input-body {
@@ -69,6 +71,12 @@
         watch: {
         },
         methods: {
+            focus() {
+                this.$emit('focus');
+            },
+            blur() {
+                this.$emit('blur');
+            },
         },
         created() {
         },

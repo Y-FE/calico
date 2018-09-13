@@ -2,7 +2,9 @@
     <textarea v-model="inputVal"
         :placeholder="placeholder"
         class="cat-textarea-body cat-textarea-default"
-        :style="{'resize': resize ? '' : 'none', 'height': `${rows * 20 + 20}px`, width: `${width}px`}">
+        :style="{'resize': resize ? '' : 'none', 'height': `${rows * 20 + 20}px`, width: `${width}px`}"
+        @focus="focus"
+        @blur="blur">
         
     </textarea>
 </template>
@@ -70,6 +72,12 @@
         watch: {
         },
         methods: {
+            focus() {
+                this.$emit('focus');
+            },
+            blur() {
+                this.$emit('blur');
+            },
         },
         created() {
         },
