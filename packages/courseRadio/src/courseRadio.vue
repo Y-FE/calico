@@ -43,6 +43,7 @@
         overflow: hidden;
         padding: $--course-raido-back-padding;
         word-break: break-all;
+        background-color: #403BEF;
     }
     .cat-course-radio-body--back-default {
         &:hover {
