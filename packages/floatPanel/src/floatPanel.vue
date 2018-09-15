@@ -16,6 +16,7 @@
         border-radius: $--float-panel-radius;
         width: fit-content;
         cursor: grab;
+        cursor: -webkit-grab;
         position: fixed;
         height: fit-content;
         z-index: $--float-panel-z-index;
