@@ -48,6 +48,9 @@ export function ccParent(componentName) {
 export function setParentModel(value) {
     this[parent][model] = value;
 }
+export function setParentLabel(value) {
+    this[parent].label = value;
+}
 
 export function getModel() {
     return this[modelProp];

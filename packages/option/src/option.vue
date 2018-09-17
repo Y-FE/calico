@@ -59,7 +59,7 @@
     }
 </style>
 <script>
-    import {ccParent, setParentModel, getParentModel} from '@mixins/parentModel';
+    import {ccParent, setParentModel, getParentModel, setParentLabel} from '@mixins/parentModel';
     import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcOption',
@@ -98,6 +98,11 @@
             },
         },
         watch: {
+            parentVal(val) {
+                if(val === this.value) {
+                    setParentLabel.call(this, this.label);
+                }
+            }
         },
         methods: {
             optionClick() {
@@ -109,6 +114,9 @@
         destroyed() {
         },
         mounted() {
+            if(this.parentVal === this.value) {
+                setParentLabel.call(this, this.label);
+            }
         }
     }
 </script>

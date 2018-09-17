@@ -151,22 +151,19 @@
         data() {
             return {
                 visible: false,
-                labelList: [],
+                label: '',
             }
         },
         computed: {
-            label() {
-                let label = this.labelList.find(i => i.value === getModel.call(this));
-                if (label) {
-                    return label.label;
-                }
-                return label;
-            },
             value() {
                 return getModel.call(this);
             },
         },
         watch: {
+            // value(val, old) {
+            //     console.log('生活终于对我下手了');
+            //     this.label = this.getLabel();
+            // },
         },
         methods: {
             selectClick() {
@@ -174,6 +171,20 @@
             },
             handleClose() {
                 this.visible = false;
+            },
+            getLabel() {
+                let labelList = [];
+                let label = '';
+                if (this.$slots && this.$slots.default && this.$slots.default.length) {
+                    labelList = this.$slots.default.map(item => item.componentInstance ? item.componentInstance : '');
+                    let label = labelList.find(i => i.value === getModel.call(this));
+                    if (label) {
+                        return label.label;
+                    }
+                    return label;
+                } else {
+                    return label;
+                }
             }
         },
         created() {
@@ -181,9 +192,7 @@
         destroyed() {
         },
         mounted() {
-            if (this.$slots && this.$slots.default && this.$slots.default.length) {
-                this.labelList = this.$slots.default.map(item => item.componentInstance ? item.componentInstance : '');
-            }
+            this.label = this.getLabel();
         }
     }
 </script>

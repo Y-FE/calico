@@ -12,6 +12,32 @@
 
         </cc-textarea>
     </div> -->
+        <cc-select v-model="courseNew" title="动态修改选项">
+            <cc-option 
+                v-for="(item, index) in courseListNew" 
+                :key="index" 
+                :value="item.val" 
+                :label="item.name">
+                <i slot="right" class="iconfont icon-delete"></i>
+            </cc-option>
+        </cc-select>
+        <cc-button @click="addNewOne(9, '课件9')">添加选项9</cc-button>
+        <cc-button @click="addNewOne(10, '课件10')">添加选项10</cc-button>
+        <cc-button @click="addNewOne(11, '课件11')">添加选项11</cc-button>
+        <cc-button @click="addNewOne(12, '课件12')">添加选项12</cc-button>
+        <cc-select v-model="fontSize" title="字号">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
+            </cc-option>
+        </cc-select>
+        <cc-select v-model="course" title="普通版">
+            <cc-option 
+                v-for="(item, index) in courseList" 
+                :key="index" 
+                :value="item.val" 
+                :label="item.name">
+                <i slot="right" class="iconfont icon-delete"></i>
+            </cc-option>
+        </cc-select>
     <cc-progress :percent="percent" style="margin: 20px">
 
     </cc-progress>
@@ -211,7 +237,7 @@
             <cc-line-option v-for="(item, index) in colorList" :key="index" :value="item"></cc-line-option>
         </cc-line-select>
 
-        <cc-select v-model="fontSize" title="字号">
+        <!-- <cc-select v-model="fontSize" title="字号">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
             </cc-option>
         </cc-select>
@@ -223,7 +249,7 @@
                 :label="item.name">
                 <i slot="right" class="iconfont icon-delete"></i>
             </cc-option>
-        </cc-select>
+        </cc-select> -->
         <cc-input-number v-model="number1" :max="6" :min="1" title="大小"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
         <cc-tooltip theme="light" :show="mm" content="路沙发客服敬爱的">
@@ -392,10 +418,12 @@
         props: {},
         data() {
             return {
+                courseListNew: [],
+                courseNew: '',
                 courseRadio: 1,
                 largeInput: '',
                 percent: 50,
-                showN: true,
+                showN: false,
                 hori: 1,
                 horiArr: [],
                 //----------------------
@@ -457,6 +485,16 @@
         watch: {
         },
         methods: {
+            addNewOne(val, name) {
+                this.addNew(val, name);
+            },
+            addNew(val, name) {
+                this.courseListNew.push({
+                    val: val,
+                    name: name
+                });
+                this.courseNew = val;
+            },
             deletePage(name) {
                 console.log(name);
             },
