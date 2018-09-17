@@ -42,6 +42,8 @@
 </template>
 <style lang="scss">
     .cat-modal {
+        top: 0;
+        left: 0;
         position: fixed;
         z-index: $--modal-z-index;
         height: 100%;
