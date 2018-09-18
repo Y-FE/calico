@@ -12,11 +12,6 @@
 
         </cc-textarea>
     </div> -->
-    <cc-tooltip content="添加新页888面" direction="top" :show="true">
-        <cc-icon-circle icon="icon-add-newpage" @click="addPage">
-            
-        </cc-icon-circle>
-    </cc-tooltip>
         <cc-select v-model="courseNew" title="动态修改选项">
             <cc-option 
                 v-for="(item, index) in courseListNew" 
@@ -587,8 +582,13 @@
             //     duration: 0,
             //      showClose: true,
             // });
+            // this.$message.warning({
+            //     message: '我是一个粉刷匠粉刷本领强，我要把那新房子，刷的很漂亮',
+            //     duration: 0,
+            //      showClose: true,
+            // });
             this.$message.warning({
-                message: '我是一个粉刷匠粉刷本领强，我要把那新房子，刷的很漂亮',
+                message: '我是一',
                 duration: 0,
                  showClose: true,
             });

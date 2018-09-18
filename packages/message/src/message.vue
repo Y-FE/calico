@@ -5,10 +5,12 @@
             class="cat-message-body"
             :class="`cat-message-${type}`"
             v-if="show">
-            <i class="iconfont " 
-                :class="`icon-message-${type}`" style="margin-top: 2px;">
-            </i>
-            <p>{{message}}</p> 
+            <cc-row>
+                <i class="iconfont " 
+                    :class="`icon-message-${type}`">
+                </i>
+                <p class="cat-message--p">{{message}}</p> 
+            </cc-row>
             <i class="iconfont icon-close-window cat-message--close"
                 v-if="showClose" 
                 @click="close()">
@@ -27,15 +29,16 @@
         top: 72px;
         left: calc(50% - 26px);
         z-index: $--message-z-index;
-        p {
+        .cat-message--p {
             width: 200px;
             line-height: $--message-line-height;
             word-break: break-all;
+            margin-left: 10px;
         }
         .cat-message--close {
             cursor: pointer;
             font-size: $--message-font-size;
-            margin-top: 2px;
+            // margin-top: 2px;
             &:hover {
                 filter: $--color-brightness-base;
             }
