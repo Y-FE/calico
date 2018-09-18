@@ -2,14 +2,19 @@
     <cc-row justify="center" align="center"  direction="column" class="cat-tooltip-body" 
         @mouseover.native="mouseChange(true)"
         @mouseleave.native="mouseChange(false)">
-        <div style="cursor: pointer;" >
+        <div style="cursor: pointer;" ref="catTooltipP">
             <slot></slot>
         </div>
-        <div class="cat-tooltip--box">
+        <div class="cat-tooltip--box" 
+            :style="{position: direction === 'bottom' ? 'relative' : 'absolute'}">
             <transition name="fade-in">
-                <cc-row justify="center" align="center" class="cat-tooltip--box-main" v-show="showState">
+                <cc-row justify="center" align="center" 
+                    class="cat-tooltip--box-main" 
+                    :style="style"
+                    v-show="showState">
                     <div class="cat-tooltip--arrow"
-                        :class="`cat-tooltip--arrow-${theme}`">
+                        :class="`cat-tooltip--arrow-${theme}`"
+                        :style="styleArrow">
                     </div>
                     <cc-row 
                         justify="center" 
@@ -26,15 +31,16 @@
 <style lang="scss">
     .cat-tooltip-body {
         width: fit-content;
+        position: relative;
     }
     .cat-tooltip--box {
         position: relative;
     }
     .cat-tooltip--box-main {
-        top: 11px;
+        // top: 11px;
         z-index: $--tooltip-z-index;
         position: absolute;
-        transform: translateX(-50%);
+        // transform: translateX(-50%);
         transition: $--transition-base;
         .cat-tooltip--arrow {
             position: absolute;
@@ -43,7 +49,6 @@
             border-left: $--tooltip-arrow-size / 2 solid transparent;
             border-right: $--tooltip-arrow-size / 2 solid transparent;
             border-bottom: $--tooltip-arrow-size solid;
-            top: -$--tooltip-arrow-size;
         }
         .cat-tooltip--arrow-dark {
             border-bottom-color: $--tooltip-dark-fill;
@@ -76,24 +81,34 @@
             ccRow,
         },
         props: {
-                //Boolean: 手动控制组件的消失和出现
-                show: {
-                    type: String | Boolean,
-                    default: 'hover'
-                },
-                // 主题： dark/light
-                theme: {
-                    type: String,
-                    default: 'dark'
-                },
-                content: {
-                    type: String | Number,
-                    default: 'calico'
-                },
+            //Boolean: 手动控制组件的消失和出现
+            show: {
+                type: String | Boolean,
+                default: 'hover'
+            },
+            // 主题： dark/light
+            theme: {
+                type: String,
+                default: 'dark'
+            },
+            content: {
+                type: String | Number,
+                default: 'calico'
+            },
+            direction: {
+                type: String,
+                default: 'bottom'
+            },
         },
         data() {
             return {
                 visible: false,
+                sizeP: {
+                    width: '',
+                    height: '',
+                },
+                style: {},
+                styleArrow: {},
             }
         },
         computed: {
@@ -113,12 +128,64 @@
                 }
                 this.visible = val;
             },
+            getSize() {
+                this.sizeP.width = this.$refs.catTooltipP.offsetWidth;
+                this.sizeP.height = this.$refs.catTooltipP.offsetHeight;
+            },
+            caclStyle() {
+                let arrSize= 6;
+                // bottom
+                if (this.direction === 'bottom') {
+                    this.style = {
+                        top: '10px',
+                        transform: 'translateX(-50%)',
+                    };
+                    this.styleArrow = {
+                        top: `-${arrSize}px`
+                    }
+                }
+                // left
+                if (this.direction === 'left') {
+                    this.style = {
+                        transform: 'translate(-100%, -50%)',
+                        left: `${-(this.sizeP.width / 2 + 10)}px`,
+                    };
+                    this.styleArrow = {
+                        right: `-${arrSize}px`,
+                        transform: 'rotateZ(90deg)'
+                    }
+                }
+                //right
+                if (this.direction === 'right') {
+                    this.style = {
+                        transform: 'translateY(-50%)',
+                        left: `${(this.sizeP.width / 2 + 10)}px`,
+                    };
+                    this.styleArrow = {
+                        left: `-${arrSize}px`,
+                        transform: 'rotateZ(-90deg)'
+                    }
+                }
+                //top
+                if (this.direction === 'top') {
+                    this.style = {
+                       transform: 'translateX(-50%)',
+                       top: `${-(this.sizeP.height * 2) - 10}px`,
+                    };
+                    this.styleArrow = {
+                        bottom: `-${arrSize}px`,
+                        transform: 'rotateZ(180deg)'
+                    }
+                }
+            },
         },
         created() {
         },
         destroyed() {
         },
         mounted() {
+            this.getSize();
+            this.caclStyle();
         }
     }
 </script>

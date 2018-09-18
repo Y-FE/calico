@@ -11,7 +11,8 @@
                 <cc-row 
                     justify="space-between" 
                     align="center" 
-                    class="cat-modal--header-body">
+                    class="cat-modal--header-body"
+                    :class="line ? 'cat-modal--header-line' : ''">
                     <div>
                         <slot name="title">{{title}}</slot>
                     </div>
@@ -28,7 +29,8 @@
                 <cc-row 
                     justify="flex-end" 
                     align="center" 
-                    class="cat-modal--footer">
+                    class="cat-modal--footer"
+                    :class="line ? 'cat-modal--footer-line' : ''">
                     <slot name="footer">
                         <div>
                             <cc-button type="default" @click="cancel">取消</cc-button>
@@ -56,7 +58,6 @@
     }
     .cat-modal--header-body {
         min-height: 56px;
-        border-bottom: 1px solid $--modal-line;
         padding: $--modal-header-padding;
         color: $--modal-header-color;
         font-size: $--modal-header-font-size;
@@ -72,6 +73,12 @@
     }
     .cat-modal--footer {
         padding: $--modal-footer-padding;
+        border-top: 1px solid $--modal-line;
+    }
+    .cat-modal--header-line {
+        border-bottom: 1px solid $--modal-line;
+    }
+    .cat-modal--footer-line {
         border-top: 1px solid $--modal-line;
     }
 </style>
@@ -105,6 +112,11 @@
                 type: String,
                 default: '',
             },
+            // 线
+            line: {
+                type: Boolean,
+                default: true,
+            }
         },
         data() {
             return {

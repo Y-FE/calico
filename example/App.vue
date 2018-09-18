@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="margin: 100px;">
     <!-- <div style="margin: 50px;">
         <cc-select v-model="fontSize" title="字号" size="large">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
@@ -252,10 +252,28 @@
         </cc-select> -->
         <cc-input-number v-model="number1" :max="6" :min="1" title="大小"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
-        <cc-tooltip theme="light" :show="mm" content="路沙发客服敬爱的">
+        <cc-tooltip theme="light" style="margin-top: 100px;" :show="mm" content="路沙发客服敬爱的">
+            <p>我是一</p>
+        </cc-tooltip>
+        <cc-tooltip theme="light" style="margin-top: 100px;" :show="mm" content="路沙发客服敬爱的" direction="left">
+            <p>我是一</p>
+        </cc-tooltip>
+        <cc-tooltip theme="light" style="margin-top: 100px;" :show="mm" content="路沙发客服敬爱的" direction="right">
+            <p>我是一</p>
+        </cc-tooltip>
+        <cc-tooltip theme="light" style="margin-top: 100px;" :show="mm" content="路沙发客服敬爱的" direction="top">
             <p>我是一</p>
         </cc-tooltip>
         <cc-tooltip style="margin-top: 100px;" @click.native="mm = !mm">
+            <p>我是一个粉刷匠</p>
+        </cc-tooltip>
+        <cc-tooltip style="margin-top: 100px;" direction="left">
+            <p>我是一个粉刷匠</p>
+        </cc-tooltip>
+        <cc-tooltip style="margin-top: 100px;" direction="right">
+            <p>我是一个粉刷匠</p>
+        </cc-tooltip>
+        <cc-tooltip style="margin-top: 100px;" direction="top">
             <p>我是一个粉刷匠</p>
         </cc-tooltip>
         
@@ -558,7 +576,7 @@
             setTimeout(function() {
                 a.close();
             }, 8000);
-            // this.$message.info('info');
+            this.$message.info('info');
             // this.$message.error('error');
             // this.$message.warning('warning');
             // this.$message.success('success');
