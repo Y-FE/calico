@@ -2,12 +2,16 @@
     <transition name="silde">
         <cc-row 
             justify="space-between"
-            align="center"
             class="cat-message-body"
             :class="`cat-message-${type}`"
             v-if="show">
-            <p>{{message}}</p>
-            <i class="iconfont icon-close" v-if="showClose" @click="close()"></i>
+            <i class="iconfont" :class="`icon-message-${type}`" style="margin-top: 3px;"></i>
+            <p>{{message}}</p> 
+            <i class="iconfont icon-close-window" 
+                style="margin-top: 2px" 
+                v-if="showClose" 
+                @click="close()">
+            </i>
         </cc-row>
     </transition>
 </template>
@@ -25,6 +29,7 @@
         p {
             width: 200px;
             line-height: $--message-line-height;
+            word-break: break-all;
         }
         i {
             cursor: pointer;

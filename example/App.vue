@@ -563,20 +563,40 @@
         destroyed() {
         },
         mounted() {
-            let a = this.$message.success({
-                message: 'wohh',
-                showClose: true,
-            });
-            // this.$message.error({
+            // let a = this.$message.success({
             //     message: 'wohh',
-            //     duration: 5000
+            //     showClose: true,
+            // });
+            // this.$message.info({
+            //     message: '我是一个粉刷匠粉刷本领强，我要把那新房子，刷的很漂亮',
+            //     duration: 0,
+            //      showClose: true,
+            // });
+            // this.$message.error({
+            //     message: '我是一个粉刷匠粉刷本领强，我要把那新房子，刷的很漂亮',
+            //     duration: 0,
+            //      showClose: true,
+            // });
+            // this.$message.success({
+            //     message: '我是一个粉刷匠粉刷本领强，我要把那新房子，刷的很漂亮',
+            //     duration: 0,
+            //      showClose: true,
+            // });
+            this.$message.warning({
+                message: '我是一个粉刷匠粉刷本领强，我要把那新房子，刷的很漂亮',
+                duration: 0,
+                 showClose: true,
+            });
+            // this.$message.success({
+            //     message: 'wohh',
+            //     duration: 0
             // });
             // let a = this.$message(876587);
 
-            setTimeout(function() {
-                a.close();
-            }, 8000);
-            this.$message.info('info');
+            // setTimeout(function() {
+            //     a.close();
+            // }, 8000);
+            // this.$message.info('info');
             // this.$message.error('error');
             // this.$message.warning('warning');
             // this.$message.success('success');
