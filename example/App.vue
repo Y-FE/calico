@@ -12,6 +12,11 @@
 
         </cc-textarea>
     </div> -->
+    <cc-tooltip content="添加新页888面" direction="top" :show="true">
+        <cc-icon-circle icon="icon-add-newpage" @click="addPage">
+            
+        </cc-icon-circle>
+    </cc-tooltip>
         <cc-select v-model="courseNew" title="动态修改选项">
             <cc-option 
                 v-for="(item, index) in courseListNew" 

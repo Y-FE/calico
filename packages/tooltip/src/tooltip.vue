@@ -169,8 +169,8 @@
                 //top
                 if (this.direction === 'top') {
                     this.style = {
-                       transform: 'translateX(-50%)',
-                       top: `${-(this.sizeP.height * 2) - 10}px`,
+                       transform: 'translate(-50%, -100%)',
+                       top: `${-(this.sizeP.height / 2) - 10}px`,
                     };
                     this.styleArrow = {
                         bottom: `-${arrSize}px`,

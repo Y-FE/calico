@@ -5,10 +5,11 @@
             class="cat-message-body"
             :class="`cat-message-${type}`"
             v-if="show">
-            <i class="iconfont" :class="`icon-message-${type}`" style="margin-top: 3px;"></i>
+            <i class="iconfont " 
+                :class="`icon-message-${type}`" style="margin-top: 2px;">
+            </i>
             <p>{{message}}</p> 
-            <i class="iconfont icon-close-window" 
-                style="margin-top: 2px" 
+            <i class="iconfont icon-close-window cat-message--close"
                 v-if="showClose" 
                 @click="close()">
             </i>
@@ -31,9 +32,10 @@
             line-height: $--message-line-height;
             word-break: break-all;
         }
-        i {
+        .cat-message--close {
             cursor: pointer;
             font-size: $--message-font-size;
+            margin-top: 2px;
             &:hover {
                 filter: $--color-brightness-base;
             }

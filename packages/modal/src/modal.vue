@@ -73,7 +73,6 @@
     }
     .cat-modal--footer {
         padding: $--modal-footer-padding;
-        border-top: 1px solid $--modal-line;
     }
     .cat-modal--header-line {
         border-bottom: 1px solid $--modal-line;
