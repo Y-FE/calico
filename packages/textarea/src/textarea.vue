@@ -5,7 +5,8 @@
         :style="{'resize': resize ? '' : 'none', 'height': `${rows * 20 + 20}px`, width: `${width}px`}"
         @focus="focus"
         @blur="blur"
-        @keyup.stop>
+        @keyup.stop
+        @keydown.stop>
         
     </textarea>
 </template>

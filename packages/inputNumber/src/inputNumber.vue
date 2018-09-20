@@ -9,6 +9,7 @@
                     @blur="handleChange" 
                     @focus="focus"
                     @keyup.stop
+                    @keydown.stop
                     class="cat-input-number-input" />
             </div>
             <cc-icon-grey-block icon="icon-reduce" 

@@ -5,6 +5,7 @@
         :style="{width: `${width}px`}"
         :placeholder="placeholder"
         @keyup.stop
+        @keydown.stop
         @focus="focus"
         @blur="blur"/>
 </template>
