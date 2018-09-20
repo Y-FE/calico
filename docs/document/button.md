@@ -5,18 +5,14 @@
 
 <cat-button-general></cat-button-general>
 
-<!-- <<< @/docs/.vuepress/components/CatButtonGeneral.vue -->
+<<< docs/.vuepress/components/CatButtonGeneral.vue
 
-```vue
-<cc-button type="primary">Primary</cc-button>
-<cc-button type="default">Default</cc-button>
-```
 
 ### Disabled button
 
 <cat-button-disabled></cat-button-disabled>
 
-<!-- <<< docs/.vuepress/components/CatButtonDisabled.vue -->
+<<< docs/.vuepress/components/CatButtonDisabled.vue
 
 ## Interface
 
