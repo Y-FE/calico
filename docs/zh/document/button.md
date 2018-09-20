@@ -3,11 +3,18 @@
 
 ## 示例
 
-### 普通按钮
+### 基础用法
 
-<cat-button-general></cat-button-general>
+<zh-cat-button-general></zh-cat-button-general>
+<code-show>
+<<< docs/.vuepress/components/zhCatButtonGeneral.vue
+</code-show>
 
-<<< docs/.vuepress/components/CatButtonGeneral.vue
+<!-- <<< docs/.vuepress/components/zhCatButtonGeneral.vue -->
+
+### 禁用状态
+
+<zh-cat-button-disabled></zh-cat-button-disabled>
 
 
 

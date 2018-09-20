@@ -1,0 +1,44 @@
+<template>
+    <code-container>
+        <cc-row justify="space-between" class="doc-btn">
+            <cc-button type="primary">主要按钮</cc-button>
+            <cc-button type="default">默认按钮</cc-button>
+        </cc-row>
+        <cc-row justify="space-between" class="doc-btn">
+            <cc-button type="primary" shape="round">圆角按钮</cc-button>
+            <cc-button type="default" shape="round">圆角按钮</cc-button>
+        </cc-row>
+    </code-container>
+</template>
+<style>
+    .doc-btn {
+        width: 165px;
+    }
+</style>
+<script>
+    export default {
+        name: 'zhCatButtonGeneral',
+        components: {
+        },
+        props: {},
+        data() {
+            return {
+            }
+        },
+        computed: {
+        },
+        watch: {
+        },
+        methods: {
+            test() {
+                alert('mm');
+            }
+        },
+        created() {
+        },
+        destroyed() {
+        },
+        mounted() {
+        }
+    }
+</script>

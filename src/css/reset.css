@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   line-height: 1em;
-  user-select: none;
+  /* user-select: none; */
   font-family: "Hiragino Sans GB","STHeiti", "Microsoft YaHei",微软雅黑, "simsun";
 }
 html {
@@ -12,6 +12,9 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+h2, h3 {
+  margin-top: 0!important;
 }
 body {
   -webkit-box-sizing: border-box;

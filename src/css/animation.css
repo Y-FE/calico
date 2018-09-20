@@ -47,6 +47,18 @@
 .fade-in-leave-active {
     transition: .3s 
 }
+.fade-out-enter {
+    opacity: 0;
+    transform: translateY(-20%)
+}
+.fade-out-leave-to {
+   opacity: 0;
+   transform: translateY(-20%)
+}
+.fade-out-enter-active, 
+.fade-out-leave-active {
+    transition: .3s 
+}
 
 .fade-enter {
     opacity: 0;
