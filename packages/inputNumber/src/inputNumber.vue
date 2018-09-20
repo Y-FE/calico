@@ -8,6 +8,7 @@
                     :value="currentValue"
                     @blur="handleChange" 
                     @focus="focus"
+                    @keyup.stop
                     class="cat-input-number-input" />
             </div>
             <cc-icon-grey-block icon="icon-reduce" 

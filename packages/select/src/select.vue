@@ -8,6 +8,7 @@
         </p> -->
         <div class="cat-select-input-body" :class="`cat-select-input-body--${size}`">
             <input class="cat-select-input-main" 
+                @keyup.stop
                 :value="label ? label : value" 
                 readonly
                 :placeholder="placeholder"

@@ -4,6 +4,7 @@
         :class="`cat-input-body--${size}`"
         :style="{width: `${width}px`}"
         :placeholder="placeholder"
+        @keyup.stop
         @focus="focus"
         @blur="blur"/>
 </template>

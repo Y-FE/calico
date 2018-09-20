@@ -43,7 +43,32 @@ module.exports = {
                 }
             },
             '/zh/': {
-                selectText: '选择语言'
+                selectText: '选择语言',
+                label: '简体中文',
+                nav: [
+                    {
+                        text: '文档',
+                        link: '/zh/document/'
+                    },
+                    {
+                        text: '快速上手',
+                        link: '/zh/guide'
+                    },
+                    {
+                        text: 'GitHub',
+                        link: 'https://github.com/Y-FE/calico'
+                    }
+                ],
+                sidebar: {
+                    '/zh/document/': [
+                        '',
+                        {
+                            title: '组件',
+                            collapsable: false,
+                            children: ['row', 'button'],
+                        }
+                    ]
+                }
             }
         },
         nav: [
@@ -59,7 +84,7 @@ module.exports = {
                 text: 'GitHub',
                 link: 'https://github.com/Y-FE/calico'
             }
-        ]
+        ],
     },
     evergreen: true
 };

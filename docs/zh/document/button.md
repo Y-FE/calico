@@ -1,7 +1,13 @@
----
-sidebar: auto
----
+# Button 按钮 
 
-# Button 66
-<cc-button>Button</cc-button>
-## 66
+
+## 示例
+
+### 普通按钮
+
+<cat-button-general></cat-button-general>
+
+<<< docs/.vuepress/components/CatButtonGeneral.vue
+
+
+

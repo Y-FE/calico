@@ -4,7 +4,8 @@
         class="cat-textarea-body cat-textarea-default"
         :style="{'resize': resize ? '' : 'none', 'height': `${rows * 20 + 20}px`, width: `${width}px`}"
         @focus="focus"
-        @blur="blur">
+        @blur="blur"
+        @keyup.stop>
         
     </textarea>
 </template>
