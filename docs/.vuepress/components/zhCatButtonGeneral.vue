@@ -18,27 +18,5 @@
 <script>
     export default {
         name: 'zhCatButtonGeneral',
-        components: {
-        },
-        props: {},
-        data() {
-            return {
-            }
-        },
-        computed: {
-        },
-        watch: {
-        },
-        methods: {
-            test() {
-                alert('mm');
-            }
-        },
-        created() {
-        },
-        destroyed() {
-        },
-        mounted() {
-        }
     }
 </script>

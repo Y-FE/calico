@@ -3,6 +3,11 @@
         <slot></slot>
     </div>
 </template>
+<style>
+    h2 {
+        border-bottom: none !important;
+    }
+</style>
 <style scoped>
     .code-container {
         margin-top: 20px;

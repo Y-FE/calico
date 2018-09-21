@@ -19,13 +19,13 @@
         padding: 10px;
         border: 1px solid #282c34;
         cursor: pointer;
-        background-color: #282c34;
-        color: #fff;
+        background-color: #fff;
+        color: #282c34;
         transition: all .3s;
     }
     .doc-code-show-btn:hover {
-        background-color: #fff;
-        color: #282c34;
+        background-color: #282c34;
+        color: #fff;
     }
     .doc-code-show-code {
         height: 0;
