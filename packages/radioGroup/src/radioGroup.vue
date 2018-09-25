@@ -14,10 +14,10 @@
 </style>
 <script>
     import ccRow from '@packages/row/src/row.vue'; 
-    import {ccModel}  from "@mixins/parentModel";
+    import {ccModel}  from '@mixins/parentModel';
     export default {
         name: 'CcRadioGroup',
-        componentName: "CcRadioGroup",
+        componentName: 'CcRadioGroup',
         mixins: [ccModel(String | Number | Boolean)],
         components: {
             ccRow,

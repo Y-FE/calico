@@ -47,6 +47,7 @@ npm run example
 - [x] pagination
 - [x] message
 - [x] nav
+- [ ] tab ui未设计好
 - [x] popover
 - [x] modal
 - [x] progress
@@ -74,6 +75,7 @@ npm run example
 - [x] courseRadio
 - [x] verticalRadio
 - [x] horizontalRadio
+- [x] answerRadio
 - [x] horizontalCheckbox
 
 ## Thanks

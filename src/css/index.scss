@@ -39,6 +39,7 @@ $--radius-circle: 50%;
 
 //font
 $--font-size-base: 12px;
+$--font-size-tab: 14px;
 $--font-size-title: 16px;
 $--font-size-large: 20px;
 $--font-size-icon-large: $--font-size-large * 2;
@@ -244,6 +245,13 @@ $--nav-border: $--color-black-opacity-5;
 $--nav-font-size: $--font-size-base;
 $--nav-item-padding: 9px 0;
 
+//tab
+$--tab-item-font-size: $--font-size-tab; 
+$--tab-item-radius: $--radius-icon;
+$--tab-item-padding: 11px 24px;
+$--tab-item-color-default: $--color-info;
+$--tab-item-background-color-default: $--color-info;
+
 //modal
 $--modal-fill: $--color-black-opacity-6;
 $--modal-z-index: $--z-index-99;
@@ -412,3 +420,16 @@ $--course-raido-font-size: $--font-size-title;
 $--course-raido-color: $--color-white;
 $--course-raido-icon-font-size: $--font-size-icon-large;
 $--course-raido-icon-color: $--color-success;
+
+
+//answer-radio
+$--answer-radio-font-size: $--font-size-base;
+$--answer-radio-border-radius: $--radius-circle;
+$--answer-radio-padding: 7px 35px;
+$--answer-radio-border-color: $--color-primary;
+
+$--answer-radio-background-color-default: $--color-white;
+$--answer-radio-color-default: $--color-primary;
+
+$--answer-radio-background-color-active: $--color-primary;
+$--answer-radio-color-active: $--color-white;
