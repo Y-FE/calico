@@ -12,7 +12,7 @@
 </style>
 <script>
     import ccIconBlock from '@packages/iconBlock/src/iconBlock.vue'; 
-    import {setParentModel, ccParent, getParentModel} from "@mixins/parentModel";
+    import {setParentModel, ccParent, getParentModel} from '@mixins/parentModel';
     export default {
         name: 'CcHorizontalRadio',
         componentName: 'CcHorizontalRadio',

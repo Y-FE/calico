@@ -6,6 +6,7 @@ import './css/animation.css';
 import croup from './directives/croup';
 import blur from './directives/blur';
 
+import AnswerRadio from '../packages/answerRadio';
 import Aside from '../packages/aside';
 import Button from '../packages/button';
 import CheckboxGroup from '../packages/checkboxGroup';
@@ -50,6 +51,8 @@ import ScaleArea from '../packages/scaleArea';
 import Select from '../packages/select';
 import SidePanel from '../packages/sidePanel';
 import Switch from '../packages/switch';
+import Tab from '../packages/tab';
+import TabItem from '../packages/tabItem';
 import Textarea from '../packages/textarea';
 import ToolItem from '../packages/toolItem';
 import ToolItemHorizal from '../packages/toolItemHorizal';
@@ -60,6 +63,7 @@ import VerticalGroup from '../packages/verticalGroup';
 import VerticalRadio from '../packages/verticalRadio';
 
 const components = [
+    AnswerRadio,
     Aside,
     Button,
     CheckboxGroup,
@@ -103,6 +107,8 @@ const components = [
     Select,
     SidePanel,
     Switch,
+    Tab,
+    TabItem,
     Textarea,
     ToolItem,
     ToolItemHorizal,
@@ -129,6 +135,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 let calico = {
     version: '0.7.12',
     install,
+    AnswerRadio,
     Aside,
     Button,
     CheckboxGroup,
@@ -172,6 +179,8 @@ let calico = {
     Select,
     SidePanel,
     Switch,
+    Tab,
+    TabItem,
     Textarea,
     ToolItem,
     ToolItemHorizal,

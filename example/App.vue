@@ -12,6 +12,10 @@
 
         </cc-textarea>
     </div> -->
+        <cc-radio-group v-model="hori" column>
+            <cc-answer-radio value="77"></cc-answer-radio>
+            <cc-answer-radio :value="1"></cc-answer-radio>
+        </cc-radio-group>
         <cc-select v-model="courseNew" title="动态修改选项">
             <cc-option 
                 v-for="(item, index) in courseListNew" 
