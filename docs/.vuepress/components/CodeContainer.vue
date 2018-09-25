@@ -7,6 +7,10 @@
     h2 {
         border-bottom: none !important;
     }
+    table {
+        display: table !important;
+        width: 100%;
+    }
 </style>
 <style scoped>
     .code-container {
