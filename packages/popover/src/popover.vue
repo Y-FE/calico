@@ -65,15 +65,21 @@
                 type: String | Number,
                 default: 182
             },
-            //'bottom','left', 'right' 不支持动态及top
+            //'bottom','top','left', 'right' 不支持动态
             //bottomStart bottomEnd
+            //topStart topEnd
             //leftStart leftEnd
             //rightStart rigthEnd
             direction: {
                 type: String,
                 default: 'bottom'
             }, 
-
+            // 对top、bottom  右正，左负
+            // 对left、right 下正，上负
+            offset: {
+                type: Number,
+                default: 0
+            },
         },
         data() {
             return {
@@ -116,18 +122,41 @@
                     this.style = {
                         top: '10px',
                         transform: 'translateX(-50%)',
+                        left: `${this.offset}px`,
                     };
                 }
                 if (this.direction === 'bottomStart') {
                     this.style = {
                         top: `${(this.sizeP.height / 2 + 10)}px`,
-                        left: `${-(this.sizeP.width / 2)}px`
+                        left: `${-(this.sizeP.width / 2) + this.offset}px`
                     };
                 }
                 if (this.direction === 'bottomEnd') {
                     this.style = {
                         top: `${(this.sizeP.height / 2 + 10)}px`,
-                        right: `${-(this.sizeP.width / 2)}px`
+                        right: `${-(this.sizeP.width / 2 + this.offset)}px`
+                    };
+                }
+                //top
+                if (this.direction === 'top') {
+                    this.style = {
+                        top: `${-(this.sizeP.height / 2) - 10}px`,
+                        transform: 'translate(-50%, -100%)',
+                        left: `${this.offset}px`
+                    };
+                }
+                if (this.direction === 'topStart') {
+                    this.style = {
+                        top: `${-(this.sizeP.height / 2) - 10}px`,
+                        transform: 'translateY(-100%)',
+                        left:  `${-(this.sizeP.width / 2) + this.offset}px`
+                    };
+                }
+                if (this.direction === 'topEnd') {
+                    this.style = {
+                        top: `${-(this.sizeP.height / 2) - 10}px`,
+                        transform: 'translateY(-100%)',
+                        right:  `${-(this.sizeP.width / 2 + this.offset)}px`
                     };
                 }
                 // left
@@ -135,20 +164,21 @@
                     this.style = {
                         transform: 'translate(-100%, -50%)',
                         left: `${-(this.sizeP.width / 2 + 10)}px`,
+                        top: `${this.offset}px`,
                     };
                 }
                 if (this.direction === 'leftStart') {
                     this.style = {
                         transform: 'translateX(-100%)',
                         left: `${-(this.sizeP.width / 2 + 10)}px`,
-                        top: `${(-this.sizeP.height / 2)}px`
+                        top: `${(-this.sizeP.height / 2) + this.offset}px`
                     };
                 }
                 if (this.direction === 'leftEnd') {
                     this.style = {
                         transform: 'translate(-100%, -100%)',
                         left: `${-(this.sizeP.width / 2 + 10)}px`,
-                        top: `${(this.sizeP.height / 2)}px`
+                        top: `${(this.sizeP.height / 2) + this.offset}px`
                     };
                 }
                 //right
@@ -156,22 +186,22 @@
                     this.style = {
                         transform: 'translateY(-50%)',
                         left: `${(this.sizeP.width / 2 + 10)}px`,
+                        top: `${this.offset}px`,
                     };
                 }
                 if (this.direction === 'rightStart') {
                     this.style = {
                         left: `${(this.sizeP.width / 2 + 10)}px`,
-                        top: `${(-this.sizeP.height / 2)}px`
+                        top: `${(-this.sizeP.height / 2) + this.offset}px`
                     };
                 }
                 if (this.direction === 'rightEnd') {
                     this.style = {
                         transform: 'translateY(-100%)',
                         left: `${(this.sizeP.width / 2 + 10)}px`,
-                        top: `${(this.sizeP.height / 2)}px`
+                        top: `${(this.sizeP.height / 2) + this.offset}px`
                     };
                 }
-                // this.style.offset = `(${this.offsetX}px, ${this.offsetY}px)`;
             },
         },
         created() {
