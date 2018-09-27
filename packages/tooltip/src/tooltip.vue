@@ -2,7 +2,7 @@
     <cc-row justify="center" align="center"  direction="column" class="cat-tooltip-body" 
         @mouseover.native="mouseChange(true)"
         @mouseleave.native="mouseChange(false)">
-        <div style="cursor: pointer;" ref="catTooltipP">
+        <div style="cursor: pointer; width: 100%;" ref="catTooltipP">
             <slot></slot>
         </div>
         <div class="cat-tooltip--box" 

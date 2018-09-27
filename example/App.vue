@@ -446,9 +446,11 @@
         <cc-menu-item icon="icon-microphone" color="#FFA250">
             麦克风
         </cc-menu-item>
+        <cc-tooltip content="移交板书权限给学生" direction="left" style="width: 100%;" :show="true">
         <cc-menu-item icon="icon-purview" color="#403BEF" disabled>
             板书权限
         </cc-menu-item>
+        </cc-tooltip>
     </cc-side-panel>
     <cc-main></cc-main>
     </div>

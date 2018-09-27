@@ -41,7 +41,7 @@
             line-height: $--input-number-height;
             .cat-input-number-button {
                 position: absolute;
-                top: 3px;
+                top: 2px;
             }
             .cat-input-number--decrease {
                 left: 1px;
