@@ -63,9 +63,9 @@ module.exports = {
                     '/zh/document/': [
                         '',
                         {
-                            title: '组件',
+                            title: '普通组件',
                             collapsable: false,
-                            children: ['row', 'button'],
+                            children: ['row', 'button', 'switch',],
                         }
                     ]
                 }

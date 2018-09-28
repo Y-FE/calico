@@ -20,10 +20,6 @@
         width: 100%;
         border: none;
         border-radius: 4px;
-        -webkit-border-radius: 4px;
-        -o-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
         display: table!important;
     }
     .doc-table td{

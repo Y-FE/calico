@@ -1,8 +1,8 @@
 # Button 按钮 
 
-<!-- ## 示例 -->
+## 示例 Examples
 
-## 基础用法
+### 基础用法
 
 <zh-cat-button-general></zh-cat-button-general>
 <code-show>
@@ -10,7 +10,7 @@
 </code-show>
 
 
-## 禁用状态
+### 禁用状态
 
 <zh-cat-button-disabled></zh-cat-button-disabled>
 <code-show>
@@ -19,7 +19,7 @@
 
 <!-- ## 接口 -->
 
-## 属性
+## 属性 Attributes
 
 | 参数  | 说明  | 类型   | 可选值           | 默认值 |
 |:------|:-------------|:-------|:------------------|:--------|
@@ -27,5 +27,12 @@
 | shape | 形状 | String | square / round    | square  |
 | disabled | 是否禁用状态 | boolean |  ----   | false  |
 
-<code-table>
-</code-table>
+## 事件 Events
+
+| 事件名称  | 说明    | 回调参数 |
+|:------|:---------------|:--------|
+| click | 点击时触发 | ---- |
+
+## 插槽 Slots
+
+
