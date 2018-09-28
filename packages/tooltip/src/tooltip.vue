@@ -120,6 +120,12 @@
             },
         },
         watch: {
+            showState(val) {
+                if (val) {
+                    this.getSize();
+                    this.caclStyle();
+                }
+            }
         },
         methods: {
             mouseChange(val) {
@@ -184,8 +190,10 @@
         destroyed() {
         },
         mounted() {
-            this.getSize();
-            this.caclStyle();
+            this.$nextTick(() => {
+                this.getSize();
+                this.caclStyle();
+            })
         }
     }
 </script>
