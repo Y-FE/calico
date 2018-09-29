@@ -62,6 +62,11 @@
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
 	}
+    .doc-des {
+        font-size: 16px;
+        color: #333;
+        transition: all .3s;
+    }
 </style>
 <style scoped>
     .code-container {

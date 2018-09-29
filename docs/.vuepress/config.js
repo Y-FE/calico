@@ -37,7 +37,7 @@ module.exports = {
                         {
                             title: 'Component',
                             collapsable: false,
-                            children: ['row', 'button', 'switch', 'toolitem']
+                            children: ['row', 'button', 'switch'],
                         }
                     ]
                 }
@@ -65,7 +65,7 @@ module.exports = {
                         {
                             title: '普通组件',
                             collapsable: false,
-                            children: ['row', 'button', 'switch',],
+                            children: ['row', 'button', 'switch', 'tooltip'],
                         }
                     ]
                 }

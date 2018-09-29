@@ -25,7 +25,7 @@
 |:------|:-------------|:-------|:------------------|:--------|
 | type  | 类型  | String | primary / default | primary |
 | shape | 形状 | String | square / round    | square  |
-| disabled | 是否禁用状态 | boolean |  ----   | false  |
+| disabled | 是否禁用状态 | Boolean |  ----   | false  |
 
 ## 事件 Events
 
