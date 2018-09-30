@@ -10,11 +10,6 @@
         </cc-row>
     </code-container>
 </template>
-<style>
-    .doc-btn {
-        width: 165px;
-    }
-</style>
 <script>
     export default {
         name: 'zhCatButtonGeneral',

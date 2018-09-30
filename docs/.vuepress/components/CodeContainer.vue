@@ -67,12 +67,20 @@
         color: #333;
         transition: all .3s;
     }
+    .doc-btn {
+        width: 165px;
+
+    }
+    .doc-top {
+        width: 100%;
+
+    }
 </style>
 <style scoped>
     .code-container {
         margin-top: 20px;
         border: 1px solid #eee;
-        padding: 0 0 20px 20px;
+        padding: 0 20px 20px 20px;
         border-radius: 4px;
     }
     .code-container > div {
