@@ -133,7 +133,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.7.17',
+    version: '0.7.19',
     install,
     AnswerRadio,
     Aside,
