@@ -60,6 +60,8 @@
         font-size: $--select-font-size;
         color: $--color-text-title; 
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
     }
 </style>
 <script>

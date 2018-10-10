@@ -59,6 +59,8 @@
             font-size: $--select-font-size;
             color: $--select-color; 
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
     }
     
