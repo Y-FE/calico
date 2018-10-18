@@ -65,7 +65,7 @@ module.exports = {
                         {
                             title: '普通组件',
                             collapsable: false,
-                            children: ['row', 'button', 'switch', 'tooltip'],
+                            children: ['row', 'button', 'switch', 'tooltip', 'radio'],
                         }
                     ]
                 }
