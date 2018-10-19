@@ -1,30 +1,25 @@
-# Button 按钮 
+
+# IconDefault 常用图标
 
 ## 示例 Examples
 
-### 基础用法
-
-<zh-cat-button-general></zh-cat-button-general>
+<zh-cat-icondefault-general></zh-cat-icondefault-general>
 <code-show>
-<<< docs/.vuepress/components/zhCatButtonGeneral.vue
+<<< docs/.vuepress/components/zhCatIcondefaultGeneral.vue 
 </code-show>
-
 
 ### 禁用状态
 
-<zh-cat-button-disabled></zh-cat-button-disabled>
+<zh-cat-icondefault-disabled></zh-cat-icondefault-disabled>
 <code-show>
-<<< docs/.vuepress/components/zhCatButtonDisabled.vue
+<<< docs/.vuepress/components/zhCatIcondefaultDisabled.vue
 </code-show>
-
-<!-- ## 接口 -->
 
 ## 属性 Attributes
 
 | 参数  | 说明  | 类型   | 可选值           | 默认值 |
 |:------|:-------------|:-------|:------------------|:--------|
-| type  | 类型  | String | primary / default | primary |
-| shape | 形状 | String | square / round    | square |
+| icon | 图标的类 | String | ---- | ---- |
 | disabled | 是否禁用状态 | Boolean |  ----   | false |
 
 ## 事件 Events
@@ -35,4 +30,5 @@
 
 ## 插槽 Slots
 
-
+| 插槽名称  | 说明 |
+|:------|:---------------|

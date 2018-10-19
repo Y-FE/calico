@@ -65,7 +65,11 @@ module.exports = {
                         {
                             title: '普通组件',
                             collapsable: false,
-                            children: ['row', 'button', 'switch', 'tooltip', 'radio', 'clock', 'progress', 'textarea', 'input', 'inputNumber', 'nav', 'pagination'],
+                            children: ['row', 'button', 'switch', 'tooltip', 'radio', 'clock', 
+                            'progress', 'textarea', 'input', 'inputNumber', 'nav', 'pagination',
+                            'iconBlock', 'iconCircle', 'iconDefault', 'iconNano', 'iconGreyBlock',
+                            'preview', 'select', 'message', 'modal', 'popover', 'scaleArea',
+                            'menuItem', 'toolItem', 'toolItemHorizal', 'checkbox'],
                         }
                     ]
                 }
