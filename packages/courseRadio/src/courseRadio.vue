@@ -60,7 +60,7 @@
     export default {
         name: 'CcCourseRadio',
         componentName: 'CcCourseRadio',
-         mixins: [ccParent('CcCourseRadioGroup')],
+        mixins: [ccParent('CcCourseRadioGroup')],
         components: {
             ccRow
         },

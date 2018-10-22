@@ -63,14 +63,37 @@ module.exports = {
                     '/zh/document/': [
                         '',
                         {
+                            title: '布局',
+                            collapsable: false,
+                            children: [
+                                'row', 'aside'
+                            ]
+                        },
+                        {
+                            title: '容器',
+                            collapsable: false,
+                            children: [
+                                'scaleArea',
+                            ]
+                        },
+                        {
                             title: '普通组件',
                             collapsable: false,
-                            children: ['row', 'button', 'switch', 'tooltip', 'radio', 'clock', 
+                            children: [ 'button', 'switch', 'tooltip', 'radio', 'clock', 
                             'progress', 'textarea', 'input', 'inputNumber', 'nav', 'pagination',
-                            'iconBlock', 'iconCircle', 'iconDefault', 'iconNano', 'iconGreyBlock',
-                            'preview', 'select', 'message', 'modal', 'popover', 'scaleArea',
-                            'menuItem', 'toolItem', 'toolItemHorizal', 'checkbox'],
-                        }
+                            'preview', 'select', 'message', 'modal', 'popover',
+                             'checkbox'],
+                        },
+                        {
+                            title: '特殊组件',
+                            collapsable: false,
+                            children: [
+                                'menuItem',  'floatPanel', 'toolItem', 'toolItemHorizal', 
+                                'answerRadio', 'courseRadio',  'horizalRadio', 'verticalRadio', 
+                                'iconBlock', 'iconCircle', 'iconDefault', 'iconNano', 'iconGreyBlock',
+                            ]
+                        },
+                        
                     ]
                 }
             }
