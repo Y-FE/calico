@@ -31,10 +31,10 @@
 | width | 输入框的宽度 | String | ---- | 80 |
 | size | 输入框尺寸 | String | normal / large | normal |
 
-##  select事件 Events
+<!-- ##  select事件 Events
 
 | 事件名称  | 说明    | 回调参数 |
-|:------|:---------------|:--------|
+|:------|:---------------|:--------| -->
 
 ## option属性 Attributes
 

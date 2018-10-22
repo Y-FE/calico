@@ -42,7 +42,6 @@
                 type: String,
                 default: '',
             },
-            //normal, large
             resize: {
                 type: Boolean,
                 default: false

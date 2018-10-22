@@ -14,10 +14,10 @@
 |:------|:-------------|:-------|:------------------|:--------|
 | value | 绑定值 | String / Number | ---- | ---- |
 | title | 标题 | String | ---- | ---- |
-| placeholder | 输入框占位文本 | String | ---- | ---- |
+| placeholder | 文字框占位文本 | String | ---- | ---- |
 | width | 文字输入框的宽度 | String | ---- | 100 |
 | rows | 文字输入框行数 | Number | ---- | 2 |
-| resize | 是否修改文字输入框的样式 | Boolean | ---- | false |
+| resize | 是否可以任意缩放 | Boolean | ---- | false |
 
 ## 事件 Events
 

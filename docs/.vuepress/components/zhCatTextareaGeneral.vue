@@ -4,7 +4,7 @@
         <cc-textarea title="评价" 
             v-model="largeInput" 
             width="400"
-            resize="large"
+            resize
             placeholder="请输入你想要说的话">
 
         </cc-textarea>
