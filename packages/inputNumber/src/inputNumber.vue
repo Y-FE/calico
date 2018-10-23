@@ -6,7 +6,7 @@
             <div class="cat-input-number-body">
                 <input type="text"
                     :value="currentValue"
-                    @blur="handleChange" 
+                    @blur="blur" 
                     @focus="focus"
                     @keyup.stop
                     @keydown.stop
@@ -116,36 +116,34 @@
         
         },
         watch: {
-            currentValue(val) {
-                //$emit与父组件通信  （子组件-->父组件）
-                //this指向当前组件实例
-                this.$emit('input', val);
-                //定义自定义函数进行通信
-                this.$emit('on-change', val)
-            },
-            //监听父组件value是否改变
+            // currentValue(val) {
+            //     this.$emit('input', val);
+            //     this.$emit('on-change', val)
+            // },
             value(val) {
-                this.updateValue(val);
+                this.currentValue = val;
+                // this.updateValue(val);
             }
         },
         methods: {
-            updateValue(val) {
-                if(val > this.max) {
-                    val = this.max;
+            validValue() {
+                if(this.value > this.max || this.value < this.min) {
+                    console.error('Incorrect range of incoming values');
                 }
-                if(val < this.min) {
-                    val = this.min;
-                }
-                this.currentValue = val;
+            },
+            currentValueChange() {
+                this.$emit('input', this.currentValue);
+                this.$emit('on-change', this.currentValue)
             },
             reduce(){
                 if (parseInt(this.value) === 1) {
                     return;
                 }
                 this.currentValue -= this.step;
-                if(this.currentValue <= this.min) {
+                if (this.currentValue <= this.min) {
                     this.currentValue = this.min;
                 }
+                this.currentValueChange();
             },
             increase(){
                 if(parseInt(this.value) === parseInt(this.max)) {
@@ -155,18 +153,20 @@
                 if(this.currentValue >= this.max) {
                     this.currentValue = this.max;
                 }
+                this.currentValueChange();
             },
-            handleChange(event) {
+            blur(event) {
                 let val = event.target.value.trim();
-                if(this.isValueNumber(val)) {
+                if(this.isValueNumber(val) && Number(val) !== this.currentValue) {
                     val = Number(val);
                     this.currentValue = val;
                     if(val > this.max) {
-                        this.current = this.max;
+                        this.currentValue = this.max;
                     }
                     if(val < this.min) {
-                        this.current = this.min;
+                        this.currentValue = this.min;
                     }
+                    this.currentValueChange();
                 } else {
                     //如果输入的不是数字，将输入的内容重置为之前的currentValue
                     event.target.value = this.currentValue;
@@ -185,7 +185,7 @@
         destroyed() {
         },
         mounted() {
-            this.updateValue(this.value);
+            this.validValue();
         }
     }
 </script>

@@ -254,7 +254,8 @@
                 <i slot="right" class="iconfont icon-delete"></i>
             </cc-option>
         </cc-select> -->
-        <cc-input-number v-model="number1" :max="6" :min="1" title="大小"></cc-input-number>
+        <cc-button @click="changeNumber2">5643634</cc-button>
+        <cc-input-number v-model="number1" :max="20" :min="1" title="大小"></cc-input-number>
         <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
         <cc-tooltip theme="light" style="margin-top: 100px;" :show="mm" content="路沙发客服敬爱的">
             <p>我是一</p>
@@ -512,7 +513,6 @@
                 fontSize: 12,
                 course: 1,
                 total: 4,
-                number1: 2,
                 number2: 30,
                 nav: '课件导航',
                 colorList:[
@@ -535,10 +535,22 @@
             }
         },
         computed: {
+            number1: {
+                get() {
+                    return this.number2
+                },
+                set(val) {
+                    this.number2 = val;
+                    console.log('666');
+                }
+            }
         },
         watch: {
         },
         methods: {
+            changeNumber2(){
+                this.number2 = 5;
+            },
             addNewOne(val, name) {
                 this.addNew(val, name);
             },
