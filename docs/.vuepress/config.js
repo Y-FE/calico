@@ -79,18 +79,19 @@ module.exports = {
                         {
                             title: '普通组件',
                             collapsable: false,
-                            children: [ 'button', 'switch', 'tooltip', 'radio', 'clock', 
-                            'progress', 'textarea', 'input', 'inputNumber', 'nav', 'pagination',
-                            'preview', 'select', 'message', 'modal', 'popover',
-                             'checkbox'],
+                            children: [ 'button',  'checkbox', 'clock', 'message',  'modal', 'nav',
+                            'pagination', 'preview', 'progress', 'input', 'inputNumber',  
+                            'radio', 'select', 'switch', 'popover', 'textarea', 'tooltip', 
+                            ],
                         },
                         {
                             title: '特殊组件',
                             collapsable: false,
                             children: [
-                                'menuItem',  'floatPanel', 'toolItem', 'toolItemHorizal', 
-                                'answerRadio', 'courseRadio',  'horizalRadio', 'verticalRadio', 
+                                'answerRadio', 'courseRadio', 'horizalRadio', 'verticalRadio',  
+                                'floatPanel','menuItem',   
                                 'iconBlock', 'iconCircle', 'iconDefault', 'iconNano', 'iconGreyBlock',
+                                'toolItem', 'toolItemHorizal', 
                             ]
                         },
                         

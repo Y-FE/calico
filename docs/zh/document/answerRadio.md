@@ -1,5 +1,5 @@
 
-# AnswerRadio 答案选择框
+# AnswerRadio 答案单选框
 
 ## 示例 Examples
 

@@ -1,5 +1,5 @@
 
-# CourseRadio 课程选择框
+# CourseRadio 课程单选框
 
 ## 示例 Examples
 
