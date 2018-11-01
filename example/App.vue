@@ -12,6 +12,15 @@
 
         </cc-textarea>
     </div> -->
+        <cc-radio-group v-model="tabKnowledge" title="形状">
+            <cc-knowledge-head-radio :value="index" 
+                v-for="(item, index) in tabList" 
+                :key="index" 
+                :label="item.name" 
+                :disabled="item.disabled"
+                :editable="item.editable">
+            </cc-knowledge-head-radio>
+        </cc-radio-group>
         <cc-radio-group v-model="hori" column>
             <cc-answer-radio value="77"></cc-answer-radio>
             <cc-answer-radio :value="1"></cc-answer-radio>
@@ -473,6 +482,11 @@
         props: {},
         data() {
             return {
+                tabList: [
+                    {name: '我是一个粉刷匠', disabled: false, editable: true},
+                    {name: '我是个666粉刷匠', disabled: false, editable: false},
+                ],
+                tabKnowledge: 0,
                 courseListNew: [],
                 courseNew: '',
                 courseRadio: 1,

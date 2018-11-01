@@ -77,6 +77,7 @@ npm run example
 - [x] horizontalRadio
 - [x] answerRadio
 - [x] horizontalCheckbox
+- [x] knowledgeHeadRadio
 
 ## Thanks
 

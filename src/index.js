@@ -30,6 +30,7 @@ import IconGreyBlock from '../packages/iconGreyBlock';
 import IconNano from '../packages/iconNano';
 import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
+import KnowledgeHeadRadio from '../packages/knowledgeHeadRadio';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
 import Main from '../packages/main';
@@ -87,6 +88,7 @@ const components = [
     IconNano,
     Input,
     InputNumber,
+    KnowledgeHeadRadio,
     LineOption,
     LineSelect,
     Main,
@@ -159,6 +161,7 @@ let calico = {
     IconNano,
     Input,
     InputNumber,
+    KnowledgeHeadRadio,
     LineOption,
     LineSelect,
     Main,
