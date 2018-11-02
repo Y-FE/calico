@@ -17,7 +17,7 @@
                 v-for="(item, index) in tabList" 
                 :key="index" 
                 :label="item.name" 
-                :disabled="item.disabled"
+                :disabled="tabList.some(item => item.editable) && !item.editable"
                 :editable="item.editable">
             </cc-knowledge-head-radio>
         </cc-radio-group>

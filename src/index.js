@@ -5,6 +5,7 @@ import './css/animation.css';
 
 import croup from './directives/croup';
 import blur from './directives/blur';
+import focus from './directives/focus';
 
 import AnswerRadio from '../packages/answerRadio';
 import Aside from '../packages/aside';
@@ -128,6 +129,7 @@ const install = function(Vue, opts = {}) {
     Vue.use(Message);
     Vue.directive('croup', croup);
     Vue.directive('blur', blur);
+    Vue.directive('focus', focus);
 };
 
 if (typeof window !== 'undefined' && window.Vue) {

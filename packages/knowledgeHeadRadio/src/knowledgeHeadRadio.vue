@@ -1,29 +1,37 @@
 <template>
     <cc-button 
         :disabled="disabled" 
-        :type="parentVal ===  value ? 'primary' : 'default'" 
+        :type="parentVal === value ? 'primary' : 'default'" 
         shape="round"
-        @click="handleChange">
+        @click="handleChange"
+        class="cat-knowledge-head-body">
         <cc-row align="center">
             <template v-if="!editable">
                 <p>{{label.length > 4 ? `${label.substr(0, 4)}...` : label}}</p>
-                <i class="iconfont icon-move-up cat-knowledge-head-radio-icon"></i>
+                <i class="iconfont icon-move-up cat-knowledge-head-radio--icon"></i>
             </template>
             <template v-else>
-                <input class="cat-knowledge-head-radio-input" v-model="label"/>
+                <input class="cat-knowledge-head-radio--input" 
+                    v-model="label"
+                    v-focus="parentVal === value"/>
             </template>
         </cc-row>
     </cc-button>
 </template>
 <style lang="scss">
-    .cat-knowledge-head-radio-icon {
+    .cat-knowledge-head-body + .cat-knowledge-head-body {
+        margin-left: 10px;
+    }
+    .cat-knowledge-head-radio--icon {
         font-size: $--knowledge-head-radio-icon-font-size; 
         margin-left: 8px;
     }
-    .cat-knowledge-head-radio-input {
+    .cat-knowledge-head-radio--input {
         background-color: $--knowledge-head-radio-input-fill;
         color: $--knowledge-head-radio-input-color;
+        font-size: $--knowledge-head-radio-font-size;
         width: 52px;
+        height: 12px;
     }
 </style>
 <script>
