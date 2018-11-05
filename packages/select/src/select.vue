@@ -162,6 +162,7 @@
             return {
                 visible: false,
                 label: '',
+                optionChange: false,
             }
         },
         computed: {
@@ -174,6 +175,12 @@
                 // console.log('生活终于对我下手了');
                 this.label = this.getLabel();
             },
+            optionChange(val, old) {
+                if (val) {
+                    this.$emit('option-change');
+                    this.optionChange = false;
+                }
+            }
         },
         methods: {
             selectClick() {

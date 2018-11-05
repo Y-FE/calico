@@ -110,7 +110,11 @@
         },
         methods: {
             optionClick() {
+                if (this.parentVal === this.value) {
+                    return;
+                }
                setParentModel.call(this, this.value);
+               this._parent.optionChange = true;
             }
         },
         created() {
