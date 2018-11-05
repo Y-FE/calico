@@ -80,6 +80,7 @@
                 }
                 let page = parseInt(this.value) - 1;
                 this.$emit('input', page);
+                this.$emit('change-page');
             },
             nextClick() {
                 if(this.value === this.total) {
@@ -87,6 +88,7 @@
                 }
                 let page = parseInt(this.value) + 1;
                 this.$emit('input', page);
+                this.$emit('change-page');
             },
         },
         created() {
