@@ -31,7 +31,7 @@
         .cat-line-input-body {
             position: relative;
             width: 100%;
-            height: $--select-height;
+            height: $--select-height-small;
             border-radius: $--select-option-radius; 
             cursor: pointer;
             border-width: 1px;
@@ -57,7 +57,7 @@
         }
     }
     .cat-select-title {
-        font-size: $--select-font-size;
+        font-size: $--select-font-size-small;
         color: $--color-text-title; 
         margin-bottom: 10px;
         display: flex;

@@ -41,7 +41,7 @@
         display: inline-block;
         position: relative;
         .cat-select-title {
-            font-size: $--select-font-size;
+            font-size: $--select-font-size-small;
             color: $--select-color; 
             margin-bottom: 10px;
             display: flex;
@@ -74,7 +74,7 @@
                 background-color: #fff;
                 i {
                     color: $--select-title-color;
-                    font-size: $--select-font-size;
+                    font-size: $--select-font-size-small;
                     transition: transform .3s;
                     transform: rotate(0deg);
                     cursor: pointer;

@@ -32,7 +32,7 @@
             }
         }
         .iconfont {
-            font-size: $--select-font-size;
+            font-size: $--select-font-size-small;
         }
         [option-hover-display=true] {
             // display: none;
