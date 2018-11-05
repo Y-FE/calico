@@ -29,7 +29,8 @@
         font-size: $--input-font-size-large;
     }
     .cat-input-body--normal {
-        
+        height: $--input-height-normal;
+        font-size: $--input-font-size-normal;
     }
 </style>
 <script>

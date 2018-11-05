@@ -8,7 +8,23 @@
         <cc-row align="center">
             <template v-if="!editable">
                 <p>{{label.length > 4 ? `${label.substr(0, 4)}...` : label}}</p>
-                <i class="iconfont icon-move-up cat-knowledge-head-radio--icon"></i>
+                <cc-row justify="center" 
+                    align="center" 
+                    class="cat-knowledge-head-radio-edit--body">
+                    <i class="iconfont icon-ellipsis cat-knowledge-head-radio--icon"></i>
+                    <div class="cat-knowledge-head-radio-edit--box" v-show="parentVal === value">
+                        <div class="cat-knowledge-head-radio-edit--box-box">
+                            <cc-row justify="center" align="center" 
+                                class="cat-knowledge-head-radio-edit--box-item" @click="editItem(val)">
+                                编辑
+                            </cc-row>
+                            <cc-row justify="center" align="center" 
+                                class="cat-knowledge-head-radio-edit--box-item" @click="deleteItem(val)">
+                                删除
+                            </cc-row>
+                        </div>
+                    </div>
+                </cc-row>
             </template>
             <template v-else>
                 <input class="cat-knowledge-head-radio--input" 
@@ -22,9 +38,15 @@
     .cat-knowledge-head-body + .cat-knowledge-head-body {
         margin-left: 10px;
     }
+    .cat-knowledge-head-body {
+        position: relative; 
+        padding-right: 34px;
+    }
     .cat-knowledge-head-radio--icon {
         font-size: $--knowledge-head-radio-icon-font-size; 
-        margin-left: 8px;
+        // margin-left: 8px;
+        // position: absolute;
+        // top: 0;
     }
     .cat-knowledge-head-radio--input {
         background-color: $--knowledge-head-radio-input-fill;
@@ -32,6 +54,35 @@
         font-size: $--knowledge-head-radio-font-size;
         width: 52px;
         height: 12px;
+    }
+    .cat-knowledge-head-radio-edit--body {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 26px;
+    }
+    .cat-knowledge-head-radio-edit--body:hover .cat-knowledge-head-radio-edit--box{
+        display: block;
+    }
+    .cat-knowledge-head-radio-edit--box {
+        display: none;
+        width: 44px;
+        height: 62px;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+    .cat-knowledge-head-radio-edit--box-box {
+        width: 44px;
+        height: 54px;
+        margin-top: 8px;
+        background: $--knowledge-head-radio-edit-box-fill;
+        box-shadow: $--knowledge-head-radio-edit-box-box-shadow;
+        border-radius: $--knowledge-head-radio-edit-box-radius;
+    }
+    .cat-knowledge-head-radio-edit--box-item {
+        height: 50%;
+        width: 100%;
     }
 </style>
 <script>
@@ -82,7 +133,16 @@
         },
         methods: {
             handleChange() {
+                if (this.val === this.parentVal) {
+                    return;
+                }
                 setParentModel.call(this, this.value);
+            },
+            editItem(val) {
+                this.$emit('edit-item', val)
+            },
+            deleteItem(val) {
+                this.$emit('delete-item', val)
             }
         },
         created() {

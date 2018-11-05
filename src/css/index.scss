@@ -185,6 +185,9 @@ $--input-border-color: $--color-black-opacity-1;
 $--input-border-color-hover: $--color-black-opacity-6;
 $--input-border-color-active: $--color-primary;
 
+$--input-height-normal: 32px;
+$--input-font-size-normal: $--font-size-base;
+
 $--input-height-large: 40px;
 $--input-font-size-large: $--font-size-title;
 
@@ -210,8 +213,11 @@ $--select-option-color-active: $--color-primary;
 $--select-option-background-color-hover: $--color-black-opacity-4;
 $--select-option-item-padding: 7px 10px;
 
-$--select-height: 26px;
-$--select-font-size: $--font-size-base;
+$--select-height-small: 26px;
+$--select-font-size-small: $--font-size-base;
+
+$--select-height-normal: $--input-height-normal;
+$--select-font-size-normal: $--input-font-size-normal;
 
 $--select-height-large: $--input-height-large;
 $--select-font-size-large: $--input-font-size-large;
@@ -439,3 +445,6 @@ $--knowledge-head-radio-font-size: $--font-size-base;
 $--knowledge-head-radio-icon-font-size: $--knowledge-head-radio-font-size;
 $--knowledge-head-radio-input-fill: transparent;
 $--knowledge-head-radio-input-color: $--color-white;
+$--knowledge-head-radio-edit-box-fill: $--color-white;
+$--knowledge-head-radio-edit-box-box-shadow: $--box-shadow-grey;
+$--knowledge-head-radio-edit-box-radius: $--radius-base;

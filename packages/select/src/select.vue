@@ -99,14 +99,20 @@
                 border: 1px solid $--select-border-color-active;
             }
         }
+        .cat-select-input-body--small {
+            height: $--select-height-small; 
+        }
         .cat-select-input-body--normal {
-            height: $--select-height; 
+            height: $--select-height-normal; 
         }
         .cat-select-input-body--large {
             height: $--select-height-large; 
         }
+        .cat-select-input-font-size--small {
+            font-size: $--select-font-size-small;
+        }
         .cat-select-input-font-size--normal {
-            font-size: $--select-font-size;
+            font-size: $--input-font-size-normal;
         }
         .cat-select-input-font-size--large {
             font-size: $--select-font-size-large;
@@ -146,10 +152,10 @@
                 type: String,
                 default: ''
             },
-            //normal , large
+            //small,  normal , large
             size: {
                 type: String,
-                default: 'normal',
+                default: 'small',
             }          
         },
         data() {
