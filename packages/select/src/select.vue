@@ -145,7 +145,7 @@
         },
         props: {
             width: {
-                type: Number,
+                type: Number | String,
                 default: 80
             },
             placeholder: {
@@ -170,10 +170,10 @@
             },
         },
         watch: {
-            // value(val, old) {
-            //     console.log('生活终于对我下手了');
-            //     this.label = this.getLabel();
-            // },
+            value(val, old) {
+                // console.log('生活终于对我下手了');
+                this.label = this.getLabel();
+            },
         },
         methods: {
             selectClick() {

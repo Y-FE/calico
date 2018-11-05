@@ -34,6 +34,7 @@
                 <i slot="right" class="iconfont icon-delete"></i>
             </cc-option>
         </cc-select>
+        <cc-button @click="courseNew = null">ah</cc-button>
         <cc-button @click="addNewOne(9, '课件9')">添加选项9</cc-button>
         <cc-button @click="addNewOne(10, '课件10')">添加选项10</cc-button>
         <cc-button @click="addNewOne(11, '课件11')">添加选项11</cc-button>
