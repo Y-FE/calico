@@ -175,9 +175,10 @@
                 // console.log('生活终于对我下手了');
                 this.label = this.getLabel();
             },
+            //当点击选项时，选项发生变化触发。而不是select的v-model发生改变时触发
             optionChange(val, old) {
                 if (val) {
-                    this.$emit('option-change');
+                    this.$emit('change-option');
                     this.optionChange = false;
                 }
             }

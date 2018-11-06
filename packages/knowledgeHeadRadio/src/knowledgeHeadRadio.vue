@@ -4,7 +4,8 @@
         :type="parentVal === value ? 'primary' : 'default'" 
         shape="round"
         @click="handleChange"
-        class="cat-knowledge-head-body">
+        class="cat-knowledge-head-body"
+        :style="{'padding-right': editable ? '' : '34px'}">
         <cc-row align="center">
             <template v-if="!editable">
                 <p>{{label.length > 4 ? `${label.substr(0, 4)}...` : label}}</p>
@@ -15,11 +16,13 @@
                     <div class="cat-knowledge-head-radio-edit--box" v-show="parentVal === value">
                         <div class="cat-knowledge-head-radio-edit--box-box">
                             <cc-row justify="center" align="center" 
-                                class="cat-knowledge-head-radio-edit--box-item" @click="editItem(val)">
+                                class="cat-knowledge-head-radio-edit--box-item" 
+                                @click.native="editItem()">
                                 编辑
                             </cc-row>
                             <cc-row justify="center" align="center" 
-                                class="cat-knowledge-head-radio-edit--box-item" @click="deleteItem(val)">
+                                class="cat-knowledge-head-radio-edit--box-item" 
+                                @click.native="deleteItem()">
                                 删除
                             </cc-row>
                         </div>
@@ -28,7 +31,7 @@
             </template>
             <template v-else>
                 <input class="cat-knowledge-head-radio--input" 
-                    v-model="label"
+                    v-model="inputName"
                     v-focus="parentVal === value"/>
             </template>
         </cc-row>
@@ -40,7 +43,7 @@
     }
     .cat-knowledge-head-body {
         position: relative; 
-        padding-right: 34px;
+        font-size: $--font-size-title;
     }
     .cat-knowledge-head-radio--icon {
         font-size: $--knowledge-head-radio-icon-font-size; 
@@ -52,8 +55,8 @@
         background-color: $--knowledge-head-radio-input-fill;
         color: $--knowledge-head-radio-input-color;
         font-size: $--knowledge-head-radio-font-size;
-        width: 52px;
-        height: 12px;
+        width: 88px;
+        height: 1em;
     }
     .cat-knowledge-head-radio-edit--body {
         position: absolute;
@@ -73,9 +76,10 @@
         top: 100%;
     }
     .cat-knowledge-head-radio-edit--box-box {
-        width: 44px;
-        height: 54px;
+        width: 60px;
+        height: 75px;
         margin-top: 8px;
+        color: $--color-info;
         background: $--knowledge-head-radio-edit-box-fill;
         box-shadow: $--knowledge-head-radio-edit-box-box-shadow;
         border-radius: $--knowledge-head-radio-edit-box-radius;
@@ -83,6 +87,9 @@
     .cat-knowledge-head-radio-edit--box-item {
         height: 50%;
         width: 100%;
+        &:hover {
+            background: $--button-default-fill-hover;  
+        }
     }
 </style>
 <script>
@@ -121,6 +128,7 @@
         },
         data() {
             return {
+                inputName: '',
             }
         },
         computed: {
@@ -130,19 +138,23 @@
             },
         },
         watch: {
+            label(val) {
+                this.inputName = val;
+            }
         },
         methods: {
             handleChange() {
-                if (this.val === this.parentVal) {
+                if (this.parentVal === this.value) {
                     return;
                 }
                 setParentModel.call(this, this.value);
             },
-            editItem(val) {
-                this.$emit('edit-item', val)
+            editItem() {
+                console.log('7777');
+                this.$emit('edit-item')
             },
-            deleteItem(val) {
-                this.$emit('delete-item', val)
+            deleteItem() {
+                this.$emit('delete-item')
             }
         },
         created() {
@@ -150,6 +162,7 @@
         destroyed() {
         },
         mounted() {
+            this.inputName = this.label;
         }
     }
 </script>

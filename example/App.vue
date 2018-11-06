@@ -13,12 +13,14 @@
         </cc-textarea>
     </div> -->
         <cc-radio-group v-model="tabKnowledge" title="形状">
-            <cc-knowledge-head-radio :value="index" 
+            <cc-knowledge-head-radio 
+                :value="index" 
                 v-for="(item, index) in tabList" 
                 :key="index" 
                 :label="item.name" 
                 :disabled="tabList.some(item => item.editable) && !item.editable"
-                :editable="item.editable">
+                :editable="item.editable"
+                @edit-item="editItem(item)">
             </cc-knowledge-head-radio>
         </cc-radio-group>
         <cc-radio-group v-model="hori" column>
@@ -484,10 +486,10 @@
         data() {
             return {
                 tabList: [
-                    {name: '我是一个粉刷匠', disabled: false, editable: true},
+                    {name: '我是一个粉刷匠', disabled: false, editable: false},
                     {name: '我是个666粉刷匠', disabled: false, editable: false},
                 ],
-                tabKnowledge: 0,
+                tabKnowledge: '',
                 courseListNew: [],
                 courseNew: '',
                 courseRadio: 1,
@@ -563,6 +565,10 @@
         watch: {
         },
         methods: {
+            editItem(item) {
+                console.log('kk');
+                item.editable = true;
+            },
             changeNumber2(){
                 this.number2 = 5;
             },
