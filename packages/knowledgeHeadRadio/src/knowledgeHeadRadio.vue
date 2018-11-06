@@ -153,7 +153,6 @@
                 setParentModel.call(this, this.value);
             },
             editItem() {
-                console.log('7777');
                 this.$emit('edit-item')
             },
             deleteItem() {
