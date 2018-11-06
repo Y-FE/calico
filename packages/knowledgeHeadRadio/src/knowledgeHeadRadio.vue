@@ -140,7 +140,10 @@
         watch: {
             label(val) {
                 this.inputName = val;
-            }
+            },
+            inputName(val) {
+                this.$emit('change-name', val);
+            },
         },
         methods: {
             handleChange() {
