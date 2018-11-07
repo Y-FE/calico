@@ -12,6 +12,10 @@
 
         </cc-textarea>
     </div> -->
+        <cc-select v-model="fontSize" title="字号" size="large" theme="dark">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
+            </cc-option>
+        </cc-select>
         <cc-radio-group v-model="tabKnowledge" title="形状">
             <cc-knowledge-head-radio 
                 :value="index" 

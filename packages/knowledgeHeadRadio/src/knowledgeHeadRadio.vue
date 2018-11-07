@@ -1,8 +1,8 @@
 <template>
     <cc-button 
         :disabled="disabled" 
-        :type="parentVal === value ? 'primary' : 'default'" 
-        shape="round"
+        :type="parentVal === value ? 'primary' : 'transparent'" 
+        size="large"
         @click="handleChange"
         class="cat-knowledge-head-body"
         :style="{'padding-right': editable ? '' : '34px'}">
@@ -43,7 +43,7 @@
     }
     .cat-knowledge-head-body {
         position: relative; 
-        font-size: $--font-size-title;
+        // font-size: $--font-size-title;
     }
     .cat-knowledge-head-radio--icon {
         font-size: $--knowledge-head-radio-icon-font-size; 
