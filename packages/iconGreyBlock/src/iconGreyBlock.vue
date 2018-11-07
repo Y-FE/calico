@@ -1,6 +1,6 @@
 <template>
     <cc-row justify="center" align="center" 
-        class="cat-icon-grey-block-boby" 
+        class="cat-icon-grey-block-body" 
         :class="[disabled ? 'cat-icon-grey-block--disabled':'']"
         @click.native="iconClick">
         <slot>
@@ -9,7 +9,7 @@
     </cc-row>
 </template>
 <style lang="scss">
-    .cat-icon-grey-block-boby {
+    .cat-icon-grey-block-body {
         width: $--icon-small-block;
         height: $--icon-small-block;
         text-align: center;

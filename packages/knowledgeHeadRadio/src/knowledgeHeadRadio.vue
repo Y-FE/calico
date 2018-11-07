@@ -5,11 +5,13 @@
         size="large"
         @click="handleChange"
         class="cat-knowledge-head-body"
-        :style="{'padding-right': editable ? '' : '34px'}">
+        :style="{'padding-right': editState ? '' : '34px'}">
         <cc-row align="center">
-            <template v-if="!editable">
+            <template v-if="!editState">
                 <p>{{label.length > 4 ? `${label.substr(0, 4)}...` : label}}</p>
-                <cc-row justify="center" 
+                <cc-row 
+                    v-if="editable"
+                    justify="center" 
                     align="center" 
                     class="cat-knowledge-head-radio-edit--body">
                     <i class="iconfont icon-ellipsis cat-knowledge-head-radio--icon"></i>
@@ -29,7 +31,7 @@
                     </div>
                 </cc-row>
             </template>
-            <template v-else>
+            <template v-if="editable && editState">
                 <input class="cat-knowledge-head-radio--input" 
                     v-model="inputName"
                     v-focus="parentVal === value"/>
@@ -121,9 +123,14 @@
                 default: false
             },
             //编辑状态
-            editable: {
+            editState: {
                 type: Boolean,
                 default: false,
+            },
+            //是否可编辑【有不展示竖排三点的情况，即不可编辑状态】:默认可编辑状态
+            editable: {
+                type: Boolean,
+                default: true
             },
         },
         data() {
