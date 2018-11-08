@@ -148,6 +148,11 @@
             label(val) {
                 this.inputName = val;
             },
+            editState(val) {
+                if (!val) {
+                    this.inputName = this.label;
+                }
+            },
             inputName(val) {
                 this.$emit('change-name', val);
             },
