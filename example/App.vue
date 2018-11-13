@@ -1,5 +1,27 @@
 <template>
 <div style="margin: 100px;">
+            <!-- <cc-input
+                size="large"
+                :width="540"
+                title="这节课讲解的内容："
+                v-model="explain">
+                <template slot="titleExtra">
+                    <cc-row align="center">
+                        <cc-popover direction="right" width="300">
+                            <i class="iconfont icon-message-info" slot="reference"></i>
+                            <p class="rank-line-height">
+                                请输入本节课所讲解的内容。例如：这节课讲解充型填空答题技巧，其间穿插考察学生英语词汇、短语、语法以及逻辑能力。
+                            </p>
+                        </cc-popover>
+                    </cc-row>
+                </template>
+            </cc-input> -->
+        <cc-input title="基本输入框"  v-model="input" placeholder="请输入">
+
+        </cc-input>
+        <cc-input title="不同尺寸输入框" size="large" v-model="input" placeholder="请输入" width="400">
+
+        </cc-input>
     <!-- <div style="margin: 50px;">
         <cc-select v-model="fontSize" title="字号" size="large">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
@@ -55,7 +77,12 @@
                 :key="index" 
                 :value="item.val" 
                 :label="item.name">
-                <i slot="right" class="iconfont icon-delete"></i>
+                <div slot="right">
+                    <cc-tooltip content="删除当前项目" direction="right">
+                        <i class="iconfont icon-delete kb-h-i" >
+                        </i>
+                    </cc-tooltip>
+                </div>
             </cc-option>
         </cc-select>
     <cc-progress :percent="percent" style="margin: 20px">
@@ -271,8 +298,8 @@
             </cc-option>
         </cc-select> -->
         <cc-button @click="changeNumber2">5643634</cc-button>
-        <cc-input-number v-model="number1" :max="20" :min="1" title="大小"></cc-input-number>
-        <cc-input-number v-model="number2"  title="旋转"></cc-input-number>
+        <!-- <cc-input-number v-model="number1" :max="20" :min="1" title="大小"></cc-input-number>
+        <cc-input-number v-model="number2"  title="旋转"></cc-input-number> -->
         <cc-tooltip theme="light" style="margin-top: 100px;" :show="mm" content="路沙发客服敬爱的">
             <p>我是一</p>
         </cc-tooltip>
@@ -489,6 +516,7 @@
         props: {},
         data() {
             return {
+                explain: '',
                 tabList: [
                     {name: '我是一个粉刷匠', disabled: false, editable: false},
                     {name: '我是个666粉刷匠', disabled: false, editable: false},
