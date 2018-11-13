@@ -32,16 +32,20 @@
             }
         }
         .iconfont {
-            font-size: $--select-font-size;
+            font-size: $--select-font-size-small;
         }
         [option-hover-display=true] {
             // display: none;
             opacity: 0;
         }
     }
+    .cat-option-body--small {
+        height: $--select-height-small;
+        font-size: $--select-font-size-small;
+    }
     .cat-option-body--normal {
-        height: $--select-height;
-        font-size: $--select-font-size;
+        height: $--select-height-normal;
+        font-size: $--select-font-size-normal;
     }
     .cat-option-body--large {
         height: $--select-height-large;
@@ -106,7 +110,11 @@
         },
         methods: {
             optionClick() {
+                if (this.parentVal === this.value) {
+                    return;
+                }
                setParentModel.call(this, this.value);
+               this._parent.optionChange = true;
             }
         },
         created() {

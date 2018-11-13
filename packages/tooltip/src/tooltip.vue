@@ -190,10 +190,10 @@
         destroyed() {
         },
         mounted() {
-            this.$nextTick(() => {
+            // this.$nextTick(() => {
                 this.getSize();
                 this.caclStyle();
-            })
+            // })
         }
     }
 </script>

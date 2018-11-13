@@ -75,11 +75,15 @@ $--z-index-100: 100;
 
 // 控件篇
 //button
-$--button-font-size: $--font-size-base;
 $--button-padding-vertical: 7px;
 $--button-padding-horizontal: 14px;
 $--button-radius: $--radius-base;
 $--button-radius-round: $--radius-round;
+
+$--button-font-size-normal: $--font-size-base;
+
+$--button-font-size-large: $--font-size-title;
+$--button-height-large: 40px;
 
 $--button-primary-color: $--color-white;
 $--button-primary-fill: $--color-info;
@@ -101,6 +105,16 @@ $--button-default-border-hover: $--color-info;
 
 $--button-default-color-disabled: $--color-disabled;
 $--button-default-border-disabled: $--color-disabled;
+
+$--button-transparent-color: $--color-info;
+$--button-transparent-fill: transparent;
+$--button-transparent-border: $--color-info;
+
+$--button-transparent-fill-hover: $--color-black-opacity-1;
+$--button-transparent-border-hover: $--color-info;
+
+$--button-transparent-color-disabled: $--color-disabled;
+$--button-transparent-border-disabled: $--color-disabled;
 
 //radio
 $--radio-font-size: 12px;
@@ -185,6 +199,9 @@ $--input-border-color: $--color-black-opacity-1;
 $--input-border-color-hover: $--color-black-opacity-6;
 $--input-border-color-active: $--color-primary;
 
+$--input-height-normal: 32px;
+$--input-font-size-normal: $--font-size-base;
+
 $--input-height-large: 40px;
 $--input-font-size-large: $--font-size-title;
 
@@ -192,9 +209,9 @@ $--input-font-size-large: $--font-size-title;
 //select
 $--select-radius: $--radius-icon;
 $--select-width: 80px !default;
+$--select-color: $--color-info;
 
 $--select-z-index: $--z-index-10;
-$--select-color: $--color-info;
 $--select-placeholder-color: $--input-placeholder-color;
 $--select-title-font-size: $--font-size-base;
 $--select-title-color: $--color-text-title;
@@ -210,8 +227,17 @@ $--select-option-color-active: $--color-primary;
 $--select-option-background-color-hover: $--color-black-opacity-4;
 $--select-option-item-padding: 7px 10px;
 
-$--select-height: 26px;
-$--select-font-size: $--font-size-base;
+$--select-fill-dark: $--color-info;
+$--select-color-dark: $--color-white;
+
+$--select-color-light: $--color-info;
+$--select-fill-light: $--color-white;
+
+$--select-height-small: 26px;
+$--select-font-size-small: $--font-size-base;
+
+$--select-height-normal: $--input-height-normal;
+$--select-font-size-normal: $--input-font-size-normal;
 
 $--select-height-large: $--input-height-large;
 $--select-font-size-large: $--input-font-size-large;
@@ -346,7 +372,7 @@ $--icon-default-color-disabled: $--color-disabled;
 
 //icon-grey-block 18px
 $--icon-grey-block-font-size: $--font-size-base;
-$--icon-grey-block-fill: $--color-white;
+$--icon-grey-block-fill: transparent;
 $--icon-grey-block-color: $--color-info;
 
 $--icon-grey-block-fill-hover: $--color-black-opacity-4;
@@ -433,3 +459,12 @@ $--answer-radio-color-default: $--color-primary;
 
 $--answer-radio-background-color-active: $--color-primary;
 $--answer-radio-color-active: $--color-white;
+
+//knowledge-head-radio
+$--knowledge-head-radio-font-size: $--font-size-title;
+$--knowledge-head-radio-icon-font-size: $--knowledge-head-radio-font-size;
+$--knowledge-head-radio-input-fill: transparent;
+$--knowledge-head-radio-input-color: $--color-white;
+$--knowledge-head-radio-edit-box-fill: $--color-white;
+$--knowledge-head-radio-edit-box-box-shadow: $--box-shadow-grey;
+$--knowledge-head-radio-edit-box-radius: $--radius-base;

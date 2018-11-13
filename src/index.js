@@ -5,6 +5,7 @@ import './css/animation.css';
 
 import croup from './directives/croup';
 import blur from './directives/blur';
+import focus from './directives/focus';
 
 import AnswerRadio from '../packages/answerRadio';
 import Aside from '../packages/aside';
@@ -30,6 +31,7 @@ import IconGreyBlock from '../packages/iconGreyBlock';
 import IconNano from '../packages/iconNano';
 import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
+import KnowledgeHeadRadio from '../packages/knowledgeHeadRadio';
 import LineOption from '../packages/lineOption';
 import LineSelect from '../packages/lineSelect';
 import Main from '../packages/main';
@@ -87,6 +89,7 @@ const components = [
     IconNano,
     Input,
     InputNumber,
+    KnowledgeHeadRadio,
     LineOption,
     LineSelect,
     Main,
@@ -126,6 +129,7 @@ const install = function(Vue, opts = {}) {
     Vue.use(Message);
     Vue.directive('croup', croup);
     Vue.directive('blur', blur);
+    Vue.directive('focus', focus);
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -133,7 +137,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.7.21',
+    version: '0.7.34',
     install,
     AnswerRadio,
     Aside,
@@ -159,6 +163,7 @@ let calico = {
     IconNano,
     Input,
     InputNumber,
+    KnowledgeHeadRadio,
     LineOption,
     LineSelect,
     Main,

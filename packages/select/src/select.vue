@@ -13,13 +13,16 @@
                 :value="label ? label : value" 
                 readonly
                 :placeholder="placeholder"
-                :class="[visible === false ? 'cat-select-input-border--default':'cat-select-input-border--active', `cat-select-input-font-size--${size}`]"/>
+                :class="[visible === false ? 'cat-select-input-border--default':
+                    'cat-select-input-border--active', `cat-select-input-font-size--${size}`, 
+                    theme ? `cat-select--${theme}` : '']"/>
             <cc-row justify="center" 
                 align="center"
                 class="cat-select-input-icon"
                 :class="`cat-select-input-icon--${size}`">
                 <i class="iconfont icon-take-up cat-select-icon-dropdown"  
-                    :class="[visible === false ? '':'cat-select-icon-resever']">
+                    :class="[visible === false ? '':'cat-select-icon-resever',
+                        `cat-select-icon-i--${size}`, `cat-select-icon-i--${theme}`]">
                 </i>    
             </cc-row>
         </div>
@@ -40,20 +43,27 @@
         width: $--select-width;
         display: inline-block;
         position: relative;
-        .cat-select-title {
-            font-size: $--select-font-size;
-            color: $--select-color; 
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
+        // .cat-select-title {
+        //     font-size: $--select-font-size-small;
+        //     color: $--select-color; 
+        //     margin-bottom: 10px;
+        //     display: flex;
+        //     align-items: center;
+        // }
         .cat-select-input-body {
             position: relative;
             width: 100%;
             cursor: pointer;
+            .cat-select--dark {
+                background-color: $--select-fill-dark;
+                color: $--select-color-dark;
+            }
+            .cat-select--light {
+                background-color: $--select-fill-light;
+                color: $--select-color-light;
+            }
             .cat-select-input-main {
                 border-radius: $--select-option-radius; 
-                color: $--select-color;
                 display: inline-block;
                 height: 100%;
                 line-height: 100%;
@@ -71,17 +81,32 @@
                 text-align: center;
                 transition: $--transition-base;
                 pointer-events: none;
-                background-color: #fff;
                 i {
-                    color: $--select-title-color;
-                    font-size: $--select-font-size;
                     transition: transform .3s;
                     transform: rotate(0deg);
                     cursor: pointer;
                 }
+                .cat-select-icon-i--small {
+                    font-size: $--select-font-size-small;
+                }
+                .cat-select-icon-i--normal {
+                    font-size: $--select-font-size-normal;
+                }
+                .cat-select-icon-i--large {
+                    font-size: $--select-font-size-large;
+                }
+                .cat-select-icon-i--light {
+                    color: $--select-title-color;
+                }
+                .cat-select-icon-i--dark {
+                    color: $--select-color-dark;
+                }
                 .cat-select-icon-resever {
                     transform: rotate(180deg);
                 }
+            }
+            .cat-select-input-icon--small {
+                padding: 0 5px;
             }
             .cat-select-input-icon--normal {
                 padding: 0 5px;
@@ -99,14 +124,20 @@
                 border: 1px solid $--select-border-color-active;
             }
         }
+        .cat-select-input-body--small {
+            height: $--select-height-small; 
+        }
         .cat-select-input-body--normal {
-            height: $--select-height; 
+            height: $--select-height-normal; 
         }
         .cat-select-input-body--large {
             height: $--select-height-large; 
         }
+        .cat-select-input-font-size--small {
+            font-size: $--select-font-size-small;
+        }
         .cat-select-input-font-size--normal {
-            font-size: $--select-font-size;
+            font-size: $--input-font-size-normal;
         }
         .cat-select-input-font-size--large {
             font-size: $--select-font-size-large;
@@ -139,23 +170,28 @@
         },
         props: {
             width: {
-                type: Number,
+                type: Number | String,
                 default: 80
             },
             placeholder: {
                 type: String,
                 default: ''
             },
-            //normal , large
+            //small,  normal , large
             size: {
                 type: String,
-                default: 'normal',
+                default: 'small',
+            },
+            theme: {
+                type: String,
+                default: 'light'
             }          
         },
         data() {
             return {
                 visible: false,
                 label: '',
+                optionChange: false,
             }
         },
         computed: {
@@ -164,10 +200,17 @@
             },
         },
         watch: {
-            // value(val, old) {
-            //     console.log('生活终于对我下手了');
-            //     this.label = this.getLabel();
-            // },
+            value(val, old) {
+                // console.log('生活终于对我下手了');
+                this.label = this.getLabel();
+            },
+            //当点击选项时，选项发生变化触发。而不是select的v-model发生改变时触发
+            optionChange(val, old) {
+                if (val) {
+                    this.$emit('change-option');
+                    this.optionChange = false;
+                }
+            }
         },
         methods: {
             selectClick() {

@@ -33,7 +33,7 @@
         .cat-color-input-body {
             position: relative;
             width: 100%;
-            height: $--select-height;
+            height: $--select-height-small;
             border-radius: $--select-option-radius; 
             cursor: pointer;
             font-size: $--font-size-base;
@@ -56,7 +56,7 @@
             }
         }
         .cat-select-title {
-            font-size: $--select-font-size;
+            font-size: $--select-font-size-small;
             color: $--select-color; 
             margin-bottom: 10px;
             display: flex;
