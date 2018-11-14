@@ -6,10 +6,13 @@
             align="center" 
             style="height: 100%"
             :class="parentVal === value ? 'cat-option--acitve' : ''">
-            <p class="cat-option--item">
-                {{label ? label : value}}
-            </p>
-            <span :option-hover-display="hoverDisplay">
+            <cc-row align="center">
+                <i v-if="icon" class="iconfont cat-option--item" :class="[icon, `cat-option--iconfont-font-${size}`]"></i>
+                <p class="cat-option--item" :style="{'margin-left' : icon ? '3px' : ''}">
+                    {{label ? label : value}}
+                </p>
+            </cc-row>
+            <span :option-hover-display="hoverDisplay" :class="[`cat-option--iconfont-font-${size}`]">
                 <slot name="right"></slot>
             </span>
         </cc-row> 
@@ -33,6 +36,15 @@
         }
         .iconfont {
             font-size: $--select-font-size-small;
+        }
+        .cat-option--iconfont-font-small {
+            font-size: $--select-font-size-small;
+        }
+        .cat-option--iconfont-font-normal {
+            font-size: $--select-font-size-normal;
+        }
+        .cat-option--iconfont-font-large {
+            font-size: $--select-font-size-large;
         }
         [option-hover-display=true] {
             // display: none;
@@ -86,7 +98,11 @@
             hoverDisplay: {
                 type: Boolean,
                 default: true
-            }
+            },
+            icon: {
+                type: String,
+                default: '',
+            }   
         },
         data() {
             return {

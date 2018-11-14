@@ -7,12 +7,22 @@
             {{title}}
         </p> -->
         <div class="cat-select-input-body" :class="`cat-select-input-body--${size}`">
+            <cc-row 
+                align="center" 
+                justify="center" 
+                v-if="icon" 
+                class="cat-select--tip-icon">
+                <i class="iconfont" 
+                    :class="[icon, `cat-select-icon-i--${size}`, `cat-select-icon-i--${theme}`]">
+                </i>
+            </cc-row>
             <input class="cat-select-input-main" 
                 @keyup.stop
                 @keydown.stop
                 :value="label ? label : value" 
                 readonly
                 :placeholder="placeholder"
+                :style="{'padding-left': icon ? `${13 + sizeObj[size]}px` : '10px'}"
                 :class="[visible === false ? 'cat-select-input-border--default':
                     'cat-select-input-border--active', `cat-select-input-font-size--${size}`, 
                     theme ? `cat-select--${theme}` : '']"/>
@@ -54,6 +64,13 @@
             position: relative;
             width: 100%;
             cursor: pointer;
+            .cat-select--tip-icon {
+                position: absolute;
+                height: calc(100% - 2px);
+                left: 10px;
+                top: 1px;
+                text-align: center;
+            }
             .cat-select--dark {
                 background-color: $--select-fill-dark;
                 color: $--select-color-dark;
@@ -73,6 +90,21 @@
                 width: 100%;
                 cursor: pointer;
             }
+            .cat-select-icon-i--small {
+                font-size: $--select-font-size-small;
+            }
+            .cat-select-icon-i--normal {
+                font-size: $--select-font-size-normal;
+            }
+            .cat-select-icon-i--large {
+                font-size: $--select-font-size-large;
+            }
+            .cat-select-icon-i--light {
+                color: $--select-title-color;
+            }
+            .cat-select-icon-i--dark {
+                color: $--select-color-dark;
+            }
             .cat-select-input-icon {
                 position: absolute;
                 height: calc(100% - 2px);
@@ -85,21 +117,6 @@
                     transition: transform .3s;
                     transform: rotate(0deg);
                     cursor: pointer;
-                }
-                .cat-select-icon-i--small {
-                    font-size: $--select-font-size-small;
-                }
-                .cat-select-icon-i--normal {
-                    font-size: $--select-font-size-normal;
-                }
-                .cat-select-icon-i--large {
-                    font-size: $--select-font-size-large;
-                }
-                .cat-select-icon-i--light {
-                    color: $--select-title-color;
-                }
-                .cat-select-icon-i--dark {
-                    color: $--select-color-dark;
                 }
                 .cat-select-icon-resever {
                     transform: rotate(180deg);
@@ -185,13 +202,22 @@
             theme: {
                 type: String,
                 default: 'light'
-            }          
+            },
+            icon: {
+                type: String,
+                default: '',
+            }     
         },
         data() {
             return {
                 visible: false,
                 label: '',
                 optionChange: false,
+                sizeObj: {
+                    small: 12,
+                    normal: 12,
+                    large: 16
+                },
             }
         },
         computed: {

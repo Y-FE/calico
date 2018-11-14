@@ -16,12 +16,6 @@
                     </cc-row>
                 </template>
             </cc-input> -->
-        <cc-input title="基本输入框"  v-model="input" placeholder="请输入">
-
-        </cc-input>
-        <cc-input title="不同尺寸输入框" size="large" v-model="input" placeholder="请输入" width="400">
-
-        </cc-input>
     <!-- <div style="margin: 50px;">
         <cc-select v-model="fontSize" title="字号" size="large">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
@@ -34,8 +28,28 @@
 
         </cc-textarea>
     </div> -->
-        <cc-select v-model="fontSize" title="字号" size="large" theme="dark">
-            <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
+        <cc-select v-model="fontSize" title="字号" size="normal" icon="icon-import" width="200">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
+            </cc-option>
+        </cc-select>
+        <cc-select v-model="fontSize" title="字号" size="large" icon="icon-import" width="200">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
+            </cc-option>
+        </cc-select>
+        <cc-select v-model="fontSize" title="字号" size="large" icon="icon-import" theme="dark">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
+            </cc-option>
+        </cc-select>
+        <cc-select v-model="fontSize" title="字号" icon="icon-import" theme="dark">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
+            </cc-option>
+        </cc-select>
+        <cc-select v-model="fontSize" title="字号" size="large">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
+            </cc-option>
+        </cc-select>
+        <cc-select v-model="fontSize" title="字号">
+            <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
             </cc-option>
         </cc-select>
         <cc-radio-group v-model="tabKnowledge" title="形状">

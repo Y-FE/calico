@@ -1,6 +1,6 @@
 <template>
     <div class="cat-pagination" :class="column ? 'cat-pagination--column' : ''">
-        <cc-icon-default icon="icon-arrow-left" 
+        <cc-icon-default :icon="type === 'primary' ? 'icon-last-page' : 'icon-arrow-left'" 
             :disabled="value === 1"
             @click="preClick">
         </cc-icon-default>
@@ -9,7 +9,7 @@
             <span class="cat-cat-pagination-line">/</span>
             <span class="cat-pagination--total">{{total}}</span>
         </span>
-        <cc-icon-default icon="icon-arrow-right" 
+        <cc-icon-default :icon="type === 'primary' ? 'icon-next-page' : 'icon-arrow-right'"
             :disabled="value === total" 
             @click="nextClick">
         </cc-icon-default>
@@ -63,6 +63,11 @@
                 type: Boolean,
                 default: false
             },
+            // 分页类型 default  primary
+            type: {
+                type: String,
+                default: 'default'
+            }
         },
         data() {
             return {
