@@ -1,17 +1,18 @@
 <template>
-    <div class="cat-nav-item" 
-        @click="handleChange" 
-        :class="parentVal === value ? 'cat-nav-item--active':'cat-nav-item--default'">
+    <cc-row class="cat-nav-item" 
+        justify="center"
+        @click.native="handleChange" 
+        :style="{'width': width ? `${width}px` : ''}"
+        :class="parentVal === value ? ['cat-nav-item--active', `cat-nav-item--active-${theme}`] : 'cat-nav-item--default'">
         <span class="cat-nav-item--text">
             <slot>
                 {{label ? label : value}}
             </slot>
         </span>
-    </div> 
+    </cc-row> 
 </template>
 <style lang="scss">
     .cat-nav-item {
-        margin-right: 10px;
         padding: $--nav-item-padding;
         transition: $--transition-base;
         position: relative;
@@ -24,6 +25,9 @@
            } 
        }
     }
+    .cat-nav-item + .cat-nav-item {
+        margin-left: 10px;
+    }
     .cat-nav-item--active {
         &::after{
             position: absolute;
@@ -32,13 +36,18 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: $--nav-item-border-active;
             animation: transX .3s;
             transition: all .3s ease-in;
         }
         .cat-nav-item--text {
             color: $--nav-item-color-acitve;
        }    
+    }
+    .cat-nav-item--active-blue {
+        &::after{ background: $--nav-item-border-active-blue; }
+    }
+    .cat-nav-item--active-dark {
+        &::after{ background: $--nav-item-border-active-dark; }
     }
     @keyframes transX {
     0% {
@@ -54,9 +63,11 @@
 </style>
 <script>
     import {setParentModel, ccParent, getParentModel} from "@mixins/parentModel";
+    import ccRow from '@packages/row/src/row.vue';
     export default {
         name: 'CcNavItem',
         components: {
+            ccRow
         },
         props: {
             value: {
@@ -66,7 +77,18 @@
             // 绑定值的描述
             label: {
                 type: Number | String,
+                default: '',
             },
+            // item的宽度
+            width: {
+                type: Number | String,
+                default:  '',
+            },
+            // blue dark
+            theme: {
+                type: String,
+                default: 'blue',
+            }
         },
         mixins: [ccParent('CcNav')],
         data() {

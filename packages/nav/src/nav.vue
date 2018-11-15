@@ -27,7 +27,8 @@
             ccRow
         },
         mixins: [ccModel(String | Number | Boolean)],
-        props: {},
+        props: {
+        },
         data() {
             return {
                 

@@ -266,10 +266,11 @@ $--pagination-font-size: $--font-size-base;
 $--nav-item-color: $--color-text-primary;
 $--nav-item-color-hover: $--color-info;
 $--nav-item-color-acitve: $--color-info;
-$--nav-item-border-active: $--color-primary;
 $--nav-border: $--color-black-opacity-5;
 $--nav-font-size: $--font-size-base;
 $--nav-item-padding: 9px 0;
+$--nav-item-border-active-blue: $--color-primary;
+$--nav-item-border-active-dark: $--color-info;
 
 //tab
 $--tab-item-font-size: $--font-size-tab; 

@@ -1,33 +1,9 @@
 <template>
 <div style="margin: 100px;">
-            <!-- <cc-input
-                size="large"
-                :width="540"
-                title="这节课讲解的内容："
-                v-model="explain">
-                <template slot="titleExtra">
-                    <cc-row align="center">
-                        <cc-popover direction="right" width="300">
-                            <i class="iconfont icon-message-info" slot="reference"></i>
-                            <p class="rank-line-height">
-                                请输入本节课所讲解的内容。例如：这节课讲解充型填空答题技巧，其间穿插考察学生英语词汇、短语、语法以及逻辑能力。
-                            </p>
-                        </cc-popover>
-                    </cc-row>
-                </template>
-            </cc-input> -->
-    <!-- <div style="margin: 50px;">
-        <cc-select v-model="fontSize" title="字号" size="large">
-            <cc-option v-for="(item, index) in fontList" :key="index" :value="item">
-            </cc-option>
-        </cc-select>
-        <cc-input title="999" size="large" v-model="largeInput" placeholder="请输入666">
-
-        </cc-input>
-        <cc-textarea title="dd" v-model="largeInput" placeholder="请输入666">
-
-        </cc-textarea>
-    </div> -->
+    <cc-nav v-model="nav">
+        <cc-nav-item  label="课件导航" value="课件导航" width="200">课件导航</cc-nav-item>
+        <cc-nav-item  label="动画风格" theme="dark" value="动画风格">动画风代码的面孔爱福家偶的佛教发鹏举点饭i格</cc-nav-item>
+    </cc-nav>
     <cc-row>
         <cc-select v-model="fontSize" title="字号" size="normal" icon="icon-import" width="200">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
@@ -536,6 +512,7 @@
         props: {},
         data() {
             return {
+                nav: '课件导航',
                 explain: '',
                 tabList: [
                     {name: '我是一个粉刷匠', disabled: false, editable: false},
