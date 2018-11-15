@@ -28,6 +28,7 @@
 
         </cc-textarea>
     </div> -->
+    <cc-row>
         <cc-select v-model="fontSize" title="字号" size="normal" icon="icon-import" width="200">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
             </cc-option>
@@ -36,6 +37,8 @@
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
             </cc-option>
         </cc-select>
+    </cc-row>
+
         <cc-select v-model="fontSize" title="字号" size="large" icon="icon-import" theme="dark">
             <cc-option v-for="(item, index) in fontList" :key="index" :value="item" icon="icon-import">
             </cc-option>
@@ -219,7 +222,7 @@
             <cc-switch slot="tool" v-model="mm"></cc-switch>
             第一页
         </cc-tool-item-layout>
-        <cc-tool-item icon="icon-setting">
+        <cc-tool-item icon="icon-setting" direction="row">
             第一页
         </cc-tool-item>
         <cc-tool-item icon="icon-setting" disabled>
@@ -292,6 +295,9 @@
         </div>
         <div style="margin-top: 100px;">
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
+        </div>
+        <div style="margin-top: 100px;">
+            <cc-pagination  v-model="currentPage" :total="4" type="primary"></cc-pagination>
         </div>
 
         <cc-line-select v-model="line" title="线条颜色">

@@ -1,5 +1,9 @@
 <template>
-    <div class="cat-pagination" :class="column ? 'cat-pagination--column' : ''">
+    <cc-row 
+        justify="space-between" 
+        align="center"  
+        class="cat-pagination" 
+        :class="[column ? 'cat-pagination--column' : '', `cat-pagination--${type}`]">
         <cc-icon-default :icon="type === 'primary' ? 'icon-last-page' : 'icon-arrow-left'" 
             :disabled="value === 1"
             @click="preClick">
@@ -13,14 +17,10 @@
             :disabled="value === total" 
             @click="nextClick">
         </cc-icon-default>
-    </div>
+    </cc-row>
 </template>
 <style lang="scss">
     .cat-pagination {
-        width: 90px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         font-size:0;
         cursor: pointer;
         .cat-pagination-page{
@@ -39,13 +39,21 @@
     .cat-pagination--column {
         transform: rotate(90deg);
     }
+    .cat-pagination--default {
+        width: 90px;
+    }
+    .cat-pagination--primary {
+        width: 70px;
+    }
 </style>
 <script>
+    import ccRow from '@packages/row/src/row.vue';
     import CcIconDefault from '@packages/iconDefault/src/iconDefault.vue';
     export default {
         name: 'CcPagination',
         components: {
-            CcIconDefault
+            CcIconDefault,
+            ccRow
         },
         props: {
             // 总条目数

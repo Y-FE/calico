@@ -33,7 +33,7 @@ $--color-brightness-modal: brightness(40%);
 $--radius-base: 2px;
 $--radius-switch: $--radius-base * 2.5;
 $--radius-icon: $--radius-base * 2;
-$--radius-panel: $--radius-base * 5;
+$--radius-panel: $--radius-base * 2;
 $--radius-round: $--radius-base * 6.5;
 $--radius-circle: 50%;
 
@@ -54,7 +54,7 @@ $--line-height-muti: 16px;
 
 //shadow
 $--box-shadow-grey: 0px 1px 10px 2px rgba(0, 0, 0, .05);
-$--box-shadow-panel: 0px 2px 36px -5px rgba(64,59,239,.5);
+$--box-shadow-panel: 0px 10px 10px 0px rgba(0,0,0,.2);
 $--box-shadow-panel-side: 2px 0px 8px 0px rgba(0, 0, 0, .05);
 $--box-shadow-preview: 0px 3px 15px -3px rgba(64, 59, 239, 0.3);
 $--box-shadow-hover: 0px 3px 8px -1px rgba(64,59,239,.5);
