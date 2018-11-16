@@ -71,6 +71,21 @@
     transition: .3s 
 }
 
+.slide-flex-enter {
+    opacity: 0;
+    width: 0px;
+    /* transform: translateX(-20%); */
+}
+.slide-flex-leave-to {
+    opacity: 0;
+    width: 0px;
+    /* transform: translateX(-20%); */
+ }
+.slide-flex-enter-active, 
+.slide-flex-leave-active {
+    transition: .3s 
+}
+
 @keyframes bounce-in {
     0% {
       transform: scale(0);

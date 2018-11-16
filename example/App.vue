@@ -1,5 +1,11 @@
 <template>
-<div style="margin: 100px;">
+<div style="margin: 100px; background: #ddd;">
+    <cc-side-flexible direction="left" style="height: 300px;"
+        width="200"
+        :show.sync="showFlex"
+        title="显示课件">
+    <div>我是一个粉刷匠</div>
+    </cc-side-flexible>
     <cc-nav v-model="nav">
         <cc-nav-item  label="课件导航" value="课件导航" width="200">课件导航</cc-nav-item>
         <cc-nav-item  label="动画风格" theme="dark" value="动画风格">动画风代码的面孔爱福家偶的佛教发鹏举点饭i格</cc-nav-item>
@@ -89,7 +95,7 @@
         title="我是一个分数字键">
         <template slot="body">
             <cc-course-radio-group v-model="courseRadio">
-                <cc-course-radio v-for="i in 6" :key="i" :value="i">
+                <cc-course-radio v-for="i in 2" :key="i" :value="i">
                     我是一个fhuipqhfuie qhfiqehfiqwep hfiqpejfioqwepjfioqepjfiqowefjoqwepfjqio wefhqweopfhiqohfiopqwe fhqiwofhq wfhqei fhqeiofhqwe f
                 </cc-course-radio>
             </cc-course-radio-group>
@@ -525,6 +531,7 @@
                 largeInput: '',
                 percent: 50,
                 showN: false,
+                showFlex: true,
                 hori: 1,
                 horiArr: [],
                 //----------------------

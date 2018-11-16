@@ -119,18 +119,17 @@
         },
         data() {
             return {
-                // showModal: this.show,
             }
         },
         computed: {
-            showModal: {
-                get() {
-                    return this.show;
-                },
-                set(val) {
-                    this.$emit('update:show', val);
-                }
-            },
+            // showModal: {
+            //     get() {
+            //         return this.show;
+            //     },
+            //     set(val) {
+            //         this.$emit('update:show', val);
+            //     }
+            // },
         },
         watch: {
         },
@@ -142,7 +141,8 @@
                 this.$emit('modal-sure');
             },
             close() {
-                this.showModal = false;
+                this.$emit('update:show', false);
+                // this.showModal = false;
             }
         },
         created() {

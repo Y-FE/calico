@@ -51,6 +51,7 @@ import RadioGroup from '../packages/radioGroup';
 import Row from '../packages/row';
 import ScaleArea from '../packages/scaleArea';
 import Select from '../packages/select';
+import SideFlexible from '../packages/sideFlexible';
 import SidePanel from '../packages/sidePanel';
 import Switch from '../packages/switch';
 import Tab from '../packages/tab';
@@ -108,6 +109,7 @@ const components = [
     Row,
     ScaleArea,
     Select,
+    SideFlexible,
     SidePanel,
     Switch,
     Tab,
@@ -182,6 +184,7 @@ let calico = {
     Row,
     ScaleArea,
     Select,
+    SideFlexible,
     SidePanel,
     Switch,
     Tab,
