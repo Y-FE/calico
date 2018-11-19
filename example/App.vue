@@ -4,7 +4,14 @@
         width="200"
         :show.sync="showFlex"
         title="显示课件">
-    <div>我是一个粉刷匠</div>
+        <div>我是一个粉刷匠</div>
+    </cc-side-flexible>
+
+    <cc-side-flexible direction="right" style="height: 300px;"
+        width="200"
+        :show.sync="showFlex"
+        title="显示课件">
+        <div>我是一个粉刷匠</div>
     </cc-side-flexible>
     <cc-nav v-model="nav">
         <cc-nav-item  label="课件导航" value="课件导航" width="200">课件导航</cc-nav-item>

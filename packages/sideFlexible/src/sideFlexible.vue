@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <transition name="slide-flex">
+    <div style="position: relative;">
+        <transition :name="`slide-flex-${direction}`">
             <cc-row 
                 v-show="show"
                 :direction="directionPosition[direction]" 
@@ -18,18 +18,17 @@
                 </div>
             </cc-row>
         </transition>
-        <transition name="slide-flex">
-            <div style="padding-top: 10px;" v-if="!show">
-                <cc-row 
-                    direction="column" 
-                    align="center"
-                    class="cat-side-flexible--collapse-body"
-                    :class="`cat-side-flexible--collapse-radius-${direction}`"
-                    @click.native="setShow(true)">
-                    <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${directionIcon[direction]}`"></i>
-                    <p class="cat-side-flexible--p">{{title}}</p>
-                </cc-row>
-            </div>
+        <transition :name="`slide-flex-${direction}`">
+            <cc-row 
+                v-if="!show"
+                direction="column" 
+                align="center"
+                class="cat-side-flexible--collapse-body"
+                :class="`cat-side-flexible--collapse-radius-${direction}`"
+                @click.native="setShow(true)">
+                <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${directionIcon[direction]}`"></i>
+                <p class="cat-side-flexible--p">{{title}}</p>
+            </cc-row>
         </transition>
     </div>
 </template>
@@ -49,6 +48,9 @@
         font-size: $--side-flexible-font-size;
         color: $--side-flexible-color;
         cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 10px;
     }
     .cat-side-flexible--collapse-radius-left {
         border-radius: 0 $--side-flexible-radius $--side-flexible-radius 0;
