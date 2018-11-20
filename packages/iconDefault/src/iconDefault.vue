@@ -1,11 +1,10 @@
 <template>
         <i class="iconfont"  
-            :class="[icon, disabled ? 'cat-icon--default-disabled':'cat-icon--default']" 
+            :class="[icon, disabled ? 'cat-icon--default-disabled':'cat-icon--default', `cat-icon--${size}`]" 
             @click="iconClick"></i>
 </template>
 <style lang="scss">
     .cat-icon--default {
-        font-size: $--icon-default-font-size;
         color: $--icon-default-color;
         cursor: pointer;
         &:hover {
@@ -14,8 +13,13 @@
     }
     .cat-icon--default-disabled {
         cursor: not-allowed;
-        font-size: $--icon-default-font-size;
         color: $--icon-default-color-disabled;
+    }
+    .cat-icon--normal {
+        font-size: $--icon-font-size-normal;
+    }
+    .cat-icon--large {
+        font-size: $--icon-font-size-large;
     }
 </style>
 <script>
@@ -31,7 +35,12 @@
             disabled: {
                 type: Boolean,
                 default: false,
-            }
+            },
+            // normal, large
+            size: {
+                type: String,
+                default: 'normal'
+            },
         },
         data() {
             return {

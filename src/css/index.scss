@@ -42,6 +42,7 @@ $--font-size-base: 12px;
 $--font-size-tab: 14px;
 $--font-size-title: 16px;
 $--font-size-large: 20px;
+$--font-size-huge: 26px;
 $--font-size-icon-large: $--font-size-large * 2;
 $--font-size-icon-base: $--font-size-title;
 
@@ -322,7 +323,7 @@ $--menu-item-text-color-disabled: $--color-disabled;
 $--menu-item-fill-disabled: $--color-disabled;
 
 //tool-item 26px
-$--tool-item-fill: $--color-white;
+$--tool-item-fill: transparent;
 $--tool-item-color: $--color-info;
 $--tool-item-icon-size: $--font-size-icon-base;
 $--tool-item-text-size: $--font-size-base;
@@ -366,10 +367,12 @@ $--icon-circle-fill-hover: $--color-primary;
 $--icon-circle-color-hover: $--color-white;
 
 //icon-default
-$--icon-default-font-size: $--font-size-large;
 $--icon-default-color: $--color-info;
 $--icon-default-color-hover: $--color-text-title;
 $--icon-default-color-disabled: $--color-disabled;
+
+$--icon-font-size-normal: $--font-size-large;
+$--icon-font-size-large: $--font-size-huge;
 
 //icon-grey-block 18px
 $--icon-grey-block-font-size: $--font-size-base;

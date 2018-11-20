@@ -5,6 +5,7 @@
         class="cat-pagination" 
         :class="[column ? 'cat-pagination--column' : '', `cat-pagination--${type}`]">
         <cc-icon-default :icon="type === 'primary' ? 'icon-last-page' : 'icon-arrow-left'" 
+            :size="size"
             :disabled="value === 1"
             @click="preClick">
         </cc-icon-default>
@@ -14,6 +15,7 @@
             <span class="cat-pagination--total">{{total}}</span>
         </span>
         <cc-icon-default :icon="type === 'primary' ? 'icon-next-page' : 'icon-arrow-right'"
+            :size="size"
             :disabled="value === total" 
             @click="nextClick">
         </cc-icon-default>
@@ -43,7 +45,7 @@
         width: 90px;
     }
     .cat-pagination--primary {
-        width: 70px;
+        width: 90px;
     }
 </style>
 <script>
@@ -75,7 +77,11 @@
             type: {
                 type: String,
                 default: 'default'
-            }
+            },
+            size: {
+                type: String,
+                default: 'normal'
+            },
         },
         data() {
             return {

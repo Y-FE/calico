@@ -286,7 +286,7 @@
             <cc-pagination  v-model="currentPage" :total="4"></cc-pagination>
         </div>
         <div style="margin-top: 100px;">
-            <cc-pagination  v-model="currentPage" :total="4" type="primary"></cc-pagination>
+            <cc-pagination  v-model="currentPage" :total="4" type="primary" size="large"></cc-pagination>
         </div>
 
         <cc-line-select v-model="line" title="线条颜色">
