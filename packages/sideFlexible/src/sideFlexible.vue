@@ -1,5 +1,5 @@
 <template>
-    <div style="position: relative;">
+    <div class="cat-side-flexible-body" :style="{'width' : width ? `${width}px` : ''}">
         <transition :name="`slide-flex-${direction}`">
             <cc-row 
                 v-show="show"
@@ -10,6 +10,7 @@
                     justify="center" 
                     align="center" 
                     class="cat-side-flexible--expand-body"
+                    :class="[`cat-side-flexible--expand-body-${direction}`]"
                     @click.native="setShow(false)">
                     <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${direction}`"></i>
                 </cc-row>
@@ -33,6 +34,9 @@
     </div>
 </template>
 <style lang="scss">
+    .cat-side-flexible-body {
+        position: relative;
+    }
     .cat-side-flexible--expand-body {
         margin-top: 10px;
         background-color: $--side-flexible-fill;
@@ -40,6 +44,13 @@
         height: $--side-flexible-expand-height;
         border-radius: $--side-flexible-radius;
         cursor: pointer;
+        position: absolute;
+    }
+    .cat-side-flexible--expand-body-left {
+        right: -41px;
+    }
+    .cat-side-flexible--expand-body-right {
+        left: -41px;
     }
     .cat-side-flexible--collapse-body {
         background-color: $--side-flexible-fill;
