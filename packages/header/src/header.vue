@@ -4,6 +4,9 @@
             <slot name="left"></slot>
         </cc-row>
         <cc-row align="center">
+            <slot name="center"></slot>
+        </cc-row>
+        <cc-row align="center">
             <slot name="right"></slot>
         </cc-row>
     </cc-row>
