@@ -10,7 +10,7 @@
                     justify="center" 
                     align="center" 
                     class="cat-side-flexible--expand-body"
-                    :class="[`cat-side-flexible--expand-body-${direction}`]"
+                    :style="{[directionIcon[direction]]: '-41px'}"
                     @click.native="setShow(false)">
                     <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${direction}`"></i>
                 </cc-row>
@@ -25,6 +25,7 @@
                 direction="column" 
                 align="center"
                 class="cat-side-flexible--collapse-body"
+                :style="{[directionIcon[direction]] : '0'}"
                 :class="`cat-side-flexible--collapse-radius-${direction}`"
                 @click.native="setShow(true)">
                 <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${directionIcon[direction]}`"></i>
@@ -46,12 +47,6 @@
         cursor: pointer;
         position: absolute;
     }
-    .cat-side-flexible--expand-body-left {
-        right: -41px;
-    }
-    .cat-side-flexible--expand-body-right {
-        left: -41px;
-    }
     .cat-side-flexible--collapse-body {
         background-color: $--side-flexible-fill;
         width: $--side-flexible-collapse-width;
@@ -60,7 +55,6 @@
         color: $--side-flexible-color;
         cursor: pointer;
         position: absolute;
-        left: 0;
         top: 10px;
     }
     .cat-side-flexible--collapse-radius-left {
