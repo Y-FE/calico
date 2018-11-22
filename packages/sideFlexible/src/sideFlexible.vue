@@ -25,7 +25,7 @@
                 direction="column" 
                 align="center"
                 class="cat-side-flexible--collapse-body"
-                :style="{[directionIcon[direction]] : '0'}"
+                :style="{[direction] : '0'}"
                 :class="`cat-side-flexible--collapse-radius-${direction}`"
                 @click.native="setShow(true)">
                 <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${directionIcon[direction]}`"></i>
