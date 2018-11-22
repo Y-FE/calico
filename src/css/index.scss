@@ -13,6 +13,7 @@ $--color-grey-nano: #8796AB;
 $--color-black: #000000;
 $--color-black-opacity-1: rgba($--color-black, .1);
 $--color-black-opacity-2: rgba($--color-black, .2);
+$--color-black-opacity-3: rgba($--color-black, .3);
 $--color-black-opacity-02: rgba($--color-black, .02);
 $--color-black-opacity-4: rgba($--color-black, .04);
 $--color-black-opacity-5: rgba($--color-black, .05);
@@ -354,6 +355,13 @@ $--icon-block-color-active: $--color-white;
 //vertical-radio
 $--vertical-radio-color: $--color-info;
 $--vertical-radio-font-size: $--font-size-base;
+
+//icon-opacity-circle 26px
+$--icon-opacity-circle-fill: $--color-black-opacity-3;
+$--icon-opacity-circle-color: $--color-white;
+$--icon-opacity-circle-radius: $--radius-circle;
+
+$--icon-opacity-circle-icon-size: $--font-size-icon-base;
 
 //icon-circle 30px
 $--icon-circle-fill: $--color-white;

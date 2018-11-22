@@ -29,6 +29,7 @@ import IconCircle from '../packages/iconCircle';
 import IconDefault from '../packages/iconDefault';
 import IconGreyBlock from '../packages/iconGreyBlock';
 import IconNano from '../packages/iconNano';
+import IconOpacityCircle from '../packages/iconOpacityCircle';
 import Input from '../packages/input';
 import InputNumber from '../packages/inputNumber';
 import KnowledgeHeadRadio from '../packages/knowledgeHeadRadio';
@@ -88,6 +89,7 @@ const components = [
     IconDefault,
     IconGreyBlock,
     IconNano,
+    IconOpacityCircle,
     Input,
     InputNumber,
     KnowledgeHeadRadio,
@@ -139,7 +141,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 let calico = {
-    version: '0.8.5',
+    version: '0.8.6',
     install,
     AnswerRadio,
     Aside,
@@ -163,6 +165,7 @@ let calico = {
     IconDefault,
     IconGreyBlock,
     IconNano,
+    IconOpacityCircle,
     Input,
     InputNumber,
     KnowledgeHeadRadio,

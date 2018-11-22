@@ -69,6 +69,7 @@ npm run example
 - [x] iconBlock
 - [x] iconNano
 - [x] iconCircle
+- [x] iconOpacityCircle
 - [x] iconDefault
 - [x] iconGreyBlock
 - [x] courseRadioGroup

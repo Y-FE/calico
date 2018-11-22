@@ -1,5 +1,6 @@
 <template>
 <div style="margin: 100px; background: #ddd;">
+    <cc-icon-opacity-circle icon="icon-camera-3"></cc-icon-opacity-circle>
     <cc-side-flexible direction="left" style="height: 300px;"
         width="200"
         :show.sync="showFlex"
@@ -7,7 +8,7 @@
         <div>我是一个粉刷匠</div>
     </cc-side-flexible>
 
-    <cc-side-flexible direction="right" style="height: 300px;"
+    <cc-side-flexible direction="right" style="height: 300px; position: absolute; right: 0; overflow: auto"
         width="200"
         :show.sync="showFlex"
         title="显示课件">
@@ -485,7 +486,7 @@
         <cc-menu-item icon="icon-report-errors" disabled color="#FF336A">
             报错
         </cc-menu-item>
-    
+<!--     
     <cc-side-panel>
         <cc-menu-item icon="icon-report-errors" color="#FF336A">
             报错
@@ -504,7 +505,7 @@
             板书权限
         </cc-menu-item>
         </cc-tooltip>
-    </cc-side-panel>
+    </cc-side-panel> -->
     <cc-main></cc-main>
     </div>
 </template>
