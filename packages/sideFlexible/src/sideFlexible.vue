@@ -1,5 +1,5 @@
 <template>
-    <div class="cat-side-flexible-body" :style="{'width' : width ? `${width}px` : ''}">
+    <div class="cat-side-flexible-body">
         <transition :name="`slide-flex-${direction}`">
             <cc-row 
                 v-show="show"
