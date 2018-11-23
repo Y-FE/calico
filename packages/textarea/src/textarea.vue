@@ -54,7 +54,7 @@
             width: {
                 type: String | Number,
                 default: 100,
-            }
+            },
         },
         data() {
             return {

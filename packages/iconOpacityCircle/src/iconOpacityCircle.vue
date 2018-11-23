@@ -1,5 +1,5 @@
 <template>
-    <cc-row align="center" justify="center" class="cat-icon-opacity-circle-body">
+    <cc-row align="center" justify="center" class="cat-icon-opacity-circle-body" @click.native="click">
         <i class="iconfont" :class="icon"></i>
     </cc-row>
 </template>
@@ -7,8 +7,8 @@
     .cat-icon-opacity-circle-body {
         background: $--icon-opacity-circle-fill;
         color: $--icon-opacity-circle-color;
-        width: 26px;
-        height: 26px;
+        width: 30px;
+        height: 30px;
         border-radius: $--icon-opacity-circle-radius;
         cursor: pointer;
         i {
@@ -38,6 +38,9 @@
         watch: {
         },
         methods: {
+            click() {
+                this.$emit('click');
+            }
         },
         created() {
         },
