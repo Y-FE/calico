@@ -5,6 +5,7 @@
                 v-show="show"
                 :direction="directionPosition[direction]" 
                 justify="space-between"
+                style="height: 100%;"
                 :style="{'width' : width ? `${width}px` : ''}">
                 <cc-row 
                     justify="center" 
