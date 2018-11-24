@@ -4,7 +4,8 @@
         @click.native="handleChange" 
         :style="{'width': width ? `${width}px` : ''}"
         :class="parentVal === value ? ['cat-nav-item--active', `cat-nav-item--active-${theme}`] : 'cat-nav-item--default'">
-        <span class="cat-nav-item--text">
+        <span class="cat-nav-item--text" 
+            :class="parentVal === value ? 'cat-nav-item--text-active' : `cat-nav-item--text-${textState}`">
             <slot>
                 {{label ? label : value}}
             </slot>
@@ -17,13 +18,25 @@
         transition: $--transition-base;
         position: relative;
         cursor: pointer;
-       .cat-nav-item--text {
+        .cat-nav-item--text {
            font-size: $--nav-font-size;
-           color: $--nav-item-color;
+        //    color: $--nav-item-color;
            &:hover {
                color: $--nav-item-color-hover;
-           } 
-       }
+            } 
+        }
+        .cat-nav-item--text-default {
+            color: $--nav-item-color-default;
+        }
+        .cat-nav-item--text-active {
+            color: $--nav-item-color-acitve;
+       }    
+        .cat-nav-item--text-success {
+            color: $--nav-item-color-success;
+       }    
+        .cat-nav-item--text-error {
+            color: $--nav-item-color-error;
+       }    
     }
     .cat-nav-item + .cat-nav-item {
         margin-left: 10px;
@@ -39,9 +52,6 @@
             animation: transX .3s;
             transition: all .3s ease-in;
         }
-        .cat-nav-item--text {
-            color: $--nav-item-color-acitve;
-       }    
     }
     .cat-nav-item--active-blue {
         &::after{ background: $--nav-item-border-active-blue; }
@@ -88,6 +98,11 @@
             theme: {
                 type: String,
                 default: 'blue',
+            },
+            // default, error, success
+            textState: {
+                type: String,
+                default: 'default',
             }
         },
         mixins: [ccParent('CcNav')],

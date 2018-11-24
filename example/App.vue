@@ -15,7 +15,7 @@
         <div>我是一个粉刷匠</div>
     </cc-side-flexible>
     <cc-nav v-model="nav">
-        <cc-nav-item  label="课件导航" value="课件导航" width="200">课件导航</cc-nav-item>
+        <cc-nav-item textState="error"  label="课件导航" value="课件导航" width="200">课件导航</cc-nav-item>
         <cc-nav-item  label="动画风格" theme="dark" value="动画风格">动画风代码的面孔爱福家偶的佛教发鹏举点饭i格</cc-nav-item>
     </cc-nav>
     <cc-row>

@@ -265,9 +265,13 @@ $--pagination-color-current: $--color-info;
 $--pagination-font-size: $--font-size-base;
 
 //nav
-$--nav-item-color: $--color-text-primary;
 $--nav-item-color-hover: $--color-info;
+
 $--nav-item-color-acitve: $--color-info;
+$--nav-item-color-default: $--color-text-primary;
+$--nav-item-color-success: $--color-success;
+$--nav-item-color-error: $--color-danger;
+
 $--nav-border: $--color-black-opacity-5;
 $--nav-font-size: $--font-size-base;
 $--nav-item-padding: 9px 0;
