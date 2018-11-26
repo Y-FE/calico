@@ -103,7 +103,11 @@
             textState: {
                 type: String,
                 default: 'default',
-            }
+            },
+            disabled: {
+                type: Boolean,
+                default: false,
+            },
         },
         mixins: [ccParent('CcNav')],
         data() {
@@ -119,6 +123,9 @@
         },
         methods: {
             handleChange() {
+                if (this.disabled) {
+                    return;
+                }
                 setParentModel.call(this, this.value);
             }
         },
