@@ -579,7 +579,7 @@
                 colorList:[
                     '#18A2EA','#FFB804','#FF4040','#2D2D2D','#009E4A',''
                 ],
-                fontList:[12,14,16,18,20,22],
+                fontList:['1发的氛fvdesf erqtfrqwe  tfqwertfwerq eqtger 围2',14,16,18,20,22],
                 courseList:[
                     {val: 1, name: "课件1"},
                     {val: 2, name: "课件2"},
