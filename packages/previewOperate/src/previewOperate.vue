@@ -8,21 +8,21 @@
                 justify="center"
                 align="center"
                 v-if="showDelete">
-                <i class="iconfont icon-delete-page"></i>
+                <i class="iconfont icon_calico-delete-page"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
                 @click.native.stop="changeOrder('up')"
                 justify="center"
                 align="center"
                 v-if="showUp">
-                <i class="iconfont icon-move-up"></i>
+                <i class="iconfont icon_calico-move-up"></i>
             </cc-row>
             <cc-row class="cat-operate-box"
                 @click.native.stop="changeOrder('down')"
                 justify="center"
                 align="center"
                 v-if="showDown">
-                <i class="iconfont icon-move-down"></i>
+                <i class="iconfont icon_calico-move-down"></i>
             </cc-row>
         </cc-row>
     </div>

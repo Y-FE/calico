@@ -25,7 +25,7 @@
         props: {
             icon: {
                 type: String,
-                default: 'icon-setting',
+                default: 'icon_calico-setting',
             },
             active: {
                 type: Boolean,

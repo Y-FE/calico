@@ -12,7 +12,7 @@
             align="center" 
             justify="center" 
             v-if="parentVal === value">
-            <i class="iconfont icon-select cat-course-radio--icon"></i>
+            <i class="iconfont icon_calico-select cat-course-radio--icon"></i>
         </cc-row>
     </cc-row>
 </template>

@@ -7,7 +7,7 @@ function addStylesheet(href) {
     document.body.appendChild(link);
 }
 
-addStylesheet('https://at.alicdn.com/t/font_776059_0l7114xr8y.css');
+addStylesheet('//at.alicdn.com/t/font_938680_6rwyd6zhi4k.css');
 
 export default ({ Vue }) => {
     Vue.use(calico);

@@ -14,7 +14,7 @@
                     justify="center" 
                     align="center" 
                     class="cat-knowledge-head-radio-edit--body">
-                    <i class="iconfont icon-ellipsis cat-knowledge-head-radio--icon"></i>
+                    <i class="iconfont icon_calico-ellipsis cat-knowledge-head-radio--icon"></i>
                     <div class="cat-knowledge-head-radio-edit--box" v-show="parentVal === value">
                         <div class="cat-knowledge-head-radio-edit--box-box">
                             <cc-row justify="center" align="center" 

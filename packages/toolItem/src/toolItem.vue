@@ -163,7 +163,7 @@
         props: {
             icon: {
                 type: String,
-                default: 'icon-icon-zidingyishezhi',
+                default: 'icon_calico-setting',
             },
             // 状态: 默认:  'default'， 成功：'success'， 失败：'danger'
             state: {

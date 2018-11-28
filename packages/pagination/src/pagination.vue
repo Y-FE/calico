@@ -4,7 +4,7 @@
         align="center"  
         class="cat-pagination" 
         :class="[column ? 'cat-pagination--column' : '', `cat-pagination--${type}`]">
-        <cc-icon-default :icon="type === 'primary' ? 'icon-last-page' : 'icon-arrow-left'" 
+        <cc-icon-default :icon="type === 'primary' ? 'icon_calico-last-page' : 'icon_calico-arrow-left'" 
             :size="size"
             :disabled="value === 1"
             @click="preClick">
@@ -14,7 +14,7 @@
             <span class="cat-cat-pagination-line">/</span>
             <span class="cat-pagination--total">{{total}}</span>
         </span>
-        <cc-icon-default :icon="type === 'primary' ? 'icon-next-page' : 'icon-arrow-right'"
+        <cc-icon-default :icon="type === 'primary' ? 'icon_calico-next-page' : 'icon_calico-arrow-right'"
             :size="size"
             :disabled="value === total" 
             @click="nextClick">

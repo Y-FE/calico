@@ -30,7 +30,7 @@
                 align="center"
                 class="cat-select-input-icon"
                 :class="[`cat-select-input-icon--${size}`, `cat-select--${theme}`]">
-                <i class="iconfont icon-take-up cat-select-icon-dropdown"  
+                <i class="iconfont icon_calico-take-up cat-select-icon-dropdown"  
                     :class="[visible === false ? '':'cat-select-icon-resever',
                         `cat-select-icon-i--${size}`, `cat-select-icon-i--${theme}`]">
                 </i>    

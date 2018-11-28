@@ -13,7 +13,7 @@
                     class="cat-side-flexible--expand-body"
                     :style="{[directionIcon[direction]]: '-41px'}"
                     @click.native="setShow(false)">
-                    <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${direction}`"></i>
+                    <i class="iconfont cat-side-flexible--icon" :class="`icon_calico-open-takeup-${direction}`"></i>
                 </cc-row>
                 <div>
                     <slot></slot>
@@ -29,7 +29,7 @@
                 :style="{[direction] : '0'}"
                 :class="`cat-side-flexible--collapse-radius-${direction}`"
                 @click.native="setShow(true)">
-                <i class="iconfont cat-side-flexible--icon" :class="`icon-open-takeup-${directionIcon[direction]}`"></i>
+                <i class="iconfont cat-side-flexible--icon" :class="`icon_calico-open-takeup-${directionIcon[direction]}`"></i>
                 <p class="cat-side-flexible--p">{{title}}</p>
             </cc-row>
         </transition>
