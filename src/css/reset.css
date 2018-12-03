@@ -1,13 +1,12 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0;
   padding: 0;
-  line-height: 1em;
-  /* user-select: none; */
+  line-height: 1em; */
   font-family: "Hiragino Sans GB","STHeiti", "Microsoft YaHei",微软雅黑, "simsun";
 }
-html {
+/* html {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -21,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-}
+} */
 button,
 input,
 textarea {
@@ -33,22 +32,22 @@ textarea {
   border-radius: 0;
   padding: 0;
 }
-a {
+/* a {
   text-decoration: none;
 }
 a:focus,
 a.active,
 a:hover {
   text-decoration: none;
-}
+} */
 /*--- 元素多余间距值 ---*/
-ul,
+/* ul, */
 p
  {
   padding: 0;
   margin: 0;
 }
-li {
+/* li {
   list-style: none;
 }
 em,
@@ -58,7 +57,7 @@ i {
 img {
   vertical-align: middle;
   border: 0;
-}
+} */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
   color:#ccc;
 }
